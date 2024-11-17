@@ -58,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Estructuras\Usuario.cs" />
     <Compile Include="Formularios\Crear_Cuenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,7 +131,6 @@
     <Content Include="ReadMePng\类库上右键.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Estructuras\" />
     <Folder Include="Recursos\" />
     <Folder Include="Servicios\" />
   </ItemGroup>
