@@ -1,0 +1,17 @@
+C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\JaguarGymApp_Preview.exe.config
+C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\JaguarGymApp_Preview.exe
+C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\JaguarGymApp_Preview.pdb
+C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\CxFlatUI.dll
+C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\Guna.UI2.dll
+C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\MaterialSkin.dll
+C:\Users\Andre\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.csproj.AssemblyReference.cache
+C:\Users\Andre\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Crear_Cuenta.resources
+C:\Users\Andre\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Ingresar_Pago.resources
+C:\Users\Andre\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Principal.resources
+C:\Users\Andre\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Properties.Resources.resources
+C:\Users\Andre\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.csproj.GenerateResource.cache
+C:\Users\Andre\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.csproj.CoreCompileInputs.cache
+C:\Users\Andre\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGy.A30E3056.Up2Date
+C:\Users\Andre\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.exe
+C:\Users\Andre\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.pdb
+C:\Users\Andre\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Inicio_Sesion.resources
