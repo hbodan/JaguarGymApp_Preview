@@ -17,7 +17,11 @@ namespace JaguarGymApp_Preview
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new Inicio_Sesion());
+=======
+            Application.Run(new Escanea_tu_cedula_o_CIF());
+>>>>>>> origin/Marcello
         }
     }
 }
