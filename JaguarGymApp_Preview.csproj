@@ -64,6 +64,12 @@
     <Compile Include="Formularios\Crear_Cuenta.Designer.cs">
       <DependentUpon>Crear_Cuenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Ingresar_Pago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Ingresar_Pago.Designer.cs">
+      <DependentUpon>Ingresar_Pago.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Inicio_Sesión.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\Crear_Cuenta.resx">
       <DependentUpon>Crear_Cuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Ingresar_Pago.resx">
+      <DependentUpon>Ingresar_Pago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Inicio_Sesión.resx">
       <DependentUpon>Inicio_Sesión.cs</DependentUpon>

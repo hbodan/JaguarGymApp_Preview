@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|c:\\users\\user\\desktop\\jaguargymapp_preview\\formularios\\ingresar_pago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:formularios\\ingresar_pago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Ingresar_Pago.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Ingresar_Pago.cs",
+              "RelativeDocumentMoniker": "Formularios\\Ingresar_Pago.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Ingresar_Pago.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Formularios\\Ingresar_Pago.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T03:03:48.261Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
