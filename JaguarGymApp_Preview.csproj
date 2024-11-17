@@ -124,14 +124,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-<<<<<<< HEAD
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
-=======
->>>>>>> origin/Marcello
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -160,24 +152,19 @@
     <Content Include="ReadMePng\NuPackNugetPackager.png" />
     <Content Include="ReadMePng\Options.png" />
     <Content Include="ReadMePng\类库上右键.png" />
-<<<<<<< HEAD
-    <None Include="Recursos\Iniciar_Sesion.png" />
-    <None Include="Recursos\deporte.png" />
-    <None Include="Recursos\ojo.png" />
-    <None Include="Recursos\onda-de-mano.png" />
-    <None Include="Recursos\Logo_deportes.png" />
-    <None Include="Recursos\uam_internacional_portada.jpg" />
-    <None Include="Recursos\uam_edificio_home.jpg" />
-    <None Include="Recursos\Mascota.png" />
-    <None Include="Recursos\Jaguares_UAM.png" />
+    <Content Include="Recursos\Codigo_de_barras_Horizontal.png" />
+    <Content Include="Recursos\deporte.png" />
+    <Content Include="Recursos\Iniciar_Sesion.png" />
+    <Content Include="Recursos\Jaguares_UAM.png" />
+    <Content Include="Recursos\Logo_deportes.png" />
+    <Content Include="Recursos\Mascota.png" />
+    <Content Include="Recursos\ojo.png" />
+    <Content Include="Recursos\onda-de-mano.png" />
+    <Content Include="Recursos\Recursos.txt" />
+    <Content Include="Recursos\uam_edificio_home.jpg" />
+    <Content Include="Recursos\uam_internacional_portada.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Estructuras\" />
-=======
-    <None Include="Recursos\Codigo_de_barras_Horizontal.png" />
-  </ItemGroup>
-  <ItemGroup>
->>>>>>> origin/Marcello
     <Folder Include="Servicios\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

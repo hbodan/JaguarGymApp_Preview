@@ -33,8 +33,8 @@
             this.txtIdentificacion = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnIngresarEntrada = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.imgEscaner = new Guna.UI2.WinForms.Guna2PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.imgEscaner)).BeginInit();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblEscaneacedulaCIF
@@ -42,7 +42,7 @@
             this.lblEscaneacedulaCIF.AutoSize = true;
             this.lblEscaneacedulaCIF.BackColor = System.Drawing.Color.Transparent;
             this.lblEscaneacedulaCIF.Font = new System.Drawing.Font("Verdana", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEscaneacedulaCIF.Location = new System.Drawing.Point(152, 215);
+            this.lblEscaneacedulaCIF.Location = new System.Drawing.Point(163, 216);
             this.lblEscaneacedulaCIF.Name = "lblEscaneacedulaCIF";
             this.lblEscaneacedulaCIF.Size = new System.Drawing.Size(737, 59);
             this.lblEscaneacedulaCIF.TabIndex = 0;
@@ -53,7 +53,7 @@
             this.lblIdentificacion.AutoSize = true;
             this.lblIdentificacion.BackColor = System.Drawing.Color.Transparent;
             this.lblIdentificacion.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdentificacion.Location = new System.Drawing.Point(415, 488);
+            this.lblIdentificacion.Location = new System.Drawing.Point(451, 487);
             this.lblIdentificacion.Name = "lblIdentificacion";
             this.lblIdentificacion.Size = new System.Drawing.Size(194, 32);
             this.lblIdentificacion.TabIndex = 1;
@@ -73,7 +73,7 @@
             this.txtIdentificacion.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIdentificacion.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtIdentificacion.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdentificacion.Location = new System.Drawing.Point(342, 534);
+            this.txtIdentificacion.Location = new System.Drawing.Point(376, 534);
             this.txtIdentificacion.Name = "txtIdentificacion";
             this.txtIdentificacion.PasswordChar = '\0';
             this.txtIdentificacion.PlaceholderText = "Ingrese su numero de cedula";
@@ -92,7 +92,7 @@
             this.btnIngresarEntrada.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
             this.btnIngresarEntrada.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresarEntrada.ForeColor = System.Drawing.Color.White;
-            this.btnIngresarEntrada.Location = new System.Drawing.Point(432, 592);
+            this.btnIngresarEntrada.Location = new System.Drawing.Point(478, 590);
             this.btnIngresarEntrada.Name = "btnIngresarEntrada";
             this.btnIngresarEntrada.PressedColor = System.Drawing.Color.Bisque;
             this.btnIngresarEntrada.Size = new System.Drawing.Size(149, 32);
@@ -108,15 +108,15 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1189, 110);
             this.guna2Panel1.TabIndex = 6;
             // 
-            // imgEscaner
+            // guna2PictureBox1
             // 
-            this.imgEscaner.Image = global::JaguarGymApp_Preview.Properties.Resources.Codigo_de_barras_Horizontal;
-            this.imgEscaner.ImageRotate = 0F;
-            this.imgEscaner.Location = new System.Drawing.Point(85, 302);
-            this.imgEscaner.Name = "imgEscaner";
-            this.imgEscaner.Size = new System.Drawing.Size(892, 88);
-            this.imgEscaner.TabIndex = 7;
-            this.imgEscaner.TabStop = false;
+            this.guna2PictureBox1.Image = global::JaguarGymApp_Preview.Properties.Resources.Codigo_de_barras_Horizontal;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(90, 360);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(892, 88);
+            this.guna2PictureBox1.TabIndex = 7;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // Escanea_tu_cedula_o_CIF
             // 
@@ -124,7 +124,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1080, 720);
-            this.Controls.Add(this.imgEscaner);
+            this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.btnIngresarEntrada);
             this.Controls.Add(this.txtIdentificacion);
@@ -133,7 +133,7 @@
             this.MaximizeBox = false;
             this.Name = "Escanea_tu_cedula_o_CIF";
             this.Text = "Registro de entrada";
-            ((System.ComponentModel.ISupportInitialize)(this.imgEscaner)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,6 +146,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtIdentificacion;
         private Guna.UI2.WinForms.Guna2Button btnIngresarEntrada;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2PictureBox imgEscaner;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }
