@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JaguarGymApp_Preview.Formularios;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace JaguarGymApp_Preview
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Principal());
+            Application.Run(new Inicio_Sesion());
         }
     }
 }

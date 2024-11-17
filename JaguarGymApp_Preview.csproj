@@ -70,11 +70,11 @@
     <Compile Include="Formularios\Ingresar_Pago.Designer.cs">
       <DependentUpon>Ingresar_Pago.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Inicio_Sesión.cs">
+    <Compile Include="Formularios\Inicio_Sesion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Inicio_Sesión.Designer.cs">
-      <DependentUpon>Inicio_Sesión.cs</DependentUpon>
+    <Compile Include="Formularios\Inicio_Sesion.Designer.cs">
+      <DependentUpon>Inicio_Sesion.cs</DependentUpon>
     </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
@@ -90,8 +90,8 @@
     <EmbeddedResource Include="Formularios\Ingresar_Pago.resx">
       <DependentUpon>Ingresar_Pago.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Inicio_Sesión.resx">
-      <DependentUpon>Inicio_Sesión.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Inicio_Sesion.resx">
+      <DependentUpon>Inicio_Sesion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
@@ -104,6 +104,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -128,10 +129,13 @@
     <Content Include="ReadMePng\NuPackNugetPackager.png" />
     <Content Include="ReadMePng\Options.png" />
     <Content Include="ReadMePng\类库上右键.png" />
+    <None Include="Recursos\uam_internacional_portada.jpg" />
+    <None Include="Recursos\uam_edificio_home.jpg" />
+    <None Include="Recursos\Mascota.png" />
+    <None Include="Recursos\Jaguares_UAM.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Estructuras\" />
-    <Folder Include="Recursos\" />
     <Folder Include="Servicios\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
