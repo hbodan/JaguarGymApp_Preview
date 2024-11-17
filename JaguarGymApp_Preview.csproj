@@ -65,6 +65,12 @@
     <Compile Include="Formularios\Crear_Cuenta.Designer.cs">
       <DependentUpon>Crear_Cuenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Escanea_tu_cedula_o_CIF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Escanea_tu_cedula_o_CIF.Designer.cs">
+      <DependentUpon>Escanea_tu_cedula_o_CIF.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Ingresar_Pago.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     <EmbeddedResource Include="Formularios\Crear_Cuenta.resx">
       <DependentUpon>Crear_Cuenta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Escanea_tu_cedula_o_CIF.resx">
+      <DependentUpon>Escanea_tu_cedula_o_CIF.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Ingresar_Pago.resx">
       <DependentUpon>Ingresar_Pago.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,17 +109,17 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -129,9 +138,9 @@
     <Content Include="ReadMePng\NuPackNugetPackager.png" />
     <Content Include="ReadMePng\Options.png" />
     <Content Include="ReadMePng\类库上右键.png" />
+    <None Include="Recursos\Codigo_de_barras_Horizontal.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Recursos\" />
     <Folder Include="Servicios\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
