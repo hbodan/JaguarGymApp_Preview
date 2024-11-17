@@ -58,6 +58,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\Inicio_Sesión.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Inicio_Sesión.Designer.cs">
+      <DependentUpon>Inicio_Sesión.cs</DependentUpon>
+    </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Inicio_Sesión.resx">
+      <DependentUpon>Inicio_Sesión.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
@@ -103,7 +112,6 @@
     <Content Include="ReadMePng\类库上右键.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Formularios\" />
     <Folder Include="Recursos\" />
     <Folder Include="Servicios\" />
   </ItemGroup>
