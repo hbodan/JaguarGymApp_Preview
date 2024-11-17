@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\",
+  "WorkspaceRootPath": "C:\\Users\\Andre\\Desktop\\JaguarGymApp_Preview\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|c:\\users\\user\\desktop\\jaguargymapp_preview\\formularios\\ingresar_pago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|c:\\users\\andre\\desktop\\jaguargymapp_preview\\formularios\\ingresar_pago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:formularios\\ingresar_pago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -14,19 +14,27 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Ingresar_Pago.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Ingresar_Pago.cs",
+              "Title": "Ingresar_Pago.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Andre\\Desktop\\JaguarGymApp_Preview\\Formularios\\Ingresar_Pago.cs",
               "RelativeDocumentMoniker": "Formularios\\Ingresar_Pago.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Ingresar_Pago.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Formularios\\Ingresar_Pago.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\Andre\\Desktop\\JaguarGymApp_Preview\\Formularios\\Ingresar_Pago.cs [Design]",
+              "RelativeToolTip": "Formularios\\Ingresar_Pago.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-17T03:03:48.261Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "EditorCaption": " [Design]"
             }
           ]
         }
