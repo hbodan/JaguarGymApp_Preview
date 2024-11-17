@@ -34,6 +34,7 @@
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.materialMaskedTextBox1 = new MaterialSkin.Controls.MaterialMaskedTextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // materialCard1
@@ -119,7 +120,7 @@
             this.materialMaskedTextBox1.BeepOnError = false;
             this.materialMaskedTextBox1.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.materialMaskedTextBox1.Depth = 0;
-            this.materialMaskedTextBox1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialMaskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialMaskedTextBox1.HidePromptOnLeave = false;
             this.materialMaskedTextBox1.HideSelection = true;
             this.materialMaskedTextBox1.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
@@ -152,11 +153,20 @@
             this.materialMaskedTextBox1.UseSystemPasswordChar = false;
             this.materialMaskedTextBox1.ValidatingType = null;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(294, 273);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 6;
+            // 
             // Crear_Cuenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.materialMaskedTextBox1);
             this.Controls.Add(this.materialButton1);
             this.Controls.Add(this.guna2ControlBox1);
@@ -179,5 +189,6 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private MaterialSkin.Controls.MaterialButton materialButton1;
         private MaterialSkin.Controls.MaterialMaskedTextBox materialMaskedTextBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
