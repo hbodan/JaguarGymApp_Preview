@@ -58,6 +58,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\Crear_Cuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Crear_Cuenta.Designer.cs">
+      <DependentUpon>Crear_Cuenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Inicio_Sesión.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Crear_Cuenta.resx">
+      <DependentUpon>Crear_Cuenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Inicio_Sesión.resx">
       <DependentUpon>Inicio_Sesión.cs</DependentUpon>
     </EmbeddedResource>
