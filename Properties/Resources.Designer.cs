@@ -63,6 +63,26 @@ namespace JaguarGymApp_Preview.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap deporte {
+            get {
+                object obj = ResourceManager.GetObject("deporte", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Iniciar_Sesion {
+            get {
+                object obj = ResourceManager.GetObject("Iniciar_Sesion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Jaguares_UAM {
             get {
                 object obj = ResourceManager.GetObject("Jaguares_UAM", resourceCulture);
@@ -73,9 +93,49 @@ namespace JaguarGymApp_Preview.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logo_deportes {
+            get {
+                object obj = ResourceManager.GetObject("Logo_deportes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Mascota {
             get {
                 object obj = ResourceManager.GetObject("Mascota", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ojo {
+            get {
+                object obj = ResourceManager.GetObject("ojo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap onda_de_mano {
+            get {
+                object obj = ResourceManager.GetObject("onda-de-mano", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap onda_de_mano1 {
+            get {
+                object obj = ResourceManager.GetObject("onda-de-mano1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
