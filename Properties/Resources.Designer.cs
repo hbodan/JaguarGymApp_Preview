@@ -123,6 +123,16 @@ namespace JaguarGymApp_Preview.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap estadisticasBoton {
+            get {
+                object obj = ResourceManager.GetObject("estadisticasBoton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Iniciar_Sesion {
             get {
                 object obj = ResourceManager.GetObject("Iniciar_Sesion", resourceCulture);
@@ -183,6 +193,16 @@ namespace JaguarGymApp_Preview.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap miembrosBoton {
+            get {
+                object obj = ResourceManager.GetObject("miembrosBoton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ojo {
             get {
                 object obj = ResourceManager.GetObject("ojo", resourceCulture);
@@ -196,6 +216,16 @@ namespace JaguarGymApp_Preview.Properties {
         internal static System.Drawing.Bitmap onda_de_mano {
             get {
                 object obj = ResourceManager.GetObject("onda-de-mano", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pagoBoton {
+            get {
+                object obj = ResourceManager.GetObject("pagoBoton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

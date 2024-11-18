@@ -58,7 +58,9 @@ namespace JaguarGymApp_Preview.Formularios
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            Recuperar_Credenciales formularioRecuperar = new Recuperar_Credenciales();
+            this.Hide();
+            formularioRecuperar.Show();
         }
 
         private void guna2ImageButton1_Click(object sender, EventArgs e)
