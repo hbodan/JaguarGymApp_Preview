@@ -41,7 +41,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnCrearCuenta = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.lkbVolverIniciar = new System.Windows.Forms.LinkLabel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.guna2GradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -190,7 +195,7 @@
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.Image = global::JaguarGymApp_Preview.Properties.Resources.ojo;
             this.guna2Button1.Location = new System.Drawing.Point(393, 483);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(29, 26);
             this.guna2Button1.TabIndex = 34;
@@ -245,7 +250,7 @@
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
             this.guna2Button2.Image = global::JaguarGymApp_Preview.Properties.Resources.ojo;
             this.guna2Button2.Location = new System.Drawing.Point(393, 584);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(29, 26);
             this.guna2Button2.TabIndex = 37;
@@ -273,35 +278,74 @@
             this.guna2TextBox1.Size = new System.Drawing.Size(379, 39);
             this.guna2TextBox1.TabIndex = 38;
             // 
-            // guna2GradientButton1
+            // btnCrearCuenta
             // 
-            this.guna2GradientButton1.AutoRoundedCorners = true;
-            this.guna2GradientButton1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton1.BorderRadius = 18;
-            this.guna2GradientButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(206)))));
-            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(168)))), ((int)(((byte)(83)))));
-            this.guna2GradientButton1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(273, 652);
-            this.guna2GradientButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.guna2GradientButton1.Name = "guna2GradientButton1";
-            this.guna2GradientButton1.Size = new System.Drawing.Size(161, 39);
-            this.guna2GradientButton1.TabIndex = 39;
-            this.guna2GradientButton1.Text = "Iniciar Sesión";
-            this.guna2GradientButton1.Click += new System.EventHandler(this.guna2GradientButton1_Click);
+            this.btnCrearCuenta.AutoRoundedCorners = true;
+            this.btnCrearCuenta.BackColor = System.Drawing.Color.Transparent;
+            this.btnCrearCuenta.BorderRadius = 18;
+            this.btnCrearCuenta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCrearCuenta.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCrearCuenta.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCrearCuenta.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCrearCuenta.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCrearCuenta.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCrearCuenta.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(206)))));
+            this.btnCrearCuenta.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(168)))), ((int)(((byte)(83)))));
+            this.btnCrearCuenta.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearCuenta.ForeColor = System.Drawing.Color.White;
+            this.btnCrearCuenta.Location = new System.Drawing.Point(273, 652);
+            this.btnCrearCuenta.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCrearCuenta.Name = "btnCrearCuenta";
+            this.btnCrearCuenta.Size = new System.Drawing.Size(161, 39);
+            this.btnCrearCuenta.TabIndex = 39;
+            this.btnCrearCuenta.Text = "Crear Cuenta";
+            this.btnCrearCuenta.Click += new System.EventHandler(this.guna2GradientButton1_Click);
+            // 
+            // lkbVolverIniciar
+            // 
+            this.lkbVolverIniciar.AutoSize = true;
+            this.lkbVolverIniciar.LinkColor = System.Drawing.Color.Silver;
+            this.lkbVolverIniciar.Location = new System.Drawing.Point(55, 677);
+            this.lkbVolverIniciar.Name = "lkbVolverIniciar";
+            this.lkbVolverIniciar.Size = new System.Drawing.Size(112, 13);
+            this.lkbVolverIniciar.TabIndex = 40;
+            this.lkbVolverIniciar.TabStop = true;
+            this.lkbVolverIniciar.Text = "Volver a Iniciar Sesión";
+            this.lkbVolverIniciar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lkbVolverIniciar_LinkClicked);
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.guna2PictureBox1.Image = global::JaguarGymApp_Preview.Properties.Resources.crearCuentaImagen;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(76, 64);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(382, 464);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 27;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // guna2GradientPanel1
+            // 
+            this.guna2GradientPanel1.Controls.Add(this.guna2PictureBox1);
+            this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(151)))), ((int)(((byte)(136)))));
+            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(110)))), ((int)(((byte)(121)))));
+            this.guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(561, 58);
+            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(524, 667);
+            this.guna2GradientPanel1.TabIndex = 41;
             // 
             // Crear_Cuenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1080, 720);
-            this.Controls.Add(this.guna2GradientButton1);
+            this.Controls.Add(this.guna2GradientPanel1);
+            this.Controls.Add(this.lkbVolverIniciar);
+            this.Controls.Add(this.btnCrearCuenta);
             this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.label6);
@@ -315,13 +359,15 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1080, 720);
             this.MinimumSize = new System.Drawing.Size(1080, 720);
             this.Name = "Crear_Cuenta";
             this.Text = "Crear Cuenta";
             this.Load += new System.EventHandler(this.Crear_Cuenta_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.guna2GradientPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -342,6 +388,9 @@
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
+        private Guna.UI2.WinForms.Guna2GradientButton btnCrearCuenta;
+        private System.Windows.Forms.LinkLabel lkbVolverIniciar;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
     }
 }

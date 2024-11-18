@@ -35,7 +35,16 @@ namespace JaguarGymApp_Preview.Formularios
 
         private void guna2GradientButton1_Click(object sender, EventArgs e)
         {
+            Principal formularioPrincipal = new Principal();
+            formularioPrincipal.Show();
+            this.Close();
+        }
 
+        private void lkbVolverIniciar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Inicio_Sesion formularioInicioSesion = new Inicio_Sesion();
+            formularioInicioSesion.Show();
+            this.Close();
         }
     }
 }

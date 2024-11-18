@@ -73,6 +73,16 @@ namespace JaguarGymApp_Preview.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap crearCuentaImagen {
+            get {
+                object obj = ResourceManager.GetObject("crearCuentaImagen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap deporte {
             get {
                 object obj = ResourceManager.GetObject("deporte", resourceCulture);

@@ -171,6 +171,7 @@
     <Content Include="ReadMePng\Options.png" />
     <Content Include="ReadMePng\类库上右键.png" />
     <Content Include="Recursos\Codigo_de_barras_Horizontal.png" />
+    <Content Include="Recursos\crearCuentaImagen.png" />
     <Content Include="Recursos\deporte.png" />
     <Content Include="Recursos\Iniciar_Sesion.png" />
     <Content Include="Recursos\Jaguares_UAM.png" />
