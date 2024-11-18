@@ -1,9 +1,12 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using JaguarGymApp_Preview.Formularios;
 using static estadisticasForm.EstructuraModelo;
+using static estadisticasForm.PoblarModelo;
 
 namespace estadisticasForm
 {

@@ -72,6 +72,7 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Estructuras\EstructuraModelo.cs" />
     <Compile Include="Estructuras\Usuario.cs" />
     <Compile Include="Formularios\Agregar_Miembros.cs">
       <SubType>Form</SubType>
@@ -90,6 +91,12 @@
     </Compile>
     <Compile Include="Formularios\Escanea_tu_cedula_o_CIF.Designer.cs">
       <DependentUpon>Escanea_tu_cedula_o_CIF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Recuperar_Credenciales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Recuperar_Credenciales.Designer.cs">
+      <DependentUpon>Recuperar_Credenciales.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Mostrar_Estadistica.cs">
       <SubType>Form</SubType>
@@ -196,6 +203,9 @@
     <EmbeddedResource Include="Formularios\Mostrar_Estadistica.resx">
       <DependentUpon>Mostrar_Estadistica.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Recuperar_Credenciales.resx">
+      <DependentUpon>Recuperar_Credenciales.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Usuario_autorizado_gerente.resx">
       <DependentUpon>Usuario_autorizado_gerente.cs</DependentUpon>
     </EmbeddedResource>
@@ -247,6 +257,7 @@
     <Content Include="Recursos\Animacion_Reloj.gif" />
     <Content Include="Recursos\Check_icon.png" />
     <Content Include="Recursos\Codigo_de_barras_Horizontal.png" />
+    <None Include="Recursos\correo.gif" />
     <Content Include="Recursos\crearCuentaImagen.png" />
     <Content Include="Recursos\deporte.png" />
     <Content Include="Recursos\Iniciar_Sesion.png" />

@@ -1,4 +1,5 @@
-﻿using LiveCharts;
+﻿
+using LiveCharts;
 using LiveCharts.Wpf;
 using LiveCharts.WinForms;
 using System;
@@ -8,9 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using static estadisticasForm.EstructuraModelo;
 using static estadisticasForm.PoblarModelo;
-
-
- 
 
 namespace estadisticasForm
 {

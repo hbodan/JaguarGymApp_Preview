@@ -144,7 +144,7 @@
             this.MaximumSize = new System.Drawing.Size(1080, 720);
             this.MinimumSize = new System.Drawing.Size(1080, 720);
             this.Name = "Mostrar_Estadistica";
-            this.Text = "mostrarEstadística";
+            this.Text = "Mostrar Estadísticas";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
