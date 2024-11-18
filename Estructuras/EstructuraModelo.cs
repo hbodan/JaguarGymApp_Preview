@@ -17,6 +17,17 @@ namespace estadisticasForm
             public decimal Monto { get; set; }
             public string Observacion { get; set; }
             public int IdMiembro { get; set; }
+
+            public Pago(int idPago, string idTransaccion, DateTime fechaRealizacion, string descripcion, decimal monto, string observacion, int idMiembro)
+            {
+                IdPago = idPago;
+                IdTransaccion = idTransaccion;
+                FechaRealizacion = fechaRealizacion;
+                Descripcion = descripcion;
+                Monto = monto;
+                Observacion = observacion;
+                IdMiembro = idMiembro;
+            }
         }
 
         public class Miembro
