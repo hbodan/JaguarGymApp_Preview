@@ -163,9 +163,29 @@ namespace JaguarGymApp_Preview.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pistola_de_escaner_hover1 {
+            get {
+                object obj = ResourceManager.GetObject("pistola-de-escaner-hover1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pistola_de_escaner1 {
             get {
                 object obj = ResourceManager.GetObject("pistola-de-escaner1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pistola_de_escaner2 {
+            get {
+                object obj = ResourceManager.GetObject("pistola-de-escaner2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
