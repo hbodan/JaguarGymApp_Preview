@@ -113,6 +113,16 @@ namespace JaguarGymApp_Preview.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logo_redondo {
+            get {
+                object obj = ResourceManager.GetObject("Logo_redondo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Mascota {
             get {
                 object obj = ResourceManager.GetObject("Mascota", resourceCulture);

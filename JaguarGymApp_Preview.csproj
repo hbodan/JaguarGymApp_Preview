@@ -73,6 +73,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Estructuras\Usuario.cs" />
+    <Compile Include="Formularios\Agregar_Miembros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Agregar_Miembros.Designer.cs">
+      <DependentUpon>Agregar_Miembros.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Crear_Cuenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,12 @@
     <Compile Include="Formularios\Inicio_Sesion.Designer.cs">
       <DependentUpon>Inicio_Sesion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Miembros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Miembros.Designer.cs">
+      <DependentUpon>Miembros.cs</DependentUpon>
+    </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +117,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Agregar_Miembros.resx">
+      <DependentUpon>Agregar_Miembros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Crear_Cuenta.resx">
       <DependentUpon>Crear_Cuenta.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Inicio_Sesion.resx">
       <DependentUpon>Inicio_Sesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Miembros.resx">
+      <DependentUpon>Miembros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
@@ -157,6 +175,7 @@
     <Content Include="Recursos\Iniciar_Sesion.png" />
     <Content Include="Recursos\Jaguares_UAM.png" />
     <Content Include="Recursos\Logo_deportes.png" />
+    <None Include="Recursos\Logo_redondo.png" />
     <Content Include="Recursos\Mascota.png" />
     <Content Include="Recursos\ojo.png" />
     <Content Include="Recursos\onda-de-mano.png" />
