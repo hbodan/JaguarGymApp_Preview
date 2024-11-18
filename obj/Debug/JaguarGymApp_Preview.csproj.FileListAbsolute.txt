@@ -72,3 +72,4 @@ C:\Users\hebod\source\repos\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.
 C:\Users\hebod\source\repos\JaguarGymApp_Preview\obj\Debug\JaguarGy.A30E3056.Up2Date
 C:\Users\hebod\source\repos\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.exe
 C:\Users\hebod\source\repos\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.pdb
+C:\Users\Andre\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Escanea_tu_cedula_o_CIF.resources
