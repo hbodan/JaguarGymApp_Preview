@@ -171,17 +171,24 @@
     <Content Include="ReadMePng\Options.png" />
     <Content Include="ReadMePng\类库上右键.png" />
     <Content Include="Recursos\Codigo_de_barras_Horizontal.png" />
+    <None Include="Recursos\configuracion.png" />
+    <None Include="Recursos\configuracion hover.png" />
     <Content Include="Recursos\deporte.png" />
+    <None Include="Recursos\estadisticasBoton.png" />
     <Content Include="Recursos\Iniciar_Sesion.png" />
     <Content Include="Recursos\Jaguares_UAM.png" />
     <Content Include="Recursos\Logo_deportes.png" />
     <Content Include="Recursos\Logo_redondo.png" />
     <Content Include="Recursos\Mascota.png" />
+    <None Include="Recursos\miembrosBoton.png" />
     <Content Include="Recursos\ojo.png" />
     <Content Include="Recursos\onda-de-mano.png" />
+    <None Include="Recursos\pagoBoton.png" />
     <Content Include="Recursos\pistola-de-escaner-hover.png" />
+    <None Include="Recursos\pistola-de-escaner-negra.png" />
     <Content Include="Recursos\pistola-de-escaner.png" />
     <Content Include="Recursos\Recursos.txt" />
+    <None Include="Recursos\uamLogoBlancoNoFondo.png" />
     <Content Include="Recursos\uam_edificio_home.jpg" />
     <Content Include="Recursos\uam_internacional_portada.jpg" />
   </ItemGroup>

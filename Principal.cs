@@ -7,17 +7,54 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Guna.UI2.WinForms;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 namespace JaguarGymApp_Preview
 {
-    public partial class Principal : Form
+    public partial class Principal : MaterialForm
     {
         public Principal()
         {
+            this.Resize += new System.EventHandler(this.Principal_Resize);
             InitializeComponent();
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.Teal500, Primary.Teal700, Primary.Teal300, Accent.LightBlue200, TextShade.WHITE);
+            this.StartPosition = FormStartPosition.CenterScreen;
+
+        }
+        private void Principal_Resize(object sender, EventArgs e)
+        {
+            this.Size = new System.Drawing.Size(1080, 720); // Mantener el tamaño de la ventana fijo
         }
 
         private void Principal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2GroupBox1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void guna2CustomGradientPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2ImageButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ImageButton3_Click(object sender, EventArgs e)
         {
 
         }

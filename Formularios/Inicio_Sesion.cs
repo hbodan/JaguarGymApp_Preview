@@ -44,7 +44,9 @@ namespace JaguarGymApp_Preview.Formularios
 
         private void guna2GradientButton1_Click(object sender, EventArgs e)
         {
-
+            Principal nuevoFormulario = new Principal(); // Cambia a tu formulario
+            this.Hide();
+            nuevoFormulario.Show();
         }
 
         private void linkLb_CrearCuenta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
