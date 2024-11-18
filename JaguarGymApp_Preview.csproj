@@ -91,6 +91,12 @@
     <Compile Include="Formularios\Escanea_tu_cedula_o_CIF.Designer.cs">
       <DependentUpon>Escanea_tu_cedula_o_CIF.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Mostrar_Estadistica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Mostrar_Estadistica.Designer.cs">
+      <DependentUpon>Mostrar_Estadistica.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Ingresar_Pago.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicios\LogicaEstadistica.cs" />
+    <Compile Include="Servicios\PoblarModelo.cs" />
     <EmbeddedResource Include="Formularios\Agregar_Miembros.resx">
       <DependentUpon>Agregar_Miembros.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Miembros.resx">
       <DependentUpon>Miembros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Mostrar_Estadistica.resx">
+      <DependentUpon>Mostrar_Estadistica.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
@@ -186,8 +197,6 @@
     <Content Include="Recursos\uam_edificio_home.jpg" />
     <Content Include="Recursos\uam_internacional_portada.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Servicios\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
