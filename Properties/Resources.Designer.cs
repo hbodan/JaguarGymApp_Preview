@@ -63,6 +63,26 @@ namespace JaguarGymApp_Preview.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Animacion_Reloj {
+            get {
+                object obj = ResourceManager.GetObject("Animacion_Reloj", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Check_icon {
+            get {
+                object obj = ResourceManager.GetObject("Check_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Codigo_de_barras_Horizontal {
             get {
                 object obj = ResourceManager.GetObject("Codigo_de_barras_Horizontal", resourceCulture);
@@ -96,6 +116,16 @@ namespace JaguarGymApp_Preview.Properties {
         internal static System.Drawing.Bitmap Jaguares_UAM {
             get {
                 object obj = ResourceManager.GetObject("Jaguares_UAM", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Jaguares_UAM_redondo {
+            get {
+                object obj = ResourceManager.GetObject("Jaguares_UAM_redondo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,6 +173,36 @@ namespace JaguarGymApp_Preview.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Precaucion_icono_Amarillo {
+            get {
+                object obj = ResourceManager.GetObject("Precaucion_icono_Amarillo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Renovar_subscripcion_icon {
+            get {
+                object obj = ResourceManager.GetObject("Renovar_subscripcion_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Siga_adeltante {
+            get {
+                object obj = ResourceManager.GetObject("Siga_adeltante", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap uam_edificio_home {
             get {
                 object obj = ResourceManager.GetObject("uam_edificio_home", resourceCulture);
@@ -156,6 +216,46 @@ namespace JaguarGymApp_Preview.Properties {
         internal static System.Drawing.Bitmap uam_internacional_portada {
             get {
                 object obj = ResourceManager.GetObject("uam_internacional_portada", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap User_icon {
+            get {
+                object obj = ResourceManager.GetObject("User_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Vencimiento_icon {
+            get {
+                object obj = ResourceManager.GetObject("Vencimiento_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Warning_icon_red {
+            get {
+                object obj = ResourceManager.GetObject("Warning_icon_red", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Warning_icon_red1 {
+            get {
+                object obj = ResourceManager.GetObject("Warning_icon_red1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

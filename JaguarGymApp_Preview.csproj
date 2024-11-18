@@ -85,6 +85,12 @@
     <Compile Include="Formularios\Escanea_tu_cedula_o_CIF.Designer.cs">
       <DependentUpon>Escanea_tu_cedula_o_CIF.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Esperando_por_escaneo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Esperando_por_escaneo.Designer.cs">
+      <DependentUpon>Esperando_por_escaneo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Ingresar_Pago.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,42 @@
     </Compile>
     <Compile Include="Formularios\Inicio_Sesion.Designer.cs">
       <DependentUpon>Inicio_Sesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Usuario_autorizado_gerente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Usuario_autorizado_gerente.Designer.cs">
+      <DependentUpon>Usuario_autorizado_gerente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Usuario_autorizado_usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Usuario_autorizado_usuario.Designer.cs">
+      <DependentUpon>Usuario_autorizado_usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Usuario_con_membresia_vencida_gerente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Usuario_con_membresia_vencida_gerente.Designer.cs">
+      <DependentUpon>Usuario_con_membresia_vencida_gerente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Usuario_con_membresia_vencida_usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Usuario_con_membresia_vencida_usuario.Designer.cs">
+      <DependentUpon>Usuario_con_membresia_vencida_usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Usuario_no_registrado_gerente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Usuario_no_registrado_gerente.Designer.cs">
+      <DependentUpon>Usuario_no_registrado_gerente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Usuario_no_registrado_usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Usuario_no_registrado_usuario.Designer.cs">
+      <DependentUpon>Usuario_no_registrado_usuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
@@ -111,11 +153,32 @@
     <EmbeddedResource Include="Formularios\Escanea_tu_cedula_o_CIF.resx">
       <DependentUpon>Escanea_tu_cedula_o_CIF.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Esperando_por_escaneo.resx">
+      <DependentUpon>Esperando_por_escaneo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Ingresar_Pago.resx">
       <DependentUpon>Ingresar_Pago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Inicio_Sesion.resx">
       <DependentUpon>Inicio_Sesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Usuario_autorizado_gerente.resx">
+      <DependentUpon>Usuario_autorizado_gerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Usuario_autorizado_usuario.resx">
+      <DependentUpon>Usuario_autorizado_usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Usuario_con_membresia_vencida_gerente.resx">
+      <DependentUpon>Usuario_con_membresia_vencida_gerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Usuario_con_membresia_vencida_usuario.resx">
+      <DependentUpon>Usuario_con_membresia_vencida_usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Usuario_no_registrado_gerente.resx">
+      <DependentUpon>Usuario_no_registrado_gerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Usuario_no_registrado_usuario.resx">
+      <DependentUpon>Usuario_no_registrado_usuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
@@ -152,15 +215,24 @@
     <Content Include="ReadMePng\NuPackNugetPackager.png" />
     <Content Include="ReadMePng\Options.png" />
     <Content Include="ReadMePng\类库上右键.png" />
+    <None Include="Recursos\User_icon.png" />
+    <None Include="Recursos\Vencimiento_icon.png" />
+    <None Include="Recursos\Warning_icon_red.png" />
+    <None Include="Recursos\Animacion_Reloj.gif" />
+    <None Include="Recursos\Check_icon.png" />
     <Content Include="Recursos\Codigo_de_barras_Horizontal.png" />
     <Content Include="Recursos\deporte.png" />
     <Content Include="Recursos\Iniciar_Sesion.png" />
     <Content Include="Recursos\Jaguares_UAM.png" />
+    <None Include="Recursos\Jaguares_UAM_redondo.png" />
     <Content Include="Recursos\Logo_deportes.png" />
     <Content Include="Recursos\Mascota.png" />
     <Content Include="Recursos\ojo.png" />
     <Content Include="Recursos\onda-de-mano.png" />
+    <None Include="Recursos\Precaucion_icono_Amarillo.png" />
     <Content Include="Recursos\Recursos.txt" />
+    <None Include="Recursos\Renovar_subscripcion_icon.png" />
+    <None Include="Recursos\Siga_adeltante.gif" />
     <Content Include="Recursos\uam_edificio_home.jpg" />
     <Content Include="Recursos\uam_internacional_portada.jpg" />
   </ItemGroup>
