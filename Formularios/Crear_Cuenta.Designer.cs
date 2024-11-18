@@ -49,10 +49,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(65, 133);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(49, 108);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 39);
+            this.label1.Size = new System.Drawing.Size(124, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Registro";
             // 
@@ -62,9 +61,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(69, 202);
+            this.label2.Location = new System.Drawing.Point(52, 164);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(252, 25);
+            this.label2.Size = new System.Drawing.Size(195, 18);
             this.label2.TabIndex = 21;
             this.label2.Text = "Ingrese sus Nombres";
             // 
@@ -74,9 +74,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(69, 306);
+            this.label3.Location = new System.Drawing.Point(52, 249);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(255, 25);
+            this.label3.Size = new System.Drawing.Size(193, 18);
             this.label3.TabIndex = 22;
             this.label3.Text = "Ingrese sus Apellidos";
             // 
@@ -84,7 +85,7 @@
             // 
             this.txtRegistroNombres.AutoRoundedCorners = true;
             this.txtRegistroNombres.BackColor = System.Drawing.Color.Transparent;
-            this.txtRegistroNombres.BorderRadius = 23;
+            this.txtRegistroNombres.BorderRadius = 18;
             this.txtRegistroNombres.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtRegistroNombres.DefaultText = "";
             this.txtRegistroNombres.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -94,20 +95,20 @@
             this.txtRegistroNombres.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtRegistroNombres.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtRegistroNombres.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRegistroNombres.Location = new System.Drawing.Point(73, 241);
-            this.txtRegistroNombres.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtRegistroNombres.Location = new System.Drawing.Point(55, 196);
+            this.txtRegistroNombres.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtRegistroNombres.Name = "txtRegistroNombres";
             this.txtRegistroNombres.PasswordChar = '*';
             this.txtRegistroNombres.PlaceholderText = "";
             this.txtRegistroNombres.SelectedText = "";
-            this.txtRegistroNombres.Size = new System.Drawing.Size(505, 48);
+            this.txtRegistroNombres.Size = new System.Drawing.Size(379, 39);
             this.txtRegistroNombres.TabIndex = 29;
             // 
             // txtRegistroApellidos
             // 
             this.txtRegistroApellidos.AutoRoundedCorners = true;
             this.txtRegistroApellidos.BackColor = System.Drawing.Color.Transparent;
-            this.txtRegistroApellidos.BorderRadius = 23;
+            this.txtRegistroApellidos.BorderRadius = 18;
             this.txtRegistroApellidos.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtRegistroApellidos.DefaultText = "";
             this.txtRegistroApellidos.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -117,13 +118,13 @@
             this.txtRegistroApellidos.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtRegistroApellidos.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtRegistroApellidos.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRegistroApellidos.Location = new System.Drawing.Point(73, 347);
-            this.txtRegistroApellidos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtRegistroApellidos.Location = new System.Drawing.Point(55, 282);
+            this.txtRegistroApellidos.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtRegistroApellidos.Name = "txtRegistroApellidos";
             this.txtRegistroApellidos.PasswordChar = '*';
             this.txtRegistroApellidos.PlaceholderText = "";
             this.txtRegistroApellidos.SelectedText = "";
-            this.txtRegistroApellidos.Size = new System.Drawing.Size(505, 48);
+            this.txtRegistroApellidos.Size = new System.Drawing.Size(379, 39);
             this.txtRegistroApellidos.TabIndex = 30;
             // 
             // label4
@@ -132,9 +133,10 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(69, 420);
+            this.label4.Location = new System.Drawing.Point(52, 341);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 25);
+            this.label4.Size = new System.Drawing.Size(61, 18);
             this.label4.TabIndex = 31;
             this.label4.Text = "Cargo";
             // 
@@ -142,7 +144,7 @@
             // 
             this.txtRegistroCargo.AutoRoundedCorners = true;
             this.txtRegistroCargo.BackColor = System.Drawing.Color.Transparent;
-            this.txtRegistroCargo.BorderRadius = 23;
+            this.txtRegistroCargo.BorderRadius = 18;
             this.txtRegistroCargo.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtRegistroCargo.DefaultText = "";
             this.txtRegistroCargo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -152,13 +154,13 @@
             this.txtRegistroCargo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtRegistroCargo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtRegistroCargo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRegistroCargo.Location = new System.Drawing.Point(73, 459);
-            this.txtRegistroCargo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtRegistroCargo.Location = new System.Drawing.Point(55, 373);
+            this.txtRegistroCargo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtRegistroCargo.Name = "txtRegistroCargo";
             this.txtRegistroCargo.PasswordChar = '*';
             this.txtRegistroCargo.PlaceholderText = "";
             this.txtRegistroCargo.SelectedText = "";
-            this.txtRegistroCargo.Size = new System.Drawing.Size(505, 48);
+            this.txtRegistroCargo.Size = new System.Drawing.Size(379, 39);
             this.txtRegistroCargo.TabIndex = 32;
             // 
             // label5
@@ -167,9 +169,10 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(69, 543);
+            this.label5.Location = new System.Drawing.Point(52, 441);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(138, 25);
+            this.label5.Size = new System.Drawing.Size(110, 18);
             this.label5.TabIndex = 33;
             this.label5.Text = "Contraseña";
             // 
@@ -186,17 +189,17 @@
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.Image = global::JaguarGymApp_Preview.Properties.Resources.ojo;
-            this.guna2Button1.Location = new System.Drawing.Point(524, 594);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Button1.Location = new System.Drawing.Point(393, 483);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(39, 32);
+            this.guna2Button1.Size = new System.Drawing.Size(29, 26);
             this.guna2Button1.TabIndex = 34;
             // 
             // guna2TextBox2
             // 
             this.guna2TextBox2.AutoRoundedCorners = true;
             this.guna2TextBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox2.BorderRadius = 23;
+            this.guna2TextBox2.BorderRadius = 18;
             this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox2.DefaultText = "";
             this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -206,13 +209,13 @@
             this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Location = new System.Drawing.Point(73, 586);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBox2.Location = new System.Drawing.Point(55, 476);
+            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.guna2TextBox2.Name = "guna2TextBox2";
             this.guna2TextBox2.PasswordChar = '\0';
             this.guna2TextBox2.PlaceholderText = "";
             this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(505, 48);
+            this.guna2TextBox2.Size = new System.Drawing.Size(379, 39);
             this.guna2TextBox2.TabIndex = 35;
             // 
             // label6
@@ -221,9 +224,10 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(69, 672);
+            this.label6.Location = new System.Drawing.Point(52, 546);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(227, 25);
+            this.label6.Size = new System.Drawing.Size(180, 18);
             this.label6.TabIndex = 36;
             this.label6.Text = "Repetir Contraseña";
             // 
@@ -240,17 +244,17 @@
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
             this.guna2Button2.Image = global::JaguarGymApp_Preview.Properties.Resources.ojo;
-            this.guna2Button2.Location = new System.Drawing.Point(524, 719);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Button2.Location = new System.Drawing.Point(393, 584);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(39, 32);
+            this.guna2Button2.Size = new System.Drawing.Size(29, 26);
             this.guna2Button2.TabIndex = 37;
             // 
             // guna2TextBox1
             // 
             this.guna2TextBox1.AutoRoundedCorners = true;
             this.guna2TextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox1.BorderRadius = 23;
+            this.guna2TextBox1.BorderRadius = 18;
             this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox1.DefaultText = "";
             this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -260,20 +264,20 @@
             this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(73, 710);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBox1.Location = new System.Drawing.Point(55, 577);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "";
             this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(505, 48);
+            this.guna2TextBox1.Size = new System.Drawing.Size(379, 39);
             this.guna2TextBox1.TabIndex = 38;
             // 
             // guna2GradientButton1
             // 
             this.guna2GradientButton1.AutoRoundedCorners = true;
             this.guna2GradientButton1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton1.BorderRadius = 23;
+            this.guna2GradientButton1.BorderRadius = 18;
             this.guna2GradientButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -284,19 +288,19 @@
             this.guna2GradientButton1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(168)))), ((int)(((byte)(83)))));
             this.guna2GradientButton1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(364, 802);
-            this.guna2GradientButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2GradientButton1.Location = new System.Drawing.Point(273, 652);
+            this.guna2GradientButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2GradientButton1.Name = "guna2GradientButton1";
-            this.guna2GradientButton1.Size = new System.Drawing.Size(215, 48);
+            this.guna2GradientButton1.Size = new System.Drawing.Size(161, 39);
             this.guna2GradientButton1.TabIndex = 39;
             this.guna2GradientButton1.Text = "Iniciar Sesión";
             this.guna2GradientButton1.Click += new System.EventHandler(this.guna2GradientButton1_Click);
             // 
             // Crear_Cuenta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1440, 886);
+            this.ClientSize = new System.Drawing.Size(1080, 720);
             this.Controls.Add(this.guna2GradientButton1);
             this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.guna2TextBox1);
@@ -311,12 +315,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1440, 886);
-            this.MinimumSize = new System.Drawing.Size(1440, 886);
+            this.MaximumSize = new System.Drawing.Size(1080, 720);
+            this.MinimumSize = new System.Drawing.Size(1080, 720);
             this.Name = "Crear_Cuenta";
-            this.Padding = new System.Windows.Forms.Padding(4, 79, 4, 4);
             this.Text = "Crear Cuenta";
             this.Load += new System.EventHandler(this.Crear_Cuenta_Load);
             this.ResumeLayout(false);

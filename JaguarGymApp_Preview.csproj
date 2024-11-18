@@ -175,12 +175,12 @@
     <Content Include="Recursos\Iniciar_Sesion.png" />
     <Content Include="Recursos\Jaguares_UAM.png" />
     <Content Include="Recursos\Logo_deportes.png" />
-    <None Include="Recursos\Logo_redondo.png" />
+    <Content Include="Recursos\Logo_redondo.png" />
     <Content Include="Recursos\Mascota.png" />
     <Content Include="Recursos\ojo.png" />
     <Content Include="Recursos\onda-de-mano.png" />
-    <None Include="Recursos\pistola-de-escaner.png" />
-    <None Include="Recursos\pistola-de-escaner-hover.png" />
+    <Content Include="Recursos\pistola-de-escaner-hover.png" />
+    <Content Include="Recursos\pistola-de-escaner.png" />
     <Content Include="Recursos\Recursos.txt" />
     <Content Include="Recursos\uam_edificio_home.jpg" />
     <Content Include="Recursos\uam_internacional_portada.jpg" />

@@ -248,15 +248,15 @@ namespace JaguarGymApp_Preview.Formularios
             // 
             this.guna2ImageButton1.BackColor = System.Drawing.Color.Transparent;
             this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.HoverState.Image = global::JaguarGymApp_Preview.Properties.Resources.pistola_de_escaner_hover1;
+            this.guna2ImageButton1.HoverState.Image = global::JaguarGymApp_Preview.Properties.Resources.pistola_de_escaner_hover;
             this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2ImageButton1.Image = global::JaguarGymApp_Preview.Properties.Resources.pistola_de_escaner2;
+            this.guna2ImageButton1.Image = global::JaguarGymApp_Preview.Properties.Resources.pistola_de_escaner;
             this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
             this.guna2ImageButton1.ImageRotate = 0F;
             this.guna2ImageButton1.ImageSize = new System.Drawing.Size(30, 30);
             this.guna2ImageButton1.Location = new System.Drawing.Point(1341, 34);
             this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.Image = global::JaguarGymApp_Preview.Properties.Resources.pistola_de_escaner2;
+            this.guna2ImageButton1.PressedState.Image = global::JaguarGymApp_Preview.Properties.Resources.pistola_de_escaner;
             this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(30, 30);
             this.guna2ImageButton1.Size = new System.Drawing.Size(50, 41);
             this.guna2ImageButton1.TabIndex = 35;
