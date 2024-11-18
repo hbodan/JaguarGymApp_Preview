@@ -99,14 +99,13 @@ namespace JaguarGymApp_Preview.Formularios
             
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void guna2Button1_Click(object sender, EventArgs e)
         {
 
         }
-
         private void linkLb_CrearCuenta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Crear_Cuenta nuevoFormulario = new Crear_Cuenta();
+            Crear_Cuenta nuevoFormulario = new Crear_Cuenta(); // Cambia a tu formulario
             this.Hide();
             nuevoFormulario.Show();
         }

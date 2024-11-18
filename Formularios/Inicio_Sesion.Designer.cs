@@ -1,4 +1,7 @@
-﻿namespace JaguarGymApp_Preview.Formularios
+﻿using System;
+using System.Windows.Forms;
+
+namespace JaguarGymApp_Preview.Formularios
 {
     partial class Inicio_Sesion
     {
@@ -147,7 +150,7 @@
             this.linkLabel1.TabIndex = 25;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Has olvidado tu contraseña?";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+
             // 
             // guna2TextBox1
             // 
@@ -211,6 +214,7 @@
             this.linkLb_CrearCuenta.TabIndex = 31;
             this.linkLb_CrearCuenta.TabStop = true;
             this.linkLb_CrearCuenta.Text = "No tienes una cuenta?";
+
             this.linkLb_CrearCuenta.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLb_CrearCuenta_LinkClicked);
             // 
             // label4
@@ -350,6 +354,8 @@
             this.PerformLayout();
 
         }
+
+
 
         #endregion
         private MaterialSkin.Controls.MaterialDrawer materialDrawer1;
