@@ -44,12 +44,26 @@ namespace JaguarGymApp_Preview.Formularios
 
         private void guna2GradientButton1_Click(object sender, EventArgs e)
         {
-
+            Principal nuevoFormulario = new Principal(); // Cambia a tu formulario
+            this.Hide();
+            nuevoFormulario.Show();
         }
 
         private void linkLb_CrearCuenta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Crear_Cuenta nuevoFormulario = new Crear_Cuenta(); // Cambia a tu formulario
+            this.Hide();
+            nuevoFormulario.Show();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+            Escanea_tu_cedula_o_CIF nuevoFormulario = new Escanea_tu_cedula_o_CIF(); // Cambia a tu formulario
             this.Hide();
             nuevoFormulario.Show();
         }
