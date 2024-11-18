@@ -57,7 +57,7 @@
             this.materialDrawer1.IndicatorWidth = 0;
             this.materialDrawer1.IsOpen = false;
             this.materialDrawer1.Location = new System.Drawing.Point(-188, 80);
-            this.materialDrawer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.materialDrawer1.Margin = new System.Windows.Forms.Padding(2);
             this.materialDrawer1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDrawer1.Name = "materialDrawer1";
             this.materialDrawer1.ShowIconsWhenHidden = false;
@@ -120,7 +120,7 @@
             this.guna2GradientButton1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
             this.guna2GradientButton1.Location = new System.Drawing.Point(603, 548);
-            this.guna2GradientButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2GradientButton1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2GradientButton1.Name = "guna2GradientButton1";
             this.guna2GradientButton1.Size = new System.Drawing.Size(210, 56);
             this.guna2GradientButton1.TabIndex = 24;
@@ -146,7 +146,7 @@
             // 
             this.guna2VSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.guna2VSeparator1.Location = new System.Drawing.Point(488, 67);
-            this.guna2VSeparator1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2VSeparator1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2VSeparator1.Name = "guna2VSeparator1";
             this.guna2VSeparator1.Size = new System.Drawing.Size(67, 648);
             this.guna2VSeparator1.TabIndex = 26;
@@ -165,10 +165,11 @@
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.Image = global::JaguarGymApp_Preview.Properties.Resources.ojo;
             this.guna2Button1.Location = new System.Drawing.Point(941, 458);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(29, 26);
             this.guna2Button1.TabIndex = 23;
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // guna2PictureBox2
             // 
@@ -177,7 +178,7 @@
             this.guna2PictureBox2.Image = global::JaguarGymApp_Preview.Properties.Resources.Logo_deportes;
             this.guna2PictureBox2.ImageRotate = 0F;
             this.guna2PictureBox2.Location = new System.Drawing.Point(603, 150);
-            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.Size = new System.Drawing.Size(379, 89);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -192,7 +193,7 @@
             this.guna2PictureBox1.Image = global::JaguarGymApp_Preview.Properties.Resources.Iniciar_Sesion;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(74, 80);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(382, 464);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -253,7 +254,7 @@
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.LimeGreen;
             this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.MidnightBlue;
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(-2, 64);
-            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(524, 662);
             this.guna2CustomGradientPanel1.TabIndex = 30;
@@ -277,7 +278,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1080, 720);
             this.MinimumSize = new System.Drawing.Size(1080, 720);
