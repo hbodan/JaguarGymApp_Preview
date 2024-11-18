@@ -32,5 +32,12 @@ namespace JaguarGymApp_Preview.Formularios
         {
 
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Inicio_Sesion formularioInicioSesion = new Inicio_Sesion();
+            formularioInicioSesion.Show();
+            this.Close();
+        }
     }
 }

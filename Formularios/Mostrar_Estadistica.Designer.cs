@@ -141,6 +141,7 @@
             this.Controls.Add(this.lbl_pagos);
             this.Controls.Add(this.chart_conceptoPagos);
             this.Controls.Add(this.chart_ingresosMensuales);
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1080, 720);
             this.MinimumSize = new System.Drawing.Size(1080, 720);
             this.Name = "Mostrar_Estadistica";

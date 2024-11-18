@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using estadisticasForm;
 using Guna.UI2.WinForms;
 using JaguarGymApp_Preview.Formularios;
 using MaterialSkin;
@@ -76,6 +77,20 @@ namespace JaguarGymApp_Preview
             Miembros formularioMiembros = new Miembros(); // Cambia a tu formulario
             this.Hide();
             formularioMiembros.Show();
+        }
+
+        private void guna2ImageButton4_Click(object sender, EventArgs e)
+        {
+            Mostrar_Estadistica formularioEstadistica = new Mostrar_Estadistica();
+            formularioEstadistica.Show();
+            this.Close();
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            Mostrar_Estadistica formularioEstadistica = new Mostrar_Estadistica();
+            formularioEstadistica.Show();
+            this.Close();
         }
     }
 }

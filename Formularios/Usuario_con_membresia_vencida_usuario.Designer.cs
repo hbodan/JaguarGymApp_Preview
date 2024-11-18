@@ -29,17 +29,18 @@
         private void InitializeComponent()
         {
             this.pnSuperior = new Guna.UI2.WinForms.Guna2Panel();
-            this.pnMembresiavencidausuario = new Guna.UI2.WinForms.Guna2Panel();
-            this.lbMembresiavencidausuario = new System.Windows.Forms.Label();
-            this.lbMembresiacaducada = new System.Windows.Forms.Label();
-            this.pbRenovarmembresia = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pbLogouam = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pnMembresiavencidausuario = new Guna.UI2.WinForms.Guna2Panel();
+            this.pbRenovarmembresia = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.lbMembresiacaducada = new System.Windows.Forms.Label();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.lbMembresiavencidausuario = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pnSuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogouam)).BeginInit();
             this.pnMembresiavencidausuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbRenovarmembresia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogouam)).BeginInit();
             this.SuspendLayout();
             // 
             // pnSuperior
@@ -50,6 +51,16 @@
             this.pnSuperior.Name = "pnSuperior";
             this.pnSuperior.Size = new System.Drawing.Size(1094, 143);
             this.pnSuperior.TabIndex = 0;
+            // 
+            // pbLogouam
+            // 
+            this.pbLogouam.Image = global::JaguarGymApp_Preview.Properties.Resources.Jaguares_UAM_redondo;
+            this.pbLogouam.ImageRotate = 0F;
+            this.pbLogouam.Location = new System.Drawing.Point(48, 3);
+            this.pbLogouam.Name = "pbLogouam";
+            this.pbLogouam.Size = new System.Drawing.Size(137, 137);
+            this.pbLogouam.TabIndex = 0;
+            this.pbLogouam.TabStop = false;
             // 
             // pnMembresiavencidausuario
             // 
@@ -63,16 +74,15 @@
             this.pnMembresiavencidausuario.Size = new System.Drawing.Size(890, 449);
             this.pnMembresiavencidausuario.TabIndex = 1;
             // 
-            // lbMembresiavencidausuario
+            // pbRenovarmembresia
             // 
-            this.lbMembresiavencidausuario.AutoSize = true;
-            this.lbMembresiavencidausuario.Font = new System.Drawing.Font("Verdana", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMembresiavencidausuario.Location = new System.Drawing.Point(204, 30);
-            this.lbMembresiavencidausuario.Name = "lbMembresiavencidausuario";
-            this.lbMembresiavencidausuario.Size = new System.Drawing.Size(590, 45);
-            this.lbMembresiavencidausuario.TabIndex = 0;
-            this.lbMembresiavencidausuario.Text = "Tu membresía ha caducado";
-            this.lbMembresiavencidausuario.Click += new System.EventHandler(this.lbMembresiavencidausuario_Click);
+            this.pbRenovarmembresia.Image = global::JaguarGymApp_Preview.Properties.Resources.Renovar_subscripcion_icon;
+            this.pbRenovarmembresia.ImageRotate = 0F;
+            this.pbRenovarmembresia.Location = new System.Drawing.Point(300, 131);
+            this.pbRenovarmembresia.Name = "pbRenovarmembresia";
+            this.pbRenovarmembresia.Size = new System.Drawing.Size(304, 304);
+            this.pbRenovarmembresia.TabIndex = 3;
+            this.pbRenovarmembresia.TabStop = false;
             // 
             // lbMembresiacaducada
             // 
@@ -86,16 +96,6 @@
             this.lbMembresiacaducada.Text = "Tu membresía ha caducado. Por favor, renueva tu membresia para continuar disfruta" +
     "ndo del gimnasio";
             // 
-            // pbRenovarmembresia
-            // 
-            this.pbRenovarmembresia.Image = global::JaguarGymApp_Preview.Properties.Resources.Renovar_subscripcion_icon;
-            this.pbRenovarmembresia.ImageRotate = 0F;
-            this.pbRenovarmembresia.Location = new System.Drawing.Point(300, 131);
-            this.pbRenovarmembresia.Name = "pbRenovarmembresia";
-            this.pbRenovarmembresia.Size = new System.Drawing.Size(304, 304);
-            this.pbRenovarmembresia.TabIndex = 3;
-            this.pbRenovarmembresia.TabStop = false;
-            // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.Image = global::JaguarGymApp_Preview.Properties.Resources.Warning_icon_red;
@@ -106,33 +106,49 @@
             this.guna2PictureBox1.TabIndex = 1;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // pbLogouam
+            // lbMembresiavencidausuario
             // 
-            this.pbLogouam.Image = global::JaguarGymApp_Preview.Properties.Resources.Jaguares_UAM_redondo;
-            this.pbLogouam.ImageRotate = 0F;
-            this.pbLogouam.Location = new System.Drawing.Point(48, 3);
-            this.pbLogouam.Name = "pbLogouam";
-            this.pbLogouam.Size = new System.Drawing.Size(137, 137);
-            this.pbLogouam.TabIndex = 0;
-            this.pbLogouam.TabStop = false;
+            this.lbMembresiavencidausuario.AutoSize = true;
+            this.lbMembresiavencidausuario.Font = new System.Drawing.Font("Verdana", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMembresiavencidausuario.Location = new System.Drawing.Point(204, 30);
+            this.lbMembresiavencidausuario.Name = "lbMembresiavencidausuario";
+            this.lbMembresiavencidausuario.Size = new System.Drawing.Size(590, 45);
+            this.lbMembresiavencidausuario.TabIndex = 0;
+            this.lbMembresiavencidausuario.Text = "Tu membresía ha caducado";
+            this.lbMembresiavencidausuario.Click += new System.EventHandler(this.lbMembresiavencidausuario_Click);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Location = new System.Drawing.Point(967, 676);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(114, 23);
+            this.linkLabel1.TabIndex = 2;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Siguiente";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // Usuario_con_membresia_vencida_usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1080, 720);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.pnMembresiavencidausuario);
             this.Controls.Add(this.pnSuperior);
             this.Name = "Usuario_con_membresia_vencida_usuario";
             this.Text = "Usuario con membresia vencida";
             this.Load += new System.EventHandler(this.Usuario_con_membresia_vencida_usuario_Load);
             this.pnSuperior.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogouam)).EndInit();
             this.pnMembresiavencidausuario.ResumeLayout(false);
             this.pnMembresiavencidausuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbRenovarmembresia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogouam)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -145,5 +161,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Label lbMembresiacaducada;
         private Guna.UI2.WinForms.Guna2PictureBox pbRenovarmembresia;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

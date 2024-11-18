@@ -33,5 +33,12 @@ namespace JaguarGymApp_Preview.Formularios
         {
 
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Usuario_autorizado_gerente formularioUsuarioAutorizadoGerente = new Usuario_autorizado_gerente();
+            formularioUsuarioAutorizadoGerente.Show();
+            this.Close();
+        }
     }
 }

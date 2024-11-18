@@ -31,11 +31,12 @@
             this.pnSuperior = new Guna.UI2.WinForms.Guna2Panel();
             this.pbLogouam = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnUsuarionoregistrado = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblUsuarionoregistrado = new System.Windows.Forms.Label();
-            this.lblRecomendarvidaestudiantil = new System.Windows.Forms.Label();
-            this.lbRecomendarvidaestudiantil = new System.Windows.Forms.Label();
-            this.lbRecomendarvidaestudiantil2 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.lbRecomendarvidaestudiantil2 = new System.Windows.Forms.Label();
+            this.lbRecomendarvidaestudiantil = new System.Windows.Forms.Label();
+            this.lblRecomendarvidaestudiantil = new System.Windows.Forms.Label();
+            this.lblUsuarionoregistrado = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pnSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogouam)).BeginInit();
             this.pnUsuarionoregistrado.SuspendLayout();
@@ -74,34 +75,15 @@
             this.pnUsuarionoregistrado.Size = new System.Drawing.Size(916, 396);
             this.pnUsuarionoregistrado.TabIndex = 1;
             // 
-            // lblUsuarionoregistrado
+            // guna2PictureBox1
             // 
-            this.lblUsuarionoregistrado.AutoSize = true;
-            this.lblUsuarionoregistrado.Font = new System.Drawing.Font("Verdana", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuarionoregistrado.Location = new System.Drawing.Point(217, 82);
-            this.lblUsuarionoregistrado.Name = "lblUsuarionoregistrado";
-            this.lblUsuarionoregistrado.Size = new System.Drawing.Size(471, 45);
-            this.lblUsuarionoregistrado.TabIndex = 0;
-            this.lblUsuarionoregistrado.Text = "Usuario no registrado";
-            // 
-            // lblRecomendarvidaestudiantil
-            // 
-            this.lblRecomendarvidaestudiantil.AutoSize = true;
-            this.lblRecomendarvidaestudiantil.Location = new System.Drawing.Point(134, 164);
-            this.lblRecomendarvidaestudiantil.Name = "lblRecomendarvidaestudiantil";
-            this.lblRecomendarvidaestudiantil.Size = new System.Drawing.Size(0, 13);
-            this.lblRecomendarvidaestudiantil.TabIndex = 1;
-            // 
-            // lbRecomendarvidaestudiantil
-            // 
-            this.lbRecomendarvidaestudiantil.AutoSize = true;
-            this.lbRecomendarvidaestudiantil.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRecomendarvidaestudiantil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lbRecomendarvidaestudiantil.Location = new System.Drawing.Point(97, 159);
-            this.lbRecomendarvidaestudiantil.Name = "lbRecomendarvidaestudiantil";
-            this.lbRecomendarvidaestudiantil.Size = new System.Drawing.Size(678, 18);
-            this.lbRecomendarvidaestudiantil.TabIndex = 2;
-            this.lbRecomendarvidaestudiantil.Text = "Este usuario no está registrado en el sistema. Recomendar al cliente ponerse en";
+            this.guna2PictureBox1.Image = global::JaguarGymApp_Preview.Properties.Resources.Precaucion_icono_Amarillo;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(137, 69);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(59, 58);
+            this.guna2PictureBox1.TabIndex = 4;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // lbRecomendarvidaestudiantil2
             // 
@@ -114,21 +96,54 @@
             this.lbRecomendarvidaestudiantil2.TabIndex = 3;
             this.lbRecomendarvidaestudiantil2.Text = " contacto con Vida Estudiantil para obtener más información.";
             // 
-            // guna2PictureBox1
+            // lbRecomendarvidaestudiantil
             // 
-            this.guna2PictureBox1.Image = global::JaguarGymApp_Preview.Properties.Resources.Precaucion_icono_Amarillo;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(137, 69);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(59, 58);
-            this.guna2PictureBox1.TabIndex = 4;
-            this.guna2PictureBox1.TabStop = false;
+            this.lbRecomendarvidaestudiantil.AutoSize = true;
+            this.lbRecomendarvidaestudiantil.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRecomendarvidaestudiantil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lbRecomendarvidaestudiantil.Location = new System.Drawing.Point(97, 159);
+            this.lbRecomendarvidaestudiantil.Name = "lbRecomendarvidaestudiantil";
+            this.lbRecomendarvidaestudiantil.Size = new System.Drawing.Size(678, 18);
+            this.lbRecomendarvidaestudiantil.TabIndex = 2;
+            this.lbRecomendarvidaestudiantil.Text = "Este usuario no está registrado en el sistema. Recomendar al cliente ponerse en";
+            // 
+            // lblRecomendarvidaestudiantil
+            // 
+            this.lblRecomendarvidaestudiantil.AutoSize = true;
+            this.lblRecomendarvidaestudiantil.Location = new System.Drawing.Point(134, 164);
+            this.lblRecomendarvidaestudiantil.Name = "lblRecomendarvidaestudiantil";
+            this.lblRecomendarvidaestudiantil.Size = new System.Drawing.Size(0, 13);
+            this.lblRecomendarvidaestudiantil.TabIndex = 1;
+            // 
+            // lblUsuarionoregistrado
+            // 
+            this.lblUsuarionoregistrado.AutoSize = true;
+            this.lblUsuarionoregistrado.Font = new System.Drawing.Font("Verdana", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuarionoregistrado.Location = new System.Drawing.Point(217, 82);
+            this.lblUsuarionoregistrado.Name = "lblUsuarionoregistrado";
+            this.lblUsuarionoregistrado.Size = new System.Drawing.Size(471, 45);
+            this.lblUsuarionoregistrado.TabIndex = 0;
+            this.lblUsuarionoregistrado.Text = "Usuario no registrado";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Location = new System.Drawing.Point(920, 643);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(114, 23);
+            this.linkLabel1.TabIndex = 2;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Siguiente";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // Usuario_no_registrado_gerente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 681);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.pnUsuarionoregistrado);
             this.Controls.Add(this.pnSuperior);
             this.Name = "Usuario_no_registrado_gerente";
@@ -140,6 +155,7 @@
             this.pnUsuarionoregistrado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -153,5 +169,6 @@
         private System.Windows.Forms.Label lbRecomendarvidaestudiantil2;
         private System.Windows.Forms.Label lbRecomendarvidaestudiantil;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

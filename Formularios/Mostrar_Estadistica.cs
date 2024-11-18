@@ -25,6 +25,16 @@ namespace estadisticasForm
             InitializeComponent();
             logicaEstadistica = new LogicaEstadistica(); // Instanciamos la clase LogicaEstadistica
             CargarDatos();
+            this.Resize += new System.EventHandler(this.Principal_Resize);
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.Teal500, Primary.Teal700, Primary.Teal300, Accent.LightBlue200, TextShade.WHITE);
+            this.StartPosition = FormStartPosition.CenterScreen;
+        }
+
+        private void Principal_Resize(object sender, EventArgs e)
+        {
+            this.Size = new System.Drawing.Size(1080, 720); // Mantener el tamaño de la ventana fijo
+
         }
 
         private void CargarDatos()

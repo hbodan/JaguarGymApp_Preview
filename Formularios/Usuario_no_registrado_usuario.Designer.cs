@@ -29,15 +29,16 @@
         private void InitializeComponent()
         {
             this.pnSuperior = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lbUstednoestaregistrado = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pbLogouam = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbUstednoestaregistrado = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pnSuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogouam)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogouam)).BeginInit();
             this.SuspendLayout();
             // 
             // pnSuperior
@@ -48,6 +49,16 @@
             this.pnSuperior.Name = "pnSuperior";
             this.pnSuperior.Size = new System.Drawing.Size(1110, 147);
             this.pnSuperior.TabIndex = 0;
+            // 
+            // pbLogouam
+            // 
+            this.pbLogouam.Image = global::JaguarGymApp_Preview.Properties.Resources.Jaguares_UAM_redondo;
+            this.pbLogouam.ImageRotate = 0F;
+            this.pbLogouam.Location = new System.Drawing.Point(67, 3);
+            this.pbLogouam.Name = "pbLogouam";
+            this.pbLogouam.Size = new System.Drawing.Size(137, 137);
+            this.pbLogouam.TabIndex = 0;
+            this.pbLogouam.TabStop = false;
             // 
             // guna2Panel1
             // 
@@ -60,15 +71,15 @@
             this.guna2Panel1.Size = new System.Drawing.Size(934, 412);
             this.guna2Panel1.TabIndex = 1;
             // 
-            // lbUstednoestaregistrado
+            // guna2PictureBox1
             // 
-            this.lbUstednoestaregistrado.AutoSize = true;
-            this.lbUstednoestaregistrado.Font = new System.Drawing.Font("Verdana", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUstednoestaregistrado.Location = new System.Drawing.Point(195, 73);
-            this.lbUstednoestaregistrado.Name = "lbUstednoestaregistrado";
-            this.lbUstednoestaregistrado.Size = new System.Drawing.Size(534, 45);
-            this.lbUstednoestaregistrado.TabIndex = 0;
-            this.lbUstednoestaregistrado.Text = "Usted no esta registrado";
+            this.guna2PictureBox1.Image = global::JaguarGymApp_Preview.Properties.Resources.Precaucion_icono_Amarillo;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(130, 60);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(59, 58);
+            this.guna2PictureBox1.TabIndex = 2;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -82,42 +93,47 @@
             this.label1.Text = "Usted no está registrado en el sistema. Por favor, contacte con Vida Estudiantil " +
     "para más información";
             // 
-            // guna2PictureBox1
+            // lbUstednoestaregistrado
             // 
-            this.guna2PictureBox1.Image = global::JaguarGymApp_Preview.Properties.Resources.Precaucion_icono_Amarillo;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(130, 60);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(59, 58);
-            this.guna2PictureBox1.TabIndex = 2;
-            this.guna2PictureBox1.TabStop = false;
+            this.lbUstednoestaregistrado.AutoSize = true;
+            this.lbUstednoestaregistrado.Font = new System.Drawing.Font("Verdana", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUstednoestaregistrado.Location = new System.Drawing.Point(195, 73);
+            this.lbUstednoestaregistrado.Name = "lbUstednoestaregistrado";
+            this.lbUstednoestaregistrado.Size = new System.Drawing.Size(534, 45);
+            this.lbUstednoestaregistrado.TabIndex = 0;
+            this.lbUstednoestaregistrado.Text = "Usted no esta registrado";
             // 
-            // pbLogouam
+            // linkLabel1
             // 
-            this.pbLogouam.Image = global::JaguarGymApp_Preview.Properties.Resources.Jaguares_UAM_redondo;
-            this.pbLogouam.ImageRotate = 0F;
-            this.pbLogouam.Location = new System.Drawing.Point(67, 3);
-            this.pbLogouam.Name = "pbLogouam";
-            this.pbLogouam.Size = new System.Drawing.Size(137, 137);
-            this.pbLogouam.TabIndex = 0;
-            this.pbLogouam.TabStop = false;
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Location = new System.Drawing.Point(805, 645);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(253, 23);
+            this.linkLabel1.TabIndex = 2;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Volver a iniciar Sesion";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // Usuario_no_Registrado_usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 681);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.pnSuperior);
             this.Name = "Usuario_no_Registrado_usuario";
             this.Text = "Usuario no registrado";
             this.Load += new System.EventHandler(this.Usuario_no_Registrado_usuario_Load);
             this.pnSuperior.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogouam)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogouam)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -129,5 +145,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbUstednoestaregistrado;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
