@@ -44,19 +44,19 @@
             this.guna2DataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.guna2ImageButton3 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.guna2ImageButton4 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2CustomGradientPanel5 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2CustomGradientPanel6 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.guna2ImageButton5 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton4 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton3 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
@@ -261,6 +261,26 @@
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(307, 180);
             this.guna2CustomGradientPanel1.TabIndex = 14;
             // 
+            // guna2ImageButton3
+            // 
+            this.guna2ImageButton3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ImageButton3.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2ImageButton3.HoverState.Image = global::JaguarGymApp_Preview.Properties.Resources.miembrosBoton;
+            this.guna2ImageButton3.HoverState.ImageSize = new System.Drawing.Size(140, 140);
+            this.guna2ImageButton3.Image = global::JaguarGymApp_Preview.Properties.Resources.miembrosBoton;
+            this.guna2ImageButton3.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton3.ImageRotate = 0F;
+            this.guna2ImageButton3.ImageSize = new System.Drawing.Size(160, 160);
+            this.guna2ImageButton3.Location = new System.Drawing.Point(79, 2);
+            this.guna2ImageButton3.Name = "guna2ImageButton3";
+            this.guna2ImageButton3.PressedState.Image = global::JaguarGymApp_Preview.Properties.Resources.miembrosBoton;
+            this.guna2ImageButton3.PressedState.ImageSize = new System.Drawing.Size(180, 180);
+            this.guna2ImageButton3.Size = new System.Drawing.Size(152, 143);
+            this.guna2ImageButton3.TabIndex = 17;
+            this.guna2ImageButton3.UseTransparentBackground = true;
+            this.guna2ImageButton3.Click += new System.EventHandler(this.guna2ImageButton3_Click);
+            // 
             // guna2Button1
             // 
             this.guna2Button1.Animated = true;
@@ -282,6 +302,7 @@
             this.guna2Button1.TabIndex = 0;
             this.guna2Button1.Text = "Miembros";
             this.guna2Button1.UseTransparentBackground = true;
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // guna2CustomGradientPanel2
             // 
@@ -299,6 +320,26 @@
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(307, 180);
             this.guna2CustomGradientPanel2.TabIndex = 15;
             this.guna2CustomGradientPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2CustomGradientPanel2_Paint);
+            // 
+            // guna2ImageButton2
+            // 
+            this.guna2ImageButton2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ImageButton2.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2ImageButton2.HoverState.Image = global::JaguarGymApp_Preview.Properties.Resources.pagoBoton;
+            this.guna2ImageButton2.HoverState.ImageSize = new System.Drawing.Size(110, 110);
+            this.guna2ImageButton2.Image = global::JaguarGymApp_Preview.Properties.Resources.pagoBoton;
+            this.guna2ImageButton2.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton2.ImageRotate = 0F;
+            this.guna2ImageButton2.ImageSize = new System.Drawing.Size(130, 130);
+            this.guna2ImageButton2.Location = new System.Drawing.Point(83, 3);
+            this.guna2ImageButton2.Name = "guna2ImageButton2";
+            this.guna2ImageButton2.PressedState.Image = global::JaguarGymApp_Preview.Properties.Resources.pagoBoton1;
+            this.guna2ImageButton2.PressedState.ImageSize = new System.Drawing.Size(150, 150);
+            this.guna2ImageButton2.Size = new System.Drawing.Size(140, 140);
+            this.guna2ImageButton2.TabIndex = 1;
+            this.guna2ImageButton2.UseTransparentBackground = true;
+            this.guna2ImageButton2.Click += new System.EventHandler(this.guna2ImageButton2_Click);
             // 
             // guna2Button2
             // 
@@ -337,6 +378,25 @@
             this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
             this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(300, 180);
             this.guna2CustomGradientPanel3.TabIndex = 16;
+            // 
+            // guna2ImageButton4
+            // 
+            this.guna2ImageButton4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ImageButton4.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2ImageButton4.HoverState.Image = global::JaguarGymApp_Preview.Properties.Resources.estadisticasBoton;
+            this.guna2ImageButton4.HoverState.ImageSize = new System.Drawing.Size(160, 160);
+            this.guna2ImageButton4.Image = global::JaguarGymApp_Preview.Properties.Resources.estadisticasBoton;
+            this.guna2ImageButton4.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton4.ImageRotate = 0F;
+            this.guna2ImageButton4.ImageSize = new System.Drawing.Size(180, 180);
+            this.guna2ImageButton4.Location = new System.Drawing.Point(57, 10);
+            this.guna2ImageButton4.Name = "guna2ImageButton4";
+            this.guna2ImageButton4.PressedState.Image = global::JaguarGymApp_Preview.Properties.Resources.estadisticasBoton;
+            this.guna2ImageButton4.PressedState.ImageSize = new System.Drawing.Size(200, 200);
+            this.guna2ImageButton4.Size = new System.Drawing.Size(190, 132);
+            this.guna2ImageButton4.TabIndex = 18;
+            this.guna2ImageButton4.UseTransparentBackground = true;
             // 
             // guna2Button3
             // 
@@ -432,65 +492,7 @@
             this.guna2ImageButton5.Size = new System.Drawing.Size(38, 33);
             this.guna2ImageButton5.TabIndex = 37;
             this.guna2ImageButton5.UseTransparentBackground = true;
-            // 
-            // guna2ImageButton4
-            // 
-            this.guna2ImageButton4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ImageButton4.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ImageButton4.HoverState.Image = global::JaguarGymApp_Preview.Properties.Resources.estadisticasBoton;
-            this.guna2ImageButton4.HoverState.ImageSize = new System.Drawing.Size(160, 160);
-            this.guna2ImageButton4.Image = global::JaguarGymApp_Preview.Properties.Resources.estadisticasBoton;
-            this.guna2ImageButton4.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton4.ImageRotate = 0F;
-            this.guna2ImageButton4.ImageSize = new System.Drawing.Size(180, 180);
-            this.guna2ImageButton4.Location = new System.Drawing.Point(57, 10);
-            this.guna2ImageButton4.Name = "guna2ImageButton4";
-            this.guna2ImageButton4.PressedState.Image = global::JaguarGymApp_Preview.Properties.Resources.estadisticasBoton;
-            this.guna2ImageButton4.PressedState.ImageSize = new System.Drawing.Size(200, 200);
-            this.guna2ImageButton4.Size = new System.Drawing.Size(190, 132);
-            this.guna2ImageButton4.TabIndex = 18;
-            this.guna2ImageButton4.UseTransparentBackground = true;
-            // 
-            // guna2ImageButton2
-            // 
-            this.guna2ImageButton2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ImageButton2.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ImageButton2.HoverState.Image = global::JaguarGymApp_Preview.Properties.Resources.pagoBoton;
-            this.guna2ImageButton2.HoverState.ImageSize = new System.Drawing.Size(110, 110);
-            this.guna2ImageButton2.Image = global::JaguarGymApp_Preview.Properties.Resources.pagoBoton;
-            this.guna2ImageButton2.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton2.ImageRotate = 0F;
-            this.guna2ImageButton2.ImageSize = new System.Drawing.Size(130, 130);
-            this.guna2ImageButton2.Location = new System.Drawing.Point(83, 3);
-            this.guna2ImageButton2.Name = "guna2ImageButton2";
-            this.guna2ImageButton2.PressedState.Image = global::JaguarGymApp_Preview.Properties.Resources.pagoBoton1;
-            this.guna2ImageButton2.PressedState.ImageSize = new System.Drawing.Size(150, 150);
-            this.guna2ImageButton2.Size = new System.Drawing.Size(140, 140);
-            this.guna2ImageButton2.TabIndex = 1;
-            this.guna2ImageButton2.UseTransparentBackground = true;
-            this.guna2ImageButton2.Click += new System.EventHandler(this.guna2ImageButton2_Click);
-            // 
-            // guna2ImageButton3
-            // 
-            this.guna2ImageButton3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ImageButton3.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ImageButton3.HoverState.Image = global::JaguarGymApp_Preview.Properties.Resources.miembrosBoton;
-            this.guna2ImageButton3.HoverState.ImageSize = new System.Drawing.Size(140, 140);
-            this.guna2ImageButton3.Image = global::JaguarGymApp_Preview.Properties.Resources.miembrosBoton;
-            this.guna2ImageButton3.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton3.ImageRotate = 0F;
-            this.guna2ImageButton3.ImageSize = new System.Drawing.Size(160, 160);
-            this.guna2ImageButton3.Location = new System.Drawing.Point(79, 2);
-            this.guna2ImageButton3.Name = "guna2ImageButton3";
-            this.guna2ImageButton3.PressedState.Image = global::JaguarGymApp_Preview.Properties.Resources.miembrosBoton;
-            this.guna2ImageButton3.PressedState.ImageSize = new System.Drawing.Size(180, 180);
-            this.guna2ImageButton3.Size = new System.Drawing.Size(152, 143);
-            this.guna2ImageButton3.TabIndex = 17;
-            this.guna2ImageButton3.UseTransparentBackground = true;
-            this.guna2ImageButton3.Click += new System.EventHandler(this.guna2ImageButton3_Click);
+            this.guna2ImageButton5.Click += new System.EventHandler(this.guna2ImageButton5_Click);
             // 
             // guna2ImageButton1
             // 

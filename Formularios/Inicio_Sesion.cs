@@ -55,5 +55,17 @@ namespace JaguarGymApp_Preview.Formularios
             this.Hide();
             nuevoFormulario.Show();
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+            Escanea_tu_cedula_o_CIF nuevoFormulario = new Escanea_tu_cedula_o_CIF(); // Cambia a tu formulario
+            this.Hide();
+            nuevoFormulario.Show();
+        }
     }
 }

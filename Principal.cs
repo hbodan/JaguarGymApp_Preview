@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
+using JaguarGymApp_Preview.Formularios;
 using MaterialSkin;
 using MaterialSkin.Controls;
 
@@ -56,7 +57,23 @@ namespace JaguarGymApp_Preview
 
         private void guna2ImageButton3_Click(object sender, EventArgs e)
         {
+            Miembros formularioMiembros = new Miembros(); // Cambia a tu formulario
+            this.Hide();
+            formularioMiembros.Show();
+        }
 
+        private void guna2ImageButton5_Click(object sender, EventArgs e)
+        {
+            Escanea_tu_cedula_o_CIF nuevoFormulario = new Escanea_tu_cedula_o_CIF(); // Cambia a tu formulario
+            this.Hide();
+            nuevoFormulario.Show();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            Miembros formularioMiembros = new Miembros(); // Cambia a tu formulario
+            this.Hide();
+            formularioMiembros.Show();
         }
     }
 }
