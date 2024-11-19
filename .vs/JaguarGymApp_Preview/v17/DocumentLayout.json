@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\hebod\\OneDrive\\Escritorio\\JaguarGymApp_Preview\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|c:\\users\\hebod\\onedrive\\escritorio\\jaguargymapp_preview\\estructuras\\estructuramodelo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:estructuras\\estructuramodelo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|c:\\users\\hebod\\onedrive\\escritorio\\jaguargymapp_preview\\formularios\\agregar_miembros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:formularios\\agregar_miembros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
@@ -14,8 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EstructuraModelo.cs",
+              "DocumentMoniker": "C:\\Users\\hebod\\OneDrive\\Escritorio\\JaguarGymApp_Preview\\Estructuras\\EstructuraModelo.cs",
+              "RelativeDocumentMoniker": "Estructuras\\EstructuraModelo.cs",
+              "ToolTip": "C:\\Users\\hebod\\OneDrive\\Escritorio\\JaguarGymApp_Preview\\Estructuras\\EstructuraModelo.cs",
+              "RelativeToolTip": "Estructuras\\EstructuraModelo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T23:26:49.862Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
@@ -54,7 +71,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Agregar_Miembros.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\hebod\\OneDrive\\Escritorio\\JaguarGymApp_Preview\\Formularios\\Agregar_Miembros.cs",
               "RelativeDocumentMoniker": "Formularios\\Agregar_Miembros.cs",
