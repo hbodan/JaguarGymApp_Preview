@@ -44,19 +44,19 @@
             this.guna2DataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2ImageButton3 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.imgBtn_Miembros = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btn_Miembros = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.imgBtn_Pagos = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btn_Pagos = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2ImageButton4 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.imgBtn_Estadistica = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btn_Estadistica = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2CustomGradientPanel5 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2CustomGradientPanel6 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.label6 = new System.Windows.Forms.Label();
-            this.guna2ImageButton5 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.imgBtn_Escaner = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
@@ -250,8 +250,8 @@
             this.guna2CustomGradientPanel1.BorderColor = System.Drawing.Color.Black;
             this.guna2CustomGradientPanel1.BorderRadius = 23;
             this.guna2CustomGradientPanel1.BorderThickness = 1;
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2ImageButton3);
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2Button1);
+            this.guna2CustomGradientPanel1.Controls.Add(this.imgBtn_Miembros);
+            this.guna2CustomGradientPanel1.Controls.Add(this.btn_Miembros);
             this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.LimeGreen;
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.Turquoise;
             this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.Navy;
@@ -261,54 +261,54 @@
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(307, 180);
             this.guna2CustomGradientPanel1.TabIndex = 14;
             // 
-            // guna2ImageButton3
+            // imgBtn_Miembros
             // 
-            this.guna2ImageButton3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ImageButton3.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ImageButton3.HoverState.ImageSize = new System.Drawing.Size(140, 140);
-            this.guna2ImageButton3.Image = global::JaguarGymApp_Preview.Properties.Resources.miembrosBoton;
-            this.guna2ImageButton3.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton3.ImageRotate = 0F;
-            this.guna2ImageButton3.ImageSize = new System.Drawing.Size(160, 160);
-            this.guna2ImageButton3.Location = new System.Drawing.Point(79, 2);
-            this.guna2ImageButton3.Name = "guna2ImageButton3";
-            this.guna2ImageButton3.PressedState.ImageSize = new System.Drawing.Size(180, 180);
-            this.guna2ImageButton3.Size = new System.Drawing.Size(152, 143);
-            this.guna2ImageButton3.TabIndex = 17;
-            this.guna2ImageButton3.UseTransparentBackground = true;
-            this.guna2ImageButton3.Click += new System.EventHandler(this.guna2ImageButton3_Click);
+            this.imgBtn_Miembros.BackColor = System.Drawing.Color.Transparent;
+            this.imgBtn_Miembros.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.imgBtn_Miembros.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgBtn_Miembros.HoverState.ImageSize = new System.Drawing.Size(140, 140);
+            this.imgBtn_Miembros.Image = global::JaguarGymApp_Preview.Properties.Resources.miembrosBoton;
+            this.imgBtn_Miembros.ImageOffset = new System.Drawing.Point(0, 0);
+            this.imgBtn_Miembros.ImageRotate = 0F;
+            this.imgBtn_Miembros.ImageSize = new System.Drawing.Size(160, 160);
+            this.imgBtn_Miembros.Location = new System.Drawing.Point(79, 2);
+            this.imgBtn_Miembros.Name = "imgBtn_Miembros";
+            this.imgBtn_Miembros.PressedState.ImageSize = new System.Drawing.Size(180, 180);
+            this.imgBtn_Miembros.Size = new System.Drawing.Size(152, 143);
+            this.imgBtn_Miembros.TabIndex = 17;
+            this.imgBtn_Miembros.UseTransparentBackground = true;
+            this.imgBtn_Miembros.Click += new System.EventHandler(this.imgBtn_Miembros_Click);
             // 
-            // guna2Button1
+            // btn_Miembros
             // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 15;
-            this.guna2Button1.BorderThickness = 1;
-            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.Location = new System.Drawing.Point(0, 148);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(307, 32);
-            this.guna2Button1.TabIndex = 0;
-            this.guna2Button1.Text = "Miembros";
-            this.guna2Button1.UseTransparentBackground = true;
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.btn_Miembros.Animated = true;
+            this.btn_Miembros.AutoRoundedCorners = true;
+            this.btn_Miembros.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Miembros.BorderRadius = 15;
+            this.btn_Miembros.BorderThickness = 1;
+            this.btn_Miembros.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Miembros.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Miembros.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Miembros.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Miembros.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Miembros.FillColor = System.Drawing.Color.White;
+            this.btn_Miembros.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Miembros.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_Miembros.Location = new System.Drawing.Point(0, 148);
+            this.btn_Miembros.Name = "btn_Miembros";
+            this.btn_Miembros.Size = new System.Drawing.Size(307, 32);
+            this.btn_Miembros.TabIndex = 0;
+            this.btn_Miembros.Text = "Miembros";
+            this.btn_Miembros.UseTransparentBackground = true;
+            this.btn_Miembros.Click += new System.EventHandler(this.btn_Miembros_Click);
             // 
             // guna2CustomGradientPanel2
             // 
             this.guna2CustomGradientPanel2.BorderColor = System.Drawing.Color.Black;
             this.guna2CustomGradientPanel2.BorderRadius = 23;
             this.guna2CustomGradientPanel2.BorderThickness = 1;
-            this.guna2CustomGradientPanel2.Controls.Add(this.guna2ImageButton2);
-            this.guna2CustomGradientPanel2.Controls.Add(this.guna2Button2);
+            this.guna2CustomGradientPanel2.Controls.Add(this.imgBtn_Pagos);
+            this.guna2CustomGradientPanel2.Controls.Add(this.btn_Pagos);
             this.guna2CustomGradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
             this.guna2CustomGradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(188)))), ((int)(((byte)(212)))));
             this.guna2CustomGradientPanel2.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
@@ -319,53 +319,54 @@
             this.guna2CustomGradientPanel2.TabIndex = 15;
             this.guna2CustomGradientPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2CustomGradientPanel2_Paint);
             // 
-            // guna2ImageButton2
+            // imgBtn_Pagos
             // 
-            this.guna2ImageButton2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ImageButton2.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ImageButton2.HoverState.ImageSize = new System.Drawing.Size(110, 110);
-            this.guna2ImageButton2.Image = global::JaguarGymApp_Preview.Properties.Resources.pagoBoton;
-            this.guna2ImageButton2.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton2.ImageRotate = 0F;
-            this.guna2ImageButton2.ImageSize = new System.Drawing.Size(130, 130);
-            this.guna2ImageButton2.Location = new System.Drawing.Point(83, 3);
-            this.guna2ImageButton2.Name = "guna2ImageButton2";
-            this.guna2ImageButton2.PressedState.ImageSize = new System.Drawing.Size(150, 150);
-            this.guna2ImageButton2.Size = new System.Drawing.Size(140, 140);
-            this.guna2ImageButton2.TabIndex = 1;
-            this.guna2ImageButton2.UseTransparentBackground = true;
-            this.guna2ImageButton2.Click += new System.EventHandler(this.guna2ImageButton2_Click);
+            this.imgBtn_Pagos.BackColor = System.Drawing.Color.Transparent;
+            this.imgBtn_Pagos.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.imgBtn_Pagos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgBtn_Pagos.HoverState.ImageSize = new System.Drawing.Size(110, 110);
+            this.imgBtn_Pagos.Image = global::JaguarGymApp_Preview.Properties.Resources.pagoBoton;
+            this.imgBtn_Pagos.ImageOffset = new System.Drawing.Point(0, 0);
+            this.imgBtn_Pagos.ImageRotate = 0F;
+            this.imgBtn_Pagos.ImageSize = new System.Drawing.Size(130, 130);
+            this.imgBtn_Pagos.Location = new System.Drawing.Point(83, 3);
+            this.imgBtn_Pagos.Name = "imgBtn_Pagos";
+            this.imgBtn_Pagos.PressedState.ImageSize = new System.Drawing.Size(150, 150);
+            this.imgBtn_Pagos.Size = new System.Drawing.Size(140, 140);
+            this.imgBtn_Pagos.TabIndex = 1;
+            this.imgBtn_Pagos.UseTransparentBackground = true;
+            this.imgBtn_Pagos.Click += new System.EventHandler(this.imgBtn_Pagos_Click);
             // 
-            // guna2Button2
+            // btn_Pagos
             // 
-            this.guna2Button2.Animated = true;
-            this.guna2Button2.AutoRoundedCorners = true;
-            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderRadius = 15;
-            this.guna2Button2.BorderThickness = 1;
-            this.guna2Button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.White;
-            this.guna2Button2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.Location = new System.Drawing.Point(0, 148);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(307, 32);
-            this.guna2Button2.TabIndex = 0;
-            this.guna2Button2.Text = "Pagos";
-            this.guna2Button2.UseTransparentBackground = true;
+            this.btn_Pagos.Animated = true;
+            this.btn_Pagos.AutoRoundedCorners = true;
+            this.btn_Pagos.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Pagos.BorderRadius = 15;
+            this.btn_Pagos.BorderThickness = 1;
+            this.btn_Pagos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Pagos.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Pagos.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Pagos.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Pagos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Pagos.FillColor = System.Drawing.Color.White;
+            this.btn_Pagos.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Pagos.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_Pagos.Location = new System.Drawing.Point(0, 148);
+            this.btn_Pagos.Name = "btn_Pagos";
+            this.btn_Pagos.Size = new System.Drawing.Size(307, 32);
+            this.btn_Pagos.TabIndex = 0;
+            this.btn_Pagos.Text = "Pagos";
+            this.btn_Pagos.UseTransparentBackground = true;
+            this.btn_Pagos.Click += new System.EventHandler(this.btn_Pagos_Click);
             // 
             // guna2CustomGradientPanel3
             // 
             this.guna2CustomGradientPanel3.BorderColor = System.Drawing.Color.Black;
             this.guna2CustomGradientPanel3.BorderRadius = 23;
             this.guna2CustomGradientPanel3.BorderThickness = 1;
-            this.guna2CustomGradientPanel3.Controls.Add(this.guna2ImageButton4);
-            this.guna2CustomGradientPanel3.Controls.Add(this.guna2Button3);
+            this.guna2CustomGradientPanel3.Controls.Add(this.imgBtn_Estadistica);
+            this.guna2CustomGradientPanel3.Controls.Add(this.btn_Estadistica);
             this.guna2CustomGradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
             this.guna2CustomGradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(39)))), ((int)(((byte)(176)))));
             this.guna2CustomGradientPanel3.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
@@ -375,46 +376,46 @@
             this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(300, 180);
             this.guna2CustomGradientPanel3.TabIndex = 16;
             // 
-            // guna2ImageButton4
+            // imgBtn_Estadistica
             // 
-            this.guna2ImageButton4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ImageButton4.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ImageButton4.HoverState.ImageSize = new System.Drawing.Size(160, 160);
-            this.guna2ImageButton4.Image = global::JaguarGymApp_Preview.Properties.Resources.estadisticasBoton;
-            this.guna2ImageButton4.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton4.ImageRotate = 0F;
-            this.guna2ImageButton4.ImageSize = new System.Drawing.Size(180, 180);
-            this.guna2ImageButton4.Location = new System.Drawing.Point(57, 10);
-            this.guna2ImageButton4.Name = "guna2ImageButton4";
-            this.guna2ImageButton4.PressedState.ImageSize = new System.Drawing.Size(200, 200);
-            this.guna2ImageButton4.Size = new System.Drawing.Size(190, 132);
-            this.guna2ImageButton4.TabIndex = 18;
-            this.guna2ImageButton4.UseTransparentBackground = true;
-            this.guna2ImageButton4.Click += new System.EventHandler(this.guna2ImageButton4_Click);
+            this.imgBtn_Estadistica.BackColor = System.Drawing.Color.Transparent;
+            this.imgBtn_Estadistica.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.imgBtn_Estadistica.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgBtn_Estadistica.HoverState.ImageSize = new System.Drawing.Size(160, 160);
+            this.imgBtn_Estadistica.Image = global::JaguarGymApp_Preview.Properties.Resources.estadisticasBoton;
+            this.imgBtn_Estadistica.ImageOffset = new System.Drawing.Point(0, 0);
+            this.imgBtn_Estadistica.ImageRotate = 0F;
+            this.imgBtn_Estadistica.ImageSize = new System.Drawing.Size(180, 180);
+            this.imgBtn_Estadistica.Location = new System.Drawing.Point(57, 10);
+            this.imgBtn_Estadistica.Name = "imgBtn_Estadistica";
+            this.imgBtn_Estadistica.PressedState.ImageSize = new System.Drawing.Size(200, 200);
+            this.imgBtn_Estadistica.Size = new System.Drawing.Size(190, 132);
+            this.imgBtn_Estadistica.TabIndex = 18;
+            this.imgBtn_Estadistica.UseTransparentBackground = true;
+            this.imgBtn_Estadistica.Click += new System.EventHandler(this.imgBtn_Estadistica_Click);
             // 
-            // guna2Button3
+            // btn_Estadistica
             // 
-            this.guna2Button3.Animated = true;
-            this.guna2Button3.AutoRoundedCorners = true;
-            this.guna2Button3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button3.BorderRadius = 15;
-            this.guna2Button3.BorderThickness = 1;
-            this.guna2Button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.White;
-            this.guna2Button3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button3.ForeColor = System.Drawing.Color.Transparent;
-            this.guna2Button3.Location = new System.Drawing.Point(0, 148);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(300, 32);
-            this.guna2Button3.TabIndex = 0;
-            this.guna2Button3.Text = "Estadisticas";
-            this.guna2Button3.UseTransparentBackground = true;
-            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
+            this.btn_Estadistica.Animated = true;
+            this.btn_Estadistica.AutoRoundedCorners = true;
+            this.btn_Estadistica.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Estadistica.BorderRadius = 15;
+            this.btn_Estadistica.BorderThickness = 1;
+            this.btn_Estadistica.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Estadistica.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Estadistica.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Estadistica.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Estadistica.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Estadistica.FillColor = System.Drawing.Color.White;
+            this.btn_Estadistica.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Estadistica.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_Estadistica.Location = new System.Drawing.Point(0, 148);
+            this.btn_Estadistica.Name = "btn_Estadistica";
+            this.btn_Estadistica.Size = new System.Drawing.Size(300, 32);
+            this.btn_Estadistica.TabIndex = 0;
+            this.btn_Estadistica.Text = "Estadisticas";
+            this.btn_Estadistica.UseTransparentBackground = true;
+            this.btn_Estadistica.Click += new System.EventHandler(this.btn_Estadistica_Click);
             // 
             // guna2CustomGradientPanel4
             // 
@@ -470,25 +471,25 @@
             this.label6.TabIndex = 36;
             this.label6.Text = "Sistema de entrada";
             // 
-            // guna2ImageButton5
+            // imgBtn_Escaner
             // 
-            this.guna2ImageButton5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ImageButton5.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton5.HoverState.Image = global::JaguarGymApp_Preview.Properties.Resources.pistola_de_escaner_hover;
-            this.guna2ImageButton5.HoverState.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2ImageButton5.Image = global::JaguarGymApp_Preview.Properties.Resources.pistola_de_escaner_hover;
-            this.guna2ImageButton5.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton5.ImageRotate = 0F;
-            this.guna2ImageButton5.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2ImageButton5.Location = new System.Drawing.Point(991, 80);
-            this.guna2ImageButton5.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2ImageButton5.Name = "guna2ImageButton5";
-            this.guna2ImageButton5.PressedState.Image = global::JaguarGymApp_Preview.Properties.Resources.pistola_de_escaner_hover;
-            this.guna2ImageButton5.PressedState.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2ImageButton5.Size = new System.Drawing.Size(38, 33);
-            this.guna2ImageButton5.TabIndex = 37;
-            this.guna2ImageButton5.UseTransparentBackground = true;
-            this.guna2ImageButton5.Click += new System.EventHandler(this.guna2ImageButton5_Click);
+            this.imgBtn_Escaner.BackColor = System.Drawing.Color.Transparent;
+            this.imgBtn_Escaner.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.imgBtn_Escaner.HoverState.Image = global::JaguarGymApp_Preview.Properties.Resources.pistola_de_escaner_hover;
+            this.imgBtn_Escaner.HoverState.ImageSize = new System.Drawing.Size(30, 30);
+            this.imgBtn_Escaner.Image = global::JaguarGymApp_Preview.Properties.Resources.pistola_de_escaner_hover;
+            this.imgBtn_Escaner.ImageOffset = new System.Drawing.Point(0, 0);
+            this.imgBtn_Escaner.ImageRotate = 0F;
+            this.imgBtn_Escaner.ImageSize = new System.Drawing.Size(30, 30);
+            this.imgBtn_Escaner.Location = new System.Drawing.Point(991, 80);
+            this.imgBtn_Escaner.Margin = new System.Windows.Forms.Padding(2);
+            this.imgBtn_Escaner.Name = "imgBtn_Escaner";
+            this.imgBtn_Escaner.PressedState.Image = global::JaguarGymApp_Preview.Properties.Resources.pistola_de_escaner_hover;
+            this.imgBtn_Escaner.PressedState.ImageSize = new System.Drawing.Size(30, 30);
+            this.imgBtn_Escaner.Size = new System.Drawing.Size(38, 33);
+            this.imgBtn_Escaner.TabIndex = 37;
+            this.imgBtn_Escaner.UseTransparentBackground = true;
+            this.imgBtn_Escaner.Click += new System.EventHandler(this.imgBtn_Escanear_Click);
             // 
             // guna2ImageButton1
             // 
@@ -526,7 +527,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1080, 720);
-            this.Controls.Add(this.guna2ImageButton5);
+            this.Controls.Add(this.imgBtn_Escaner);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.guna2CustomGradientPanel6);
             this.Controls.Add(this.guna2CustomGradientPanel5);
@@ -576,18 +577,18 @@
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView2;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btn_Miembros;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button btn_Pagos;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton3;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton4;
+        private Guna.UI2.WinForms.Guna2Button btn_Estadistica;
+        private Guna.UI2.WinForms.Guna2ImageButton imgBtn_Pagos;
+        private Guna.UI2.WinForms.Guna2ImageButton imgBtn_Miembros;
+        private Guna.UI2.WinForms.Guna2ImageButton imgBtn_Estadistica;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel4;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel5;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel6;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton5;
+        private Guna.UI2.WinForms.Guna2ImageButton imgBtn_Escaner;
         private System.Windows.Forms.Label label6;
     }
 }

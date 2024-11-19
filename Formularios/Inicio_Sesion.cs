@@ -41,8 +41,7 @@ namespace JaguarGymApp_Preview.Formularios
         {
 
         }
-
-        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        private void btn_IniciarSesion_Click(object sender, EventArgs e)
         {
             Principal nuevoFormulario = new Principal(); // Cambia a tu formulario
             this.Hide();
@@ -55,19 +54,35 @@ namespace JaguarGymApp_Preview.Formularios
             this.Hide();
             nuevoFormulario.Show();
         }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkLb_RecuperarCredenciales_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Recuperar_Credenciales formularioRecuperar = new Recuperar_Credenciales();
             this.Hide();
             formularioRecuperar.Show();
         }
 
-        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        private void imgbtn_Escaner_Click(object sender, EventArgs e)
         {
             Escanea_tu_cedula_o_CIF nuevoFormulario = new Escanea_tu_cedula_o_CIF(); // Cambia a tu formulario
             this.Hide();
             nuevoFormulario.Show();
         }
+
+        private void btn_MostrarPassword_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void btn_MostrarPassword_MouseDown(object sender, MouseEventArgs e)
+        {
+            // Mostrar la contraseña
+            txtBox_IngresarPassword.PasswordChar = '\0';
+        }
+
+        private void btn_MostrarPassword_MouseUp(object sender, MouseEventArgs e)
+        {
+            // Ocultar la contraseña nuevamente
+            txtBox_IngresarPassword.PasswordChar = '*';
+        }
+
     }
 }
