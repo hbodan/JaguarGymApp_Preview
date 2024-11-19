@@ -1,4 +1,5 @@
-﻿using JaguarGymApp_Preview.Formularios;
+﻿using estadisticasForm;
+using JaguarGymApp_Preview.Formularios;
 using System;
 using System.Windows.Forms;
 

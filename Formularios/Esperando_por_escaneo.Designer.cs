@@ -34,6 +34,7 @@
             this.lblEsperealusuario = new System.Windows.Forms.Label();
             this.lblEsperandoescaneo = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pnpanelsuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogouam)).BeginInit();
             this.PnEsperandoescaner.SuspendLayout();
@@ -62,6 +63,7 @@
             // PnEsperandoescaner
             // 
             this.PnEsperandoescaner.BackColor = System.Drawing.Color.White;
+            this.PnEsperandoescaner.Controls.Add(this.linkLabel1);
             this.PnEsperandoescaner.Controls.Add(this.lblEsperealusuario);
             this.PnEsperandoescaner.Controls.Add(this.lblEsperandoescaneo);
             this.PnEsperandoescaner.Controls.Add(this.guna2PictureBox1);
@@ -106,6 +108,19 @@
             this.guna2PictureBox1.UseTransparentBackground = true;
             this.guna2PictureBox1.UseWaitCursor = true;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Location = new System.Drawing.Point(760, 465);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(114, 23);
+            this.linkLabel1.TabIndex = 3;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Siguiente";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // Esperando_por_escaneo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -132,5 +147,6 @@
         private System.Windows.Forms.Label lblEsperandoescaneo;
         private System.Windows.Forms.Label lblEsperealusuario;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

@@ -130,3 +130,12 @@ C:\Users\hebod\OneDrive\Escritorio\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_P
 C:\Users\hebod\OneDrive\Escritorio\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Usuario_con_membresia_vencida_usuario.resources
 C:\Users\hebod\OneDrive\Escritorio\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Usuario_no_registrado_gerente.resources
 C:\Users\hebod\OneDrive\Escritorio\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Usuario_no_Registrado_usuario.resources
+C:\Users\Andre\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Esperando_por_escaneo.resources
+C:\Users\Andre\Desktop\JaguarGymApp_Preview\obj\Debug\estadisticasForm.Mostrar_Estadistica.resources
+C:\Users\Andre\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Recuperar_Credenciales.resources
+C:\Users\Andre\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Usuario_autorizado_gerente.resources
+C:\Users\Andre\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Usuario_autorizado_usuario.resources
+C:\Users\Andre\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Usuario_con_membresia_vencida_gerente.resources
+C:\Users\Andre\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Usuario_con_membresia_vencida_usuario.resources
+C:\Users\Andre\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Usuario_no_registrado_gerente.resources
+C:\Users\Andre\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Usuario_no_Registrado_usuario.resources

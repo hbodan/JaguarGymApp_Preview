@@ -39,5 +39,12 @@ namespace JaguarGymApp_Preview.Formularios
         {
 
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Usuario_con_membresia_vencida_usuario formularioUsuarioMembresiaVencida = new Usuario_con_membresia_vencida_usuario();
+            formularioUsuarioMembresiaVencida.Show();
+            this.Close();
+        }
     }
 }

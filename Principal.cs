@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using estadisticasForm;
 using Guna.UI2.WinForms;
 using JaguarGymApp_Preview.Formularios;
 using MaterialSkin;
@@ -51,31 +52,44 @@ namespace JaguarGymApp_Preview
         {
 
         }
-
-        private void guna2ImageButton2_Click(object sender, EventArgs e)
+        private void imgBtn_Pagos_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void guna2ImageButton3_Click(object sender, EventArgs e)
+        private void imgBtn_Miembros_Click(object sender, EventArgs e)
         {
             Miembros formularioMiembros = new Miembros(); // Cambia a tu formulario
             this.Hide();
             formularioMiembros.Show();
         }
-
-        private void guna2ImageButton5_Click(object sender, EventArgs e)
+        private void btn_Miembros_Click(object sender, EventArgs e)
+        {
+            Miembros formularioMiembros = new Miembros(); // Cambia a tu formulario
+            this.Hide();
+            formularioMiembros.Show();
+        }
+        private void imgBtn_Estadistica_Click(object sender, EventArgs e)
+        {
+            Mostrar_Estadistica formularioEstadistica = new Mostrar_Estadistica();
+            formularioEstadistica.Show();
+            this.Close();
+        }
+        private void btn_Estadistica_Click(object sender, EventArgs e)
+        {
+            Mostrar_Estadistica formularioEstadistica = new Mostrar_Estadistica();
+            formularioEstadistica.Show();
+            this.Close();
+        }
+        private void imgBtn_Escanear_Click(object sender, EventArgs e)
         {
             Escanea_tu_cedula_o_CIF nuevoFormulario = new Escanea_tu_cedula_o_CIF(); // Cambia a tu formulario
             this.Hide();
             nuevoFormulario.Show();
         }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void btn_Pagos_Click(object sender, EventArgs e)
         {
-            Miembros formularioMiembros = new Miembros(); // Cambia a tu formulario
-            this.Hide();
-            formularioMiembros.Show();
+
         }
     }
 }

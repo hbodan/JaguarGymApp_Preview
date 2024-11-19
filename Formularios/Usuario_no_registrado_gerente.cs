@@ -33,5 +33,12 @@ namespace JaguarGymApp_Preview.Formularios
         {
 
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Usuario_no_Registrado_usuario formularioUsuarioNoRegistrado = new Usuario_no_Registrado_usuario();
+            formularioUsuarioNoRegistrado.Show();
+            this.Close();
+        }
     }
 }

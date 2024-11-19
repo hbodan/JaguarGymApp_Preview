@@ -270,6 +270,7 @@
     <Content Include="Recursos\Logo_redondo.png" />
     <Content Include="Recursos\Mascota.png" />
     <Content Include="Recursos\miembrosBoton.png" />
+    <None Include="Recursos\ojo-cruzado.png" />
     <Content Include="Recursos\ojo.png" />
     <Content Include="Recursos\onda-de-mano.png" />
     <Content Include="Recursos\pagoBoton.png" />

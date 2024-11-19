@@ -33,7 +33,16 @@ namespace JaguarGymApp_Preview.Formularios
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+            Esperando_por_escaneo formularioEscaneo = new Esperando_por_escaneo();
+            formularioEscaneo.Show();
+            this.Close();
+        }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Inicio_Sesion formularioInicioSesion = new Inicio_Sesion();
+            formularioInicioSesion.Show();
+            this.Close();
         }
     }
 
