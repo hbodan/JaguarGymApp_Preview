@@ -40,6 +40,7 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.LinkAtras = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMiembros)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -69,7 +70,7 @@
             this.dgvMiembros.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvMiembros.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvMiembros.Location = new System.Drawing.Point(12, 14);
-            this.dgvMiembros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvMiembros.Margin = new System.Windows.Forms.Padding(2);
             this.dgvMiembros.Name = "dgvMiembros";
             this.dgvMiembros.RowHeadersVisible = false;
             this.dgvMiembros.RowHeadersWidth = 51;
@@ -132,7 +133,7 @@
             this.btnBuscar.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Location = new System.Drawing.Point(342, 131);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(135, 37);
             this.btnBuscar.TabIndex = 3;
@@ -151,7 +152,7 @@
             this.btnAgregar.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.Location = new System.Drawing.Point(50, 542);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(135, 37);
             this.btnAgregar.TabIndex = 4;
@@ -170,7 +171,7 @@
             this.btnVerMiembros.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerMiembros.ForeColor = System.Drawing.Color.White;
             this.btnVerMiembros.Location = new System.Drawing.Point(202, 542);
-            this.btnVerMiembros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVerMiembros.Margin = new System.Windows.Forms.Padding(2);
             this.btnVerMiembros.Name = "btnVerMiembros";
             this.btnVerMiembros.Size = new System.Drawing.Size(135, 37);
             this.btnVerMiembros.TabIndex = 5;
@@ -218,11 +219,25 @@
             this.guna2Panel1.Size = new System.Drawing.Size(776, 364);
             this.guna2Panel1.TabIndex = 8;
             // 
+            // LinkAtras
+            // 
+            this.LinkAtras.AutoSize = true;
+            this.LinkAtras.LinkColor = System.Drawing.Color.Silver;
+            this.LinkAtras.Location = new System.Drawing.Point(360, 566);
+            this.LinkAtras.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LinkAtras.Name = "LinkAtras";
+            this.LinkAtras.Size = new System.Drawing.Size(93, 13);
+            this.LinkAtras.TabIndex = 10;
+            this.LinkAtras.TabStop = true;
+            this.LinkAtras.Text = "Volver hacia Atras";
+            this.LinkAtras.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkAtras_LinkClicked);
+            // 
             // Miembros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1080, 720);
+            this.Controls.Add(this.LinkAtras);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.statusStrip1);
@@ -230,7 +245,7 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1080, 720);
             this.MinimumSize = new System.Drawing.Size(810, 585);
@@ -258,5 +273,6 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private System.Windows.Forms.LinkLabel LinkAtras;
     }
 }

@@ -38,6 +38,7 @@
             this.chart_membresiasActivasExpiradas = new LiveCharts.WinForms.PieChart();
             this.chart_flujoPorDia = new LiveCharts.WinForms.CartesianChart();
             this.chart_internosExternos = new LiveCharts.WinForms.PieChart();
+            this.LinkAtras = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // chart_ingresosMensuales
@@ -126,11 +127,25 @@
             this.chart_internosExternos.TabIndex = 10;
             this.chart_internosExternos.Text = "pieChart1";
             // 
+            // LinkAtras
+            // 
+            this.LinkAtras.AutoSize = true;
+            this.LinkAtras.LinkColor = System.Drawing.Color.Silver;
+            this.LinkAtras.Location = new System.Drawing.Point(30, 693);
+            this.LinkAtras.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LinkAtras.Name = "LinkAtras";
+            this.LinkAtras.Size = new System.Drawing.Size(93, 13);
+            this.LinkAtras.TabIndex = 11;
+            this.LinkAtras.TabStop = true;
+            this.LinkAtras.Text = "Volver hacia Atras";
+            this.LinkAtras.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkAtras_LinkClicked);
+            // 
             // Mostrar_Estadistica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1080, 720);
+            this.Controls.Add(this.LinkAtras);
             this.Controls.Add(this.chart_internosExternos);
             this.Controls.Add(this.chart_flujoPorDia);
             this.Controls.Add(this.chart_membresiasActivasExpiradas);
@@ -164,5 +179,6 @@
         private LiveCharts.WinForms.PieChart chart_membresiasActivasExpiradas;
         private LiveCharts.WinForms.CartesianChart chart_flujoPorDia;
         private LiveCharts.WinForms.PieChart chart_internosExternos;
+        private System.Windows.Forms.LinkLabel LinkAtras;
     }
 }

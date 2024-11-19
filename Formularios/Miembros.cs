@@ -84,5 +84,12 @@ namespace JaguarGymApp_Preview.Formularios
             dgvMiembros.DataSource = resultados;
 
         }
+
+        private void LinkAtras_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Principal formularioPrincipal = new Principal();
+            formularioPrincipal.Show();
+            this.Hide();
+        }
     }
 }

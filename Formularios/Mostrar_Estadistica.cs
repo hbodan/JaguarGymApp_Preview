@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using static estadisticasForm.LogicaEstadistica;
 using MaterialSkin;
 using MaterialSkin.Controls;
+using JaguarGymApp_Preview;
 
 
 
@@ -76,6 +77,13 @@ namespace estadisticasForm
         private void chart_flujoPorHora_ChildChanged(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
         {
 
+        }
+
+        private void LinkAtras_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Principal formularioPrincipal = new Principal();
+            formularioPrincipal.Show();
+            this.Hide();
         }
     }
 }
