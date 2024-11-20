@@ -38,9 +38,9 @@ namespace JaguarGymApp_Preview.Formularios
           
             usuarios = new List<Usuario>
             {
-                new Usuario(1, "Juan Pérez", "Ingeniería de Sistemas"),
-                new Usuario(2, "Ana Gómez", "Ingeniería Civil"),
-                new Usuario(3, "Carlos Ruiz", "Ingeniería Mecánica")
+                new Usuario(1, "24010892", "Roberto Carlos","Lopez Ramirez","Ingenieria en Sistemas","FIA",true,false),
+                new Usuario(2, "0011010059898J", "Carlos Alberto","Bonilla Mejia","Ingenieria en Sistemas","FIA",true,false),
+                new Usuario(3, "0011203041023H", "Mari Auxiliadora","De Santa","Arquitectura","FIA",true,false)
             };
             Actualizardata();
             ConteoMiembros();
@@ -79,7 +79,7 @@ namespace JaguarGymApp_Preview.Formularios
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             var Buscado = txtBuscar.Text.ToLower();
-            var resultados = usuarios.Where(u => u.Nombre.ToLower().Contains(Buscado)).ToList();
+            var resultados = usuarios.Where(u => u.Nombres.ToLower().Contains(Buscado)).ToList();
             dgvMiembros.DataSource = null;
             dgvMiembros.DataSource = resultados;
 
@@ -91,6 +91,12 @@ namespace JaguarGymApp_Preview.Formularios
             Principal formularioPrincipal = new Principal();
             formularioPrincipal.Show();
             this.Hide();
+        }
+
+        private void dgvMiembros_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dgvMiembros.ReadOnly = true;
+
         }
     }
 }

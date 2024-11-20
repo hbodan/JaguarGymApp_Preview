@@ -41,13 +41,36 @@ namespace JaguarGymApp_Preview.Formularios
         {
 
         }
+        private Usuario CrearUsuario()
+        {
+            if (!int.TryParse(txtId.Text, out int Id))
+                throw new Exception("El campo ID debe ser un número válido.");
+
+            return new Usuario(
+                Id,
+                txtidentificacion.Text,
+                txtNombre.Text,
+                txtApellidos.Text,
+                txtCarrera.Text,
+                txtFacultad.Text,
+                chkInterno.Checked,
+                chkColaborador.Checked
+            );
+        }
+
         private void AgregarMiembro()
         {
-            int NuevoId = int.Parse(txtId.Text);
-            string NuevoNombre = txtNombre.Text;
-            string NuevaCarrera = txtCarrera.Text;
-            miembrosRecibidos.Add(new Usuario(NuevoId, NuevoNombre, NuevaCarrera));
+            try
+            {
+                Usuario nuevoMiembro = CrearUsuario();
+                miembrosRecibidos.Add(nuevoMiembro);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
 
         private void LinkAtras_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -57,9 +80,35 @@ namespace JaguarGymApp_Preview.Formularios
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            AgregarMiembro();
-            formularioAnterior.RecibirDatos(miembrosRecibidos);
-            this.Close();
+            if (ValidacionLlenado())
+            {
+                AgregarMiembro();
+                formularioAnterior.RecibirDatos(miembrosRecibidos);
+                this.Close();
+            }
         }
+
+        private void linkSalir_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            
+        }
+        private bool ValidacionLlenado()
+        {
+            foreach (Control control in this.Controls)
+            {
+                if (control is TextBox)
+                {
+                    if (string.IsNullOrWhiteSpace(control.Text))
+                    {
+                        MessageBox.Show($"El campo {control.Name} no puede estar vacío.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return false;
+                    }
+                }
+            }
+            return true;
+
+        }
+
+
     }
 }

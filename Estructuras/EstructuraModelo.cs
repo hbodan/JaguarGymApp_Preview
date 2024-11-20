@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace estadisticasForm
 {
-    internal class EstructuraModelo
+    public class EstructuraModelo
     {
         public class Pago
         {

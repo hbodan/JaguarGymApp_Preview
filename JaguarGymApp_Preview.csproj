@@ -266,6 +266,9 @@
     <Content Include="Recursos\Iniciar_Sesion.png" />
     <Content Include="Recursos\Jaguares_UAM.png" />
     <Content Include="Recursos\Jaguares_UAM_redondo.png" />
+    <None Include="Recursos\Jaguar_Mamado.png" />
+    <None Include="Recursos\Jaguar_Mamado_Redondo.png" />
+    <None Include="Recursos\Juaguar_Mostroso_UAM.png" />
     <Content Include="Recursos\Logo_deportes.png" />
     <Content Include="Recursos\Logo_redondo.png" />
     <Content Include="Recursos\Mascota.png" />
