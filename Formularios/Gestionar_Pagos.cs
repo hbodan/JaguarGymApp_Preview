@@ -14,10 +14,10 @@ using MaterialSkin.Controls;
 
 namespace JaguarGymApp_Preview.Formularios
 {
-    public partial class Pagos : MaterialForm
+    public partial class Gestion_Pagos : MaterialForm
     {
         List<Pago> pagos;
-        public Pagos()
+        public Gestion_Pagos()
         {
             InitializeComponent();
             this.Resize += new System.EventHandler(this.Principal_Resize);
@@ -118,6 +118,11 @@ namespace JaguarGymApp_Preview.Formularios
             MessageBox.Show("Este es el monto total de todos los pagos registrados.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        
+        private void LinkAtras_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Principal formularioPrincipal = new Principal();
+            formularioPrincipal.Show();
+            this.Hide();
+        }
     }
 }

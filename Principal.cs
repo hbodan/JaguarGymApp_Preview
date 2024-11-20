@@ -54,7 +54,9 @@ namespace JaguarGymApp_Preview
         }
         private void imgBtn_Pagos_Click(object sender, EventArgs e)
         {
-
+            Gestion_Pagos formularioPagos = new Gestion_Pagos();
+            formularioPagos.Show();
+            this.Hide();
         }
 
         private void imgBtn_Miembros_Click(object sender, EventArgs e)
@@ -89,7 +91,9 @@ namespace JaguarGymApp_Preview
         }
         private void btn_Pagos_Click(object sender, EventArgs e)
         {
-
+            Gestion_Pagos formularioPagos = new Gestion_Pagos();
+            formularioPagos.Show();
+            this.Hide();
         }
     }
 }

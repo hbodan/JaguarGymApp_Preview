@@ -20,9 +20,6 @@ namespace JaguarGymApp_Preview.Estructuras
             Carrera = carrera;
         }
 
-        private List<Usuario> usuarios;
-
-
     }
 
 }

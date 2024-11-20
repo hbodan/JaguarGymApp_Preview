@@ -11,6 +11,8 @@ using JaguarGymApp_Preview.Estructuras;
 using JaguarGymApp_Preview.Formularios;
 using MaterialSkin;
 using MaterialSkin.Controls;
+using estadisticasForm;
+
 
 namespace JaguarGymApp_Preview.Formularios
 {
@@ -18,8 +20,9 @@ namespace JaguarGymApp_Preview.Formularios
     {
         // Lista para almacenar los pagos ingresados
         private List<Pago> pagosRecibidos;
-        private Pagos formularioAnterior;
-        public Ingresar_Pago(List<Pago> lista, Pagos formulario)
+        private Gestion_Pagos formularioAnterior;
+
+        public Ingresar_Pago(List<Pago> lista, Gestion_Pagos formulario)
         {
             InitializeComponent();
             this.Resize += new System.EventHandler(this.Principal_Resize);

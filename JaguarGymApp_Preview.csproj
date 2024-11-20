@@ -72,7 +72,10 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Estructuras\EstructuraModelo.cs" />
+    <Compile Include="Estructuras\CambioDeRol.cs" />
+    <Compile Include="Estructuras\Entrada.cs" />
+    <Compile Include="Estructuras\Miembro.cs" />
+    <Compile Include="Estructuras\Pago.cs" />
     <Compile Include="Estructuras\Usuario.cs" />
     <Compile Include="Formularios\Agregar_Miembros.cs">
       <SubType>Form</SubType>
@@ -91,6 +94,12 @@
     </Compile>
     <Compile Include="Formularios\Escanea_tu_cedula_o_CIF.Designer.cs">
       <DependentUpon>Escanea_tu_cedula_o_CIF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Gestionar_Pagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Gestionar_Pagos.Designer.cs">
+      <DependentUpon>Gestionar_Pagos.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Recuperar_Credenciales.cs">
       <SubType>Form</SubType>
@@ -190,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Esperando_por_escaneo.resx">
       <DependentUpon>Esperando_por_escaneo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Gestionar_Pagos.resx">
+      <DependentUpon>Gestionar_Pagos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Ingresar_Pago.resx">
       <DependentUpon>Ingresar_Pago.cs</DependentUpon>

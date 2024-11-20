@@ -87,7 +87,6 @@ namespace JaguarGymApp_Preview.Formularios
 
         private void LinkAtras_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            //Solo pq si
             Principal formularioPrincipal = new Principal();
             formularioPrincipal.Show();
             this.Hide();

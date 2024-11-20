@@ -7,8 +7,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static estadisticasForm.EstructuraModelo;
 using static estadisticasForm.PoblarModelo;
+using JaguarGymApp_Preview.Estructuras;
 
 namespace estadisticasForm
 {
