@@ -143,6 +143,26 @@ namespace JaguarGymApp_Preview.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Jaguar_Mamado {
+            get {
+                object obj = ResourceManager.GetObject("Jaguar_Mamado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Jaguar_Mamado_Redondo {
+            get {
+                object obj = ResourceManager.GetObject("Jaguar_Mamado_Redondo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Jaguares_UAM {
             get {
                 object obj = ResourceManager.GetObject("Jaguares_UAM", resourceCulture);
@@ -156,6 +176,16 @@ namespace JaguarGymApp_Preview.Properties {
         internal static System.Drawing.Bitmap Jaguares_UAM_redondo {
             get {
                 object obj = ResourceManager.GetObject("Jaguares_UAM_redondo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Juaguar_Mostroso_UAM {
+            get {
+                object obj = ResourceManager.GetObject("Juaguar_Mostroso_UAM", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
