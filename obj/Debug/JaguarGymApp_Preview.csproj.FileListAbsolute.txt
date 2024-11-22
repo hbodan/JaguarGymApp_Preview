@@ -177,3 +177,4 @@ C:\Users\Usuario\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.csp
 C:\Users\Usuario\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGy.A30E3056.Up2Date
 C:\Users\Usuario\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.exe
 C:\Users\Usuario\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.pdb
+C:\Users\hebod\OneDrive\Escritorio\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Gestion_Pagos.resources

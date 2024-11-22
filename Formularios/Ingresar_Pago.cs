@@ -53,14 +53,65 @@ namespace JaguarGymApp_Preview.Formularios
         { 
             int idPago = int.Parse(txtIdPago.Text);
             string idTransaccion = txtIdTransaccion.Text;
-            DateTime fechaRealizacion = DateTime.Parse(txtFechaRealizacion.Text);
+            DateTime fechaRealizacion = DateTime.Parse(dtPickerFecha.Text);
             string descripcion = txtDescripcion.Text;
             decimal monto = decimal.Parse(txtMonto.Text);
             string observacion = txtObservacion.Text;
             int idMiembro = int.Parse(txtIdMiembro.Text);
 
-
+            
             pagosRecibidos.Add(new Pago(idPago, idTransaccion, fechaRealizacion, descripcion, monto, observacion, idMiembro));
+
+            /*
+            if (string.IsNullOrWhiteSpace(txtIdPago.Text) || !int.TryParse(txtIdPago.Text, out int idPago))
+            {
+                MessageBox.Show("Por favor, ingresa un ID de pago válido.");
+                return;
+            }
+
+            string idTransaccion = txtIdTransaccion.Text.Trim();
+            if (string.IsNullOrEmpty(idTransaccion))
+            {
+                MessageBox.Show("El ID de transacción no puede estar vacío.");
+                return;
+            }
+
+            if (!DateTime.TryParse(dtPickerFecha.Text, out DateTime fechaRealizacion))
+            {
+                MessageBox.Show("Por favor, selecciona una fecha válida.");
+                return;
+            }
+
+            string descripcion = txtDescripcion.Text.Trim();
+            if (string.IsNullOrEmpty(descripcion))
+            {
+                MessageBox.Show("La descripción no puede estar vacía.");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtMonto.Text) || !decimal.TryParse(txtMonto.Text, out decimal monto) || monto <= 0)
+            {
+                MessageBox.Show("Por favor, ingresa un monto válido mayor a 0.");
+                return;
+            }
+
+            string observacion = txtObservacion.Text.Trim();
+            if (observacion.Length > 500)
+            {
+                MessageBox.Show("La observación no puede exceder los 500 caracteres.");
+                return;
+            }
+
+
+            if (string.IsNullOrWhiteSpace(txtIdMiembro.Text) || !int.TryParse(txtIdMiembro.Text, out int idMiembro))
+            {
+                MessageBox.Show("Por favor, ingresa un ID de miembro válido.");
+                return;
+            }
+
+
+            MessageBox.Show("Datos validados correctamente.");
+            */
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -74,7 +125,6 @@ namespace JaguarGymApp_Preview.Formularios
         {
             txtIdPago.Text = "";
             txtIdTransaccion.Text = "";
-            txtFechaRealizacion.Text = "";
             txtDescripcion.Text = "";
             txtMonto.Text = "";
             txtObservacion.Text = "";

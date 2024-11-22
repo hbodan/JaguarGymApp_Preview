@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Miembros));
             this.dgvMiembros = new Guna.UI2.WinForms.Guna2DataGridView();
             this.txtBuscar = new Guna.UI2.WinForms.Guna2TextBox();
@@ -53,35 +53,36 @@
             this.dgvMiembros.AllowUserToDeleteRows = false;
             this.dgvMiembros.AllowUserToResizeColumns = false;
             this.dgvMiembros.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgvMiembros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvMiembros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMiembros.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMiembros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMiembros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvMiembros.ColumnHeadersHeight = 25;
             this.dgvMiembros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMiembros.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMiembros.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvMiembros.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvMiembros.Location = new System.Drawing.Point(16, 17);
-            this.dgvMiembros.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvMiembros.Location = new System.Drawing.Point(12, 14);
+            this.dgvMiembros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvMiembros.Name = "dgvMiembros";
             this.dgvMiembros.ReadOnly = true;
+            this.dgvMiembros.RowHeadersVisible = false;
             this.dgvMiembros.RowHeadersWidth = 51;
             this.dgvMiembros.RowTemplate.Height = 24;
-            this.dgvMiembros.Size = new System.Drawing.Size(1048, 416);
+            this.dgvMiembros.Size = new System.Drawing.Size(786, 338);
             this.dgvMiembros.TabIndex = 0;
             this.dgvMiembros.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvMiembros.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -109,7 +110,7 @@
             // txtBuscar
             // 
             this.txtBuscar.AutoRoundedCorners = true;
-            this.txtBuscar.BorderRadius = 23;
+            this.txtBuscar.BorderRadius = 18;
             this.txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBuscar.DefaultText = "";
             this.txtBuscar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -119,19 +120,19 @@
             this.txtBuscar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBuscar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBuscar.Location = new System.Drawing.Point(223, 202);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtBuscar.Location = new System.Drawing.Point(167, 164);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.PasswordChar = '\0';
             this.txtBuscar.PlaceholderText = "";
             this.txtBuscar.SelectedText = "";
-            this.txtBuscar.Size = new System.Drawing.Size(383, 48);
+            this.txtBuscar.Size = new System.Drawing.Size(287, 39);
             this.txtBuscar.TabIndex = 1;
             // 
             // btnBuscar
             // 
             this.btnBuscar.AutoRoundedCorners = true;
-            this.btnBuscar.BorderRadius = 22;
+            this.btnBuscar.BorderRadius = 17;
             this.btnBuscar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnBuscar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnBuscar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -139,10 +140,10 @@
             this.btnBuscar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.btnBuscar.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(612, 205);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBuscar.Location = new System.Drawing.Point(459, 167);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(180, 46);
+            this.btnBuscar.Size = new System.Drawing.Size(135, 37);
             this.btnBuscar.TabIndex = 3;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -150,7 +151,7 @@
             // btnAgregar
             // 
             this.btnAgregar.AutoRoundedCorners = true;
-            this.btnAgregar.BorderRadius = 22;
+            this.btnAgregar.BorderRadius = 17;
             this.btnAgregar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnAgregar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnAgregar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -158,10 +159,10 @@
             this.btnAgregar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.btnAgregar.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(224, 770);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAgregar.Location = new System.Drawing.Point(168, 626);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(180, 46);
+            this.btnAgregar.Size = new System.Drawing.Size(135, 37);
             this.btnAgregar.TabIndex = 4;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -169,7 +170,7 @@
             // btnVerMiembros
             // 
             this.btnVerMiembros.AutoRoundedCorners = true;
-            this.btnVerMiembros.BorderRadius = 22;
+            this.btnVerMiembros.BorderRadius = 17;
             this.btnVerMiembros.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnVerMiembros.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnVerMiembros.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -177,10 +178,10 @@
             this.btnVerMiembros.FillColor = System.Drawing.Color.Purple;
             this.btnVerMiembros.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerMiembros.ForeColor = System.Drawing.Color.White;
-            this.btnVerMiembros.Location = new System.Drawing.Point(426, 770);
-            this.btnVerMiembros.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnVerMiembros.Location = new System.Drawing.Point(320, 626);
+            this.btnVerMiembros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnVerMiembros.Name = "btnVerMiembros";
-            this.btnVerMiembros.Size = new System.Drawing.Size(180, 46);
+            this.btnVerMiembros.Size = new System.Drawing.Size(135, 37);
             this.btnVerMiembros.TabIndex = 5;
             this.btnVerMiembros.Text = "Ver Miembros";
             // 
@@ -189,10 +190,10 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(3, 862);
+            this.statusStrip1.Location = new System.Drawing.Point(2, 696);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 13, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1434, 22);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 10, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1036, 22);
             this.statusStrip1.TabIndex = 6;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -206,7 +207,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(224, 109);
+            this.label1.Location = new System.Drawing.Point(168, 89);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(251, 32);
             this.label1.TabIndex = 7;
@@ -220,19 +222,19 @@
             this.guna2Panel1.BorderThickness = 1;
             this.guna2Panel1.Controls.Add(this.dgvMiembros);
             this.guna2Panel1.FillColor = System.Drawing.Color.White;
-            this.guna2Panel1.Location = new System.Drawing.Point(224, 278);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel1.Location = new System.Drawing.Point(168, 226);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1083, 448);
+            this.guna2Panel1.Size = new System.Drawing.Size(812, 364);
             this.guna2Panel1.TabIndex = 8;
             // 
             // LinkAtras
             // 
             this.LinkAtras.AutoSize = true;
             this.LinkAtras.LinkColor = System.Drawing.Color.Silver;
-            this.LinkAtras.Location = new System.Drawing.Point(637, 800);
+            this.LinkAtras.Location = new System.Drawing.Point(478, 650);
+            this.LinkAtras.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LinkAtras.Name = "LinkAtras";
-            this.LinkAtras.Size = new System.Drawing.Size(116, 16);
+            this.LinkAtras.Size = new System.Drawing.Size(93, 13);
             this.LinkAtras.TabIndex = 10;
             this.LinkAtras.TabStop = true;
             this.LinkAtras.Text = "Volver hacia Atras";
@@ -240,9 +242,9 @@
             // 
             // Miembros
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1440, 886);
+            this.ClientSize = new System.Drawing.Size(1040, 720);
             this.Controls.Add(this.LinkAtras);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.label1);
@@ -252,12 +254,12 @@
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1440, 886);
-            this.MinimumSize = new System.Drawing.Size(1080, 720);
+            this.MaximumSize = new System.Drawing.Size(1080, 720);
+            this.MinimumSize = new System.Drawing.Size(810, 583);
             this.Name = "Miembros";
-            this.Padding = new System.Windows.Forms.Padding(3, 64, 3, 2);
+            this.Padding = new System.Windows.Forms.Padding(2, 52, 2, 2);
             this.Text = "Miembros";
             this.Load += new System.EventHandler(this.Miembros_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMiembros)).EndInit();

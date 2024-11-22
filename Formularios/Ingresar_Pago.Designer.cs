@@ -44,8 +44,8 @@
             this.txtIdMiembro = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtObservacion = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtDescripcion = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtFechaRealizacion = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtIdTransaccion = new Guna.UI2.WinForms.Guna2TextBox();
+            this.dtPickerFecha = new Guna.UI2.WinForms.Guna2DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -304,28 +304,6 @@
             this.txtDescripcion.TabIndex = 34;
             this.txtDescripcion.TextChanged += new System.EventHandler(this.txtDescripcion_TextChanged);
             // 
-            // txtFechaRealizacion
-            // 
-            this.txtFechaRealizacion.AutoRoundedCorners = true;
-            this.txtFechaRealizacion.BorderRadius = 17;
-            this.txtFechaRealizacion.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtFechaRealizacion.DefaultText = "";
-            this.txtFechaRealizacion.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtFechaRealizacion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtFechaRealizacion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFechaRealizacion.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFechaRealizacion.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFechaRealizacion.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtFechaRealizacion.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFechaRealizacion.Location = new System.Drawing.Point(549, 262);
-            this.txtFechaRealizacion.Name = "txtFechaRealizacion";
-            this.txtFechaRealizacion.PasswordChar = '\0';
-            this.txtFechaRealizacion.PlaceholderText = "";
-            this.txtFechaRealizacion.SelectedText = "";
-            this.txtFechaRealizacion.Size = new System.Drawing.Size(200, 36);
-            this.txtFechaRealizacion.TabIndex = 35;
-            this.txtFechaRealizacion.TextChanged += new System.EventHandler(this.txtFechaRealizacion_TextChanged);
-            // 
             // txtIdTransaccion
             // 
             this.txtIdTransaccion.AutoRoundedCorners = true;
@@ -348,13 +326,27 @@
             this.txtIdTransaccion.TabIndex = 36;
             this.txtIdTransaccion.TextChanged += new System.EventHandler(this.txtIdTransaccion_TextChanged);
             // 
+            // dtPickerFecha
+            // 
+            this.dtPickerFecha.Checked = true;
+            this.dtPickerFecha.FillColor = System.Drawing.Color.White;
+            this.dtPickerFecha.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtPickerFecha.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtPickerFecha.Location = new System.Drawing.Point(549, 262);
+            this.dtPickerFecha.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtPickerFecha.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtPickerFecha.Name = "dtPickerFecha";
+            this.dtPickerFecha.Size = new System.Drawing.Size(200, 36);
+            this.dtPickerFecha.TabIndex = 37;
+            this.dtPickerFecha.Value = new System.DateTime(2024, 11, 22, 7, 19, 31, 585);
+            // 
             // Ingresar_Pago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1080, 720);
+            this.Controls.Add(this.dtPickerFecha);
             this.Controls.Add(this.txtIdTransaccion);
-            this.Controls.Add(this.txtFechaRealizacion);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtObservacion);
             this.Controls.Add(this.txtIdMiembro);
@@ -399,7 +391,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtIdMiembro;
         private Guna.UI2.WinForms.Guna2TextBox txtObservacion;
         private Guna.UI2.WinForms.Guna2TextBox txtDescripcion;
-        private Guna.UI2.WinForms.Guna2TextBox txtFechaRealizacion;
         private Guna.UI2.WinForms.Guna2TextBox txtIdTransaccion;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtPickerFecha;
     }
 }

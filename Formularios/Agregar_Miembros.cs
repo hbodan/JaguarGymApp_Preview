@@ -26,12 +26,16 @@ namespace JaguarGymApp_Preview.Formularios
             InitializeComponent();
             this.Resize += new System.EventHandler(this.Principal_Resize);
 
+
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Teal500, Primary.Teal700, Primary.Teal300, Accent.LightBlue200, TextShade.WHITE);
             this.StartPosition = FormStartPosition.CenterScreen;
             this.miembrosRecibidos = lista;
             this.formularioAnterior = formulario;
+
         }
+
+        
         private void Principal_Resize(object sender, EventArgs e)
         {
             this.Size = new System.Drawing.Size(1080, 720); // Mantener el tamaño de la ventana fijo
@@ -43,16 +47,66 @@ namespace JaguarGymApp_Preview.Formularios
         }
         private Usuario CrearUsuario()
         {
+            
             if (!int.TryParse(txtId.Text, out int Id))
                 throw new Exception("El campo ID debe ser un número válido.");
+
+            /*
+            if (string.IsNullOrWhiteSpace(txtIdPago.Text) || !int.TryParse(txtIdPago.Text, out int idPago))
+            {
+                MessageBox.Show("Por favor, ingresa un ID de pago válido.");
+                return;
+            }
+
+            string idTransaccion = txtIdTransaccion.Text.Trim();
+            if (string.IsNullOrEmpty(idTransaccion))
+            {
+                MessageBox.Show("El ID de transacción no puede estar vacío.");
+                return;
+            }
+
+            if (!DateTime.TryParse(dtPickerFecha.Text, out DateTime fechaRealizacion))
+            {
+                MessageBox.Show("Por favor, selecciona una fecha válida.");
+                return;
+            }
+
+            string descripcion = txtDescripcion.Text.Trim();
+            if (string.IsNullOrEmpty(descripcion))
+            {
+                MessageBox.Show("La descripción no puede estar vacía.");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtMonto.Text) || !decimal.TryParse(txtMonto.Text, out decimal monto) || monto <= 0)
+            {
+                MessageBox.Show("Por favor, ingresa un monto válido mayor a 0.");
+                return;
+            }
+
+            string observacion = txtObservacion.Text.Trim();
+            if (observacion.Length > 500)
+            {
+                MessageBox.Show("La observación no puede exceder los 500 caracteres.");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtIdMiembro.Text) || !int.TryParse(txtIdMiembro.Text, out int idMiembro))
+            {
+                MessageBox.Show("Por favor, ingresa un ID de miembro válido.");
+                return;
+            }
+
+            MessageBox.Show("Datos validados correctamente.");
+            */
 
             return new Usuario(
                 Id,
                 txtidentificacion.Text,
                 txtNombre.Text,
                 txtApellidos.Text,
-                txtCarrera.Text,
-                txtFacultad.Text,
+                cbCarrera.Text,
+                cbFacultad.Text,
                 chkInterno.Checked,
                 chkColaborador.Checked
             );

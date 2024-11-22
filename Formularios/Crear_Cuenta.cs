@@ -33,6 +33,11 @@ namespace JaguarGymApp_Preview.Formularios
 
         }
 
+        private void verificarDatos() { 
+        
+        
+        }
+
         private void guna2GradientButton1_Click(object sender, EventArgs e)
         {
             Principal formularioPrincipal = new Principal();
