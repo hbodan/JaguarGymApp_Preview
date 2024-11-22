@@ -36,15 +36,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtRegistroCargo = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtPassword2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnCrearCuenta = new Guna.UI2.WinForms.Guna2GradientButton();
             this.lkbVolverIniciar = new System.Windows.Forms.LinkLabel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.btn_MostrarPasswordA = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2GradientPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -103,7 +103,7 @@
             this.txtRegistroNombres.Location = new System.Drawing.Point(55, 196);
             this.txtRegistroNombres.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtRegistroNombres.Name = "txtRegistroNombres";
-            this.txtRegistroNombres.PasswordChar = '*';
+            this.txtRegistroNombres.PasswordChar = '\0';
             this.txtRegistroNombres.PlaceholderText = "";
             this.txtRegistroNombres.SelectedText = "";
             this.txtRegistroNombres.Size = new System.Drawing.Size(379, 39);
@@ -126,7 +126,7 @@
             this.txtRegistroApellidos.Location = new System.Drawing.Point(55, 282);
             this.txtRegistroApellidos.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtRegistroApellidos.Name = "txtRegistroApellidos";
-            this.txtRegistroApellidos.PasswordChar = '*';
+            this.txtRegistroApellidos.PasswordChar = '\0';
             this.txtRegistroApellidos.PlaceholderText = "";
             this.txtRegistroApellidos.SelectedText = "";
             this.txtRegistroApellidos.Size = new System.Drawing.Size(379, 39);
@@ -162,7 +162,7 @@
             this.txtRegistroCargo.Location = new System.Drawing.Point(55, 373);
             this.txtRegistroCargo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtRegistroCargo.Name = "txtRegistroCargo";
-            this.txtRegistroCargo.PasswordChar = '*';
+            this.txtRegistroCargo.PasswordChar = '\0';
             this.txtRegistroCargo.PlaceholderText = "";
             this.txtRegistroCargo.SelectedText = "";
             this.txtRegistroCargo.Size = new System.Drawing.Size(379, 39);
@@ -181,47 +181,28 @@
             this.label5.TabIndex = 33;
             this.label5.Text = "Contraseña";
             // 
-            // guna2Button1
+            // txtPassword
             // 
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = global::JaguarGymApp_Preview.Properties.Resources.ojo;
-            this.guna2Button1.Location = new System.Drawing.Point(393, 483);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(29, 26);
-            this.guna2Button1.TabIndex = 34;
-            // 
-            // guna2TextBox2
-            // 
-            this.guna2TextBox2.AutoRoundedCorners = true;
-            this.guna2TextBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox2.BorderRadius = 18;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Location = new System.Drawing.Point(55, 476);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(379, 39);
-            this.guna2TextBox2.TabIndex = 35;
+            this.txtPassword.AutoRoundedCorners = true;
+            this.txtPassword.BackColor = System.Drawing.Color.Transparent;
+            this.txtPassword.BorderRadius = 18;
+            this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPassword.DefaultText = "";
+            this.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPassword.Location = new System.Drawing.Point(55, 476);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.PlaceholderText = "";
+            this.txtPassword.SelectedText = "";
+            this.txtPassword.Size = new System.Drawing.Size(379, 39);
+            this.txtPassword.TabIndex = 35;
             // 
             // label6
             // 
@@ -236,47 +217,28 @@
             this.label6.TabIndex = 36;
             this.label6.Text = "Repetir Contraseña";
             // 
-            // guna2Button2
+            // txtPassword2
             // 
-            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.guna2Button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.White;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Image = global::JaguarGymApp_Preview.Properties.Resources.ojo;
-            this.guna2Button2.Location = new System.Drawing.Point(393, 584);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(29, 26);
-            this.guna2Button2.TabIndex = 37;
-            // 
-            // guna2TextBox1
-            // 
-            this.guna2TextBox1.AutoRoundedCorners = true;
-            this.guna2TextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox1.BorderRadius = 18;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(55, 577);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(379, 39);
-            this.guna2TextBox1.TabIndex = 38;
+            this.txtPassword2.AutoRoundedCorners = true;
+            this.txtPassword2.BackColor = System.Drawing.Color.Transparent;
+            this.txtPassword2.BorderRadius = 18;
+            this.txtPassword2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPassword2.DefaultText = "";
+            this.txtPassword2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPassword2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPassword2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPassword2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPassword2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPassword2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtPassword2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPassword2.Location = new System.Drawing.Point(55, 577);
+            this.txtPassword2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtPassword2.Name = "txtPassword2";
+            this.txtPassword2.PasswordChar = '*';
+            this.txtPassword2.PlaceholderText = "";
+            this.txtPassword2.SelectedText = "";
+            this.txtPassword2.Size = new System.Drawing.Size(379, 39);
+            this.txtPassword2.TabIndex = 38;
             // 
             // btnCrearCuenta
             // 
@@ -337,20 +299,61 @@
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(524, 667);
             this.guna2GradientPanel1.TabIndex = 41;
+            this.guna2GradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel1_Paint);
+            // 
+            // btn_MostrarPasswordA
+            // 
+            this.btn_MostrarPasswordA.BackColor = System.Drawing.Color.Transparent;
+            this.btn_MostrarPasswordA.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btn_MostrarPasswordA.HoverState.ImageSize = new System.Drawing.Size(25, 25);
+            this.btn_MostrarPasswordA.Image = global::JaguarGymApp_Preview.Properties.Resources.ojo;
+            this.btn_MostrarPasswordA.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_MostrarPasswordA.ImageRotate = 0F;
+            this.btn_MostrarPasswordA.ImageSize = new System.Drawing.Size(25, 25);
+            this.btn_MostrarPasswordA.Location = new System.Drawing.Point(391, 479);
+            this.btn_MostrarPasswordA.Name = "btn_MostrarPasswordA";
+            this.btn_MostrarPasswordA.PressedState.Image = global::JaguarGymApp_Preview.Properties.Resources.ojo_cruzado;
+            this.btn_MostrarPasswordA.PressedState.ImageSize = new System.Drawing.Size(25, 25);
+            this.btn_MostrarPasswordA.Size = new System.Drawing.Size(34, 29);
+            this.btn_MostrarPasswordA.TabIndex = 37;
+            this.btn_MostrarPasswordA.UseTransparentBackground = true;
+            this.btn_MostrarPasswordA.Click += new System.EventHandler(this.btn_MostrarPassword_Click);
+            this.btn_MostrarPasswordA.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MostrarPasswordA_MouseDown);
+            this.btn_MostrarPasswordA.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MostrarPasswordA_MouseUp);
+            // 
+            // guna2ImageButton1
+            // 
+            this.guna2ImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(25, 25);
+            this.guna2ImageButton1.Image = global::JaguarGymApp_Preview.Properties.Resources.ojo;
+            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton1.ImageRotate = 0F;
+            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(25, 25);
+            this.guna2ImageButton1.Location = new System.Drawing.Point(391, 582);
+            this.guna2ImageButton1.Name = "guna2ImageButton1";
+            this.guna2ImageButton1.PressedState.Image = global::JaguarGymApp_Preview.Properties.Resources.ojo_cruzado;
+            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(25, 25);
+            this.guna2ImageButton1.Size = new System.Drawing.Size(34, 29);
+            this.guna2ImageButton1.TabIndex = 42;
+            this.guna2ImageButton1.UseTransparentBackground = true;
+            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
+            this.guna2ImageButton1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MostrarPasswordB_MouseDown);
+            this.guna2ImageButton1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MostrarPasswordB_MouseUp);
             // 
             // Crear_Cuenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1080, 720);
+            this.Controls.Add(this.guna2ImageButton1);
+            this.Controls.Add(this.btn_MostrarPasswordA);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.lkbVolverIniciar);
             this.Controls.Add(this.btnCrearCuenta);
-            this.Controls.Add(this.guna2Button2);
-            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.txtPassword2);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.guna2Button1);
-            this.Controls.Add(this.guna2TextBox2);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtRegistroCargo);
             this.Controls.Add(this.label4);
@@ -362,7 +365,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1080, 720);
-            this.MinimumSize = new System.Drawing.Size(1080, 720);
+            this.MinimumSize = new System.Drawing.Size(1080, 718);
             this.Name = "Crear_Cuenta";
             this.Text = "Crear Cuenta";
             this.Load += new System.EventHandler(this.Crear_Cuenta_Load);
@@ -383,14 +386,14 @@
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2TextBox txtRegistroCargo;
         private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtPassword2;
         private Guna.UI2.WinForms.Guna2GradientButton btnCrearCuenta;
         private System.Windows.Forms.LinkLabel lkbVolverIniciar;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private Guna.UI2.WinForms.Guna2ImageButton btn_MostrarPasswordA;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
     }
 }

@@ -51,5 +51,43 @@ namespace JaguarGymApp_Preview.Formularios
             formularioInicioSesion.Show();
             this.Close();
         }
+
+        private void btn_MostrarPassword_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2GradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void MostrarPasswordA_MouseDown(object sender, MouseEventArgs e)
+        {
+            // Mostrar la contraseña
+            txtPassword.PasswordChar = '\0';
+        }
+
+        private void MostrarPasswordA_MouseUp(object sender, MouseEventArgs e)
+        {
+            // Ocultar la contraseña nuevamente
+            txtPassword.PasswordChar = '*';
+        }
+
+        private void MostrarPasswordB_MouseDown(object sender, MouseEventArgs e)
+        {
+            // Mostrar la contraseña
+            txtPassword2.PasswordChar = '\0';
+        }
+
+        private void MostrarPasswordB_MouseUp(object sender, MouseEventArgs e)
+        {
+            // Ocultar la contraseña nuevamente
+            txtPassword2.PasswordChar = '*';
+        }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
