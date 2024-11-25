@@ -14,6 +14,7 @@ namespace JaguarGymApp_Preview.Formularios
 {
     public partial class Inicio_Sesion : MaterialForm
     {
+
         public Inicio_Sesion()
         {
             this.Resize += new System.EventHandler(this.Principal_Resize);
@@ -84,5 +85,39 @@ namespace JaguarGymApp_Preview.Formularios
             txtBox_IngresarPassword.PasswordChar = '*';
         }
 
+        private void txtbox_IngresarUsuario_TextChanged(object sender, EventArgs e)
+        {
+            string usuario = txtbox_IngresarUsuario.Text ;
+        }
+        private void txtbox_IngresarUsuario_Validating(object sender, CancelEventArgs e)
+        {
+
+            if (string.IsNullOrWhiteSpace(txtbox_IngresarUsuario.Text))
+            {
+                errorProvider1.SetError(txtbox_IngresarUsuario, "El campo de usuario no puede estar vacío.");
+            }
+            else
+            {
+                errorProvider1.SetError(txtbox_IngresarUsuario, string.Empty); // Limpia el error.
+            }
+        }
+
+
+        private void txtBox_IngresarPassword_TextChanged(object sender, EventArgs e)
+        {
+            string contraseña = txtBox_IngresarPassword.Text;
+        }
+        private void txtBox_IngresarPassword_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtBox_IngresarPassword.Text))
+            {
+                errorProvider1.SetError(txtBox_IngresarPassword, "El campo de contraseña no puede estar vacío.");
+                
+            }
+            else
+            {
+                errorProvider1.SetError(txtBox_IngresarPassword, string.Empty); // Limpia el error.
+            }
+        }
     }
 }
