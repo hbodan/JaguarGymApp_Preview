@@ -81,7 +81,7 @@ namespace estadisticasForm
 
         private void LinkAtras_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Principal formularioPrincipal = new Principal();
+            Principal formularioPrincipal = new Principal(0);
             formularioPrincipal.Show();
             this.Hide();
         }

@@ -7,15 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Markup;
+using JaguarGymApp_Preview.Servicios;
 using MaterialSkin;
 using MaterialSkin.Controls;
+using MySql.Data.MySqlClient;
 
 namespace JaguarGymApp_Preview.Formularios
 {
     public partial class Crear_Cuenta : MaterialForm
     {
+        private MySqlConnection data;
         public Crear_Cuenta()
         {
+            ConexionBD conn = new ConexionBD();
+            data = new MySqlConnection(conn.GetConnector());
             this.Resize += new System.EventHandler(this.Principal_Resize);
             InitializeComponent();
             var materialSkinManager = MaterialSkinManager.Instance;
@@ -33,20 +39,54 @@ namespace JaguarGymApp_Preview.Formularios
 
         }
 
-        private void verificarDatos() { 
-        
-        
+        private void AgregarUsuario()
+        {
+            string nombreUsuario = txtRegistroNombreCompleto.Text;
+            string correo = txtRegistroEmail.Text;  // Campo de Correo
+            string clave = txtPassword2.Text;  // Campo de Contraseña
+
+            string query = "INSERT INTO usuario (nombreUsuario, correoElectronico, clave) VALUES (@nombre, @correo, @clave)";
+
+            try
+            {
+                // Establecemos la conexión
+                ConexionBD conn = new ConexionBD();
+                MySqlConnection data = new MySqlConnection(conn.GetConnector());
+
+                // Creamos la consulta con parámetros
+                MySqlCommand command = new MySqlCommand(query, data);
+                command.Parameters.AddWithValue("@nombre", nombreUsuario);
+                command.Parameters.AddWithValue("@correo", correo);
+                command.Parameters.AddWithValue("@clave", clave);
+
+                // Abrimos la conexión
+                data.Open();
+
+                // Ejecutamos la consulta de inserción
+                int rowsAffected = command.ExecuteNonQuery();
+
+                if (rowsAffected > 0)
+                {
+                    Inicio_Sesion formularioInicioSesion = new Inicio_Sesion();
+                    formularioInicioSesion.Show();
+                    this.Dispose();
+                    MessageBox.Show("Usuario registrado exitosamente!");
+
+                }
+                else
+                {
+                    MessageBox.Show("Hubo un problema al registrar el usuario.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al conectar con la base de datos: " + ex.Message);
+            }
         }
 
         private void guna2GradientButton1_Click(object sender, EventArgs e)
         {
-            /*
-            Principal formularioPrincipal = new Principal();
-            formularioPrincipal.Show();
-            this.Close();
-            */
 
-            // Limpiar errores anteriores
             errorProvider1.Clear();
 
             // Limpiar errores anteriores
@@ -88,13 +128,6 @@ namespace JaguarGymApp_Preview.Formularios
                 errorProvider1.SetError(txtPassword, "Las contraseñas no coinciden.");
             }
 
-            // Validación del campo Cargo
-            if (string.IsNullOrWhiteSpace(txtRegistroCargo.Text))
-            {
-                errores.Add("El campo de cargo no puede estar vacío.");
-                errorProvider1.SetError(txtRegistroCargo, "El campo de cargo no puede estar vacío.");
-            }
-
             // Verificar si hay errores
             if (errores.Count > 0)
             {
@@ -103,10 +136,9 @@ namespace JaguarGymApp_Preview.Formularios
             }
             else
             {
-                // Si no hay errores, proceder con la creación de cuenta
-                MessageBox.Show("Cuenta creada con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                // Aquí puedes agregar el código para proceder con la creación de la cuenta
+                AgregarUsuario();
             }
+
         }
 
         // Método para mostrar los errores en una pestaña o lista
@@ -119,17 +151,11 @@ namespace JaguarGymApp_Preview.Formularios
             MessageBox.Show(mensajeErrores, "Errores de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
-
         private void lkbVolverIniciar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Inicio_Sesion formularioInicioSesion = new Inicio_Sesion();
             formularioInicioSesion.Show();
             this.Close();
-        }
-
-        private void btn_MostrarPassword_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void guna2GradientPanel1_Paint(object sender, PaintEventArgs e)
@@ -158,11 +184,6 @@ namespace JaguarGymApp_Preview.Formularios
         {
             // Ocultar la contraseña nuevamente
             txtPassword2.PasswordChar = '*';
-        }
-
-        private void guna2ImageButton1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

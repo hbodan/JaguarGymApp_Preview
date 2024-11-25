@@ -34,8 +34,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtRegistroNombreCompleto = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtRegistroEmail = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtRegistroCargo = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -57,7 +55,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(49, 108);
+            this.label1.Location = new System.Drawing.Point(62, 139);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 31);
             this.label1.TabIndex = 0;
@@ -69,7 +67,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(52, 164);
+            this.label2.Location = new System.Drawing.Point(65, 195);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(260, 18);
@@ -82,7 +80,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(52, 249);
+            this.label3.Location = new System.Drawing.Point(65, 280);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(266, 18);
@@ -103,7 +101,7 @@
             this.txtRegistroNombreCompleto.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtRegistroNombreCompleto.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtRegistroNombreCompleto.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRegistroNombreCompleto.Location = new System.Drawing.Point(55, 196);
+            this.txtRegistroNombreCompleto.Location = new System.Drawing.Point(68, 227);
             this.txtRegistroNombreCompleto.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtRegistroNombreCompleto.Name = "txtRegistroNombreCompleto";
             this.txtRegistroNombreCompleto.PasswordChar = '\0';
@@ -126,7 +124,7 @@
             this.txtRegistroEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtRegistroEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtRegistroEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRegistroEmail.Location = new System.Drawing.Point(58, 283);
+            this.txtRegistroEmail.Location = new System.Drawing.Point(71, 314);
             this.txtRegistroEmail.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtRegistroEmail.Name = "txtRegistroEmail";
             this.txtRegistroEmail.PasswordChar = '\0';
@@ -135,49 +133,13 @@
             this.txtRegistroEmail.Size = new System.Drawing.Size(379, 39);
             this.txtRegistroEmail.TabIndex = 30;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(52, 341);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 18);
-            this.label4.TabIndex = 31;
-            this.label4.Text = "Cargo";
-            // 
-            // txtRegistroCargo
-            // 
-            this.txtRegistroCargo.AutoRoundedCorners = true;
-            this.txtRegistroCargo.BackColor = System.Drawing.Color.Transparent;
-            this.txtRegistroCargo.BorderRadius = 18;
-            this.txtRegistroCargo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtRegistroCargo.DefaultText = "";
-            this.txtRegistroCargo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtRegistroCargo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtRegistroCargo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtRegistroCargo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtRegistroCargo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRegistroCargo.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtRegistroCargo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRegistroCargo.Location = new System.Drawing.Point(55, 373);
-            this.txtRegistroCargo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtRegistroCargo.Name = "txtRegistroCargo";
-            this.txtRegistroCargo.PasswordChar = '\0';
-            this.txtRegistroCargo.PlaceholderText = "";
-            this.txtRegistroCargo.SelectedText = "";
-            this.txtRegistroCargo.Size = new System.Drawing.Size(379, 39);
-            this.txtRegistroCargo.TabIndex = 32;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(52, 441);
+            this.label5.Location = new System.Drawing.Point(65, 373);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(110, 18);
@@ -198,7 +160,7 @@
             this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassword.Location = new System.Drawing.Point(55, 476);
+            this.txtPassword.Location = new System.Drawing.Point(68, 408);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -213,7 +175,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(52, 546);
+            this.label6.Location = new System.Drawing.Point(65, 478);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(180, 18);
@@ -234,7 +196,7 @@
             this.txtPassword2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPassword2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassword2.Location = new System.Drawing.Point(55, 577);
+            this.txtPassword2.Location = new System.Drawing.Point(68, 509);
             this.txtPassword2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtPassword2.Name = "txtPassword2";
             this.txtPassword2.PasswordChar = '*';
@@ -313,14 +275,13 @@
             this.btn_MostrarPasswordA.ImageOffset = new System.Drawing.Point(0, 0);
             this.btn_MostrarPasswordA.ImageRotate = 0F;
             this.btn_MostrarPasswordA.ImageSize = new System.Drawing.Size(25, 25);
-            this.btn_MostrarPasswordA.Location = new System.Drawing.Point(391, 479);
+            this.btn_MostrarPasswordA.Location = new System.Drawing.Point(404, 411);
             this.btn_MostrarPasswordA.Name = "btn_MostrarPasswordA";
             this.btn_MostrarPasswordA.PressedState.Image = global::JaguarGymApp_Preview.Properties.Resources.ojo_cruzado;
             this.btn_MostrarPasswordA.PressedState.ImageSize = new System.Drawing.Size(25, 25);
             this.btn_MostrarPasswordA.Size = new System.Drawing.Size(34, 29);
             this.btn_MostrarPasswordA.TabIndex = 37;
             this.btn_MostrarPasswordA.UseTransparentBackground = true;
-            this.btn_MostrarPasswordA.Click += new System.EventHandler(this.btn_MostrarPassword_Click);
             this.btn_MostrarPasswordA.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MostrarPasswordA_MouseDown);
             this.btn_MostrarPasswordA.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MostrarPasswordA_MouseUp);
             // 
@@ -333,14 +294,13 @@
             this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
             this.guna2ImageButton1.ImageRotate = 0F;
             this.guna2ImageButton1.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2ImageButton1.Location = new System.Drawing.Point(391, 582);
+            this.guna2ImageButton1.Location = new System.Drawing.Point(404, 514);
             this.guna2ImageButton1.Name = "guna2ImageButton1";
             this.guna2ImageButton1.PressedState.Image = global::JaguarGymApp_Preview.Properties.Resources.ojo_cruzado;
             this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(25, 25);
             this.guna2ImageButton1.Size = new System.Drawing.Size(34, 29);
             this.guna2ImageButton1.TabIndex = 42;
             this.guna2ImageButton1.UseTransparentBackground = true;
-            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
             this.guna2ImageButton1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MostrarPasswordB_MouseDown);
             this.guna2ImageButton1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MostrarPasswordB_MouseUp);
             // 
@@ -362,8 +322,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtRegistroCargo);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtRegistroEmail);
             this.Controls.Add(this.txtRegistroNombreCompleto);
             this.Controls.Add(this.label3);
@@ -391,8 +349,6 @@
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2TextBox txtRegistroNombreCompleto;
         private Guna.UI2.WinForms.Guna2TextBox txtRegistroEmail;
-        private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2TextBox txtRegistroCargo;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private System.Windows.Forms.Label label6;

@@ -10,22 +10,31 @@ using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using System.Drawing.Drawing2D;
+using JaguarGymApp_Preview.Servicios;
+using MySql.Data.MySqlClient;
+
 namespace JaguarGymApp_Preview.Formularios
+
 {
     public partial class Inicio_Sesion : MaterialForm
     {
+        private MySqlConnection data;
 
         public Inicio_Sesion()
         {
+            ConexionBD conn = new ConexionBD();
+            data = new MySqlConnection(conn.GetConnector());
             this.Resize += new System.EventHandler(this.Principal_Resize);
             InitializeComponent();
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Teal500, Primary.Teal700, Primary.Teal300, Accent.LightBlue200, TextShade.WHITE);
             this.StartPosition = FormStartPosition.CenterScreen;
+
         }
+
         private void Principal_Resize(object sender, EventArgs e)
         {
-            this.Size = new System.Drawing.Size(1080, 720); // Mantener el tamaño de la ventana fijo
+            this.Size = new System.Drawing.Size(1080, 720);
         }
         private void Inicio_Sesión_Load(object sender, EventArgs e)
         {
@@ -33,20 +42,54 @@ namespace JaguarGymApp_Preview.Formularios
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void RevisarCredenciales()
         {
+            string correoIngresado = txtbox_IngresarUsuario.Text;
+            string claveIngresada = txtBox_IngresarPassword.Text;
 
+            string query = "SELECT idUsuario FROM usuario WHERE correoElectronico = @usuario AND clave = @contrasena LIMIT 1";
+
+            try
+            {
+                MySqlCommand command = new MySqlCommand(query, data);
+
+                command.Parameters.AddWithValue("@usuario", correoIngresado);
+                command.Parameters.AddWithValue("@contrasena", claveIngresada);
+
+                data.Open();
+
+                object result = command.ExecuteScalar();
+
+                if (result != null)
+                {
+                    int idMiembro = Convert.ToInt32(result);
+
+                    Principal nuevoFormulario = new Principal(idMiembro);
+                    nuevoFormulario.Show();
+
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o contraseña incorrectos.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al conectar con la base de datos: " + ex.Message);
+            }
+            finally
+            {
+                if (data.State == ConnectionState.Open)
+                {
+                    data.Close();
+                }
+            }
         }
 
-        private void guna2PictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
         private void btn_IniciarSesion_Click(object sender, EventArgs e)
         {
-            Principal nuevoFormulario = new Principal(); // Cambia a tu formulario
-            this.Hide();
-            nuevoFormulario.Show();
+            RevisarCredenciales();
         }
 
         private void linkLb_CrearCuenta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -69,10 +112,6 @@ namespace JaguarGymApp_Preview.Formularios
             nuevoFormulario.Show();
         }
 
-        private void btn_MostrarPassword_Click(object sender, EventArgs e)
-        {
-
-        }
         private void btn_MostrarPassword_MouseDown(object sender, MouseEventArgs e)
         {
             // Mostrar la contraseña

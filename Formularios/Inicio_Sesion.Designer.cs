@@ -87,7 +87,6 @@ namespace JaguarGymApp_Preview.Formularios
             this.label1.Size = new System.Drawing.Size(343, 32);
             this.label1.TabIndex = 19;
             this.label1.Text = "Bienvenido de vuelta!";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -284,7 +283,6 @@ namespace JaguarGymApp_Preview.Formularios
             this.btn_MostrarPassword.Size = new System.Drawing.Size(34, 29);
             this.btn_MostrarPassword.TabIndex = 36;
             this.btn_MostrarPassword.UseTransparentBackground = true;
-            this.btn_MostrarPassword.Click += new System.EventHandler(this.btn_MostrarPassword_Click);
             this.btn_MostrarPassword.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MostrarPassword_MouseDown);
             this.btn_MostrarPassword.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_MostrarPassword_MouseUp);
             // 
@@ -322,7 +320,6 @@ namespace JaguarGymApp_Preview.Formularios
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox2.TabIndex = 12;
             this.guna2PictureBox2.TabStop = false;
-            this.guna2PictureBox2.Click += new System.EventHandler(this.guna2PictureBox2_Click);
             // 
             // errorProvider1
             // 
