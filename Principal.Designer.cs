@@ -44,19 +44,19 @@
             this.guna2DataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.imgBtn_Miembros = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btn_Miembros = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.imgBtn_Pagos = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btn_Pagos = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.imgBtn_Estadistica = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btn_Estadistica = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2CustomGradientPanel5 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2CustomGradientPanel6 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.imgBtn_Escaner = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.imgBtn_Estadistica = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.imgBtn_Pagos = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.imgBtn_Miembros = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
@@ -261,24 +261,6 @@
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(307, 180);
             this.guna2CustomGradientPanel1.TabIndex = 14;
             // 
-            // imgBtn_Miembros
-            // 
-            this.imgBtn_Miembros.BackColor = System.Drawing.Color.Transparent;
-            this.imgBtn_Miembros.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.imgBtn_Miembros.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imgBtn_Miembros.HoverState.ImageSize = new System.Drawing.Size(140, 140);
-            this.imgBtn_Miembros.Image = global::JaguarGymApp_Preview.Properties.Resources.miembrosBoton;
-            this.imgBtn_Miembros.ImageOffset = new System.Drawing.Point(0, 0);
-            this.imgBtn_Miembros.ImageRotate = 0F;
-            this.imgBtn_Miembros.ImageSize = new System.Drawing.Size(160, 160);
-            this.imgBtn_Miembros.Location = new System.Drawing.Point(79, 2);
-            this.imgBtn_Miembros.Name = "imgBtn_Miembros";
-            this.imgBtn_Miembros.PressedState.ImageSize = new System.Drawing.Size(180, 180);
-            this.imgBtn_Miembros.Size = new System.Drawing.Size(152, 143);
-            this.imgBtn_Miembros.TabIndex = 17;
-            this.imgBtn_Miembros.UseTransparentBackground = true;
-            this.imgBtn_Miembros.Click += new System.EventHandler(this.imgBtn_Miembros_Click);
-            // 
             // btn_Miembros
             // 
             this.btn_Miembros.Animated = true;
@@ -319,24 +301,6 @@
             this.guna2CustomGradientPanel2.TabIndex = 15;
             this.guna2CustomGradientPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2CustomGradientPanel2_Paint);
             // 
-            // imgBtn_Pagos
-            // 
-            this.imgBtn_Pagos.BackColor = System.Drawing.Color.Transparent;
-            this.imgBtn_Pagos.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.imgBtn_Pagos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imgBtn_Pagos.HoverState.ImageSize = new System.Drawing.Size(110, 110);
-            this.imgBtn_Pagos.Image = global::JaguarGymApp_Preview.Properties.Resources.pagoBoton;
-            this.imgBtn_Pagos.ImageOffset = new System.Drawing.Point(0, 0);
-            this.imgBtn_Pagos.ImageRotate = 0F;
-            this.imgBtn_Pagos.ImageSize = new System.Drawing.Size(130, 130);
-            this.imgBtn_Pagos.Location = new System.Drawing.Point(83, 3);
-            this.imgBtn_Pagos.Name = "imgBtn_Pagos";
-            this.imgBtn_Pagos.PressedState.ImageSize = new System.Drawing.Size(150, 150);
-            this.imgBtn_Pagos.Size = new System.Drawing.Size(140, 140);
-            this.imgBtn_Pagos.TabIndex = 1;
-            this.imgBtn_Pagos.UseTransparentBackground = true;
-            this.imgBtn_Pagos.Click += new System.EventHandler(this.imgBtn_Pagos_Click);
-            // 
             // btn_Pagos
             // 
             this.btn_Pagos.Animated = true;
@@ -375,24 +339,6 @@
             this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
             this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(300, 180);
             this.guna2CustomGradientPanel3.TabIndex = 16;
-            // 
-            // imgBtn_Estadistica
-            // 
-            this.imgBtn_Estadistica.BackColor = System.Drawing.Color.Transparent;
-            this.imgBtn_Estadistica.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.imgBtn_Estadistica.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imgBtn_Estadistica.HoverState.ImageSize = new System.Drawing.Size(160, 160);
-            this.imgBtn_Estadistica.Image = global::JaguarGymApp_Preview.Properties.Resources.estadisticasBoton;
-            this.imgBtn_Estadistica.ImageOffset = new System.Drawing.Point(0, 0);
-            this.imgBtn_Estadistica.ImageRotate = 0F;
-            this.imgBtn_Estadistica.ImageSize = new System.Drawing.Size(180, 180);
-            this.imgBtn_Estadistica.Location = new System.Drawing.Point(57, 10);
-            this.imgBtn_Estadistica.Name = "imgBtn_Estadistica";
-            this.imgBtn_Estadistica.PressedState.ImageSize = new System.Drawing.Size(200, 200);
-            this.imgBtn_Estadistica.Size = new System.Drawing.Size(190, 132);
-            this.imgBtn_Estadistica.TabIndex = 18;
-            this.imgBtn_Estadistica.UseTransparentBackground = true;
-            this.imgBtn_Estadistica.Click += new System.EventHandler(this.imgBtn_Estadistica_Click);
             // 
             // btn_Estadistica
             // 
@@ -491,18 +437,74 @@
             this.imgBtn_Escaner.UseTransparentBackground = true;
             this.imgBtn_Escaner.Click += new System.EventHandler(this.imgBtn_Escanear_Click);
             // 
+            // imgBtn_Estadistica
+            // 
+            this.imgBtn_Estadistica.BackColor = System.Drawing.Color.Transparent;
+            this.imgBtn_Estadistica.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.imgBtn_Estadistica.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgBtn_Estadistica.HoverState.ImageSize = new System.Drawing.Size(160, 160);
+            this.imgBtn_Estadistica.Image = global::JaguarGymApp_Preview.Properties.Resources.estadisticasBoton;
+            this.imgBtn_Estadistica.ImageOffset = new System.Drawing.Point(0, 0);
+            this.imgBtn_Estadistica.ImageRotate = 0F;
+            this.imgBtn_Estadistica.ImageSize = new System.Drawing.Size(180, 180);
+            this.imgBtn_Estadistica.Location = new System.Drawing.Point(57, 10);
+            this.imgBtn_Estadistica.Name = "imgBtn_Estadistica";
+            this.imgBtn_Estadistica.PressedState.ImageSize = new System.Drawing.Size(200, 200);
+            this.imgBtn_Estadistica.Size = new System.Drawing.Size(190, 132);
+            this.imgBtn_Estadistica.TabIndex = 18;
+            this.imgBtn_Estadistica.UseTransparentBackground = true;
+            this.imgBtn_Estadistica.Click += new System.EventHandler(this.imgBtn_Estadistica_Click);
+            // 
+            // imgBtn_Pagos
+            // 
+            this.imgBtn_Pagos.BackColor = System.Drawing.Color.Transparent;
+            this.imgBtn_Pagos.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.imgBtn_Pagos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgBtn_Pagos.HoverState.ImageSize = new System.Drawing.Size(110, 110);
+            this.imgBtn_Pagos.Image = global::JaguarGymApp_Preview.Properties.Resources.pagoBoton;
+            this.imgBtn_Pagos.ImageOffset = new System.Drawing.Point(0, 0);
+            this.imgBtn_Pagos.ImageRotate = 0F;
+            this.imgBtn_Pagos.ImageSize = new System.Drawing.Size(130, 130);
+            this.imgBtn_Pagos.Location = new System.Drawing.Point(83, 3);
+            this.imgBtn_Pagos.Name = "imgBtn_Pagos";
+            this.imgBtn_Pagos.PressedState.ImageSize = new System.Drawing.Size(150, 150);
+            this.imgBtn_Pagos.Size = new System.Drawing.Size(140, 140);
+            this.imgBtn_Pagos.TabIndex = 1;
+            this.imgBtn_Pagos.UseTransparentBackground = true;
+            this.imgBtn_Pagos.Click += new System.EventHandler(this.imgBtn_Pagos_Click);
+            // 
+            // imgBtn_Miembros
+            // 
+            this.imgBtn_Miembros.BackColor = System.Drawing.Color.Transparent;
+            this.imgBtn_Miembros.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.imgBtn_Miembros.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgBtn_Miembros.HoverState.ImageSize = new System.Drawing.Size(140, 140);
+            this.imgBtn_Miembros.Image = global::JaguarGymApp_Preview.Properties.Resources.miembrosBoton;
+            this.imgBtn_Miembros.ImageOffset = new System.Drawing.Point(0, 0);
+            this.imgBtn_Miembros.ImageRotate = 0F;
+            this.imgBtn_Miembros.ImageSize = new System.Drawing.Size(160, 160);
+            this.imgBtn_Miembros.Location = new System.Drawing.Point(79, 2);
+            this.imgBtn_Miembros.Name = "imgBtn_Miembros";
+            this.imgBtn_Miembros.PressedState.ImageSize = new System.Drawing.Size(180, 180);
+            this.imgBtn_Miembros.Size = new System.Drawing.Size(152, 143);
+            this.imgBtn_Miembros.TabIndex = 17;
+            this.imgBtn_Miembros.UseTransparentBackground = true;
+            this.imgBtn_Miembros.Click += new System.EventHandler(this.imgBtn_Miembros_Click);
+            // 
             // guna2ImageButton1
             // 
             this.guna2ImageButton1.BackColor = System.Drawing.Color.Transparent;
             this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
             this.guna2ImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2ImageButton1.HoverState.Image = global::JaguarGymApp_Preview.Properties.Resources.configuracion_hover;
             this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(35, 35);
-            this.guna2ImageButton1.Image = global::JaguarGymApp_Preview.Properties.Resources.Mascota;
+            this.guna2ImageButton1.Image = global::JaguarGymApp_Preview.Properties.Resources.configuracion;
             this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
             this.guna2ImageButton1.ImageRotate = 0F;
             this.guna2ImageButton1.ImageSize = new System.Drawing.Size(35, 35);
             this.guna2ImageButton1.Location = new System.Drawing.Point(992, 27);
             this.guna2ImageButton1.Name = "guna2ImageButton1";
+            this.guna2ImageButton1.PressedState.Image = global::JaguarGymApp_Preview.Properties.Resources.configuracion_hover;
             this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(35, 35);
             this.guna2ImageButton1.Size = new System.Drawing.Size(40, 36);
             this.guna2ImageButton1.TabIndex = 1;

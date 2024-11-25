@@ -134,6 +134,12 @@
     <Compile Include="Formularios\Agregar_Miembros.Designer.cs">
       <DependentUpon>Agregar_Miembros.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Configuracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Configuracion.Designer.cs">
+      <DependentUpon>Configuracion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Crear_Cuenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,6 +249,9 @@
     <EmbeddedResource Include="Formularios\Agregar_Miembros.resx">
       <DependentUpon>Agregar_Miembros.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Configuracion.resx">
+      <DependentUpon>Configuracion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Crear_Cuenta.resx">
       <DependentUpon>Crear_Cuenta.cs</DependentUpon>
     </EmbeddedResource>
@@ -319,11 +328,14 @@
     <Content Include="ReadMePng\Options.png" />
     <Content Include="ReadMePng\类库上右键.png" />
     <Content Include="Recursos\Animacion_Reloj.gif" />
+    <None Include="Recursos\avatar.png" />
+    <None Include="Recursos\bloquear.png" />
     <Content Include="Recursos\Check_icon.png" />
     <Content Include="Recursos\Codigo_de_barras_Horizontal.png" />
     <Content Include="Recursos\configuracion hover.png" />
     <Content Include="Recursos\configuracion.png" />
     <Content Include="Recursos\correo.gif" />
+    <None Include="Recursos\correo.png" />
     <Content Include="Recursos\crearCuentaImagen.png" />
     <Content Include="Recursos\deporte.png" />
     <Content Include="Recursos\estadisticasBoton.png" />
@@ -347,7 +359,10 @@
     <Content Include="Recursos\Precaucion_icono_Amarillo.png" />
     <Content Include="Recursos\Recursos.txt" />
     <Content Include="Recursos\Renovar_subscripcion_icon.png" />
+    <None Include="Recursos\Salida.png" />
+    <None Include="Recursos\Salida hover.png" />
     <Content Include="Recursos\Siga_adeltante.gif" />
+    <None Include="Recursos\tarjeta-de-identificacion.png" />
     <Content Include="Recursos\uamLogoBlancoNoFondo.png" />
     <Content Include="Recursos\uam_edificio_home.jpg" />
     <Content Include="Recursos\uam_internacional_portada.jpg" />
