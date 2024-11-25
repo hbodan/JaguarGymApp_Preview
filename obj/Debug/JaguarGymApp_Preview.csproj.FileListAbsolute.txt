@@ -179,3 +179,4 @@ C:\Users\Usuario\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.exe
 C:\Users\Usuario\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.pdb
 C:\Users\hebod\OneDrive\Escritorio\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Gestion_Pagos.resources
 C:\Users\Andre\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Gestion_Pagos.resources
+C:\Users\Andre\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Configuracion.resources

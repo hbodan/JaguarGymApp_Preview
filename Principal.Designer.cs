@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,19 +44,19 @@
             this.guna2DataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.imgBtn_Miembros = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btn_Miembros = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.imgBtn_Pagos = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btn_Pagos = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.imgBtn_Estadistica = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btn_Estadistica = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2CustomGradientPanel5 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2CustomGradientPanel6 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.imgBtn_Escaner = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.imgBtn_Estadistica = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.imgBtn_Pagos = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.imgBtn_Miembros = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
@@ -101,26 +101,26 @@
             // 
             // guna2DataGridView1
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.guna2DataGridView1.ColumnHeadersHeight = 4;
             this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.Location = new System.Drawing.Point(12, 10);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
@@ -187,26 +187,26 @@
             // 
             // guna2DataGridView2
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.guna2DataGridView2.ColumnHeadersHeight = 4;
             this.guna2DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle6;
             this.guna2DataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView2.Location = new System.Drawing.Point(7, 10);
             this.guna2DataGridView2.Name = "guna2DataGridView2";
@@ -261,24 +261,6 @@
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(307, 180);
             this.guna2CustomGradientPanel1.TabIndex = 14;
             // 
-            // imgBtn_Miembros
-            // 
-            this.imgBtn_Miembros.BackColor = System.Drawing.Color.Transparent;
-            this.imgBtn_Miembros.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.imgBtn_Miembros.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imgBtn_Miembros.HoverState.ImageSize = new System.Drawing.Size(140, 140);
-            this.imgBtn_Miembros.Image = global::JaguarGymApp_Preview.Properties.Resources.miembrosBoton;
-            this.imgBtn_Miembros.ImageOffset = new System.Drawing.Point(0, 0);
-            this.imgBtn_Miembros.ImageRotate = 0F;
-            this.imgBtn_Miembros.ImageSize = new System.Drawing.Size(160, 160);
-            this.imgBtn_Miembros.Location = new System.Drawing.Point(79, 2);
-            this.imgBtn_Miembros.Name = "imgBtn_Miembros";
-            this.imgBtn_Miembros.PressedState.ImageSize = new System.Drawing.Size(180, 180);
-            this.imgBtn_Miembros.Size = new System.Drawing.Size(152, 143);
-            this.imgBtn_Miembros.TabIndex = 17;
-            this.imgBtn_Miembros.UseTransparentBackground = true;
-            this.imgBtn_Miembros.Click += new System.EventHandler(this.imgBtn_Miembros_Click);
-            // 
             // btn_Miembros
             // 
             this.btn_Miembros.Animated = true;
@@ -319,24 +301,6 @@
             this.guna2CustomGradientPanel2.TabIndex = 15;
             this.guna2CustomGradientPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2CustomGradientPanel2_Paint);
             // 
-            // imgBtn_Pagos
-            // 
-            this.imgBtn_Pagos.BackColor = System.Drawing.Color.Transparent;
-            this.imgBtn_Pagos.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.imgBtn_Pagos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imgBtn_Pagos.HoverState.ImageSize = new System.Drawing.Size(110, 110);
-            this.imgBtn_Pagos.Image = global::JaguarGymApp_Preview.Properties.Resources.pagoBoton;
-            this.imgBtn_Pagos.ImageOffset = new System.Drawing.Point(0, 0);
-            this.imgBtn_Pagos.ImageRotate = 0F;
-            this.imgBtn_Pagos.ImageSize = new System.Drawing.Size(130, 130);
-            this.imgBtn_Pagos.Location = new System.Drawing.Point(83, 3);
-            this.imgBtn_Pagos.Name = "imgBtn_Pagos";
-            this.imgBtn_Pagos.PressedState.ImageSize = new System.Drawing.Size(150, 150);
-            this.imgBtn_Pagos.Size = new System.Drawing.Size(140, 140);
-            this.imgBtn_Pagos.TabIndex = 1;
-            this.imgBtn_Pagos.UseTransparentBackground = true;
-            this.imgBtn_Pagos.Click += new System.EventHandler(this.imgBtn_Pagos_Click);
-            // 
             // btn_Pagos
             // 
             this.btn_Pagos.Animated = true;
@@ -375,24 +339,6 @@
             this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
             this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(300, 180);
             this.guna2CustomGradientPanel3.TabIndex = 16;
-            // 
-            // imgBtn_Estadistica
-            // 
-            this.imgBtn_Estadistica.BackColor = System.Drawing.Color.Transparent;
-            this.imgBtn_Estadistica.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.imgBtn_Estadistica.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imgBtn_Estadistica.HoverState.ImageSize = new System.Drawing.Size(160, 160);
-            this.imgBtn_Estadistica.Image = global::JaguarGymApp_Preview.Properties.Resources.estadisticasBoton;
-            this.imgBtn_Estadistica.ImageOffset = new System.Drawing.Point(0, 0);
-            this.imgBtn_Estadistica.ImageRotate = 0F;
-            this.imgBtn_Estadistica.ImageSize = new System.Drawing.Size(180, 180);
-            this.imgBtn_Estadistica.Location = new System.Drawing.Point(57, 10);
-            this.imgBtn_Estadistica.Name = "imgBtn_Estadistica";
-            this.imgBtn_Estadistica.PressedState.ImageSize = new System.Drawing.Size(200, 200);
-            this.imgBtn_Estadistica.Size = new System.Drawing.Size(190, 132);
-            this.imgBtn_Estadistica.TabIndex = 18;
-            this.imgBtn_Estadistica.UseTransparentBackground = true;
-            this.imgBtn_Estadistica.Click += new System.EventHandler(this.imgBtn_Estadistica_Click);
             // 
             // btn_Estadistica
             // 
@@ -491,18 +437,74 @@
             this.imgBtn_Escaner.UseTransparentBackground = true;
             this.imgBtn_Escaner.Click += new System.EventHandler(this.imgBtn_Escanear_Click);
             // 
+            // imgBtn_Estadistica
+            // 
+            this.imgBtn_Estadistica.BackColor = System.Drawing.Color.Transparent;
+            this.imgBtn_Estadistica.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.imgBtn_Estadistica.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgBtn_Estadistica.HoverState.ImageSize = new System.Drawing.Size(160, 160);
+            this.imgBtn_Estadistica.Image = global::JaguarGymApp_Preview.Properties.Resources.estadisticasBoton;
+            this.imgBtn_Estadistica.ImageOffset = new System.Drawing.Point(0, 0);
+            this.imgBtn_Estadistica.ImageRotate = 0F;
+            this.imgBtn_Estadistica.ImageSize = new System.Drawing.Size(180, 180);
+            this.imgBtn_Estadistica.Location = new System.Drawing.Point(57, 10);
+            this.imgBtn_Estadistica.Name = "imgBtn_Estadistica";
+            this.imgBtn_Estadistica.PressedState.ImageSize = new System.Drawing.Size(200, 200);
+            this.imgBtn_Estadistica.Size = new System.Drawing.Size(190, 132);
+            this.imgBtn_Estadistica.TabIndex = 18;
+            this.imgBtn_Estadistica.UseTransparentBackground = true;
+            this.imgBtn_Estadistica.Click += new System.EventHandler(this.imgBtn_Estadistica_Click);
+            // 
+            // imgBtn_Pagos
+            // 
+            this.imgBtn_Pagos.BackColor = System.Drawing.Color.Transparent;
+            this.imgBtn_Pagos.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.imgBtn_Pagos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgBtn_Pagos.HoverState.ImageSize = new System.Drawing.Size(110, 110);
+            this.imgBtn_Pagos.Image = global::JaguarGymApp_Preview.Properties.Resources.pagoBoton;
+            this.imgBtn_Pagos.ImageOffset = new System.Drawing.Point(0, 0);
+            this.imgBtn_Pagos.ImageRotate = 0F;
+            this.imgBtn_Pagos.ImageSize = new System.Drawing.Size(130, 130);
+            this.imgBtn_Pagos.Location = new System.Drawing.Point(83, 3);
+            this.imgBtn_Pagos.Name = "imgBtn_Pagos";
+            this.imgBtn_Pagos.PressedState.ImageSize = new System.Drawing.Size(150, 150);
+            this.imgBtn_Pagos.Size = new System.Drawing.Size(140, 140);
+            this.imgBtn_Pagos.TabIndex = 1;
+            this.imgBtn_Pagos.UseTransparentBackground = true;
+            this.imgBtn_Pagos.Click += new System.EventHandler(this.imgBtn_Pagos_Click);
+            // 
+            // imgBtn_Miembros
+            // 
+            this.imgBtn_Miembros.BackColor = System.Drawing.Color.Transparent;
+            this.imgBtn_Miembros.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.imgBtn_Miembros.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgBtn_Miembros.HoverState.ImageSize = new System.Drawing.Size(140, 140);
+            this.imgBtn_Miembros.Image = global::JaguarGymApp_Preview.Properties.Resources.miembrosBoton;
+            this.imgBtn_Miembros.ImageOffset = new System.Drawing.Point(0, 0);
+            this.imgBtn_Miembros.ImageRotate = 0F;
+            this.imgBtn_Miembros.ImageSize = new System.Drawing.Size(160, 160);
+            this.imgBtn_Miembros.Location = new System.Drawing.Point(79, 2);
+            this.imgBtn_Miembros.Name = "imgBtn_Miembros";
+            this.imgBtn_Miembros.PressedState.ImageSize = new System.Drawing.Size(180, 180);
+            this.imgBtn_Miembros.Size = new System.Drawing.Size(152, 143);
+            this.imgBtn_Miembros.TabIndex = 17;
+            this.imgBtn_Miembros.UseTransparentBackground = true;
+            this.imgBtn_Miembros.Click += new System.EventHandler(this.imgBtn_Miembros_Click);
+            // 
             // guna2ImageButton1
             // 
             this.guna2ImageButton1.BackColor = System.Drawing.Color.Transparent;
             this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
             this.guna2ImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2ImageButton1.HoverState.Image = global::JaguarGymApp_Preview.Properties.Resources.configuracion_hover;
             this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(35, 35);
-            this.guna2ImageButton1.Image = global::JaguarGymApp_Preview.Properties.Resources.Mascota;
+            this.guna2ImageButton1.Image = global::JaguarGymApp_Preview.Properties.Resources.configuracion;
             this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
             this.guna2ImageButton1.ImageRotate = 0F;
             this.guna2ImageButton1.ImageSize = new System.Drawing.Size(35, 35);
             this.guna2ImageButton1.Location = new System.Drawing.Point(992, 27);
             this.guna2ImageButton1.Name = "guna2ImageButton1";
+            this.guna2ImageButton1.PressedState.Image = global::JaguarGymApp_Preview.Properties.Resources.configuracion_hover;
             this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(35, 35);
             this.guna2ImageButton1.Size = new System.Drawing.Size(40, 36);
             this.guna2ImageButton1.TabIndex = 1;
