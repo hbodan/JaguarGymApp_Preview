@@ -31,6 +31,7 @@ namespace JaguarGymApp_Preview.Formularios
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.materialDrawer1 = new MaterialSkin.Controls.MaterialDrawer();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,9 +48,11 @@ namespace JaguarGymApp_Preview.Formularios
             this.btn_MostrarPassword = new Guna.UI2.WinForms.Guna2ImageButton();
             this.imgbtn_Escaner = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // materialDrawer1
@@ -175,6 +178,8 @@ namespace JaguarGymApp_Preview.Formularios
             this.txtbox_IngresarUsuario.SelectedText = "";
             this.txtbox_IngresarUsuario.Size = new System.Drawing.Size(380, 40);
             this.txtbox_IngresarUsuario.TabIndex = 28;
+            this.txtbox_IngresarUsuario.TextChanged += new System.EventHandler(this.txtbox_IngresarUsuario_TextChanged);
+            this.txtbox_IngresarUsuario.Validating += new System.ComponentModel.CancelEventHandler(this.txtbox_IngresarUsuario_Validating);
             // 
             // txtBox_IngresarPassword
             // 
@@ -195,10 +200,11 @@ namespace JaguarGymApp_Preview.Formularios
             this.txtBox_IngresarPassword.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtBox_IngresarPassword.Name = "txtBox_IngresarPassword";
             this.txtBox_IngresarPassword.PasswordChar = '*';
-            this.txtBox_IngresarPassword.PlaceholderText = "Password";
+            this.txtBox_IngresarPassword.PlaceholderText = "Contraseña";
             this.txtBox_IngresarPassword.SelectedText = "";
             this.txtBox_IngresarPassword.Size = new System.Drawing.Size(380, 40);
             this.txtBox_IngresarPassword.TabIndex = 29;
+            this.txtBox_IngresarPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtBox_IngresarPassword_Validating);
             // 
             // linkLb_CrearCuenta
             // 
@@ -285,6 +291,7 @@ namespace JaguarGymApp_Preview.Formularios
             // imgbtn_Escaner
             // 
             this.imgbtn_Escaner.BackColor = System.Drawing.Color.Transparent;
+            this.imgbtn_Escaner.CausesValidation = false;
             this.imgbtn_Escaner.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
             this.imgbtn_Escaner.HoverState.Image = global::JaguarGymApp_Preview.Properties.Resources.pistola_de_escaner_hover;
             this.imgbtn_Escaner.HoverState.ImageSize = new System.Drawing.Size(30, 30);
@@ -316,6 +323,10 @@ namespace JaguarGymApp_Preview.Formularios
             this.guna2PictureBox2.TabIndex = 12;
             this.guna2PictureBox2.TabStop = false;
             this.guna2PictureBox2.Click += new System.EventHandler(this.guna2PictureBox2_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // Inicio_Sesion
             // 
@@ -350,6 +361,7 @@ namespace JaguarGymApp_Preview.Formularios
             this.guna2GradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -374,5 +386,6 @@ namespace JaguarGymApp_Preview.Formularios
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2ImageButton imgbtn_Escaner;
         private Guna.UI2.WinForms.Guna2ImageButton btn_MostrarPassword;
+        private ErrorProvider errorProvider1;
     }
 }

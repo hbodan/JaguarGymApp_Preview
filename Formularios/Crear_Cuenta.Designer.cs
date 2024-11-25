@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtRegistroNombres = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtRegistroApellidos = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtRegistroNombreCompleto = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtRegistroEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtRegistroCargo = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -45,8 +46,10 @@
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btn_MostrarPasswordA = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2GradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -69,9 +72,9 @@
             this.label2.Location = new System.Drawing.Point(52, 164);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(195, 18);
+            this.label2.Size = new System.Drawing.Size(260, 18);
             this.label2.TabIndex = 21;
-            this.label2.Text = "Ingrese sus Nombres";
+            this.label2.Text = "Ingrese su nombre completo";
             // 
             // label3
             // 
@@ -82,55 +85,55 @@
             this.label3.Location = new System.Drawing.Point(52, 249);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(193, 18);
+            this.label3.Size = new System.Drawing.Size(266, 18);
             this.label3.TabIndex = 22;
-            this.label3.Text = "Ingrese sus Apellidos";
+            this.label3.Text = "Ingrese su correo electronico";
             // 
-            // txtRegistroNombres
+            // txtRegistroNombreCompleto
             // 
-            this.txtRegistroNombres.AutoRoundedCorners = true;
-            this.txtRegistroNombres.BackColor = System.Drawing.Color.Transparent;
-            this.txtRegistroNombres.BorderRadius = 18;
-            this.txtRegistroNombres.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtRegistroNombres.DefaultText = "";
-            this.txtRegistroNombres.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtRegistroNombres.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtRegistroNombres.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtRegistroNombres.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtRegistroNombres.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRegistroNombres.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtRegistroNombres.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRegistroNombres.Location = new System.Drawing.Point(55, 196);
-            this.txtRegistroNombres.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtRegistroNombres.Name = "txtRegistroNombres";
-            this.txtRegistroNombres.PasswordChar = '\0';
-            this.txtRegistroNombres.PlaceholderText = "";
-            this.txtRegistroNombres.SelectedText = "";
-            this.txtRegistroNombres.Size = new System.Drawing.Size(379, 39);
-            this.txtRegistroNombres.TabIndex = 29;
+            this.txtRegistroNombreCompleto.AutoRoundedCorners = true;
+            this.txtRegistroNombreCompleto.BackColor = System.Drawing.Color.Transparent;
+            this.txtRegistroNombreCompleto.BorderRadius = 18;
+            this.txtRegistroNombreCompleto.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtRegistroNombreCompleto.DefaultText = "";
+            this.txtRegistroNombreCompleto.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtRegistroNombreCompleto.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtRegistroNombreCompleto.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRegistroNombreCompleto.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRegistroNombreCompleto.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtRegistroNombreCompleto.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtRegistroNombreCompleto.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtRegistroNombreCompleto.Location = new System.Drawing.Point(55, 196);
+            this.txtRegistroNombreCompleto.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtRegistroNombreCompleto.Name = "txtRegistroNombreCompleto";
+            this.txtRegistroNombreCompleto.PasswordChar = '\0';
+            this.txtRegistroNombreCompleto.PlaceholderText = "";
+            this.txtRegistroNombreCompleto.SelectedText = "";
+            this.txtRegistroNombreCompleto.Size = new System.Drawing.Size(379, 39);
+            this.txtRegistroNombreCompleto.TabIndex = 29;
             // 
-            // txtRegistroApellidos
+            // txtRegistroEmail
             // 
-            this.txtRegistroApellidos.AutoRoundedCorners = true;
-            this.txtRegistroApellidos.BackColor = System.Drawing.Color.Transparent;
-            this.txtRegistroApellidos.BorderRadius = 18;
-            this.txtRegistroApellidos.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtRegistroApellidos.DefaultText = "";
-            this.txtRegistroApellidos.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtRegistroApellidos.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtRegistroApellidos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtRegistroApellidos.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtRegistroApellidos.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRegistroApellidos.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtRegistroApellidos.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRegistroApellidos.Location = new System.Drawing.Point(55, 282);
-            this.txtRegistroApellidos.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtRegistroApellidos.Name = "txtRegistroApellidos";
-            this.txtRegistroApellidos.PasswordChar = '\0';
-            this.txtRegistroApellidos.PlaceholderText = "";
-            this.txtRegistroApellidos.SelectedText = "";
-            this.txtRegistroApellidos.Size = new System.Drawing.Size(379, 39);
-            this.txtRegistroApellidos.TabIndex = 30;
+            this.txtRegistroEmail.AutoRoundedCorners = true;
+            this.txtRegistroEmail.BackColor = System.Drawing.Color.Transparent;
+            this.txtRegistroEmail.BorderRadius = 18;
+            this.txtRegistroEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtRegistroEmail.DefaultText = "";
+            this.txtRegistroEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtRegistroEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtRegistroEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRegistroEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRegistroEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtRegistroEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtRegistroEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtRegistroEmail.Location = new System.Drawing.Point(58, 283);
+            this.txtRegistroEmail.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtRegistroEmail.Name = "txtRegistroEmail";
+            this.txtRegistroEmail.PasswordChar = '\0';
+            this.txtRegistroEmail.PlaceholderText = "";
+            this.txtRegistroEmail.SelectedText = "";
+            this.txtRegistroEmail.Size = new System.Drawing.Size(379, 39);
+            this.txtRegistroEmail.TabIndex = 30;
             // 
             // label4
             // 
@@ -341,6 +344,10 @@
             this.guna2ImageButton1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MostrarPasswordB_MouseDown);
             this.guna2ImageButton1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MostrarPasswordB_MouseUp);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Crear_Cuenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -357,8 +364,8 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtRegistroCargo);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtRegistroApellidos);
-            this.Controls.Add(this.txtRegistroNombres);
+            this.Controls.Add(this.txtRegistroEmail);
+            this.Controls.Add(this.txtRegistroNombreCompleto);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -371,6 +378,7 @@
             this.Load += new System.EventHandler(this.Crear_Cuenta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2GradientPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -381,8 +389,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2TextBox txtRegistroNombres;
-        private Guna.UI2.WinForms.Guna2TextBox txtRegistroApellidos;
+        private Guna.UI2.WinForms.Guna2TextBox txtRegistroNombreCompleto;
+        private Guna.UI2.WinForms.Guna2TextBox txtRegistroEmail;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2TextBox txtRegistroCargo;
         private System.Windows.Forms.Label label5;
@@ -395,5 +403,6 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2ImageButton btn_MostrarPasswordA;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

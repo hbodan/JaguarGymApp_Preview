@@ -40,10 +40,85 @@ namespace JaguarGymApp_Preview.Formularios
 
         private void guna2GradientButton1_Click(object sender, EventArgs e)
         {
+            /*
             Principal formularioPrincipal = new Principal();
             formularioPrincipal.Show();
             this.Close();
+            */
+
+            // Limpiar errores anteriores
+            errorProvider1.Clear();
+
+            // Limpiar errores anteriores
+            errorProvider1.Clear();
+
+            // Lista para almacenar los errores de validación
+            List<string> errores = new List<string>();
+
+            // Validación del campo Usuario
+            if (string.IsNullOrWhiteSpace(txtRegistroNombreCompleto.Text))
+            {
+                errores.Add("El campo de nombre no puede estar vacío.");
+                errorProvider1.SetError(txtRegistroNombreCompleto, "El campo de nombre no puede estar vacío.");
+            }
+
+            // Validación del campo Apellidos
+            if (string.IsNullOrWhiteSpace(txtRegistroEmail.Text))
+            {
+                errores.Add("El campo de Email no puede estar vacío.");
+                errorProvider1.SetError(txtRegistroEmail, "El campo de Email no puede estar vacío.");
+            }
+
+            // Validación del campo Contraseña
+            if (string.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                errores.Add("El campo de contraseña no puede estar vacío.");
+                errorProvider1.SetError(txtPassword, "El campo de contraseña no puede estar vacío.");
+            }
+
+            // Validación de la confirmación de la Contraseña (Repetir contraseña)
+            if (string.IsNullOrWhiteSpace(txtPassword2.Text))
+            {
+                errores.Add("Debe confirmar la contraseña.");
+                errorProvider1.SetError(txtPassword2, "Debe confirmar la contraseña.");
+            }
+            else if (txtPassword.Text != txtPassword2.Text)
+            {
+                errores.Add("Las contraseñas no coinciden.");
+                errorProvider1.SetError(txtPassword, "Las contraseñas no coinciden.");
+            }
+
+            // Validación del campo Cargo
+            if (string.IsNullOrWhiteSpace(txtRegistroCargo.Text))
+            {
+                errores.Add("El campo de cargo no puede estar vacío.");
+                errorProvider1.SetError(txtRegistroCargo, "El campo de cargo no puede estar vacío.");
+            }
+
+            // Verificar si hay errores
+            if (errores.Count > 0)
+            {
+                // Mostrar los errores en una nueva pestaña o control
+                MostrarErrores(errores);
+            }
+            else
+            {
+                // Si no hay errores, proceder con la creación de cuenta
+                MessageBox.Show("Cuenta creada con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Aquí puedes agregar el código para proceder con la creación de la cuenta
+            }
         }
+
+        // Método para mostrar los errores en una pestaña o lista
+        private void MostrarErrores(List<string> errores)
+        {
+            // Unir todos los errores en una sola cadena separada por saltos de línea
+            string mensajeErrores = string.Join(Environment.NewLine, errores);
+
+            // Mostrar el mensaje de errores en un cuadro emergente (MessageBox)
+            MessageBox.Show(mensajeErrores, "Errores de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
 
         private void lkbVolverIniciar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

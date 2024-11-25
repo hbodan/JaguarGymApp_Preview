@@ -85,6 +85,7 @@
             // btnIngresarEntrada
             // 
             this.btnIngresarEntrada.AutoRoundedCorners = true;
+            this.btnIngresarEntrada.BackColor = System.Drawing.Color.Transparent;
             this.btnIngresarEntrada.BorderRadius = 15;
             this.btnIngresarEntrada.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnIngresarEntrada.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
