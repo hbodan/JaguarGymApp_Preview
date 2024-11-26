@@ -61,7 +61,7 @@ namespace JaguarGymApp_Preview.Formularios
 
         private void regreso_Principal_Click(object sender, EventArgs e)
         {
-            Principal nuevoFormulario = new Principal();
+            Principal nuevoFormulario = new Principal(0);
             this.Hide();
             nuevoFormulario.Show();
         }

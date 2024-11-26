@@ -211,3 +211,4 @@ C:\Users\hebod\OneDrive\Escritorio\JaguarGymApp_Preview\bin\Debug\System.Memory.
 C:\Users\hebod\OneDrive\Escritorio\JaguarGymApp_Preview\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\hebod\OneDrive\Escritorio\JaguarGymApp_Preview\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\hebod\OneDrive\Escritorio\JaguarGymApp_Preview\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\hebod\OneDrive\Escritorio\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Configuracion.resources

@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\hebod\\OneDrive\\Escritorio\\JaguarGymApp_Preview\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|c:\\users\\hebod\\onedrive\\escritorio\\jaguargymapp_preview\\principal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:principal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|c:\\users\\hebod\\onedrive\\escritorio\\jaguargymapp_preview\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|c:\\users\\hebod\\onedrive\\escritorio\\jaguargymapp_preview\\formularios\\agregar_miembros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:formularios\\agregar_miembros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|c:\\users\\hebod\\onedrive\\escritorio\\jaguargymapp_preview\\formularios\\crear_cuenta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:formularios\\crear_cuenta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|c:\\users\\hebod\\onedrive\\escritorio\\jaguargymapp_preview\\formularios\\crear_cuenta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:formularios\\crear_cuenta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|c:\\users\\hebod\\onedrive\\escritorio\\jaguargymapp_preview\\formularios\\escanea_tu_cedula_o_cif.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:formularios\\escanea_tu_cedula_o_cif.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|c:\\users\\hebod\\onedrive\\escritorio\\jaguargymapp_preview\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|c:\\users\\hebod\\onedrive\\escritorio\\jaguargymapp_preview\\formularios\\configuracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:formularios\\configuracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -59,39 +71,81 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Principal.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\hebod\\OneDrive\\Escritorio\\JaguarGymApp_Preview\\Principal.Designer.cs",
-              "RelativeDocumentMoniker": "Principal.Designer.cs",
-              "ToolTip": "C:\\Users\\hebod\\OneDrive\\Escritorio\\JaguarGymApp_Preview\\Principal.Designer.cs",
-              "RelativeToolTip": "Principal.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T14:34:37.797Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Principal.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\hebod\\OneDrive\\Escritorio\\JaguarGymApp_Preview\\Principal.cs",
               "RelativeDocumentMoniker": "Principal.cs",
               "ToolTip": "C:\\Users\\hebod\\OneDrive\\Escritorio\\JaguarGymApp_Preview\\Principal.cs [Dise\u00F1o]",
               "RelativeToolTip": "Principal.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T14:34:35.625Z",
+              "WhenOpened": "2024-11-25T14:47:37.173Z",
               "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Crear_Cuenta.cs",
+              "DocumentMoniker": "C:\\Users\\hebod\\OneDrive\\Escritorio\\JaguarGymApp_Preview\\Formularios\\Crear_Cuenta.cs",
+              "RelativeDocumentMoniker": "Formularios\\Crear_Cuenta.cs",
+              "ToolTip": "C:\\Users\\hebod\\OneDrive\\Escritorio\\JaguarGymApp_Preview\\Formularios\\Crear_Cuenta.cs",
+              "RelativeToolTip": "Formularios\\Crear_Cuenta.cs",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAcwD0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T14:41:48.958Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Agregar_Miembros.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\hebod\\OneDrive\\Escritorio\\JaguarGymApp_Preview\\Formularios\\Agregar_Miembros.cs",
-              "RelativeDocumentMoniker": "Formularios\\Agregar_Miembros.cs",
-              "ToolTip": "C:\\Users\\hebod\\OneDrive\\Escritorio\\JaguarGymApp_Preview\\Formularios\\Agregar_Miembros.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Formularios\\Agregar_Miembros.cs [Dise\u00F1o]",
+              "Title": "Crear_Cuenta.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\hebod\\OneDrive\\Escritorio\\JaguarGymApp_Preview\\Formularios\\Crear_Cuenta.cs",
+              "RelativeDocumentMoniker": "Formularios\\Crear_Cuenta.cs",
+              "ToolTip": "C:\\Users\\hebod\\OneDrive\\Escritorio\\JaguarGymApp_Preview\\Formularios\\Crear_Cuenta.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Formularios\\Crear_Cuenta.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T14:33:52.286Z",
+              "WhenOpened": "2024-11-25T14:41:47.314Z",
               "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Escanea_tu_cedula_o_CIF.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\hebod\\OneDrive\\Escritorio\\JaguarGymApp_Preview\\Formularios\\Escanea_tu_cedula_o_CIF.cs",
+              "RelativeDocumentMoniker": "Formularios\\Escanea_tu_cedula_o_CIF.cs",
+              "ToolTip": "C:\\Users\\hebod\\OneDrive\\Escritorio\\JaguarGymApp_Preview\\Formularios\\Escanea_tu_cedula_o_CIF.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Formularios\\Escanea_tu_cedula_o_CIF.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T14:41:45.353Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\hebod\\OneDrive\\Escritorio\\JaguarGymApp_Preview\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\hebod\\OneDrive\\Escritorio\\JaguarGymApp_Preview\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T14:39:53.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Configuracion.cs",
+              "DocumentMoniker": "C:\\Users\\hebod\\OneDrive\\Escritorio\\JaguarGymApp_Preview\\Formularios\\Configuracion.cs",
+              "RelativeDocumentMoniker": "Formularios\\Configuracion.cs",
+              "ToolTip": "C:\\Users\\hebod\\OneDrive\\Escritorio\\JaguarGymApp_Preview\\Formularios\\Configuracion.cs",
+              "RelativeToolTip": "Formularios\\Configuracion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T14:39:02.788Z",
+              "EditorCaption": ""
             }
           ]
         }
