@@ -331,6 +331,7 @@
     <None Include="Recursos\avatar.png" />
     <None Include="Recursos\bloquear.png" />
     <Content Include="Recursos\Check_icon.png" />
+    <None Include="Recursos\codigo-de-barras.png" />
     <Content Include="Recursos\Codigo_de_barras_Horizontal.png" />
     <Content Include="Recursos\configuracion hover.png" />
     <Content Include="Recursos\configuracion.png" />
@@ -338,6 +339,7 @@
     <None Include="Recursos\correo.png" />
     <Content Include="Recursos\crearCuentaImagen.png" />
     <Content Include="Recursos\deporte.png" />
+    <None Include="Recursos\escaneo-de-codigo-de-barras.png" />
     <Content Include="Recursos\estadisticasBoton.png" />
     <Content Include="Recursos\Iniciar_Sesion.png" />
     <Content Include="Recursos\Jaguares_UAM.png" />
