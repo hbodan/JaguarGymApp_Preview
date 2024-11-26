@@ -103,6 +103,16 @@ namespace JaguarGymApp_Preview.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap codigo_de_barras {
+            get {
+                object obj = ResourceManager.GetObject("codigo-de-barras", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Codigo_de_barras_Horizontal {
             get {
                 object obj = ResourceManager.GetObject("Codigo_de_barras_Horizontal", resourceCulture);
@@ -166,6 +176,26 @@ namespace JaguarGymApp_Preview.Properties {
         internal static System.Drawing.Bitmap deporte {
             get {
                 object obj = ResourceManager.GetObject("deporte", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap escaneo_de_codigo_de_barras {
+            get {
+                object obj = ResourceManager.GetObject("escaneo-de-codigo-de-barras", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap escaneo_de_codigo_de_barras1 {
+            get {
+                object obj = ResourceManager.GetObject("escaneo-de-codigo-de-barras1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
