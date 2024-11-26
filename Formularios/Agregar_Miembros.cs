@@ -13,6 +13,7 @@ using JaguarGymApp_Preview.Estructuras;
 using Guna.UI2.WinForms.Enums;
 using JaguarGymApp_Preview.Formularios;
 using System.Web;
+using System.Xml.Serialization;
 
 namespace JaguarGymApp_Preview.Formularios
 {
@@ -45,68 +46,23 @@ namespace JaguarGymApp_Preview.Formularios
         {
 
         }
+
+        private void CrearID()
+        {
+            int IdCreada = miembrosRecibidos.Count + 1;
+            txtId.Text = IdCreada.ToString();
+        }
         private Usuario CrearUsuario()
         {
-            
-            if (!int.TryParse(txtId.Text, out int Id))
-                throw new Exception("El campo ID debe ser un número válido.");
-
-            /*
-            if (string.IsNullOrWhiteSpace(txtIdPago.Text) || !int.TryParse(txtIdPago.Text, out int idPago))
-            {
-                MessageBox.Show("Por favor, ingresa un ID de pago válido.");
-                return;
-            }
-
-            string idTransaccion = txtIdTransaccion.Text.Trim();
-            if (string.IsNullOrEmpty(idTransaccion))
-            {
-                MessageBox.Show("El ID de transacción no puede estar vacío.");
-                return;
-            }
-
-            if (!DateTime.TryParse(dtPickerFecha.Text, out DateTime fechaRealizacion))
-            {
-                MessageBox.Show("Por favor, selecciona una fecha válida.");
-                return;
-            }
-
-            string descripcion = txtDescripcion.Text.Trim();
-            if (string.IsNullOrEmpty(descripcion))
-            {
-                MessageBox.Show("La descripción no puede estar vacía.");
-                return;
-            }
-
-            if (string.IsNullOrWhiteSpace(txtMonto.Text) || !decimal.TryParse(txtMonto.Text, out decimal monto) || monto <= 0)
-            {
-                MessageBox.Show("Por favor, ingresa un monto válido mayor a 0.");
-                return;
-            }
-
-            string observacion = txtObservacion.Text.Trim();
-            if (observacion.Length > 500)
-            {
-                MessageBox.Show("La observación no puede exceder los 500 caracteres.");
-                return;
-            }
-
-            if (string.IsNullOrWhiteSpace(txtIdMiembro.Text) || !int.TryParse(txtIdMiembro.Text, out int idMiembro))
-            {
-                MessageBox.Show("Por favor, ingresa un ID de miembro válido.");
-                return;
-            }
-
-            MessageBox.Show("Datos validados correctamente.");
-            */
+            CrearID();
 
             return new Usuario(
-                Id,
+                int.Parse(txtId.Text),
                 txtidentificacion.Text,
                 txtNombre.Text,
                 txtApellidos.Text,
-                cbCarrera.Text,
-                cbFacultad.Text,
+                cmbCarrera.Text,
+                cmbFacultad.Text,
                 chkInterno.Checked,
                 chkColaborador.Checked
             );
