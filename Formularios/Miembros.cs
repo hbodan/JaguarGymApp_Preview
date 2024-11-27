@@ -38,9 +38,6 @@ namespace JaguarGymApp_Preview.Formularios
           
             usuarios = new List<Usuario>
             {
-                new Usuario(1, "24010892", "Roberto Carlos","Lopez Ramirez","Ingenieria en Sistemas","FIA",true,false),
-                new Usuario(2, "0011010059898J", "Carlos Alberto","Bonilla Mejia","Ingenieria en Sistemas","FIA",true,false),
-                new Usuario(3, "0011203041023H", "Mari Auxiliadora","De Santa","Arquitectura","FIA",true,false)
             };
             Actualizardata();
             ConteoMiembros();
