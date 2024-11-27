@@ -48,7 +48,7 @@ namespace JaguarGymApp_Preview.Formularios
                 {
                     conn.Open();
 
-                    string query = "SELECT * FROM usuario";
+                    string query = "SELECT * FROM miembro";
                     MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
                     DataTable table = new DataTable();
                     adapter.Fill(table);
@@ -63,14 +63,32 @@ namespace JaguarGymApp_Preview.Formularios
         }
         private void ConteoMiembros()
         {
-            int TotalMiembros = 0;
-            foreach (var miembro in miembros)
+            try
             {
-                TotalMiembros++;
-            }
+                // Crear una conexión con la base de datos
+                ConexionBD conn = new ConexionBD();
+                using (MySqlConnection connection = new MySqlConnection(conn.GetConnector()))
+                {
+                    connection.Open(); // Abrir la conexión
+                    string query = "SELECT COUNT(*) FROM miembro"; // Consulta SQL para contar los registros
 
-            toolStripStatusLabel1.Text = $"Numero de Miembros activos: {TotalMiembros}"; 
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        // Ejecutar la consulta y obtener el resultado
+                        int totalMiembros = Convert.ToInt32(command.ExecuteScalar());
+
+                        // Mostrar el total en el ToolStripStatusLabel
+                        toolStripStatusLabel1.Text = $"Número de Miembros activos: {totalMiembros}";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejo de errores
+                MessageBox.Show($"Error al contar los miembros: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {

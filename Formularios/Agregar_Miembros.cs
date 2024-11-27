@@ -1,34 +1,24 @@
-﻿using MaterialSkin;
+﻿using JaguarGymApp_Preview.Estructuras;
+using MaterialSkin;
+using MaterialSkin.Controls;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using MaterialSkin.Controls;
-using JaguarGymApp_Preview.Estructuras;
-using Guna.UI2.WinForms.Enums;
-using JaguarGymApp_Preview.Formularios;
-using System.Web;
-using System.Xml.Serialization;
-using MySql.Data.MySqlClient;
-using JaguarGymApp_Preview.Servicios;
 using System.Data.SqlClient;
-using static JaguarGymApp_Preview.Formularios.Agregar_Miembros;
+using System.Windows.Forms;
+using JaguarGymApp_Preview.Servicios;
 
 namespace JaguarGymApp_Preview.Formularios
 {
-    
+
     public partial class Agregar_Miembros : MaterialForm
     {
         private MySqlConnection data;
         List<Miembro> miembrosRecibidos;
         private Miembros_Activos formularioAnterior;
-        
-        public Agregar_Miembros(List<Miembro> lista,Miembros_Activos formulario)
+
+        public Agregar_Miembros(List<Miembro> lista, Miembros_Activos formulario)
         {
             ConexionBD conn = new ConexionBD();
             data = new MySqlConnection(conn.GetConnector());
@@ -41,46 +31,68 @@ namespace JaguarGymApp_Preview.Formularios
             this.formularioAnterior = formulario;
 
         }
-        public class ConexionBD
+        public class DataHelper
         {
-            string server = "localhost";
-            string database = "jaguarGym";
-            string username = "root";
-            string password = "";
+            ConexionBD connectionString = new ConexionBD();
 
-            public ConexionBD()
+            public DataTable ObtenerFacultades()
             {
-            }
+                using (MySqlConnection connection = new MySqlConnection(connectionString.GetConnector()))
+                {
+                    try
+                    {
+                        connection.Open();
+                        string query = "SELECT idFacultad, nombreFacultad FROM facultad";
 
-            public string GetConnector()
-            {
-                string connectionString = $"Server={this.server}; database={this.database}; UID={this.username}; password={this.password};";
+                        // Crear el comando
+                        MySqlCommand command = new MySqlCommand(query, connection);
 
-                return connectionString;
+                        // Usar MySqlDataAdapter para llenar el DataTable
+                        MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                        DataTable facultades = new DataTable();
+                        adapter.Fill(facultades);
+
+                        return facultades;
+                    }
+                    catch (Exception ex)
+                    {
+                        // Manejo de errores
+                        throw new Exception($"Error al obtener facultades: {ex.Message}");
+                    }
+                }
             }
         }
-        
+
 
         public DataTable ObtenerCarrerasPorFacultad(int idFacultad)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            string query = "SELECT idCarrera, nombreCarrera FROM Carrera WHERE idFacultad = @idFacultad";
+
+            try
             {
-                connection.Open();
-                string query = "SELECT idCarrera, nombreCarrera FROM Carrera WHERE idFacultad = @idFacultad";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@idFacultad", idFacultad);
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-                DataTable carreras = new DataTable();
-                adapter.Fill(carreras);
-                return carreras;
+                ConexionBD conn = new ConexionBD();
+                using (MySqlConnection connection = new MySqlConnection(conn.GetConnector()))
+                {
+                    connection.Open();
+                    MySqlCommand command = new MySqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@idFacultad", idFacultad);
+
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                    DataTable carreras = new DataTable();
+                    adapter.Fill(carreras);
+                    return carreras;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al obtener carreras: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
             }
         }
-}
-
 
         private void ToDataBase(Miembro miembro)
         {
-            string query = @"INSERT INTO Miembros 
+            string query = @"INSERT INTO miembro 
                      (identificacion, cif, nombres, apellidos, fechaNacimiento, fechaExp, idcarrera, idfacultad, genero, interno, colaborador, cargo) 
                      VALUES 
                      (@identificacion, @cif, @nombres, @apellidos, @fechaNacimiento, @fechaExp, @idcarrera, @idfacultad, @genero, @interno, @colaborador, @cargo)";
@@ -88,21 +100,23 @@ namespace JaguarGymApp_Preview.Formularios
             try
             {
                 ConexionBD conn = new ConexionBD();
-                using (SqlConnection connection = new SqlConnection(conn.GetConnector()))
+                using (MySqlConnection connection = new MySqlConnection(conn.GetConnector()))
                 {
-                    SqlCommand command = new SqlCommand(query, connection);
-                    command.Parameters.AddWithValue("@identificacion", miembro.Identificacion);
-                    command.Parameters.AddWithValue("@cif", miembro.CIF);
-                    command.Parameters.AddWithValue("@nombre", miembro.Nombres);
-                    command.Parameters.AddWithValue("@apellidos", miembro.Apellidos);
+                    MySqlCommand command = new MySqlCommand(query, connection);
+
+                    // Validar datos antes de asignar
+                    command.Parameters.AddWithValue("@identificacion", miembro.Identificacion ?? string.Empty);
+                    command.Parameters.AddWithValue("@cif", miembro.CIF ?? string.Empty);
+                    command.Parameters.AddWithValue("@nombres", miembro.Nombres ?? string.Empty);
+                    command.Parameters.AddWithValue("@apellidos", miembro.Apellidos ?? string.Empty);
                     command.Parameters.AddWithValue("@fechaNacimiento", miembro.FechaNac);
                     command.Parameters.AddWithValue("@fechaExp", miembro.FechaExp);
                     command.Parameters.AddWithValue("@idcarrera", miembro.Carrera);
                     command.Parameters.AddWithValue("@idfacultad", miembro.Facultad);
-                    command.Parameters.AddWithValue("@genero", miembro.Genero);
-                    command.Parameters.AddWithValue("@interno", miembro.Interno);
-                    command.Parameters.AddWithValue("@colaborador", miembro.Colaborador);
-                    command.Parameters.AddWithValue("@cargo", miembro.Cargo);
+                    command.Parameters.AddWithValue("@genero", miembro.Genero ?? string.Empty);
+                    command.Parameters.AddWithValue("@interno", miembro.Interno ? 1 : 0);
+                    command.Parameters.AddWithValue("@colaborador", miembro.Colaborador ? 1 : 0);
+                    command.Parameters.AddWithValue("@cargo", miembro.Cargo ?? string.Empty);
 
                     connection.Open();
                     int rowsAffected = command.ExecuteNonQuery();
@@ -122,40 +136,61 @@ namespace JaguarGymApp_Preview.Formularios
                 MessageBox.Show($"Error al guardar en la base de datos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
         private void Principal_Resize(object sender, EventArgs e)
         {
             this.Size = new System.Drawing.Size(1080, 720); // Mantener el tamaño de la ventana fijo
         }
-        private DataHelper dataHelper = new DataHelper();
+
 
         private void Agregar_Miembros_Load(object sender, EventArgs e)
         {
-            DataTable facultades = dataHelper.ObtenerFacultades();
+            ConexionBD conn = new ConexionBD();
 
-            cmbFacultad.DataSource = facultades;
-            cmbFacultad.DisplayMember = "nombreFacultad";
-            cmbFacultad.ValueMember = "idFacultad";
+            string query = "SELECT idFacultad, nombreFacultad FROM Facultad";
 
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(conn.GetConnector()))
+                {
+                    connection.Open();
+                    MySqlCommand command = new MySqlCommand(query, connection);
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+
+                    DataTable facultades = new DataTable();
+                    adapter.Fill(facultades);
+
+                    cmbFacultad.DataSource = facultades;
+                    cmbFacultad.DisplayMember = "nombreFacultad";
+                    cmbFacultad.ValueMember = "idFacultad";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar facultades: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
         private Miembro CrearMiembro()
         {
             return new Miembro(
-                0,
-                txtidentificacion.Text,
-                txtCIF.Text,
-                txtNombre.Text,
-                txtApellidos.Text,
-                dateNacimiento.Value,
-                dateExpiracion.Value,
-                cmbCarrera.Text,
-                cmbFacultad.Text,
-                chkMasculino.Checked,
-                chkEstudiante.Checked,
-                chkColaborador.Checked,
-                txtCargo.Text
-                
+                idMiembro: 0, // Valor autogenerado
+                identificacion: string.IsNullOrWhiteSpace(txtidentificacion.Text) ? null : txtidentificacion.Text,
+                cif: string.IsNullOrWhiteSpace(txtCIF.Text) ? null : txtCIF.Text,
+                nombres: string.IsNullOrWhiteSpace(txtNombre.Text) ? null : txtNombre.Text,
+                apellidos: string.IsNullOrWhiteSpace(txtApellidos.Text) ? null : txtApellidos.Text,
+                fechaNac: dateNacimiento.Value,
+                fechaExp: dateExpiracion.Value,
+                carrera: cmbCarrera.SelectedValue?.ToString(),
+                facultad: cmbFacultad.SelectedValue?.ToString(),
+                genero: cmbGenero.SelectedItem?.ToString(),
+                interno: chkEstudiante.Checked,
+                colaborador: chkColaborador.Checked,
+                cargo: string.IsNullOrWhiteSpace(txtCargo.Text) ? null : txtCargo.Text
             );
         }
+
 
         private void AgregarMiembro()
         {
@@ -165,7 +200,6 @@ namespace JaguarGymApp_Preview.Formularios
                 {
                     Miembro nuevoMiembro = CrearMiembro();
                     ToDataBase(nuevoMiembro);
-                    miembrosRecibidos.Add(nuevoMiembro);
                 }
                 catch (Exception ex)
                 {
@@ -194,7 +228,7 @@ namespace JaguarGymApp_Preview.Formularios
 
         private void linkSalir_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            
+
         }
         private bool ValidacionLlenado()
         {
@@ -205,7 +239,7 @@ namespace JaguarGymApp_Preview.Formularios
             }
             if (string.IsNullOrEmpty(txtCIF.Text))
             {
-                MessageBox.Show("El campo CIF no puede estar vacío", "Advertencia",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El campo CIF no puede estar vacío", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             if (string.IsNullOrEmpty(txtNombre.Text))
             {
@@ -256,7 +290,7 @@ namespace JaguarGymApp_Preview.Formularios
         }
 
         private void chkColaborador_CheckedChanged(object sender, EventArgs e) //Hacerque se muestre el campo "Cargo" si Colaborador es seleccionado
-        { 
+        {
             bool Seleccionado = chkColaborador.Checked;
 
             lblCargo.Visible = Seleccionado;
@@ -266,19 +300,32 @@ namespace JaguarGymApp_Preview.Formularios
 
         private void cmbFacultad_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbFacultad.SelectedValue != null)
+            try
             {
-                int idFacultadSeleccionada = Convert.ToInt32(cmbFacultad.SelectedValue);
-
-                DataTable carreras = dataHelper.ObtenerCarrerasPorFacultad(idFacultadSeleccionada);
-
-                cmbFacultad.DataSource = carreras;
-                cmbCarrera.DisplayMember = "nombreCarrera";
-                cmbCarrera.ValueMember = "idCarrera";
+                if (cmbFacultad.SelectedValue != null && cmbFacultad.SelectedValue is int idFacultadSeleccionada)
+                {
+                    // Obtener las carreras según la facultad seleccionada
+                    DataTable carreras = ObtenerCarrerasPorFacultad(idFacultadSeleccionada);
+                    cmbCarrera.DataSource = carreras;
+                    cmbCarrera.DisplayMember = "nombreCarrera";
+                    cmbCarrera.ValueMember = "idCarrera";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar las carreras: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
+
+
+
         private void dateNacimiento_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbGenero_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

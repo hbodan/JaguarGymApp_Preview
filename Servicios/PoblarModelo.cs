@@ -1,12 +1,7 @@
 ﻿
+using JaguarGymApp_Preview.Estructuras;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using JaguarGymApp_Preview.Formularios;
-using static estadisticasForm.PoblarModelo;
-using JaguarGymApp_Preview.Estructuras;
 
 namespace estadisticasForm
 {
@@ -26,9 +21,11 @@ namespace estadisticasForm
         {
             return new List<Miembro>
             {
-                new Miembro { IdMiembro = 1, Identificacion = "ID001",CIF = "ID001", Nombres = "Juan", Apellidos = "Pérez", FechaNac = new DateTime(1990, 5, 15),FechaExp = new DateTime(2025, 5, 15), Carrera = "Ingeniería", Facultad = "Facultad de Ingeniería",  Genero = true, Interno = true, Colaborador = false, Cargo = "Estudiante" },
-                new Miembro { IdMiembro = 2, Identificacion = "ID002",CIF = "ID002", Nombres = "Ana", Apellidos = "Gómez", FechaNac = new DateTime(1992, 8, 20),FechaExp = new DateTime(2026, 8, 20), Carrera = "Medicina", Facultad = "Facultad de Medicina", Genero = false, Interno = false, Colaborador = true, Cargo = "Profesor" },
-                new Miembro { IdMiembro = 3, Identificacion = "ID003",CIF = "ID003", Nombres = "Carlos", Apellidos = "Sánchez", FechaNac = new DateTime(1991, 11, 12), FechaExp = new DateTime(2024, 11, 12), Carrera = "Derecho", Facultad = "Facultad de Derecho",Genero = true, Interno = true, Colaborador = false, Cargo = "Estudiante" }
+                /* new Miembro { IdMiembro = 1, Identificacion = "ID001",CIF = "ID001", Nombres = "Juan", Apellidos = "Pérez", FechaNac = new DateTime(1990, 5, 15), FechaExp = new DateTime(2025, 5, 15), Carrera = "Ingeniería", Facultad = "Facultad de Ingeniería",  Genero = true, Interno = true, Colaborador = false, Cargo = "Estudiante" },
+         new Miembro { IdMiembro = 2, Identificacion = "ID002",CIF = "ID002", Nombres = "Ana", Apellidos = "Gómez", FechaNac = new DateTime(1992, 8, 20), FechaExp = new DateTime(2026, 8, 20), Carrera = "Medicina", Facultad = "Facultad de Medicina", Genero = false, Interno = false, Colaborador = true, Cargo = "Profesor" },
+         new Miembro { IdMiembro = 3, Identificacion = "ID003",CIF = "ID003", Nombres = "Carlos", Apellidos = "Sánchez", FechaNac = new DateTime(1991, 11, 12), FechaExp = new DateTime(2024, 11, 12), Carrera = "Derecho", Facultad = "Facultad de Derecho",Genero = true, Interno = true, Colaborador = false, Cargo = "Estudiante" }
+                };
+                }*/
             };
         }
 
