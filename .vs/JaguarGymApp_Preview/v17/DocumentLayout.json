@@ -3,35 +3,35 @@
   "WorkspaceRootPath": "C:\\Users\\Andre\\Desktop\\JaguarGymApp_Preview\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|C:\\Users\\Andre\\Desktop\\JaguarGymApp_Preview\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|C:\\Users\\Andre\\Desktop\\JaguarGymApp_Preview\\formularios\\configuracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:formularios\\configuracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|c:\\users\\andre\\desktop\\jaguargymapp_preview\\formularios\\configuracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:formularios\\configuracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|c:\\users\\andre\\desktop\\jaguargymapp_preview\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|c:\\users\\andre\\desktop\\jaguargymapp_preview\\formularios\\inicio_sesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|C:\\Users\\Andre\\Desktop\\JaguarGymApp_Preview\\formularios\\inicio_sesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:formularios\\inicio_sesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|c:\\users\\andre\\desktop\\jaguargymapp_preview\\formularios\\configuracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:formularios\\configuracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|c:\\users\\andre\\desktop\\jaguargymapp_preview\\formularios\\crear_cuenta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|C:\\Users\\Andre\\Desktop\\JaguarGymApp_Preview\\formularios\\crear_cuenta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:formularios\\crear_cuenta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|c:\\users\\andre\\desktop\\jaguargymapp_preview\\formularios\\crear_cuenta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|C:\\Users\\Andre\\Desktop\\JaguarGymApp_Preview\\formularios\\crear_cuenta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:formularios\\crear_cuenta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|c:\\users\\andre\\desktop\\jaguargymapp_preview\\formularios\\inicio_sesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|C:\\Users\\Andre\\Desktop\\JaguarGymApp_Preview\\formularios\\inicio_sesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:formularios\\inicio_sesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|c:\\users\\andre\\desktop\\jaguargymapp_preview\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|C:\\Users\\Andre\\Desktop\\JaguarGymApp_Preview\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,7 +54,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Inicio_Sesion.cs",
               "DocumentMoniker": "C:\\Users\\Andre\\Desktop\\JaguarGymApp_Preview\\Formularios\\Inicio_Sesion.cs",
               "RelativeDocumentMoniker": "Formularios\\Inicio_Sesion.cs",
@@ -62,8 +62,7 @@
               "RelativeToolTip": "Formularios\\Inicio_Sesion.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T00:37:32.638Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T00:37:32.638Z"
             },
             {
               "$type": "Document",
@@ -75,8 +74,7 @@
               "RelativeToolTip": "Formularios\\Crear_Cuenta.cs",
               "ViewState": "AgIAAIcAAAAAAAAAAAAjwE8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T21:06:07.316Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T21:06:07.316Z"
             },
             {
               "$type": "Document",
@@ -87,8 +85,7 @@
               "ToolTip": "C:\\Users\\Andre\\Desktop\\JaguarGymApp_Preview\\Formularios\\Crear_Cuenta.cs [Design]",
               "RelativeToolTip": "Formularios\\Crear_Cuenta.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T21:06:02.258Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-25T21:06:02.258Z"
             },
             {
               "$type": "Document",
@@ -99,8 +96,7 @@
               "ToolTip": "C:\\Users\\Andre\\Desktop\\JaguarGymApp_Preview\\Formularios\\Inicio_Sesion.cs [Design]",
               "RelativeToolTip": "Formularios\\Inicio_Sesion.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T21:03:28.235Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-25T21:03:28.235Z"
             },
             {
               "$type": "Document",
@@ -111,12 +107,11 @@
               "ToolTip": "C:\\Users\\Andre\\Desktop\\JaguarGymApp_Preview\\Principal.cs [Design]",
               "RelativeToolTip": "Principal.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T21:02:40.809Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-25T21:02:40.809Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Configuracion.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Andre\\Desktop\\JaguarGymApp_Preview\\Formularios\\Configuracion.cs",
               "RelativeDocumentMoniker": "Formularios\\Configuracion.cs",
@@ -128,26 +123,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Configuracion.cs",
               "DocumentMoniker": "C:\\Users\\Andre\\Desktop\\JaguarGymApp_Preview\\Formularios\\Configuracion.cs",
               "RelativeDocumentMoniker": "Formularios\\Configuracion.cs",
               "ToolTip": "C:\\Users\\Andre\\Desktop\\JaguarGymApp_Preview\\Formularios\\Configuracion.cs",
               "RelativeToolTip": "Formularios\\Configuracion.cs",
-              "ViewState": "AgIAAMgAAAAAAAAAAAAiwOAAAABTAAAAAAAAAA==",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAnwHoAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T21:00:01.818Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Andre\\Desktop\\JaguarGymApp_Preview\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Andre\\Desktop\\JaguarGymApp_Preview\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T20:59:34.292Z",
               "EditorCaption": ""

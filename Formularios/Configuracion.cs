@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -120,6 +121,7 @@ namespace JaguarGymApp_Preview.Formularios
 
                 // Ejecutamos la consulta de inserción
                 int rowsAffected = command.ExecuteNonQuery();
+                LoadData();
 
                 if (rowsAffected > 0)
                 {
@@ -189,27 +191,7 @@ namespace JaguarGymApp_Preview.Formularios
             }
 
         }
-
-        private void dgv_ListaUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-        private void dgv_ListaUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // Verifica que el índice de fila seleccionado sea válido
-            if (e.RowIndex >= 0)
-            {
-                // Obtén la fila seleccionada
-                DataGridViewRow selectedRow = dgv_ListaUsuarios.Rows[e.RowIndex];
-
-                // Llena los campos con los valores de las celdas
-                txt_UsuarioConfiguracion.Text = selectedRow.Cells["nombreUsuario"].Value?.ToString(); // Nombre del usuario
-                txt_EmailConfiguracion.Text = selectedRow.Cells["correoElectronico"].Value?.ToString(); // Correo electrónico
-                txt_PasswordConfiguracion.Text = selectedRow.Cells["clave"].Value?.ToString(); // Contraseña
-            }
-        }
-
-        private void btn_EditarConfiguracion_Click(object sender, EventArgs e)
+        private void editarUsuario ()
         {
             if (dgv_ListaUsuarios.SelectedRows.Count == 0)
             {
@@ -250,6 +232,151 @@ namespace JaguarGymApp_Preview.Formularios
             catch (Exception ex)
             {
                 MessageBox.Show("Error al actualizar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+        private void dgv_ListaUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        private void dgv_ListaUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Verifica que el índice de fila seleccionado sea válido
+            if (e.RowIndex >= 0)
+            {
+                // Obtén la fila seleccionada
+                DataGridViewRow selectedRow = dgv_ListaUsuarios.Rows[e.RowIndex];
+
+                // Llena los campos con los valores de las celdas
+                txt_UsuarioConfiguracion.Text = selectedRow.Cells["nombreUsuario"].Value?.ToString(); // Nombre del usuario
+                txt_EmailConfiguracion.Text = selectedRow.Cells["correoElectronico"].Value?.ToString(); // Correo electrónico
+                txt_PasswordConfiguracion.Text = selectedRow.Cells["clave"].Value?.ToString(); // Contraseña
+            }
+        }
+
+        private void btn_EditarConfiguracion_Click(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+
+            errorProvider1.Clear();
+
+            List<string> errores = new List<string>();
+
+            // Validación del campo Usuario
+            if (string.IsNullOrWhiteSpace(txt_UsuarioConfiguracion.Text))
+            {
+                errores.Add("El campo de nombre no puede estar vacío.");
+                errorProvider1.SetError(txt_UsuarioConfiguracion, "El campo de nombre no puede estar vacío.");
+            }
+
+            // Validación del campo Email
+            if (string.IsNullOrWhiteSpace(txt_EmailConfiguracion.Text))
+            {
+                errores.Add("El campo de Email no puede estar vacío.");
+                errorProvider1.SetError(txt_EmailConfiguracion, "El campo de Email no puede estar vacío.");
+            }
+
+            // Validación del campo Contraseña
+            if (string.IsNullOrWhiteSpace(txt_PasswordConfiguracion.Text))
+            {
+                errores.Add("El campo de contraseña no puede estar vacío.");
+                errorProvider1.SetError(txt_PasswordConfiguracion, "El campo de contraseña no puede estar vacío.");
+            }
+
+            // Verificar si hay errores
+            if (errores.Count > 0)
+            {
+                // Mostrar los errores en una nueva pestaña o control
+                MostrarErrores(errores);
+            }
+            else
+            {
+                editarUsuario();
+            }
+
+        }
+        private void EliminarRegistro(int id)
+        {
+            if (dgv_ListaUsuarios.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Por favor, selecciona un registro para eliminar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string idUsuario = dgv_ListaUsuarios.SelectedRows[0].Cells["idUsuario"].Value.ToString();
+            string query = "DELETE FROM usuario WHERE idUsuario = @id";
+
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(new ConexionBD().GetConnector()))
+                {
+                    conn.Open();
+
+                    using (MySqlCommand command = new MySqlCommand(query, conn))
+                    {
+                        command.Parameters.AddWithValue("@id", idUsuario);
+
+                        // Confirmación antes de eliminar
+                        DialogResult confirmacion = MessageBox.Show(
+                            "¿Estás seguro de que deseas eliminar este registro?",
+                            "Confirmación",
+                            MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Warning
+                        );
+
+                        if (confirmacion == DialogResult.Yes)
+                        {
+                            int rowsAffected = command.ExecuteNonQuery();
+
+                            if (rowsAffected > 0)
+                            {
+                                MessageBox.Show("Registro eliminado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                LoadData(); // Recargar datos en el DataGridView
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se pudo eliminar el registro.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void btn_EliminarConfiguracion_Click(object sender, EventArgs e)
+        {
+            // Verifica si hay una fila seleccionada
+            if (dgv_ListaUsuarios.SelectedRows.Count > 0)
+            {
+                // Obtener el ID o clave primaria de la fila seleccionada
+                int id = Convert.ToInt32(dgv_ListaUsuarios.SelectedRows[0].Cells["idUsuario"].Value);
+
+                // Confirmación antes de eliminar
+                var confirm = MessageBox.Show("¿Estás seguro de que deseas eliminar este registro?",
+                                               "Confirmar Eliminación",
+                                               MessageBoxButtons.YesNo,
+                                               MessageBoxIcon.Warning);
+
+                if (confirm == DialogResult.Yes)
+                {
+                    // Llama al método para eliminar el registro
+                    EliminarRegistro(id);
+
+                    // Actualiza el DataGridView
+                    LoadData();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, selecciona un registro para eliminar.",
+                                "Eliminar Registro",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
             }
         }
     }
