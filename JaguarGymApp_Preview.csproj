@@ -188,11 +188,11 @@
     <Compile Include="Formularios\Inicio_Sesion.Designer.cs">
       <DependentUpon>Inicio_Sesion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Miembros.cs">
+    <Compile Include="Formularios\Miembros_Activos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Miembros.Designer.cs">
-      <DependentUpon>Miembros.cs</DependentUpon>
+    <Compile Include="Formularios\Miembros_Activos.Designer.cs">
+      <DependentUpon>Miembros_Activos.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Usuario_autorizado_gerente.cs">
       <SubType>Form</SubType>
@@ -270,8 +270,8 @@
     <EmbeddedResource Include="Formularios\Inicio_Sesion.resx">
       <DependentUpon>Inicio_Sesion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Miembros.resx">
-      <DependentUpon>Miembros.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Miembros_Activos.resx">
+      <DependentUpon>Miembros_Activos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Mostrar_Estadistica.resx">
       <DependentUpon>Mostrar_Estadistica.cs</DependentUpon>
