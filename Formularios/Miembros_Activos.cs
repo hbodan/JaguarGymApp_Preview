@@ -48,7 +48,7 @@ namespace JaguarGymApp_Preview.Formularios
                 {
                     conn.Open();
 
-                    string query = "SELECT * FROM miembro";
+                    string query = "SELECT \r\n m.idMiembro AS 'ID',\r\n m.cif AS 'CIF', m.identificacion AS 'Identificación',\r\n    m.nombres AS 'Nombres',\r\n    m.apellidos AS 'Apellidos',\r\n m.fechaNacimiento AS 'Fecha de Nacimiento'\r\n ,   f.nombreFacultad AS 'Facultad',\r\n    c.nombreCarrera AS 'Carrera',\r\n    m.genero AS 'Género',\r\n m.fechaExp AS 'Membresia Expira', \r\n    CASE \r\n        WHEN m.interno = 1 THEN 'Sí' \r\n        ELSE 'No' \r\n    END AS 'Interno',\r\n    CASE \r\n        WHEN m.colaborador = 1 THEN 'Sí' \r\n        ELSE 'No' \r\n    END AS 'Colaborador',\r\n    m.cargo AS 'Cargo'\r\nFROM \r\n    miembro m\r\nLEFT JOIN facultad f ON m.idfacultad = f.idFacultad\r\nLEFT JOIN carrera c ON m.idcarrera = c.idCarrera;";
                     MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
                     DataTable table = new DataTable();
                     adapter.Fill(table);
@@ -78,7 +78,7 @@ namespace JaguarGymApp_Preview.Formularios
                         int totalMiembros = Convert.ToInt32(command.ExecuteScalar());
 
                         // Mostrar el total en el ToolStripStatusLabel
-                        toolStripStatusLabel1.Text = $"Número de Miembros activos: {totalMiembros}";
+                        toolStripStatusLabel1.Text = $"Total de Miembros activos: {totalMiembros}";
                     }
                 }
             }
@@ -106,11 +106,82 @@ namespace JaguarGymApp_Preview.Formularios
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            var Buscado = txtBuscar.Text.ToLower();
-            var resultados = miembros.Where(u => u.Nombres.ToLower().Contains(Buscado)).ToList();
-            dgvMiembros.DataSource = null;
-            dgvMiembros.DataSource = resultados;
+            string filtroSeleccionado = cmbFiltro.SelectedItem.ToString(); // Obtener el criterio seleccionado
+            string criterioBusqueda = txtBuscar.Text.Trim();     // Obtener el texto a buscar
 
+            if (string.IsNullOrEmpty(criterioBusqueda))
+            {
+                Actualizardata();
+                return;
+            }
+            
+            string query = "";
+
+            // Construir la consulta SQL según el filtro seleccionado
+            switch (filtroSeleccionado)
+            {
+                case "Identificacion":
+                    query = "SELECT * FROM miembro WHERE identificacion LIKE @criterio";
+                    break;
+
+                case "Nombre":
+                    query = "SELECT * FROM miembro WHERE nombres LIKE @criterio";
+                    break;
+
+                case "Apellido":
+                    query = "SELECT * FROM miembro WHERE apellidos LIKE @criterio";
+                    break;
+
+                case "Facultad":
+                    query = @"SELECT m.* FROM miembro m 
+                      JOIN facultad f ON m.idfacultad = f.idFacultad 
+                      WHERE f.nombreFacultad LIKE @criterio";
+                    break;
+
+                case "Carrera":
+                    query = @"SELECT m.* FROM miembro m 
+                      JOIN carrera c ON m.idcarrera = c.idCarrera 
+                      WHERE c.nombreCarrera LIKE @criterio";
+                    break;
+
+                case "Género":
+                    query = "SELECT * FROM miembro WHERE genero LIKE @criterio";
+                    break;
+
+                default:
+                    MessageBox.Show("Filtro no válido seleccionado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+            }
+
+            // Ejecutar la consulta
+            try
+            {
+                ConexionBD conn = new ConexionBD();
+                using (MySqlConnection connection = new MySqlConnection(conn.GetConnector()))
+                {
+                    connection.Open();
+                    MySqlCommand command = new MySqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@criterio", "%" + criterioBusqueda + "%");
+
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                    DataTable resultados = new DataTable();
+                    adapter.Fill(resultados);
+
+                    // Asumiendo que tienes un DataGridView para mostrar resultados
+                    dgvMiembros.DataSource = resultados;
+
+                    if (resultados.Rows.Count == 0)
+                    {
+                        MessageBox.Show("No se ha encontrado ningún registro que cumpla el criterio","Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al realizar la búsqueda: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            
         }
 
         private void LinkAtras_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

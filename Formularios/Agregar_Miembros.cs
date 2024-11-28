@@ -278,25 +278,42 @@ namespace JaguarGymApp_Preview.Formularios
         }
 
 
-        private void chkEstudiante_CheckedChanged(object sender, EventArgs e) //Hacer que se muestren los comboBox si estudiante es seleccionado
+        private void chkEstudiante_CheckedChanged(object sender, EventArgs e)
         {
-            bool Seleccionado = chkEstudiante.Checked;
+            bool seleccionado = chkEstudiante.Checked;
 
-            lblFacultad.Visible = Seleccionado;
-            cmbFacultad.Visible = Seleccionado;
-            lblCarrera.Visible = Seleccionado;
-            cmbCarrera.Visible = Seleccionado;
-            chkColaborador.Checked = false;
+            // Mostrar/ocultar controles relacionados con "Estudiante"
+            lblFacultad.Visible = seleccionado;
+            cmbFacultad.Visible = seleccionado;
+            lblCarrera.Visible = seleccionado;
+            cmbCarrera.Visible = seleccionado;
+
+            // Limpiar los campos de "Colaborador" y llenar el cargo como "Estudiante"
+            if (seleccionado)
+            {
+                chkColaborador.Checked = false;
+                txtCargo.Text = "Estudiante"; // Asignar "Estudiante" como cargo
+            }
         }
 
-        private void chkColaborador_CheckedChanged(object sender, EventArgs e) //Hacerque se muestre el campo "Cargo" si Colaborador es seleccionado
-        {
-            bool Seleccionado = chkColaborador.Checked;
 
-            lblCargo.Visible = Seleccionado;
-            txtCargo.Visible = Seleccionado;
-            chkEstudiante.Checked = false;
+        private void chkColaborador_CheckedChanged(object sender, EventArgs e)
+        {
+            bool seleccionado = chkColaborador.Checked;
+
+            // Mostrar/ocultar controles relacionados con "Colaborador"
+            lblCargo.Visible = seleccionado;
+            txtCargo.Visible = seleccionado;
+
+            // Limpiar y ocultar Facultad y Carrera si se selecciona "Colaborador"
+            if (seleccionado)
+            {
+                cmbFacultad.SelectedIndex = -1; // Limpiar selección de Facultad
+                cmbCarrera.DataSource = null;  // Limpiar las carreras cargadas
+                chkEstudiante.Checked = false;
+            }
         }
+
 
         private void cmbFacultad_SelectedIndexChanged(object sender, EventArgs e)
         {
