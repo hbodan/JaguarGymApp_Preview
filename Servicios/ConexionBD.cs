@@ -10,10 +10,10 @@ namespace JaguarGymApp_Preview.Servicios
 {
     public class ConexionBD
     {
-        string server = "localhost";
-        string database = "jaguarGym";
-        string username = "root";
-        string password = "";
+        string server = "bzfkzsmkcdxslgo5fohv-mysql.services.clever-cloud.com";
+        string database = "bzfkzsmkcdxslgo5fohv";
+        string username = "uf0betb0sqlmsqbd";
+        string password = "bnFWrCsdN7EPRyEkPzYG";
 
         public ConexionBD()
         {

@@ -110,7 +110,7 @@ namespace JaguarGymApp_Preview
             string nombreCompleto = string.Empty;
 
             // Consulta SQL para obtener el nombre completo según el idMiembro.
-            string query = "SELECT nombreUsuario FROM usuario WHERE idUsuario = @idUsuario";
+            string query = "SELECT nombreUsuario FROM Usuario WHERE idUsuario = @idUsuario";
 
             try
             {

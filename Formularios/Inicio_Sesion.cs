@@ -47,7 +47,7 @@ namespace JaguarGymApp_Preview.Formularios
             string correoIngresado = txtbox_IngresarUsuario.Text;
             string claveIngresada = txtBox_IngresarPassword.Text;
 
-            string query = "SELECT idUsuario FROM usuario WHERE correoElectronico = @usuario AND clave = @contrasena LIMIT 1";
+            string query = "SELECT idUsuario FROM Usuario WHERE correoElectronico = @usuario AND clave = @contrasena LIMIT 1";
 
             try
             {

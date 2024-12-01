@@ -45,7 +45,7 @@ namespace JaguarGymApp_Preview.Formularios
             string correo = txtRegistroEmail.Text;  // Campo de Correo
             string clave = txtPassword2.Text;  // Campo de Contraseña
 
-            string query = "INSERT INTO usuario (nombreUsuario, correoElectronico, clave) VALUES (@nombre, @correo, @clave)";
+            string query = "INSERT INTO Usuario (nombreUsuario, correoElectronico, clave) VALUES (@nombre, @correo, @clave)";
 
             try
             {

@@ -48,7 +48,7 @@ namespace JaguarGymApp_Preview.Formularios
                 {
                     conn.Open();
 
-                    string query = "SELECT \r\n m.idMiembro AS 'ID',\r\n m.cif AS 'CIF', m.identificacion AS 'Identificación',\r\n    m.nombres AS 'Nombres',\r\n    m.apellidos AS 'Apellidos',\r\n m.fechaNacimiento AS 'Fecha de Nacimiento'\r\n ,   f.nombreFacultad AS 'Facultad',\r\n    c.nombreCarrera AS 'Carrera',\r\n    m.genero AS 'Género',\r\n m.fechaExp AS 'Membresia Expira', \r\n    CASE \r\n        WHEN m.interno = 1 THEN 'Sí' \r\n        ELSE 'No' \r\n    END AS 'Interno',\r\n    CASE \r\n        WHEN m.colaborador = 1 THEN 'Sí' \r\n        ELSE 'No' \r\n    END AS 'Colaborador',\r\n    m.cargo AS 'Cargo'\r\nFROM \r\n    miembro m\r\nLEFT JOIN facultad f ON m.idfacultad = f.idFacultad\r\nLEFT JOIN carrera c ON m.idcarrera = c.idCarrera;";
+                    string query = "SELECT \r\n m.idMiembro AS 'ID',\r\n m.cif AS 'CIF', m.identificacion AS 'Identificación',\r\n    m.nombres AS 'Nombres',\r\n    m.apellidos AS 'Apellidos',\r\n m.fechaNacimiento AS 'Fecha de Nacimiento'\r\n ,   f.nombreFacultad AS 'Facultad',\r\n    c.nombreCarrera AS 'Carrera',\r\n    m.genero AS 'Género',\r\n m.fechaExp AS 'Membresia Expira', \r\n    CASE \r\n        WHEN m.interno = 1 THEN 'Sí' \r\n        ELSE 'No' \r\n    END AS 'Interno',\r\n    CASE \r\n        WHEN m.colaborador = 1 THEN 'Sí' \r\n        ELSE 'No' \r\n    END AS 'Colaborador',\r\n    m.cargo AS 'Cargo'\r\nFROM \r\n    Miembro m\r\nLEFT JOIN Facultad f ON m.idfacultad = f.idFacultad\r\nLEFT JOIN Carrera c ON m.idcarrera = c.idCarrera;";
                     MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
                     DataTable table = new DataTable();
                     adapter.Fill(table);
@@ -70,7 +70,7 @@ namespace JaguarGymApp_Preview.Formularios
                 using (MySqlConnection connection = new MySqlConnection(conn.GetConnector()))
                 {
                     connection.Open(); // Abrir la conexión
-                    string query = "SELECT COUNT(*) FROM miembro"; // Consulta SQL para contar los registros
+                    string query = "SELECT COUNT(*) FROM Miembro"; // Consulta SQL para contar los registros
 
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
@@ -121,31 +121,31 @@ namespace JaguarGymApp_Preview.Formularios
             switch (filtroSeleccionado)
             {
                 case "Identificacion":
-                    query = "SELECT * FROM miembro WHERE identificacion LIKE @criterio";
+                    query = "SELECT * FROM Miembro WHERE identificacion LIKE @criterio";
                     break;
 
                 case "Nombre":
-                    query = "SELECT * FROM miembro WHERE nombres LIKE @criterio";
+                    query = "SELECT * FROM Miembro WHERE nombres LIKE @criterio";
                     break;
 
                 case "Apellido":
-                    query = "SELECT * FROM miembro WHERE apellidos LIKE @criterio";
+                    query = "SELECT * FROM Miembro WHERE apellidos LIKE @criterio";
                     break;
 
                 case "Facultad":
-                    query = @"SELECT m.* FROM miembro m 
-                      JOIN facultad f ON m.idfacultad = f.idFacultad 
+                    query = @"SELECT m.* FROM Miembro m 
+                      JOIN Facultad f ON m.idfacultad = f.idFacultad 
                       WHERE f.nombreFacultad LIKE @criterio";
                     break;
 
                 case "Carrera":
-                    query = @"SELECT m.* FROM miembro m 
-                      JOIN carrera c ON m.idcarrera = c.idCarrera 
+                    query = @"SELECT m.* FROM Miembro m 
+                      JOIN Carrera c ON m.idcarrera = c.idCarrera 
                       WHERE c.nombreCarrera LIKE @criterio";
                     break;
 
                 case "Género":
-                    query = "SELECT * FROM miembro WHERE genero LIKE @criterio";
+                    query = "SELECT * FROM Miembro WHERE genero LIKE @criterio";
                     break;
 
                 default:

@@ -42,7 +42,7 @@ namespace JaguarGymApp_Preview.Formularios
                     try
                     {
                         connection.Open();
-                        string query = "SELECT idFacultad, nombreFacultad FROM facultad";
+                        string query = "SELECT idFacultad, nombreFacultad FROM Facultad";
 
                         // Crear el comando
                         MySqlCommand command = new MySqlCommand(query, connection);
@@ -92,7 +92,7 @@ namespace JaguarGymApp_Preview.Formularios
 
         private void ToDataBase(Miembro miembro)
         {
-            string query = @"INSERT INTO miembro 
+            string query = @"INSERT INTO Miembro 
                      (identificacion, cif, nombres, apellidos, fechaNacimiento, fechaExp, idcarrera, idfacultad, genero, interno, colaborador, cargo) 
                      VALUES 
                      (@identificacion, @cif, @nombres, @apellidos, @fechaNacimiento, @fechaExp, @idcarrera, @idfacultad, @genero, @interno, @colaborador, @cargo)";
@@ -113,7 +113,7 @@ namespace JaguarGymApp_Preview.Formularios
                     command.Parameters.AddWithValue("@fechaExp", miembro.FechaExp);
                     command.Parameters.AddWithValue("@idcarrera", miembro.Carrera);
                     command.Parameters.AddWithValue("@idfacultad", miembro.Facultad);
-                    command.Parameters.AddWithValue("@genero", miembro.Genero ?? string.Empty);
+                    command.Parameters.AddWithValue("@genero", miembro.Genero);
                     command.Parameters.AddWithValue("@interno", miembro.Interno ? 1 : 0);
                     command.Parameters.AddWithValue("@colaborador", miembro.Colaborador ? 1 : 0);
                     command.Parameters.AddWithValue("@cargo", miembro.Cargo ?? string.Empty);
@@ -184,7 +184,7 @@ namespace JaguarGymApp_Preview.Formularios
                 fechaExp: dateExpiracion.Value,
                 carrera: cmbCarrera.SelectedValue?.ToString(),
                 facultad: cmbFacultad.SelectedValue?.ToString(),
-                genero: cmbGenero.SelectedItem?.ToString(),
+                genero: cmbGenero.SelectedItem?.ToString() == "Masculino",
                 interno: chkEstudiante.Checked,
                 colaborador: chkColaborador.Checked,
                 cargo: string.IsNullOrWhiteSpace(txtCargo.Text) ? null : txtCargo.Text
