@@ -70,13 +70,13 @@ namespace JaguarGymApp_Preview
 
         private void imgBtn_Miembros_Click(object sender, EventArgs e)
         {
-            Miembros formularioMiembros = new Miembros(); // Cambia a tu formulario
+            Miembros_Activos formularioMiembros = new Miembros_Activos(); // Cambia a tu formulario
             this.Hide();
             formularioMiembros.Show();
         }
         private void btn_Miembros_Click(object sender, EventArgs e)
         {
-            Miembros formularioMiembros = new Miembros(); // Cambia a tu formulario
+            Miembros_Activos formularioMiembros = new Miembros_Activos(); // Cambia a tu formulario
             this.Hide();
             formularioMiembros.Show();
         }

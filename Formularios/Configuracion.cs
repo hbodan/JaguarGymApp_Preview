@@ -8,13 +8,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using JaguarGymApp_Preview.Servicios;
 using MaterialSkin;
 using MaterialSkin.Controls;
+using MySql.Data.MySqlClient;
 
 namespace JaguarGymApp_Preview.Formularios
 {
     public partial class Configuracion : MaterialForm
     {
+        private MySqlConnection data;
+
         public Configuracion()
         {
             this.Resize += new System.EventHandler(this.Principal_Resize);
@@ -76,7 +80,7 @@ namespace JaguarGymApp_Preview.Formularios
         {
             try
             {
-                using (MySqlConnection conn = new MySqlConnection(new ConexionBD().GetConnector()))
+                using (MySqlConnection conn = new MySqlConnection(new Servicios.ConexionBD().GetConnector()))
                 {
                     conn.Open();
 
