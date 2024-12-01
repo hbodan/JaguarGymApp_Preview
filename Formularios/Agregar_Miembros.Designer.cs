@@ -49,11 +49,12 @@
             this.cmbFacultad = new Guna.UI2.WinForms.Guna2ComboBox();
             this.lblCargo = new System.Windows.Forms.Label();
             this.txtCargo = new Guna.UI2.WinForms.Guna2TextBox();
-            this.chkMasculino = new MaterialSkin.Controls.MaterialCheckbox();
             this.label4 = new System.Windows.Forms.Label();
             this.dateNacimiento = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.dateExpiracion = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.cmbGenero = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,7 +68,6 @@
             this.txtCIF.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtCIF.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCIF.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCIF.Enabled = false;
             this.txtCIF.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCIF.Font = new System.Drawing.Font("Verdana", 9F);
             this.txtCIF.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -76,7 +76,6 @@
             this.txtCIF.Name = "txtCIF";
             this.txtCIF.PasswordChar = '\0';
             this.txtCIF.PlaceholderText = "";
-            this.txtCIF.ReadOnly = true;
             this.txtCIF.SelectedText = "";
             this.txtCIF.Size = new System.Drawing.Size(334, 36);
             this.txtCIF.TabIndex = 0;
@@ -141,7 +140,7 @@
             this.lblCarrera.AutoSize = true;
             this.lblCarrera.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic);
             this.lblCarrera.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.lblCarrera.Location = new System.Drawing.Point(453, 616);
+            this.lblCarrera.Location = new System.Drawing.Point(453, 634);
             this.lblCarrera.Name = "lblCarrera";
             this.lblCarrera.Size = new System.Drawing.Size(98, 25);
             this.lblCarrera.TabIndex = 6;
@@ -265,7 +264,7 @@
             this.lblFacultad.AutoSize = true;
             this.lblFacultad.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic);
             this.lblFacultad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.lblFacultad.Location = new System.Drawing.Point(459, 569);
+            this.lblFacultad.Location = new System.Drawing.Point(459, 578);
             this.lblFacultad.Name = "lblFacultad";
             this.lblFacultad.Size = new System.Drawing.Size(105, 25);
             this.lblFacultad.TabIndex = 15;
@@ -277,7 +276,7 @@
             this.chkEstudiante.AutoSize = true;
             this.chkEstudiante.Depth = 0;
             this.chkEstudiante.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkEstudiante.Location = new System.Drawing.Point(668, 456);
+            this.chkEstudiante.Location = new System.Drawing.Point(579, 479);
             this.chkEstudiante.Margin = new System.Windows.Forms.Padding(0);
             this.chkEstudiante.MouseLocation = new System.Drawing.Point(-1, -1);
             this.chkEstudiante.MouseState = MaterialSkin.MouseState.HOVER;
@@ -295,7 +294,7 @@
             this.chkColaborador.AutoSize = true;
             this.chkColaborador.Depth = 0;
             this.chkColaborador.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkColaborador.Location = new System.Drawing.Point(873, 456);
+            this.chkColaborador.Location = new System.Drawing.Point(784, 479);
             this.chkColaborador.Margin = new System.Windows.Forms.Padding(0);
             this.chkColaborador.MouseLocation = new System.Drawing.Point(-1, -1);
             this.chkColaborador.MouseState = MaterialSkin.MouseState.HOVER;
@@ -320,7 +319,7 @@
             this.cmbCarrera.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCarrera.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbCarrera.ItemHeight = 30;
-            this.cmbCarrera.Location = new System.Drawing.Point(579, 611);
+            this.cmbCarrera.Location = new System.Drawing.Point(579, 629);
             this.cmbCarrera.Margin = new System.Windows.Forms.Padding(4);
             this.cmbCarrera.Name = "cmbCarrera";
             this.cmbCarrera.Size = new System.Drawing.Size(334, 36);
@@ -339,7 +338,7 @@
             this.cmbFacultad.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbFacultad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbFacultad.ItemHeight = 30;
-            this.cmbFacultad.Location = new System.Drawing.Point(579, 567);
+            this.cmbFacultad.Location = new System.Drawing.Point(579, 576);
             this.cmbFacultad.Margin = new System.Windows.Forms.Padding(4);
             this.cmbFacultad.Name = "cmbFacultad";
             this.cmbFacultad.Size = new System.Drawing.Size(334, 36);
@@ -352,7 +351,7 @@
             this.lblCargo.AutoSize = true;
             this.lblCargo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic);
             this.lblCargo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.lblCargo.Location = new System.Drawing.Point(477, 525);
+            this.lblCargo.Location = new System.Drawing.Point(477, 529);
             this.lblCargo.Name = "lblCargo";
             this.lblCargo.Size = new System.Drawing.Size(80, 25);
             this.lblCargo.TabIndex = 21;
@@ -372,7 +371,7 @@
             this.txtCargo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCargo.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCargo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCargo.Location = new System.Drawing.Point(579, 520);
+            this.txtCargo.Location = new System.Drawing.Point(579, 524);
             this.txtCargo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCargo.Name = "txtCargo";
             this.txtCargo.PasswordChar = '\0';
@@ -382,29 +381,12 @@
             this.txtCargo.TabIndex = 22;
             this.txtCargo.Visible = false;
             // 
-            // chkMasculino
-            // 
-            this.chkMasculino.AutoSize = true;
-            this.chkMasculino.Depth = 0;
-            this.chkMasculino.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkMasculino.Location = new System.Drawing.Point(487, 456);
-            this.chkMasculino.Margin = new System.Windows.Forms.Padding(0);
-            this.chkMasculino.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.chkMasculino.MouseState = MaterialSkin.MouseState.HOVER;
-            this.chkMasculino.Name = "chkMasculino";
-            this.chkMasculino.ReadOnly = false;
-            this.chkMasculino.Ripple = true;
-            this.chkMasculino.Size = new System.Drawing.Size(109, 37);
-            this.chkMasculino.TabIndex = 23;
-            this.chkMasculino.Text = "Masculino";
-            this.chkMasculino.UseVisualStyleBackColor = true;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.label4.Location = new System.Drawing.Point(332, 355);
+            this.label4.Location = new System.Drawing.Point(332, 398);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(229, 25);
             this.label4.TabIndex = 24;
@@ -416,7 +398,7 @@
             this.dateNacimiento.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(134)))));
             this.dateNacimiento.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dateNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dateNacimiento.Location = new System.Drawing.Point(579, 355);
+            this.dateNacimiento.Location = new System.Drawing.Point(579, 398);
             this.dateNacimiento.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateNacimiento.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateNacimiento.Name = "dateNacimiento";
@@ -430,7 +412,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.label5.Location = new System.Drawing.Point(362, 402);
+            this.label5.Location = new System.Drawing.Point(362, 445);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(199, 25);
             this.label5.TabIndex = 26;
@@ -442,7 +424,7 @@
             this.dateExpiracion.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(134)))));
             this.dateExpiracion.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dateExpiracion.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dateExpiracion.Location = new System.Drawing.Point(579, 397);
+            this.dateExpiracion.Location = new System.Drawing.Point(579, 440);
             this.dateExpiracion.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateExpiracion.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateExpiracion.Name = "dateExpiracion";
@@ -450,16 +432,51 @@
             this.dateExpiracion.TabIndex = 27;
             this.dateExpiracion.Value = new System.DateTime(2024, 11, 26, 21, 42, 45, 670);
             // 
+            // cmbGenero
+            // 
+            this.cmbGenero.AutoRoundedCorners = true;
+            this.cmbGenero.BackColor = System.Drawing.Color.Transparent;
+            this.cmbGenero.BorderRadius = 17;
+            this.cmbGenero.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbGenero.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbGenero.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbGenero.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbGenero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbGenero.ItemHeight = 30;
+            this.cmbGenero.Items.AddRange(new object[] {
+            "Masculino",
+            "Femenino",
+            "Ninguno"});
+            this.cmbGenero.Location = new System.Drawing.Point(579, 352);
+            this.cmbGenero.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbGenero.Name = "cmbGenero";
+            this.cmbGenero.Size = new System.Drawing.Size(334, 36);
+            this.cmbGenero.TabIndex = 29;
+            this.cmbGenero.SelectedIndexChanged += new System.EventHandler(this.cmbGenero_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.label6.Location = new System.Drawing.Point(459, 354);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(95, 25);
+            this.label6.TabIndex = 28;
+            this.label6.Text = "Genero:";
+            // 
             // Agregar_Miembros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1387, 788);
+            this.Controls.Add(this.cmbGenero);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.dateExpiracion);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dateNacimiento);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.chkMasculino);
             this.Controls.Add(this.txtCargo);
             this.Controls.Add(this.lblCargo);
             this.Controls.Add(this.cmbFacultad);
@@ -518,10 +535,11 @@
         private Guna.UI2.WinForms.Guna2ComboBox cmbFacultad;
         private System.Windows.Forms.Label lblCargo;
         private Guna.UI2.WinForms.Guna2TextBox txtCargo;
-        private MaterialSkin.Controls.MaterialCheckbox chkMasculino;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2DateTimePicker dateNacimiento;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2DateTimePicker dateExpiracion;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbGenero;
+        private System.Windows.Forms.Label label6;
     }
 }

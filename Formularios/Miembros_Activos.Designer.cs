@@ -41,6 +41,7 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.LinkAtras = new System.Windows.Forms.LinkLabel();
+            this.cmbFiltro = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMiembros)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -49,8 +50,6 @@
             // 
             this.dgvMiembros.AllowUserToAddRows = false;
             this.dgvMiembros.AllowUserToDeleteRows = false;
-            this.dgvMiembros.AllowUserToResizeColumns = false;
-            this.dgvMiembros.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgvMiembros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMiembros.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
@@ -63,7 +62,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvMiembros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvMiembros.ColumnHeadersHeight = 25;
+            this.dgvMiembros.ColumnHeadersHeight = 35;
             this.dgvMiembros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -74,14 +73,14 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvMiembros.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvMiembros.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvMiembros.Location = new System.Drawing.Point(70, 286);
+            this.dgvMiembros.Location = new System.Drawing.Point(27, 287);
             this.dgvMiembros.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvMiembros.Name = "dgvMiembros";
             this.dgvMiembros.ReadOnly = true;
             this.dgvMiembros.RowHeadersVisible = false;
-            this.dgvMiembros.RowHeadersWidth = 51;
+            this.dgvMiembros.RowHeadersWidth = 65;
             this.dgvMiembros.RowTemplate.Height = 24;
-            this.dgvMiembros.Size = new System.Drawing.Size(1221, 444);
+            this.dgvMiembros.Size = new System.Drawing.Size(1357, 444);
             this.dgvMiembros.TabIndex = 0;
             this.dgvMiembros.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvMiembros.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -95,7 +94,7 @@
             this.dgvMiembros.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Lucida Console", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvMiembros.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvMiembros.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvMiembros.ThemeStyle.HeaderStyle.Height = 25;
+            this.dgvMiembros.ThemeStyle.HeaderStyle.Height = 35;
             this.dgvMiembros.ThemeStyle.ReadOnly = true;
             this.dgvMiembros.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvMiembros.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -119,7 +118,7 @@
             this.txtBuscar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBuscar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBuscar.Location = new System.Drawing.Point(70, 209);
+            this.txtBuscar.Location = new System.Drawing.Point(27, 210);
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.PasswordChar = '\0';
@@ -131,7 +130,7 @@
             // btnBuscar
             // 
             this.btnBuscar.AutoRoundedCorners = true;
-            this.btnBuscar.BorderRadius = 22;
+            this.btnBuscar.BorderRadius = 23;
             this.btnBuscar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnBuscar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnBuscar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -139,10 +138,10 @@
             this.btnBuscar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.btnBuscar.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(459, 213);
+            this.btnBuscar.Location = new System.Drawing.Point(745, 209);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(180, 46);
+            this.btnBuscar.Size = new System.Drawing.Size(180, 48);
             this.btnBuscar.TabIndex = 3;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -158,7 +157,7 @@
             this.btnAgregar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.btnAgregar.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(71, 777);
+            this.btnAgregar.Location = new System.Drawing.Point(28, 778);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(180, 46);
@@ -177,7 +176,7 @@
             this.btnVerMiembros.FillColor = System.Drawing.Color.Purple;
             this.btnVerMiembros.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerMiembros.ForeColor = System.Drawing.Color.White;
-            this.btnVerMiembros.Location = new System.Drawing.Point(274, 777);
+            this.btnVerMiembros.Location = new System.Drawing.Point(231, 778);
             this.btnVerMiembros.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVerMiembros.Name = "btnVerMiembros";
             this.btnVerMiembros.Size = new System.Drawing.Size(180, 46);
@@ -206,7 +205,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(64, 141);
+            this.label1.Location = new System.Drawing.Point(21, 142);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(309, 40);
             this.label1.TabIndex = 7;
@@ -216,7 +215,7 @@
             // 
             this.LinkAtras.AutoSize = true;
             this.LinkAtras.LinkColor = System.Drawing.Color.Silver;
-            this.LinkAtras.Location = new System.Drawing.Point(484, 807);
+            this.LinkAtras.Location = new System.Drawing.Point(441, 808);
             this.LinkAtras.Name = "LinkAtras";
             this.LinkAtras.Size = new System.Drawing.Size(116, 16);
             this.LinkAtras.TabIndex = 10;
@@ -224,11 +223,37 @@
             this.LinkAtras.Text = "Volver hacia Atras";
             this.LinkAtras.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkAtras_LinkClicked);
             // 
-            // Miembros
+            // cmbFiltro
+            // 
+            this.cmbFiltro.AutoRoundedCorners = true;
+            this.cmbFiltro.BackColor = System.Drawing.Color.Transparent;
+            this.cmbFiltro.BorderRadius = 19;
+            this.cmbFiltro.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFiltro.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbFiltro.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbFiltro.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbFiltro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(134)))));
+            this.cmbFiltro.ItemHeight = 35;
+            this.cmbFiltro.Items.AddRange(new object[] {
+            "Identificacion",
+            "Nombre",
+            "Apellido",
+            "Facultad",
+            "Carrera",
+            "Género"});
+            this.cmbFiltro.Location = new System.Drawing.Point(417, 210);
+            this.cmbFiltro.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbFiltro.Name = "cmbFiltro";
+            this.cmbFiltro.Size = new System.Drawing.Size(256, 41);
+            this.cmbFiltro.TabIndex = 11;
+            // 
+            // Miembros_Activos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1387, 886);
+            this.Controls.Add(this.cmbFiltro);
             this.Controls.Add(this.dgvMiembros);
             this.Controls.Add(this.LinkAtras);
             this.Controls.Add(this.label1);
@@ -242,7 +267,7 @@
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1440, 886);
             this.MinimumSize = new System.Drawing.Size(1080, 718);
-            this.Name = "Miembros";
+            this.Name = "Miembros_Activos";
             this.Padding = new System.Windows.Forms.Padding(3, 64, 3, 2);
             this.Text = "Miembros";
             this.Load += new System.EventHandler(this.Miembros_Load);
@@ -265,5 +290,6 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel LinkAtras;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbFiltro;
     }
 }
