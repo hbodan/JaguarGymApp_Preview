@@ -28,45 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtNombre = new System.Windows.Forms.Label();
             this.txtIngreso = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2DataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.imgBtn_Miembros = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btn_Miembros = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.imgBtn_Pagos = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btn_Pagos = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.imgBtn_Estadistica = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btn_Estadistica = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2CustomGradientPanel5 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2CustomGradientPanel6 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.imgBtn_Escaner = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.imgBtn_Estadistica = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.imgBtn_Pagos = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.imgBtn_Miembros = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
-            this.guna2Panel1.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView2)).BeginInit();
+            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.panelOverlay = new Guna.UI2.WinForms.Guna2Panel();
+            this.dgv_ListaMembresiasAVencer = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.dgv_MiembroMasTiempo = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
             this.guna2CustomGradientPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.guna2GroupBox1.SuspendLayout();
+            this.panelOverlay.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ListaMembresiasAVencer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            this.guna2GroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_MiembroMasTiempo)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNombre
@@ -88,152 +93,6 @@
             this.txtIngreso.Size = new System.Drawing.Size(104, 16);
             this.txtIngreso.TabIndex = 5;
             this.txtIngreso.Text = "Hora de ingreso";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(51, 365);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(254, 20);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Membresias proximas a vencer";
-            // 
-            // guna2DataGridView1
-            // 
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
-            this.guna2DataGridView1.ColumnHeadersHeight = 4;
-            this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle15;
-            this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(12, 10);
-            this.guna2DataGridView1.Name = "guna2DataGridView1";
-            this.guna2DataGridView1.RowHeadersVisible = false;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(612, 165);
-            this.guna2DataGridView1.TabIndex = 7;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
-            this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 22;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(814, 365);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(218, 20);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Miembros más constantes";
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel1.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Panel1.BorderRadius = 23;
-            this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.guna2DataGridView1);
-            this.guna2Panel1.FillColor = System.Drawing.Color.White;
-            this.guna2Panel1.Location = new System.Drawing.Point(55, 395);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(638, 180);
-            this.guna2Panel1.TabIndex = 10;
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel2.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Panel2.BorderRadius = 23;
-            this.guna2Panel2.BorderThickness = 1;
-            this.guna2Panel2.Controls.Add(this.guna2DataGridView2);
-            this.guna2Panel2.FillColor = System.Drawing.Color.White;
-            this.guna2Panel2.Location = new System.Drawing.Point(729, 395);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(300, 180);
-            this.guna2Panel2.TabIndex = 11;
-            // 
-            // guna2DataGridView2
-            // 
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
-            this.guna2DataGridView2.ColumnHeadersHeight = 4;
-            this.guna2DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle18;
-            this.guna2DataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView2.Location = new System.Drawing.Point(7, 10);
-            this.guna2DataGridView2.Name = "guna2DataGridView2";
-            this.guna2DataGridView2.RowHeadersVisible = false;
-            this.guna2DataGridView2.Size = new System.Drawing.Size(284, 156);
-            this.guna2DataGridView2.TabIndex = 7;
-            this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView2.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView2.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView2.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView2.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.guna2DataGridView2.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView2.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.guna2DataGridView2.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.guna2DataGridView2.ThemeStyle.HeaderStyle.Height = 4;
-            this.guna2DataGridView2.ThemeStyle.ReadOnly = false;
-            this.guna2DataGridView2.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView2.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.guna2DataGridView2.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView2.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.guna2DataGridView2.ThemeStyle.RowsStyle.Height = 22;
-            this.guna2DataGridView2.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView2.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // label5
             // 
@@ -260,6 +119,24 @@
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(307, 180);
             this.guna2CustomGradientPanel1.TabIndex = 14;
+            // 
+            // imgBtn_Miembros
+            // 
+            this.imgBtn_Miembros.BackColor = System.Drawing.Color.Transparent;
+            this.imgBtn_Miembros.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.imgBtn_Miembros.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgBtn_Miembros.HoverState.ImageSize = new System.Drawing.Size(140, 140);
+            this.imgBtn_Miembros.Image = global::JaguarGymApp_Preview.Properties.Resources.miembrosBoton;
+            this.imgBtn_Miembros.ImageOffset = new System.Drawing.Point(0, 0);
+            this.imgBtn_Miembros.ImageRotate = 0F;
+            this.imgBtn_Miembros.ImageSize = new System.Drawing.Size(160, 160);
+            this.imgBtn_Miembros.Location = new System.Drawing.Point(79, 2);
+            this.imgBtn_Miembros.Name = "imgBtn_Miembros";
+            this.imgBtn_Miembros.PressedState.ImageSize = new System.Drawing.Size(180, 180);
+            this.imgBtn_Miembros.Size = new System.Drawing.Size(152, 143);
+            this.imgBtn_Miembros.TabIndex = 17;
+            this.imgBtn_Miembros.UseTransparentBackground = true;
+            this.imgBtn_Miembros.Click += new System.EventHandler(this.imgBtn_Miembros_Click);
             // 
             // btn_Miembros
             // 
@@ -301,6 +178,24 @@
             this.guna2CustomGradientPanel2.TabIndex = 15;
             this.guna2CustomGradientPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2CustomGradientPanel2_Paint);
             // 
+            // imgBtn_Pagos
+            // 
+            this.imgBtn_Pagos.BackColor = System.Drawing.Color.Transparent;
+            this.imgBtn_Pagos.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.imgBtn_Pagos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgBtn_Pagos.HoverState.ImageSize = new System.Drawing.Size(110, 110);
+            this.imgBtn_Pagos.Image = global::JaguarGymApp_Preview.Properties.Resources.pagoBoton;
+            this.imgBtn_Pagos.ImageOffset = new System.Drawing.Point(0, 0);
+            this.imgBtn_Pagos.ImageRotate = 0F;
+            this.imgBtn_Pagos.ImageSize = new System.Drawing.Size(130, 130);
+            this.imgBtn_Pagos.Location = new System.Drawing.Point(83, 3);
+            this.imgBtn_Pagos.Name = "imgBtn_Pagos";
+            this.imgBtn_Pagos.PressedState.ImageSize = new System.Drawing.Size(150, 150);
+            this.imgBtn_Pagos.Size = new System.Drawing.Size(140, 140);
+            this.imgBtn_Pagos.TabIndex = 1;
+            this.imgBtn_Pagos.UseTransparentBackground = true;
+            this.imgBtn_Pagos.Click += new System.EventHandler(this.imgBtn_Pagos_Click);
+            // 
             // btn_Pagos
             // 
             this.btn_Pagos.Animated = true;
@@ -339,6 +234,24 @@
             this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
             this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(300, 180);
             this.guna2CustomGradientPanel3.TabIndex = 16;
+            // 
+            // imgBtn_Estadistica
+            // 
+            this.imgBtn_Estadistica.BackColor = System.Drawing.Color.Transparent;
+            this.imgBtn_Estadistica.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.imgBtn_Estadistica.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgBtn_Estadistica.HoverState.ImageSize = new System.Drawing.Size(160, 160);
+            this.imgBtn_Estadistica.Image = global::JaguarGymApp_Preview.Properties.Resources.estadisticasBoton;
+            this.imgBtn_Estadistica.ImageOffset = new System.Drawing.Point(0, 0);
+            this.imgBtn_Estadistica.ImageRotate = 0F;
+            this.imgBtn_Estadistica.ImageSize = new System.Drawing.Size(180, 180);
+            this.imgBtn_Estadistica.Location = new System.Drawing.Point(57, 10);
+            this.imgBtn_Estadistica.Name = "imgBtn_Estadistica";
+            this.imgBtn_Estadistica.PressedState.ImageSize = new System.Drawing.Size(200, 200);
+            this.imgBtn_Estadistica.Size = new System.Drawing.Size(190, 132);
+            this.imgBtn_Estadistica.TabIndex = 18;
+            this.imgBtn_Estadistica.UseTransparentBackground = true;
+            this.imgBtn_Estadistica.Click += new System.EventHandler(this.imgBtn_Estadistica_Click);
             // 
             // btn_Estadistica
             // 
@@ -437,60 +350,6 @@
             this.imgBtn_Escaner.UseTransparentBackground = true;
             this.imgBtn_Escaner.Click += new System.EventHandler(this.imgBtn_Escanear_Click);
             // 
-            // imgBtn_Estadistica
-            // 
-            this.imgBtn_Estadistica.BackColor = System.Drawing.Color.Transparent;
-            this.imgBtn_Estadistica.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.imgBtn_Estadistica.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imgBtn_Estadistica.HoverState.ImageSize = new System.Drawing.Size(160, 160);
-            this.imgBtn_Estadistica.Image = global::JaguarGymApp_Preview.Properties.Resources.estadisticasBoton;
-            this.imgBtn_Estadistica.ImageOffset = new System.Drawing.Point(0, 0);
-            this.imgBtn_Estadistica.ImageRotate = 0F;
-            this.imgBtn_Estadistica.ImageSize = new System.Drawing.Size(180, 180);
-            this.imgBtn_Estadistica.Location = new System.Drawing.Point(57, 10);
-            this.imgBtn_Estadistica.Name = "imgBtn_Estadistica";
-            this.imgBtn_Estadistica.PressedState.ImageSize = new System.Drawing.Size(200, 200);
-            this.imgBtn_Estadistica.Size = new System.Drawing.Size(190, 132);
-            this.imgBtn_Estadistica.TabIndex = 18;
-            this.imgBtn_Estadistica.UseTransparentBackground = true;
-            this.imgBtn_Estadistica.Click += new System.EventHandler(this.imgBtn_Estadistica_Click);
-            // 
-            // imgBtn_Pagos
-            // 
-            this.imgBtn_Pagos.BackColor = System.Drawing.Color.Transparent;
-            this.imgBtn_Pagos.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.imgBtn_Pagos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imgBtn_Pagos.HoverState.ImageSize = new System.Drawing.Size(110, 110);
-            this.imgBtn_Pagos.Image = global::JaguarGymApp_Preview.Properties.Resources.pagoBoton;
-            this.imgBtn_Pagos.ImageOffset = new System.Drawing.Point(0, 0);
-            this.imgBtn_Pagos.ImageRotate = 0F;
-            this.imgBtn_Pagos.ImageSize = new System.Drawing.Size(130, 130);
-            this.imgBtn_Pagos.Location = new System.Drawing.Point(83, 3);
-            this.imgBtn_Pagos.Name = "imgBtn_Pagos";
-            this.imgBtn_Pagos.PressedState.ImageSize = new System.Drawing.Size(150, 150);
-            this.imgBtn_Pagos.Size = new System.Drawing.Size(140, 140);
-            this.imgBtn_Pagos.TabIndex = 1;
-            this.imgBtn_Pagos.UseTransparentBackground = true;
-            this.imgBtn_Pagos.Click += new System.EventHandler(this.imgBtn_Pagos_Click);
-            // 
-            // imgBtn_Miembros
-            // 
-            this.imgBtn_Miembros.BackColor = System.Drawing.Color.Transparent;
-            this.imgBtn_Miembros.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.imgBtn_Miembros.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imgBtn_Miembros.HoverState.ImageSize = new System.Drawing.Size(140, 140);
-            this.imgBtn_Miembros.Image = global::JaguarGymApp_Preview.Properties.Resources.miembrosBoton;
-            this.imgBtn_Miembros.ImageOffset = new System.Drawing.Point(0, 0);
-            this.imgBtn_Miembros.ImageRotate = 0F;
-            this.imgBtn_Miembros.ImageSize = new System.Drawing.Size(160, 160);
-            this.imgBtn_Miembros.Location = new System.Drawing.Point(79, 2);
-            this.imgBtn_Miembros.Name = "imgBtn_Miembros";
-            this.imgBtn_Miembros.PressedState.ImageSize = new System.Drawing.Size(180, 180);
-            this.imgBtn_Miembros.Size = new System.Drawing.Size(152, 143);
-            this.imgBtn_Miembros.TabIndex = 17;
-            this.imgBtn_Miembros.UseTransparentBackground = true;
-            this.imgBtn_Miembros.Click += new System.EventHandler(this.imgBtn_Miembros_Click);
-            // 
             // guna2ImageButton1
             // 
             this.guna2ImageButton1.BackColor = System.Drawing.Color.Transparent;
@@ -524,11 +383,221 @@
             this.guna2PictureBox1.TabStop = false;
             this.guna2PictureBox1.UseTransparentBackground = true;
             // 
+            // guna2GroupBox1
+            // 
+            this.guna2GroupBox1.Controls.Add(this.panelOverlay);
+            this.guna2GroupBox1.Controls.Add(this.dgv_ListaMembresiasAVencer);
+            this.guna2GroupBox1.CustomBorderColor = System.Drawing.SystemColors.Control;
+            this.guna2GroupBox1.FillColor = System.Drawing.SystemColors.Control;
+            this.guna2GroupBox1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
+            this.guna2GroupBox1.Location = new System.Drawing.Point(51, 365);
+            this.guna2GroupBox1.Name = "guna2GroupBox1";
+            this.guna2GroupBox1.Size = new System.Drawing.Size(512, 230);
+            this.guna2GroupBox1.TabIndex = 38;
+            this.guna2GroupBox1.Text = "Membresias proximas a vencer";
+            // 
+            // panelOverlay
+            // 
+            this.panelOverlay.BorderColor = System.Drawing.Color.Black;
+            this.panelOverlay.BorderThickness = 1;
+            this.panelOverlay.Controls.Add(this.label1);
+            this.panelOverlay.Controls.Add(this.guna2PictureBox2);
+            this.panelOverlay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelOverlay.Location = new System.Drawing.Point(0, 40);
+            this.panelOverlay.Name = "panelOverlay";
+            this.panelOverlay.Size = new System.Drawing.Size(512, 190);
+            this.panelOverlay.TabIndex = 3;
+            // 
+            // dgv_ListaMembresiasAVencer
+            // 
+            this.dgv_ListaMembresiasAVencer.AllowUserToResizeRows = false;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(229)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            this.dgv_ListaMembresiasAVencer.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgv_ListaMembresiasAVencer.BackgroundColor = System.Drawing.Color.DarkGray;
+            this.dgv_ListaMembresiasAVencer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.dgv_ListaMembresiasAVencer.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_ListaMembresiasAVencer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgv_ListaMembresiasAVencer.ColumnHeadersHeight = 25;
+            this.dgv_ListaMembresiasAVencer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_ListaMembresiasAVencer.DefaultCellStyle = dataGridViewCellStyle11;
+            this.dgv_ListaMembresiasAVencer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_ListaMembresiasAVencer.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(92)))));
+            this.dgv_ListaMembresiasAVencer.Location = new System.Drawing.Point(0, 40);
+            this.dgv_ListaMembresiasAVencer.Name = "dgv_ListaMembresiasAVencer";
+            this.dgv_ListaMembresiasAVencer.ReadOnly = true;
+            this.dgv_ListaMembresiasAVencer.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_ListaMembresiasAVencer.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.dgv_ListaMembresiasAVencer.RowHeadersVisible = false;
+            this.dgv_ListaMembresiasAVencer.RowTemplate.Height = 20;
+            this.dgv_ListaMembresiasAVencer.Size = new System.Drawing.Size(512, 190);
+            this.dgv_ListaMembresiasAVencer.TabIndex = 2;
+            this.dgv_ListaMembresiasAVencer.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Teal;
+            this.dgv_ListaMembresiasAVencer.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(229)))), ((int)(((byte)(224)))));
+            this.dgv_ListaMembresiasAVencer.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_ListaMembresiasAVencer.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.dgv_ListaMembresiasAVencer.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Gray;
+            this.dgv_ListaMembresiasAVencer.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dgv_ListaMembresiasAVencer.ThemeStyle.BackColor = System.Drawing.Color.DarkGray;
+            this.dgv_ListaMembresiasAVencer.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(92)))));
+            this.dgv_ListaMembresiasAVencer.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.dgv_ListaMembresiasAVencer.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_ListaMembresiasAVencer.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_ListaMembresiasAVencer.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgv_ListaMembresiasAVencer.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgv_ListaMembresiasAVencer.ThemeStyle.HeaderStyle.Height = 25;
+            this.dgv_ListaMembresiasAVencer.ThemeStyle.ReadOnly = true;
+            this.dgv_ListaMembresiasAVencer.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
+            this.dgv_ListaMembresiasAVencer.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgv_ListaMembresiasAVencer.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_ListaMembresiasAVencer.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgv_ListaMembresiasAVencer.ThemeStyle.RowsStyle.Height = 20;
+            this.dgv_ListaMembresiasAVencer.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.Gray;
+            this.dgv_ListaMembresiasAVencer.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.Image = global::JaguarGymApp_Preview.Properties.Resources.Renovar_subscripcion_icon;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(385, 24);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(124, 129);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox2.TabIndex = 0;
+            this.guna2PictureBox2.TabStop = false;
+            this.guna2PictureBox2.Click += new System.EventHandler(this.guna2PictureBox2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Verdana", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(3, 81);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(376, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "No hay membresias proximas a vencer";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // guna2GroupBox2
+            // 
+            this.guna2GroupBox2.BorderColor = System.Drawing.Color.Black;
+            this.guna2GroupBox2.Controls.Add(this.dgv_MiembroMasTiempo);
+            this.guna2GroupBox2.CustomBorderColor = System.Drawing.SystemColors.Control;
+            this.guna2GroupBox2.FillColor = System.Drawing.SystemColors.Control;
+            this.guna2GroupBox2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GroupBox2.ForeColor = System.Drawing.Color.Black;
+            this.guna2GroupBox2.Location = new System.Drawing.Point(569, 365);
+            this.guna2GroupBox2.Name = "guna2GroupBox2";
+            this.guna2GroupBox2.Size = new System.Drawing.Size(460, 230);
+            this.guna2GroupBox2.TabIndex = 39;
+            this.guna2GroupBox2.Text = "Miembros con más tiempo";
+            this.guna2GroupBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // dgv_MiembroMasTiempo
+            // 
+            this.dgv_MiembroMasTiempo.AllowUserToResizeRows = false;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(229)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.White;
+            this.dgv_MiembroMasTiempo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            this.dgv_MiembroMasTiempo.BackgroundColor = System.Drawing.Color.DarkGray;
+            this.dgv_MiembroMasTiempo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_MiembroMasTiempo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            this.dgv_MiembroMasTiempo.ColumnHeadersHeight = 25;
+            this.dgv_MiembroMasTiempo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_MiembroMasTiempo.DefaultCellStyle = dataGridViewCellStyle15;
+            this.dgv_MiembroMasTiempo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_MiembroMasTiempo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(92)))));
+            this.dgv_MiembroMasTiempo.Location = new System.Drawing.Point(0, 40);
+            this.dgv_MiembroMasTiempo.Name = "dgv_MiembroMasTiempo";
+            this.dgv_MiembroMasTiempo.ReadOnly = true;
+            this.dgv_MiembroMasTiempo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_MiembroMasTiempo.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            this.dgv_MiembroMasTiempo.RowHeadersVisible = false;
+            this.dgv_MiembroMasTiempo.RowTemplate.Height = 20;
+            this.dgv_MiembroMasTiempo.Size = new System.Drawing.Size(460, 190);
+            this.dgv_MiembroMasTiempo.TabIndex = 2;
+            this.dgv_MiembroMasTiempo.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Teal;
+            this.dgv_MiembroMasTiempo.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(229)))), ((int)(((byte)(224)))));
+            this.dgv_MiembroMasTiempo.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_MiembroMasTiempo.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.dgv_MiembroMasTiempo.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Gray;
+            this.dgv_MiembroMasTiempo.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dgv_MiembroMasTiempo.ThemeStyle.BackColor = System.Drawing.Color.DarkGray;
+            this.dgv_MiembroMasTiempo.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(92)))));
+            this.dgv_MiembroMasTiempo.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.dgv_MiembroMasTiempo.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_MiembroMasTiempo.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_MiembroMasTiempo.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgv_MiembroMasTiempo.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgv_MiembroMasTiempo.ThemeStyle.HeaderStyle.Height = 25;
+            this.dgv_MiembroMasTiempo.ThemeStyle.ReadOnly = true;
+            this.dgv_MiembroMasTiempo.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
+            this.dgv_MiembroMasTiempo.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgv_MiembroMasTiempo.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_MiembroMasTiempo.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgv_MiembroMasTiempo.ThemeStyle.RowsStyle.Height = 20;
+            this.dgv_MiembroMasTiempo.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.Gray;
+            this.dgv_MiembroMasTiempo.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1080, 720);
+            this.Controls.Add(this.guna2GroupBox2);
+            this.Controls.Add(this.guna2GroupBox1);
             this.Controls.Add(this.imgBtn_Escaner);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.guna2CustomGradientPanel6);
@@ -538,28 +607,27 @@
             this.Controls.Add(this.guna2CustomGradientPanel2);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.guna2Panel2);
-            this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.txtIngreso);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.guna2ImageButton1);
             this.Controls.Add(this.guna2PictureBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1440, 829);
+            this.MaximumSize = new System.Drawing.Size(1080, 720);
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Principal_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView2)).EndInit();
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.guna2CustomGradientPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.guna2GroupBox1.ResumeLayout(false);
+            this.panelOverlay.ResumeLayout(false);
+            this.panelOverlay.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ListaMembresiasAVencer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            this.guna2GroupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_MiembroMasTiempo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -571,12 +639,6 @@
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private System.Windows.Forms.Label txtNombre;
         private System.Windows.Forms.Label txtIngreso;
-        private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
-        private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView2;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI2.WinForms.Guna2Button btn_Miembros;
@@ -592,5 +654,12 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel6;
         private Guna.UI2.WinForms.Guna2ImageButton imgBtn_Escaner;
         private System.Windows.Forms.Label label6;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
+        private Guna.UI2.WinForms.Guna2DataGridView dgv_ListaMembresiasAVencer;
+        private Guna.UI2.WinForms.Guna2Panel panelOverlay;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
+        private Guna.UI2.WinForms.Guna2DataGridView dgv_MiembroMasTiempo;
     }
 }

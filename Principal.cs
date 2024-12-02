@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -43,6 +44,8 @@ namespace JaguarGymApp_Preview
         {
             txtNombre.Text = $"Bienvenido de nuevo, {ObtenerPrimerNombrePorId(_idUsuario)}";
             txtIngreso.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+            LoadMembresiasProximasAVencer();
+            LoadMiembrosMasActivos();
         }
 
         private void guna2ImageButton1_Click(object sender, EventArgs e)
@@ -155,6 +158,92 @@ namespace JaguarGymApp_Preview
             }
 
             return string.Empty;
+        }
+        private void LoadMembresiasProximasAVencer()
+        {
+            try
+            {
+                string query = "SELECT nombres, identificacion, fechaExp FROM Miembro WHERE fechaExp BETWEEN CURDATE() AND DATE_ADD(CURDATE(), INTERVAL 7 DAY)";
+
+                ConexionBD conn = new ConexionBD();
+                MySqlConnection data = new MySqlConnection(conn.GetConnector());
+
+                using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, data))
+                {
+                    DataTable table = new DataTable();
+                    adapter.Fill(table);
+
+                    if (table.Rows.Count == 0)
+                    {
+                        panelOverlay.Visible = true; // Muestra el panel superpuesto
+                        dgv_ListaMembresiasAVencer.Visible = false; // Oculta el DataGridView
+                    }
+                    else
+                    {
+                        panelOverlay.Visible = false; // Oculta el panel superpuesto
+                        dgv_ListaMembresiasAVencer.Visible = true;
+
+                        dgv_ListaMembresiasAVencer.DataSource = table;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar las membresías: " + ex.Message);
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void LoadMiembrosMasActivos()
+        {
+            try
+            {
+                // Consulta SQL para obtener los 10 miembros con más entradas registradas
+                string query = @"
+            SELECT 
+                m.nombres, 
+                m.identificacion, 
+                COUNT(e.idEntrada) AS TotalEntradas
+            FROM 
+                Miembro m
+            JOIN 
+                Entrada e ON m.idMiembro = e.idMiembro
+            GROUP BY 
+                m.idMiembro, m.nombres, m.identificacion
+            ORDER BY 
+                TotalEntradas DESC
+            LIMIT 10;";  // Limitar a los 10 miembros con más entradas
+
+                // Crear la conexión a la base de datos
+                ConexionBD conn = new ConexionBD();
+                MySqlConnection data = new MySqlConnection(conn.GetConnector());
+
+                using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, data))
+                {
+                    DataTable table = new DataTable();
+                    adapter.Fill(table);
+
+                    // Mostrar los datos en el DataGridView
+                    dgv_MiembroMasTiempo.DataSource = table;
+
+                    // Configurar encabezados de columna, si lo deseas
+                    dgv_MiembroMasTiempo.Columns["nombres"].HeaderText = "Nombres";
+                    dgv_MiembroMasTiempo.Columns["identificacion"].HeaderText = "Identificación";
+                    dgv_MiembroMasTiempo.Columns["TotalEntradas"].HeaderText = "Total Entradas";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los miembros más activos: " + ex.Message);
+            }
+        }
+
+        private void guna2PictureBox2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
