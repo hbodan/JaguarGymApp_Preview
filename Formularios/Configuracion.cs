@@ -449,5 +449,6 @@ namespace JaguarGymApp_Preview.Formularios
             string patron = @"^[^@\s]+@uamv\.edu\.ni";
             return System.Text.RegularExpressions.Regex.IsMatch(correo, patron);
         }
+
     }
 }
