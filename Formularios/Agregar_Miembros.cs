@@ -1,14 +1,12 @@
 ﻿using JaguarGymApp_Preview.Estructuras;
+using JaguarGymApp_Preview.Servicios;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
 using System.Windows.Forms;
-using JaguarGymApp_Preview.Servicios;
-using System.Drawing;
 
 namespace JaguarGymApp_Preview.Formularios
 {
@@ -185,11 +183,7 @@ namespace JaguarGymApp_Preview.Formularios
                 fechaExp: DateTime.Now,
                 carrera: cmbCarrera.SelectedValue?.ToString(),
                 facultad: cmbFacultad.SelectedValue?.ToString(),
-<<<<<<< HEAD
                 genero: chkMasculino.Checked,
-=======
-                genero: chkGenero.Checked,
->>>>>>> e866d6f33a935be39fbb65b8a112f0d59418544a
                 interno: chkEstudiante.Checked,
                 colaborador: chkColaborador.Checked,
                 cargo: string.IsNullOrWhiteSpace(txtCargo.Text) ? null : txtCargo.Text
@@ -225,15 +219,7 @@ namespace JaguarGymApp_Preview.Formularios
         {
             if (ValidacionLlenado())
             {
-                if (btnAgregar.Text == "Agregar")
-                {
-                    AgregarMiembro(); // Método existente para agregar un nuevo miembro
-                }
-                else if (btnAgregar.Text == "Editar")
-                {
-                    EditarMiembro(); // Nuevo método para actualizar un miembro
-                }
-
+                AgregarMiembro(); // Método existente para agregar un nuevo miembro
                 formularioAnterior.RecargarMiembros(); // Método en el formulario padre para recargar los datos
                 this.Close();
             }
@@ -297,7 +283,6 @@ namespace JaguarGymApp_Preview.Formularios
         }
 
 
-<<<<<<< HEAD
         private void chkEstudiante_CheckedChanged(object sender, EventArgs e)
         {
             bool seleccionado = chkEstudiante.Checked;
@@ -348,27 +333,6 @@ namespace JaguarGymApp_Preview.Formularios
         }
 
 
-=======
->>>>>>> e866d6f33a935be39fbb65b8a112f0d59418544a
-        private void cmbFacultad_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                if (cmbFacultad.SelectedValue != null && cmbFacultad.SelectedValue is int idFacultadSeleccionada)
-                {
-                    // Obtener las carreras según la facultad seleccionada
-                    DataTable carreras = ObtenerCarrerasPorFacultad(idFacultadSeleccionada);
-                    cmbCarrera.DataSource = carreras;
-                    cmbCarrera.DisplayMember = "nombreCarrera";
-                    cmbCarrera.ValueMember = "idCarrera";
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error al cargar las carreras: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
 
 
 
@@ -378,89 +342,29 @@ namespace JaguarGymApp_Preview.Formularios
             this.Close();
         }
 
-
-<<<<<<< HEAD
-=======
-        }
-
-        private void chkEstudiante_CheckedChanged_1(object sender, EventArgs e)
+        public void CargarDatosMiembro(string identificacion, string cif, string nombres, string apellidos, DateTime fechaNacimiento, DateTime fechaExp, string carrera, string facultad, bool genero, bool interno, bool colaborador, string cargo)
         {
+            txtidentificacion.Text = identificacion;
+            txtCIF.Text = cif;
+            txtNombre.Text = nombres;
+            txtApellidos.Text = apellidos;
+            dateNacimiento.Value = fechaNacimiento;
+            fechaExp = DateTime.Now;
+            cmbCarrera.Text = carrera;
+            cmbFacultad.Text = facultad;
+            chkMasculino.Checked = genero;
+            chkEstudiante.Checked = interno && !colaborador;
+            chkColaborador.Checked = colaborador;
+            txtCargo.Text = cargo;
 
-            bool seleccionado = chkEstudiante.Checked;
-
-            // Mostrar/ocultar controles relacionados con "Estudiante"
-            lblFacultad.Enabled = seleccionado;
-            cmbFacultad.Enabled = seleccionado;
-            lblCarrera.Enabled = seleccionado;
-            cmbCarrera.Enabled = seleccionado;
-
-            // Limpiar los campos de "Colaborador" y llenar el cargo como "Estudiante"
-            if (seleccionado)
-            {
-                chkColaborador.Checked = false;
-                txtCargo.Text = "Estudiante"; // Asignar "Estudiante" como cargo
-            }
+            // Ajustar visibilidad según el rol
+            lblFacultad.Visible = chkEstudiante.Checked;
+            cmbFacultad.Visible = chkEstudiante.Checked;
+            lblCarrera.Visible = chkEstudiante.Checked;
+            cmbCarrera.Visible = chkEstudiante.Checked;
+            lblCargo.Visible = chkColaborador.Checked;
+            txtCargo.Visible = chkColaborador.Checked;
         }
-
-        private void chkColaborador_CheckedChanged(object sender, EventArgs e)
-        {
-            bool seleccionado = chkColaborador.Checked;
-
-            // Mostrar/ocultar controles relacionados con "Colaborador"
-            lblCargo.Enabled = seleccionado;
-            txtCargo.Enabled = seleccionado;
-
-            // Limpiar y ocultar Facultad y Carrera si se selecciona "Colaborador"
-            if (seleccionado)
-            {
-                cmbFacultad.SelectedIndex = -1; // Limpiar selección de Facultad
-                cmbCarrera.DataSource = null;  // Limpiar las carreras cargadas
-                chkEstudiante.Checked = false;
-            }
-        }
-
-        private void chkGenero_CheckedChanged(object sender, EventArgs e)
-        {
-            bool genero = chkGenero.Checked;
-            if (genero)
-            chkFemenino.Checked = false;
-        }
-
-        private void chkFemenino_CheckedChanged(object sender, EventArgs e)
-        {
-            bool femenino = chkFemenino.Checked;
-            if (femenino)
-            chkGenero.Checked = false;
-        }
-
-        private void dateExpiracion_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-            public void CargarDatosMiembro(string identificacion,string cif,string nombres,string apellidos,DateTime fechaNacimiento,DateTime fechaExp,string carrera,string facultad,bool genero, bool interno,bool colaborador,string cargo)
-            {
-                txtidentificacion.Text = identificacion;
-                txtCIF.Text = cif;
-                txtNombre.Text = nombres;
-                txtApellidos.Text = apellidos;
-                dateNacimiento.Value = fechaNacimiento;
-                fechaExp = DateTime.Now;
-                cmbCarrera.Text = carrera;
-                cmbFacultad.Text = facultad;
-                chkGenero.Checked = genero;
-                chkEstudiante.Checked = interno && !colaborador;
-                chkColaborador.Checked = colaborador;
-                txtCargo.Text = cargo;
-
-                // Ajustar visibilidad según el rol
-                lblFacultad.Visible = chkEstudiante.Checked;
-                cmbFacultad.Visible = chkEstudiante.Checked;
-                lblCarrera.Visible = chkEstudiante.Checked;
-                cmbCarrera.Visible = chkEstudiante.Checked;
-                lblCargo.Visible = chkColaborador.Checked;
-                txtCargo.Visible = chkColaborador.Checked;
-            }
         private void EditarMiembro()
         {
             string query = @"
@@ -494,7 +398,7 @@ namespace JaguarGymApp_Preview.Formularios
                     command.Parameters.AddWithValue("@fechaExp", DateTime.Now);
                     command.Parameters.AddWithValue("@carrera", cmbCarrera.Text);
                     command.Parameters.AddWithValue("@facultad", cmbFacultad.Text);
-                    command.Parameters.AddWithValue("@genero", chkGenero.Checked);
+                    command.Parameters.AddWithValue("@genero", chkMasculino.Checked);
                     command.Parameters.AddWithValue("@interno", chkEstudiante.Checked ? 1 : 0);
                     command.Parameters.AddWithValue("@colaborador", chkColaborador.Checked ? 1 : 0);
                     command.Parameters.AddWithValue("@cargo", txtCargo.Text);
@@ -523,6 +427,24 @@ namespace JaguarGymApp_Preview.Formularios
         {
 
         }
->>>>>>> e866d6f33a935be39fbb65b8a112f0d59418544a
+
+        private void cmbFacultad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cmbFacultad.SelectedValue != null && cmbFacultad.SelectedValue is int idFacultadSeleccionada)
+                {
+                    // Obtener las carreras según la facultad seleccionada
+                    DataTable carreras = ObtenerCarrerasPorFacultad(idFacultadSeleccionada);
+                    cmbCarrera.DataSource = carreras;
+                    cmbCarrera.DisplayMember = "nombreCarrera";
+                    cmbCarrera.ValueMember = "idCarrera";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar las carreras: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

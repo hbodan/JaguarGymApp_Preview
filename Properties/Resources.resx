@@ -118,12 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-<<<<<<< HEAD
-=======
   <data name="ojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\ojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
->>>>>>> e866d6f33a935be39fbb65b8a112f0d59418544a
   <data name="codigo-de-barras" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\codigo-de-barras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -160,23 +157,21 @@
   <data name="User_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\User_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-<<<<<<< HEAD
-=======
+
   <data name="avatar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\avatar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
->>>>>>> e866d6f33a935be39fbb65b8a112f0d59418544a
+
   <data name="estadisticasBoton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\estadisticasBoton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="correo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\correo.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-<<<<<<< HEAD
-=======
+
   </data>
   <data name="Jaguar_Mamado_Redondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\Jaguar_Mamado_Redondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
->>>>>>> e866d6f33a935be39fbb65b8a112f0d59418544a
+
   </data>
   <data name="ojo-cruzado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\ojo-cruzado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,13 +188,13 @@
   <data name="correo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\correo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-<<<<<<< HEAD
-  <data name="buscar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\buscar.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-=======
+
+	<data name="buscar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\buscar.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+
   <data name="Mostro_UAM" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\Mostro_UAM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
->>>>>>> e866d6f33a935be39fbb65b8a112f0d59418544a
   </data>
   <data name="Jaguares_UAM" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\Jaguares_UAM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -276,12 +271,13 @@
   <data name="escaneo-de-codigo-de-barras" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\escaneo-de-codigo-de-barras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-<<<<<<< HEAD
-  <data name="buscarPNG" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\buscarPNG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-=======
+
+	<data name="buscarPNG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\buscarPNG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+
   <data name="image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\image.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
->>>>>>> e866d6f33a935be39fbb65b8a112f0d59418544a
+
   </data>
 </root>

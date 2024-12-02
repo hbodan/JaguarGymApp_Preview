@@ -1,17 +1,12 @@
 ﻿using JaguarGymApp_Preview.Estructuras;
-using MaterialSkin.Controls;
+using JaguarGymApp_Preview.Servicios;
 using MaterialSkin;
+using MaterialSkin.Controls;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using JaguarGymApp_Preview.Servicios;
-using MySql.Data.MySqlClient;
 
 namespace JaguarGymApp_Preview.Formularios
 {
@@ -29,7 +24,7 @@ namespace JaguarGymApp_Preview.Formularios
             Actualizardata();
         }
 
-         public void Principal_Resize(object sender, EventArgs e)
+        public void Principal_Resize(object sender, EventArgs e)
         {
             this.Size = new System.Drawing.Size(1080, 720); // Mantener el tamaño de la ventana fijo
         }
@@ -39,12 +34,9 @@ namespace JaguarGymApp_Preview.Formularios
             Actualizardata();
             ConteoMiembros();
         }
-<<<<<<< HEAD
 
-        private void Actualizardata()
-=======
+
         public void Actualizardata()
->>>>>>> e866d6f33a935be39fbb65b8a112f0d59418544a
         {
             try
             {
@@ -52,11 +44,7 @@ namespace JaguarGymApp_Preview.Formularios
                 {
                     conn.Open();
 
-<<<<<<< HEAD
-                    string query = "SELECT \r\n m.idMiembro AS 'ID',\r\n m.cif AS 'CIF', m.identificacion AS 'Identificación',\r\n    m.nombres AS 'Nombres',\r\n    m.apellidos AS 'Apellidos',\r\n m.fechaNacimiento AS 'Fecha de Nacimiento'\r\n ,   f.nombreFacultad AS 'Facultad',\r\n    c.nombreCarrera AS 'Carrera',\r\n CASE \r\n WHEN  m.genero = 1 THEN 'Masculino' ELSE 'Femenino' END AS 'Género',\r\n m.fechaExp AS 'Membresia Expira', \r\n    CASE \r\n        WHEN m.interno = 1 THEN 'Sí' \r\n        ELSE 'No' \r\n    END AS 'Interno',\r\n    CASE \r\n        WHEN m.colaborador = 1 THEN 'Sí' \r\n        ELSE 'No' \r\n    END AS 'Colaborador',\r\n    m.cargo AS 'Cargo'\r\nFROM \r\n    Miembro m\r\nLEFT JOIN Facultad f ON m.idfacultad = f.idFacultad\r\nLEFT JOIN Carrera c ON m.idcarrera = c.idCarrera;";
-=======
                     string query = "SELECT \r\n m.idMiembro AS 'ID',\r\n m.cif AS 'CIF', m.identificacion AS 'Identificación',\r\n    m.nombres AS 'Nombres',\r\n    m.apellidos AS 'Apellidos',\r\n    CASE \r\n        WHEN m.genero = 1 THEN 'Masculino' \r\n        ELSE 'Femenino' \r\n    END AS 'Genero',\r\n m.fechaNacimiento AS 'Fecha de Nacimiento'\r\n ,   f.nombreFacultad AS 'Facultad',\r\n    c.nombreCarrera AS 'Carrera',\r\n m.fechaExp AS 'Membresia Expira', \r\n    CASE \r\n        WHEN m.interno = 1 THEN 'Sí' \r\n        ELSE 'No' \r\n    END AS 'Interno',\r\n    CASE \r\n        WHEN m.colaborador = 1 THEN 'Sí' \r\n        ELSE 'No' \r\n    END AS 'Colaborador',\r\n    m.cargo AS 'Cargo'\r\nFROM \r\n    Miembro m\r\nLEFT JOIN Facultad f ON m.idfacultad = f.idFacultad\r\nLEFT JOIN Carrera c ON m.idcarrera = c.idCarrera;";
->>>>>>> e866d6f33a935be39fbb65b8a112f0d59418544a
                     MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
                     DataTable table = new DataTable();
                     adapter.Fill(table);
@@ -69,12 +57,8 @@ namespace JaguarGymApp_Preview.Formularios
                 MessageBox.Show("Error al cargar datos: " + ex.Message);
             }
         }
-<<<<<<< HEAD
 
-        private void ConteoMiembros()
-=======
         public void ConteoMiembros()
->>>>>>> e866d6f33a935be39fbb65b8a112f0d59418544a
         {
             try
             {
@@ -105,7 +89,7 @@ namespace JaguarGymApp_Preview.Formularios
 
         public void btnAgregar_Click(object sender, EventArgs e)
         {
-            Agregar_Miembros formulario2 = new Agregar_Miembros(miembros,this);
+            Agregar_Miembros formulario2 = new Agregar_Miembros(miembros, this);
             formulario2.Show();
             this.Hide();
         }
@@ -127,7 +111,7 @@ namespace JaguarGymApp_Preview.Formularios
                 Actualizardata();
                 return;
             }
-            
+
             string query = "";
 
             // Construir la consulta SQL según el filtro seleccionado
@@ -185,7 +169,7 @@ namespace JaguarGymApp_Preview.Formularios
 
                     if (resultados.Rows.Count == 0)
                     {
-                        MessageBox.Show("No se ha encontrado ningún registro que cumpla el criterio","Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("No se ha encontrado ningún registro que cumpla el criterio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
             }
@@ -194,7 +178,7 @@ namespace JaguarGymApp_Preview.Formularios
                 MessageBox.Show($"Error al realizar la búsqueda: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            
+
         }
 
         public void LinkAtras_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -204,7 +188,7 @@ namespace JaguarGymApp_Preview.Formularios
             this.Hide();
         }
 
-<<<<<<< HEAD
+
         private Miembro ObtenerDatosMiembroPorId(int idMiembro)
         {
             Miembro miembro = null;
@@ -234,7 +218,7 @@ namespace JaguarGymApp_Preview.Formularios
         Carrera c ON m.idcarrera = c.idCarrera
     WHERE 
         m.idMiembro = @idMiembro";
-;
+            ;
 
             try
             {
@@ -290,61 +274,16 @@ namespace JaguarGymApp_Preview.Formularios
                 {
                     // Abrir el formulario Editar_Miembros
                     Editar_Miembros editarMiembrosForm = new Editar_Miembros(miembroSeleccionado, this);
-                    editarMiembrosForm.CargarDatosMiembro(
-=======
-        public void dgvMiembros_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            dgvMiembros.ReadOnly = false;
-            // Verificar que se haga doble clic en una fila válida
-            if (e.RowIndex >= 0)
-            {
-                // Obtener los datos de la fila seleccionada
-                DataGridViewRow filaSeleccionada = dgvMiembros.Rows[e.RowIndex];
-
-                // Crear una instancia del formulario "Agregar_Miembros"
-                Agregar_Miembros formularioEdicion = new Agregar_Miembros(null, this);
-
-                formularioEdicion.btnAgregar.Text = "Editar";
-                formularioEdicion.lblTitulo.Text = "Edicion de Miembro";
-
-                // Pasar los datos al formulario de edición
-                formularioEdicion.CargarDatosMiembro(
->>>>>>> e866d6f33a935be39fbb65b8a112f0d59418544a
-
-                    identificacion: filaSeleccionada.Cells["Identificación"].Value.ToString(),
-                    cif: filaSeleccionada.Cells["CIF"].Value.ToString(),
-                    nombres: filaSeleccionada.Cells["Nombres"].Value.ToString(),
-                    apellidos: filaSeleccionada.Cells["Apellidos"].Value.ToString(),
-                    fechaNacimiento: Convert.ToDateTime(filaSeleccionada.Cells["Fecha de Nacimiento"].Value),
-                    fechaExp: Convert.ToDateTime(filaSeleccionada.Cells["Membresia Expira"].Value),
-                    carrera: filaSeleccionada.Cells["Carrera"].Value.ToString(),
-                    facultad: filaSeleccionada.Cells["Facultad"].Value.ToString(),
-                    genero: filaSeleccionada.Cells["Genero"].Value.ToString() == "Masculino",
-                    interno: filaSeleccionada.Cells["Interno"].Value.ToString() == "Sí",
-                    colaborador: filaSeleccionada.Cells["Colaborador"].Value.ToString() == "Sí",
-                    cargo: filaSeleccionada.Cells["Cargo"].Value.ToString()
-                );
-<<<<<<< HEAD
-                    editarMiembrosForm.ShowDialog();
-
-                    // Actualizar el DataGridView después de cerrar el formulario
-                    Actualizardata();
+                    
                 }
-                
-=======
-
-                // Mostrar el formulario
-                formularioEdicion.ShowDialog();
->>>>>>> e866d6f33a935be39fbb65b8a112f0d59418544a
-
             }
-
         }
+
 
 
         public void dgvMiembros_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         public void RecargarMiembros()
