@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,6 +22,9 @@ namespace JaguarGymApp_Preview.Formularios
 
         public Configuracion()
         {
+            
+            ConexionBD conn = new ConexionBD();
+            data = new MySqlConnection(conn.GetConnector());
             this.Resize += new System.EventHandler(this.Principal_Resize);
             InitializeComponent();
             var materialSkinManager = MaterialSkinManager.Instance;
@@ -35,7 +39,7 @@ namespace JaguarGymApp_Preview.Formularios
 
         private void Configuracion_Load(object sender, EventArgs e)
         {
-
+            LoadData();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -80,17 +84,35 @@ namespace JaguarGymApp_Preview.Formularios
         {
             try
             {
-                using (MySqlConnection conn = new MySqlConnection(new Servicios.ConexionBD().GetConnector()))
+                // Establecemos la conexión
+                ConexionBD conn = new ConexionBD();
+                MySqlConnection data = new MySqlConnection(conn.GetConnector());
+
                 {
-                    conn.Open();
+                    data.Open();
 
-                    string query = "SELECT * FROM usuario";
-                    MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
-                    DataTable table = new DataTable();
-                    adapter.Fill(table);
+                    string query = "SELECT * FROM Usuario";
+                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, data))
+                    {
+                        DataTable table = new DataTable();
+                        adapter.Fill(table);
 
-                    dgv_ListaUsuarios.DataSource = table;
+                        if (table.Rows.Count == 0)
+                        {
+                            MessageBox.Show("No se encontraron datos.");
+                        }
+                        else
+                        {
+                            dgv_ListaUsuarios.DataSource = table;
+                            EnmascararPassword();
+                         
+                        }
+                    }
                 }
+            }
+            catch (MySqlException sqlEx)
+            {
+                MessageBox.Show($"Error de MySQL: {sqlEx.Message}\nCódigo de Error: {sqlEx.Number}");
             }
             catch (Exception ex)
             {
@@ -99,45 +121,56 @@ namespace JaguarGymApp_Preview.Formularios
         }
         private void AgregarUsuario()
         {
-            string nombreUsuario = txt_UsuarioConfiguracion.Text;
-            string correo = txt_EmailConfiguracion.Text;  // Campo de Correo
-            string clave = txt_PasswordConfiguracion.Text;  // Campo de Contraseña
+            // Obtener valores de los campos
+            string nombreUsuario = txt_UsuarioConfiguracion.Text.Trim();
+            string correo = txt_EmailConfiguracion.Text.Trim();
+            string clave = txt_PasswordConfiguracion.Text.Trim();
 
-            string query = "INSERT INTO usuario (nombreUsuario, correoElectronico, clave) VALUES (@nombre, @correo, @clave)";
+            // Validar campos requeridos
+            if (string.IsNullOrWhiteSpace(nombreUsuario) || string.IsNullOrWhiteSpace(correo) || string.IsNullOrWhiteSpace(clave))
+            {
+                MessageBox.Show("Por favor, completa todos los campos antes de registrar al usuario.", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
+            // Consulta SQL con parámetros
+            string query = "INSERT INTO Usuario (nombreUsuario, correoElectronico, clave) VALUES (@nombre, @correo, @clave)";
 
             try
             {
-
-                // Creamos la consulta con parámetros
-                MySqlCommand command = new MySqlCommand(query, data);
-                command.Parameters.AddWithValue("@nombre", nombreUsuario);
-                command.Parameters.AddWithValue("@correo", correo);
-                command.Parameters.AddWithValue("@clave", clave);
-
-                // Abrimos la conexión
-                data.Open();
-
-                // Ejecutamos la consulta de inserción
-                int rowsAffected = command.ExecuteNonQuery();
-                LoadData();
-
-                if (rowsAffected > 0)
+                // Usar `using` para manejar la conexión automáticamente
+                using (MySqlConnection data = new MySqlConnection(new ConexionBD().GetConnector()))
                 {
-                    MessageBox.Show("Usuario registrado exitosamente!");
-                    data.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Hubo un problema al registrar el usuario.");
-                    data.Close();
+                    data.Open();
+
+                    using (MySqlCommand command = new MySqlCommand(query, data))
+                    {
+                        command.Parameters.AddWithValue("@nombre", nombreUsuario);
+                        command.Parameters.AddWithValue("@correo", correo);
+                        command.Parameters.AddWithValue("@clave", clave);
+
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Usuario registrado exitosamente!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LoadData(); // Actualizar DataGridView con los nuevos datos
+                        }
+                        else
+                        {
+                            MessageBox.Show("Hubo un problema al registrar el usuario.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al conectar con la base de datos: " + ex.Message);
-                data.Close();
+                MessageBox.Show("Error al conectar con la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
         // Método para mostrar los errores en una pestaña o lista
         private void MostrarErrores(List<string> errores)
         {
@@ -169,6 +202,11 @@ namespace JaguarGymApp_Preview.Formularios
                 errores.Add("El campo de Email no puede estar vacío.");
                 errorProvider1.SetError(txt_EmailConfiguracion, "El campo de Email no puede estar vacío.");
             }
+            else if (!EsCorreoValido(txt_EmailConfiguracion.Text)) // Validar formato del correo específico
+            {
+                errores.Add("El correo electrónico debe tener el formato @uamv.edu.ni");
+                errorProvider1.SetError(txt_EmailConfiguracion, "El correo electrónico debe tener el formato @uamv.edu.ni");
+            }
 
             // Validación del campo Contraseña
             if (string.IsNullOrWhiteSpace(txt_PasswordConfiguracion.Text))
@@ -198,7 +236,7 @@ namespace JaguarGymApp_Preview.Formularios
             }
 
             string idUsuario = dgv_ListaUsuarios.SelectedRows[0].Cells["idUsuario"].Value.ToString();
-            string query = "UPDATE usuario SET nombreUsuario = @nombre, correoElectronico = @correo, clave = @clave WHERE idUsuario = @id";
+            string query = "UPDATE Usuario SET nombreUsuario = @nombre, correoElectronico = @correo, clave = @clave WHERE idUsuario = @id";
 
             try
             {
@@ -248,7 +286,12 @@ namespace JaguarGymApp_Preview.Formularios
                 // Llena los campos con los valores de las celdas
                 txt_UsuarioConfiguracion.Text = selectedRow.Cells["nombreUsuario"].Value?.ToString(); // Nombre del usuario
                 txt_EmailConfiguracion.Text = selectedRow.Cells["correoElectronico"].Value?.ToString(); // Correo electrónico
-                txt_PasswordConfiguracion.Text = selectedRow.Cells["clave"].Value?.ToString(); // Contraseña
+
+                // Muestra el valor real de la contraseña desde el Tag
+                if (selectedRow.Cells["clave"].Tag != null)
+                {
+                    txt_PasswordConfiguracion.Text = selectedRow.Cells["clave"].Tag.ToString();
+                }
             }
         }
 
@@ -272,6 +315,11 @@ namespace JaguarGymApp_Preview.Formularios
             {
                 errores.Add("El campo de Email no puede estar vacío.");
                 errorProvider1.SetError(txt_EmailConfiguracion, "El campo de Email no puede estar vacío.");
+            }
+            else if (!EsCorreoValido(txt_EmailConfiguracion.Text)) // Validar formato del correo específico
+            {
+                errores.Add("El correo electrónico debe tener el formato @uamv.edu.ni");
+                errorProvider1.SetError(txt_EmailConfiguracion, "El correo electrónico debe tener el formato @uamv.edu.ni");
             }
 
             // Validación del campo Contraseña
@@ -302,7 +350,7 @@ namespace JaguarGymApp_Preview.Formularios
             }
 
             string idUsuario = dgv_ListaUsuarios.SelectedRows[0].Cells["idUsuario"].Value.ToString();
-            string query = "DELETE FROM usuario WHERE idUsuario = @id";
+            string query = "DELETE FROM Usuario WHERE idUsuario = @id";
 
             try
             {
@@ -376,6 +424,30 @@ namespace JaguarGymApp_Preview.Formularios
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
             }
+        }
+        private void EnmascararPassword()
+        {
+            // Verifica que la columna "clave" exista
+            if (dgv_ListaUsuarios.Columns["clave"] != null)
+            {
+                foreach (DataGridViewRow row in dgv_ListaUsuarios.Rows)
+                {
+                    if (row.Cells["clave"].Value != null)
+                    {
+                        // Guarda el valor original en el Tag de la celda
+                        row.Cells["clave"].Tag = row.Cells["clave"].Value.ToString();
+
+                        // Enmascara el valor con asteriscos
+                        row.Cells["clave"].Value = new string('*', 6); // Puedes ajustar el número de asteriscos
+                    }
+                }
+            }
+        }
+        private bool EsCorreoValido(string correo)
+        {
+            // Expresión regular para correos que terminan en @uamv.edu.ni
+            string patron = @"^[^@\s]+@uamv\.edu\.ni";
+            return System.Text.RegularExpressions.Regex.IsMatch(correo, patron);
         }
     }
 }
