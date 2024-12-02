@@ -83,6 +83,12 @@ namespace JaguarGymApp_Preview.Formularios
                 MessageBox.Show("Error al conectar con la base de datos: " + ex.Message);
             }
         }
+        private bool EsCorreoValido(string correo)
+        {
+            // Expresión regular para correos que terminan en @uamv.edu.ni
+            string patron = @"^[^@\s]+@uamv\.edu\.ni";
+            return System.Text.RegularExpressions.Regex.IsMatch(correo, patron);
+        }
 
         private void guna2GradientButton1_Click(object sender, EventArgs e)
         {
@@ -95,19 +101,24 @@ namespace JaguarGymApp_Preview.Formularios
             // Lista para almacenar los errores de validación
             List<string> errores = new List<string>();
 
-            // Validación del campo Usuario
+            // Validación del campo nombre completo
             if (string.IsNullOrWhiteSpace(txtRegistroNombreCompleto.Text))
             {
                 errores.Add("El campo de nombre no puede estar vacío.");
                 errorProvider1.SetError(txtRegistroNombreCompleto, "El campo de nombre no puede estar vacío.");
             }
-
-            // Validación del campo Apellidos
+            // Validación del campo Email
             if (string.IsNullOrWhiteSpace(txtRegistroEmail.Text))
             {
                 errores.Add("El campo de Email no puede estar vacío.");
                 errorProvider1.SetError(txtRegistroEmail, "El campo de Email no puede estar vacío.");
             }
+            else if (!EsCorreoValido(txtRegistroEmail.Text)) // Validar formato del correo específico
+            {
+                errores.Add("El correo electrónico debe tener el formato @uamv.edu.ni");
+                errorProvider1.SetError(txtRegistroEmail, "El correo electrónico debe tener el formato @uamv.edu.ni");
+            }
+
 
             // Validación del campo Contraseña
             if (string.IsNullOrWhiteSpace(txtPassword.Text))

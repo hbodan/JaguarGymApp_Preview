@@ -22,12 +22,18 @@ namespace JaguarGymApp_Preview
     public partial class Principal : MaterialForm
     {
         private MySqlConnection data;
-
+        private MySqlConnection dataMembresia;
+        private MySqlConnection dataTop;
         private int _idUsuario;
+
         public Principal(int idUsuario)
         {
             ConexionBD conn = new ConexionBD();
             data = new MySqlConnection(conn.GetConnector());
+            ConexionBD connMembresia = new ConexionBD();
+            dataMembresia = new MySqlConnection(connMembresia.GetConnector());
+            ConexionBD connTop = new ConexionBD();
+            dataTop = new MySqlConnection(connTop.GetConnector());
             this.Resize += new System.EventHandler(this.Principal_Resize);
             InitializeComponent();
             var materialSkinManager = MaterialSkinManager.Instance;
@@ -137,24 +143,23 @@ namespace JaguarGymApp_Preview
                     // Tomar solo la primera palabra del nombre completo.
                     string primerNombre = nombreCompleto.Split(' ')[0];
                     return primerNombre;
+                    data.Close();
                 }
                 else
                 {
                     MessageBox.Show("No se encontró un usuario con ese ID.");
+                    data.Close();
                 }
             }
             catch (Exception ex)
             {
                 // Manejo de errores.
                 MessageBox.Show("Error al buscar el nombre: " + ex.Message);
+                data.Close();
             }
             finally
             {
-                // Cerrar la conexión.
-                if (data.State == ConnectionState.Open)
-                {
-                    data.Close();
-                }
+                data.Close();
             }
 
             return string.Empty;
@@ -163,12 +168,9 @@ namespace JaguarGymApp_Preview
         {
             try
             {
-                string query = "SELECT nombres, identificacion, fechaExp FROM Miembro WHERE fechaExp BETWEEN CURDATE() AND DATE_ADD(CURDATE(), INTERVAL 7 DAY)";
+                string queryMembresia = "SELECT nombres, identificacion, fechaExp FROM Miembro WHERE fechaExp BETWEEN CURDATE() AND DATE_ADD(CURDATE(), INTERVAL 7 DAY)";
 
-                ConexionBD conn = new ConexionBD();
-                MySqlConnection data = new MySqlConnection(conn.GetConnector());
-
-                using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, data))
+                using (MySqlDataAdapter adapter = new MySqlDataAdapter(queryMembresia, dataMembresia))
                 {
                     DataTable table = new DataTable();
                     adapter.Fill(table);
@@ -201,43 +203,55 @@ namespace JaguarGymApp_Preview
         {
             try
             {
-                // Consulta SQL para obtener los 10 miembros con más entradas registradas
-                string query = @"
-            SELECT 
-                m.nombres, 
-                m.identificacion, 
-                COUNT(e.idEntrada) AS TotalEntradas
-            FROM 
-                Miembro m
-            JOIN 
-                Entrada e ON m.idMiembro = e.idMiembro
-            GROUP BY 
-                m.idMiembro, m.nombres, m.identificacion
-            ORDER BY 
-                TotalEntradas DESC
-            LIMIT 10;";  // Limitar a los 10 miembros con más entradas
 
-                // Crear la conexión a la base de datos
-                ConexionBD conn = new ConexionBD();
-                MySqlConnection data = new MySqlConnection(conn.GetConnector());
+                // Consulta SQL para obtener los 10 miembros más activos
+                string queryTop = @"
+                SELECT 
+                    m.nombres, 
+                    m.identificacion, 
+                    COUNT(e.idEntrada) AS TotalEntradas
+                FROM 
+                    Miembro m
+                JOIN 
+                    Entrada e ON m.idMiembro = e.idMiembro
+                GROUP BY 
+                    m.idMiembro, m.nombres, m.identificacion
+                ORDER BY 
+                    TotalEntradas DESC
+                LIMIT 10;";
 
-                using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, data))
+                // Abre una conexión y úsala para ejecutar la consulta
+                using (dataTop)
                 {
-                    DataTable table = new DataTable();
-                    adapter.Fill(table);
+                    dataTop.Open();
 
-                    // Mostrar los datos en el DataGridView
-                    dgv_MiembroMasTiempo.DataSource = table;
+                    using (MySqlCommand commandTop = new MySqlCommand(queryTop, dataTop))
+                    using (MySqlDataAdapter adapterTop = new MySqlDataAdapter(commandTop)) // Asociar el comando al adaptador
+                    {
+                        DataTable table = new DataTable();
+                        adapterTop.Fill(table);
 
-                    // Configurar encabezados de columna, si lo deseas
-                    dgv_MiembroMasTiempo.Columns["nombres"].HeaderText = "Nombres";
-                    dgv_MiembroMasTiempo.Columns["identificacion"].HeaderText = "Identificación";
-                    dgv_MiembroMasTiempo.Columns["TotalEntradas"].HeaderText = "Total Entradas";
+                        // Asigna los datos al DataGridView
+                        dgv_MiembroMasTiempo.DataSource = table;
+
+                        // Configura los encabezados de las columnas
+                        dgv_MiembroMasTiempo.Columns["nombres"].HeaderText = "Nombres";
+                        dgv_MiembroMasTiempo.Columns["identificacion"].HeaderText = "Identificación";
+                        dgv_MiembroMasTiempo.Columns["TotalEntradas"].HeaderText = "Total Entradas";
+                    }
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al cargar los miembros más activos: " + ex.Message);
+            }
+            finally
+            {
+                // Asegúrate de cerrar la conexión en el bloque finally
+                if (dataTop != null && dataTop.State == ConnectionState.Open)
+                {
+                    dataTop.Close(); // Cierra la conexión
+                }
             }
         }
 

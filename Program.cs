@@ -16,7 +16,7 @@ namespace JaguarGymApp_Preview
             //Solo para el commit
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Principal(0));
+            Application.Run(new Inicio_Sesion());
         }
     }
 }
