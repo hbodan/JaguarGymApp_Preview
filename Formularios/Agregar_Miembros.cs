@@ -184,7 +184,7 @@ namespace JaguarGymApp_Preview.Formularios
                 fechaExp: dateExpiracion.Value,
                 carrera: cmbCarrera.SelectedValue?.ToString(),
                 facultad: cmbFacultad.SelectedValue?.ToString(),
-                genero: cmbGenero.SelectedItem?.ToString() == "Masculino",
+                genero: chkMasculino.Checked,
                 interno: chkEstudiante.Checked,
                 colaborador: chkColaborador.Checked,
                 cargo: string.IsNullOrWhiteSpace(txtCargo.Text) ? null : txtCargo.Text
@@ -230,7 +230,7 @@ namespace JaguarGymApp_Preview.Formularios
         {
 
         }
-        private bool ValidacionLlenado()
+        public bool ValidacionLlenado()
         {
             if (string.IsNullOrEmpty(txtidentificacion.Text))
             {
@@ -267,6 +267,11 @@ namespace JaguarGymApp_Preview.Formularios
                 MessageBox.Show("Debe seleccionar si el miembro es estudiante o colaborador.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
+            if (!chkMasculino.Checked && !chkFemenino.Checked)
+            {
+                MessageBox.Show("Debe seleccionar si el miembro es Masculino o Femenino.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
             // Validar campo de Cargo si es colaborador
             if (chkColaborador.Checked && string.IsNullOrWhiteSpace(txtCargo.Text))
             {
@@ -301,17 +306,30 @@ namespace JaguarGymApp_Preview.Formularios
         {
             bool seleccionado = chkColaborador.Checked;
 
-            // Mostrar/ocultar controles relacionados con "Colaborador"
+
             lblCargo.Visible = seleccionado;
             txtCargo.Visible = seleccionado;
 
-            // Limpiar y ocultar Facultad y Carrera si se selecciona "Colaborador"
+
             if (seleccionado)
             {
-                cmbFacultad.SelectedIndex = -1; // Limpiar selección de Facultad
-                cmbCarrera.DataSource = null;  // Limpiar las carreras cargadas
                 chkEstudiante.Checked = false;
+                txtCargo.Text = "";
             }
+        }
+        private void chkMasculino_CheckedChanged(object sender, EventArgs e)
+        {
+            bool seleccionado = chkMasculino.Checked;
+
+            if (seleccionado)
+                chkFemenino.Checked = false;
+        }
+        private void chkFemenino_CheckedChanged(object sender, EventArgs e)
+        {
+            bool seleccionado = chkFemenino.Checked;
+
+            if (seleccionado)
+                chkMasculino.Checked = false;
         }
 
 
@@ -337,19 +355,12 @@ namespace JaguarGymApp_Preview.Formularios
 
 
 
-        private void dateNacimiento_ValueChanged(object sender, EventArgs e)
+        private void LinkAtras_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            formularioAnterior.RecibirDatos(miembrosRecibidos);
+            this.Close();
         }
 
-        private void cmbGenero_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

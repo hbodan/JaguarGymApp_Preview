@@ -191,7 +191,7 @@
             this.statusStrip1.Location = new System.Drawing.Point(3, 858);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 13, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1381, 26);
+            this.statusStrip1.Size = new System.Drawing.Size(1434, 26);
             this.statusStrip1.TabIndex = 6;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -252,7 +252,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1387, 886);
+            this.ClientSize = new System.Drawing.Size(1440, 886);
             this.Controls.Add(this.cmbFiltro);
             this.Controls.Add(this.dgvMiembros);
             this.Controls.Add(this.LinkAtras);
@@ -266,7 +266,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1440, 886);
-            this.MinimumSize = new System.Drawing.Size(1080, 718);
+            this.MinimumSize = new System.Drawing.Size(1440, 886);
             this.Name = "Miembros_Activos";
             this.Padding = new System.Windows.Forms.Padding(3, 64, 3, 2);
             this.Text = "Miembros";

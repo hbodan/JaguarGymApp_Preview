@@ -48,7 +48,7 @@ namespace JaguarGymApp_Preview.Formularios
                 {
                     conn.Open();
 
-                    string query = "SELECT \r\n m.idMiembro AS 'ID',\r\n m.cif AS 'CIF', m.identificacion AS 'Identificación',\r\n    m.nombres AS 'Nombres',\r\n    m.apellidos AS 'Apellidos',\r\n m.fechaNacimiento AS 'Fecha de Nacimiento'\r\n ,   f.nombreFacultad AS 'Facultad',\r\n    c.nombreCarrera AS 'Carrera',\r\n    m.genero AS 'Género',\r\n m.fechaExp AS 'Membresia Expira', \r\n    CASE \r\n        WHEN m.interno = 1 THEN 'Sí' \r\n        ELSE 'No' \r\n    END AS 'Interno',\r\n    CASE \r\n        WHEN m.colaborador = 1 THEN 'Sí' \r\n        ELSE 'No' \r\n    END AS 'Colaborador',\r\n    m.cargo AS 'Cargo'\r\nFROM \r\n    Miembro m\r\nLEFT JOIN Facultad f ON m.idfacultad = f.idFacultad\r\nLEFT JOIN Carrera c ON m.idcarrera = c.idCarrera;";
+                    string query = "SELECT \r\n m.idMiembro AS 'ID',\r\n m.cif AS 'CIF', m.identificacion AS 'Identificación',\r\n    m.nombres AS 'Nombres',\r\n    m.apellidos AS 'Apellidos',\r\n m.fechaNacimiento AS 'Fecha de Nacimiento'\r\n ,   f.nombreFacultad AS 'Facultad',\r\n    c.nombreCarrera AS 'Carrera',\r\n CASE \r\n WHEN  m.genero = 1 THEN 'Masculino' ELSE 'Femenino' END AS 'Género',\r\n m.fechaExp AS 'Membresia Expira', \r\n    CASE \r\n        WHEN m.interno = 1 THEN 'Sí' \r\n        ELSE 'No' \r\n    END AS 'Interno',\r\n    CASE \r\n        WHEN m.colaborador = 1 THEN 'Sí' \r\n        ELSE 'No' \r\n    END AS 'Colaborador',\r\n    m.cargo AS 'Cargo'\r\nFROM \r\n    Miembro m\r\nLEFT JOIN Facultad f ON m.idfacultad = f.idFacultad\r\nLEFT JOIN Carrera c ON m.idcarrera = c.idCarrera;";
                     MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
                     DataTable table = new DataTable();
                     adapter.Fill(table);
@@ -192,9 +192,114 @@ namespace JaguarGymApp_Preview.Formularios
             this.Hide();
         }
 
+        private Miembro ObtenerDatosMiembroPorId(int idMiembro)
+        {
+            Miembro miembro = null;
+            string query = @"
+        SELECT 
+    m.idMiembro, m.cif, m.identificacion, m.nombres, m.apellidos,
+    m.fechaNacimiento,f.nombreFacultad, c.nombreCarrera,
+    CASE 
+        WHEN m.genero = 1 THEN 'Masculino' 
+        ELSE 'Femenino' 
+    END AS genero,
+    m.fechaExp,
+    CASE 
+        WHEN m.interno = 1 THEN 'Sí' 
+        ELSE 'No' 
+    END AS interno,
+    CASE 
+        WHEN m.colaborador = 1 THEN 'Sí' 
+        ELSE 'No' 
+    END AS colaborador,
+    m.cargo
+    FROM 
+        Miembro m
+    LEFT JOIN 
+        Facultad f ON m.idfacultad = f.idFacultad
+    LEFT JOIN 
+        Carrera c ON m.idcarrera = c.idCarrera
+    WHERE 
+        m.idMiembro = @idMiembro";
+;
+
+            try
+            {
+                ConexionBD conn = new ConexionBD();
+                using (MySqlConnection connection = new MySqlConnection(conn.GetConnector()))
+                {
+                    connection.Open();
+                    MySqlCommand command = new MySqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@idMiembro", idMiembro);
+
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            miembro = new Miembro
+                            {
+                                IdMiembro = Convert.ToInt32(reader["idMiembro"]),
+                                Identificacion = reader["identificacion"].ToString(),
+                                CIF = reader["cif"].ToString(),
+                                Nombres = reader["nombres"].ToString(),
+                                Apellidos = reader["apellidos"].ToString(),
+                                FechaNac = Convert.ToDateTime(reader["fechaNacimiento"]),
+                                FechaExp = Convert.ToDateTime(reader["fechaExp"]),
+                                Carrera = reader["nombreCarrera"].ToString(),
+                                Facultad = reader["nombreFacultad"].ToString(),
+                                Genero = Convert.ToBoolean(reader["genero"]),
+                                Interno = Convert.ToBoolean(reader["interno"]),
+                                Colaborador = Convert.ToBoolean(reader["colaborador"]),
+                                Cargo = reader["cargo"].ToString()
+                            };
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al obtener datos del miembro: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return miembro;
+        }
         private void dgvMiembros_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            dgvMiembros.ReadOnly = true;
+            // Verificar que no sea el encabezado
+            if (e.RowIndex >= 0)
+            {
+                // Obtener el ID del miembro seleccionado
+                int idMiembro = Convert.ToInt32(dgvMiembros.Rows[e.RowIndex].Cells["ID"].Value);
+                DataGridViewRow filaSeleccionada = dgvMiembros.Rows[e.RowIndex];
+                Miembro miembroSeleccionado = ObtenerDatosMiembroPorId(idMiembro);
+                // Recuperar datos del miembro desde la base de datos
+                if (miembroSeleccionado != null)
+                {
+                    // Abrir el formulario Editar_Miembros
+                    Editar_Miembros editarMiembrosForm = new Editar_Miembros(miembroSeleccionado, this);
+                    editarMiembrosForm.CargarDatosMiembro(
+
+                    identificacion: filaSeleccionada.Cells["Identificación"].Value.ToString(),
+                    cif: filaSeleccionada.Cells["CIF"].Value.ToString(),
+                    nombres: filaSeleccionada.Cells["Nombres"].Value.ToString(),
+                    apellidos: filaSeleccionada.Cells["Apellidos"].Value.ToString(),
+                    fechaNacimiento: Convert.ToDateTime(filaSeleccionada.Cells["Fecha de Nacimiento"].Value),
+                    fechaExp: Convert.ToDateTime(filaSeleccionada.Cells["Membresia Expira"].Value),
+                    carrera: filaSeleccionada.Cells["Carrera"].Value.ToString(),
+                    facultad: filaSeleccionada.Cells["Facultad"].Value.ToString(),
+                    genero: filaSeleccionada.Cells["Genero"].Value.ToString() == "Masculino",
+                    interno: filaSeleccionada.Cells["Interno"].Value.ToString() == "Sí",
+                    colaborador: filaSeleccionada.Cells["Colaborador"].Value.ToString() == "Sí",
+                    cargo: filaSeleccionada.Cells["Cargo"].Value.ToString()
+                );
+                    editarMiembrosForm.ShowDialog();
+
+                    // Actualizar el DataGridView después de cerrar el formulario
+                    Actualizardata();
+                }
+                
+
+            }
 
         }
     }

@@ -146,6 +146,12 @@
     <Compile Include="Formularios\Crear_Cuenta.Designer.cs">
       <DependentUpon>Crear_Cuenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Editar_Miembros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Editar_Miembros.Designer.cs">
+      <DependentUpon>Editar_Miembros.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Escanea_tu_cedula_o_CIF.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Crear_Cuenta.resx">
       <DependentUpon>Crear_Cuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Editar_Miembros.resx">
+      <DependentUpon>Editar_Miembros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Escanea_tu_cedula_o_CIF.resx">
       <DependentUpon>Escanea_tu_cedula_o_CIF.cs</DependentUpon>
