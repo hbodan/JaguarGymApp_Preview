@@ -80,7 +80,7 @@
             this.dgvMiembros.RowHeadersVisible = false;
             this.dgvMiembros.RowHeadersWidth = 65;
             this.dgvMiembros.RowTemplate.Height = 24;
-            this.dgvMiembros.Size = new System.Drawing.Size(1357, 444);
+            this.dgvMiembros.Size = new System.Drawing.Size(1407, 444);
             this.dgvMiembros.TabIndex = 0;
             this.dgvMiembros.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvMiembros.ThemeStyle.AlternatingRowsStyle.Font = null;

@@ -353,6 +353,8 @@
     <Content Include="Recursos\deporte.png" />
     <None Include="Recursos\escaneo-de-codigo-de-barras.png" />
     <Content Include="Recursos\estadisticasBoton.png" />
+    <None Include="Recursos\Fondo_GYM.png" />
+    <None Include="Recursos\image.jpg" />
     <Content Include="Recursos\Iniciar_Sesion.png" />
     <Content Include="Recursos\Jaguares_UAM.png" />
     <Content Include="Recursos\Jaguares_UAM_redondo.png" />
@@ -361,9 +363,13 @@
     <None Include="Recursos\Juaguar_Mostroso_UAM.png" />
     <Content Include="Recursos\Logo_deportes.png" />
     <Content Include="Recursos\Logo_redondo.png" />
+    <None Include="Recursos\marco1.png" />
+    <None Include="Recursos\marco2.png" />
+    <None Include="Recursos\marco3.png" />
     <Content Include="Recursos\Mascota.png" />
     <Content Include="Recursos\miembrosBoton.png" />
     <None Include="Recursos\ojo-cruzado.png" />
+    <None Include="Recursos\Mostro_UAM.png" />
     <Content Include="Recursos\ojo.png" />
     <Content Include="Recursos\onda-de-mano.png" />
     <Content Include="Recursos\pagoBoton.png" />
