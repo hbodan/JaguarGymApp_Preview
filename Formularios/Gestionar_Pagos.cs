@@ -59,7 +59,7 @@ namespace JaguarGymApp_Preview.Formularios
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             int buscado = int.Parse(txtBuscar.Text);
-            var resultados = pagos.Where(u => u.IdPago == buscado).ToList();
+            var resultados = pagos.Where(u => u.IdMiembro == buscado).ToList();
 
             dgvPagos.DataSource = null;
             dgvPagos.DataSource = resultados;
@@ -98,12 +98,7 @@ namespace JaguarGymApp_Preview.Formularios
 
         private void Pagos_Load(object sender, EventArgs e)
         {
-             pagos = new List<Pago>
-            {
-                new Pago(1, "T12345", DateTime.Now, "Pago mensual de membresía", 100.00m, "Pago realizado en línea", 1),
-                new Pago(2, "T12346", DateTime.Now, "Pago de sesión extra", 20.00m, "Pago realizado en gimnasio", 2),
-                new Pago(3, "T12347", DateTime.Now, "Pago por clases grupales", 50.00m, "Pago realizado en efectivo", 3)
-            };
+        
             ActualizarData();
             ConteoPagos();
         }

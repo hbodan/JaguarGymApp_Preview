@@ -50,24 +50,8 @@ namespace JaguarGymApp_Preview.Formularios
         }
 
         private void AgregarPago()
-        { 
-            int idPago = int.Parse(txtIdPago.Text);
-            string idTransaccion = txtIdTransaccion.Text;
-            DateTime fechaRealizacion = DateTime.Parse(dtPickerFecha.Text);
-            string descripcion = txtDescripcion.Text;
-            decimal monto = decimal.Parse(txtMonto.Text);
-            string observacion = txtObservacion.Text;
-            int idMiembro = int.Parse(txtIdMiembro.Text);
-
-            
-            pagosRecibidos.Add(new Pago(idPago, idTransaccion, fechaRealizacion, descripcion, monto, observacion, idMiembro));
-
-            /*
-            if (string.IsNullOrWhiteSpace(txtIdPago.Text) || !int.TryParse(txtIdPago.Text, out int idPago))
-            {
-                MessageBox.Show("Por favor, ingresa un ID de pago válido.");
-                return;
-            }
+        {
+         
 
             string idTransaccion = txtIdTransaccion.Text.Trim();
             if (string.IsNullOrEmpty(idTransaccion))
@@ -82,10 +66,10 @@ namespace JaguarGymApp_Preview.Formularios
                 return;
             }
 
-            string descripcion = txtDescripcion.Text.Trim();
-            if (string.IsNullOrEmpty(descripcion))
+            int mesesPagados = (int)nudMesesPagados.ValueNumber; // Obtenemos el valor del NumericUpDown
+            if (mesesPagados < 1 || mesesPagados > 12)
             {
-                MessageBox.Show("La descripción no puede estar vacía.");
+                MessageBox.Show("El número de meses pagados debe estar entre 1 y 12.");
                 return;
             }
 
@@ -102,16 +86,18 @@ namespace JaguarGymApp_Preview.Formularios
                 return;
             }
 
-
-            if (string.IsNullOrWhiteSpace(txtIdMiembro.Text) || !int.TryParse(txtIdMiembro.Text, out int idMiembro))
+            if (string.IsNullOrWhiteSpace(txtBuscarMiembro.Text) || !int.TryParse(txtBuscarMiembro.Text, out int idMiembro))
             {
                 MessageBox.Show("Por favor, ingresa un ID de miembro válido.");
                 return;
             }
 
 
-            MessageBox.Show("Datos validados correctamente.");
-            */
+            // Agregar el pago a la lista
+            pagosRecibidos.Add(new Pago( idTransaccion, fechaRealizacion, monto, observacion, idMiembro, mesesPagados));
+
+            MessageBox.Show("Pago registrado correctamente.");
+
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -123,12 +109,11 @@ namespace JaguarGymApp_Preview.Formularios
         }
         private void LimpiarCampos()
         {
-            txtIdPago.Text = "";
             txtIdTransaccion.Text = "";
-            txtDescripcion.Text = "";
+            nudMesesPagados.ValueNumber = 1;
             txtMonto.Text = "";
             txtObservacion.Text = "";
-            txtIdMiembro.Text = "";
+            txtBuscarMiembro.Text = "";
         }
         private void label4_Click(object sender, EventArgs e)
         {
@@ -187,6 +172,76 @@ namespace JaguarGymApp_Preview.Formularios
         }
 
         private void txtIdMiembro_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nudMesesPagados_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBuscarMiembro_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvMiembros_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Verificar que se haya seleccionado una fila válida
+            if (e.RowIndex >= 0)
+            {
+                // Obtener los datos de la fila seleccionada
+                var miembroSeleccionado = (Miembro)dgvMiembros.Rows[e.RowIndex].DataBoundItem;
+
+                // Actualizar el TextBox con el nombre completo del miembro seleccionado
+                txtMiembroSeleccionado.Text = $"Miembro: {miembroSeleccionado.Nombres} {miembroSeleccionado.Apellidos}";
+
+                // Actualizar el campo ID miembro
+                txtBuscarMiembro.Text = miembroSeleccionado.Identificacion;
+            }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+              // Obtener el texto de búsqueda
+            string criterio = txtBuscarMiembro.Text.Trim().ToLower();
+
+            // Simular la búsqueda en una lista de miembros (reemplazar por datos reales)
+            List<Miembro> listaMiembros = ObtenerMiembros(); // Implementar método para obtener miembros
+
+            // Filtrar los resultados por ID o CIF
+            var resultados = listaMiembros.Where(m =>
+                m.Identificacion.ToLower().Contains(criterio) ||
+                m.CIF.ToLower().Contains(criterio)).ToList();
+
+            // Mostrar los resultados en el DataGridView
+            dgvMiembros.DataSource = resultados;
+
+            if (resultados.Count == 0)
+            {
+                MessageBox.Show("No se encontraron coincidencias.");
+            }
+        }
+
+        // Método para obtener miembros (puedes reemplazarlo con una consulta real a la base de datos)
+        private List<Miembro> ObtenerMiembros()
+        {
+            return new List<Miembro>
+            {
+                new Miembro(1, "12345678", "CIF001", "Juan", "Pérez", DateTime.Now.AddYears(-25), DateTime.Now.AddYears(-5),
+                "Ingeniería", "Facultad de Tecnología", true, true, false, "Estudiante"),
+                new Miembro(2, "87654321", "CIF002", "María", "López", DateTime.Now.AddYears(-22), DateTime.Now.AddYears(-4),
+                "Medicina", "Facultad de Ciencias", false, false, true, "Colaboradora")
+            };
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblMiembroSeleccionado_Click(object sender, EventArgs e)
         {
 
         }

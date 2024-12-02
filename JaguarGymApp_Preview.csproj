@@ -328,6 +328,9 @@
     <Content Include="ReadMePng\Options.png" />
     <Content Include="ReadMePng\类库上右键.png" />
     <Content Include="Recursos\Animacion_Reloj.gif" />
+    <None Include="Resources\buscarPNG.png" />
+    <None Include="Resources\buscar2.ico" />
+    <None Include="Resources\buscar.ico" />
     <None Include="Recursos\avatar.png" />
     <None Include="Recursos\bloquear.png" />
     <Content Include="Recursos\Check_icon.png" />

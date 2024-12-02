@@ -247,38 +247,75 @@ C:\Users\hebod\OneDrive\Escritorio\JaguarGymApp_Preview\bin\Debug\System.Runtime
 C:\Users\hebod\OneDrive\Escritorio\JaguarGymApp_Preview\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\hebod\OneDrive\Escritorio\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Configuracion.resources
 C:\Users\hebod\OneDrive\Escritorio\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Miembros_Activos.resources
-C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\BouncyCastle.Cryptography.dll
-C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\Google.Protobuf.dll
-C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\K4os.Compression.LZ4.dll
-C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\K4os.Compression.LZ4.Streams.dll
-C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\K4os.Hash.xxHash.dll
-C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\MySql.Data.dll
-C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\System.Buffers.dll
-C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\System.Configuration.ConfigurationManager.dll
-C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\System.Diagnostics.DiagnosticSource.dll
-C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\System.IO.Pipelines.dll
-C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\System.Memory.dll
-C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\System.Numerics.Vectors.dll
-C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\ZstdSharp.dll
-C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\BouncyCastle.Cryptography.xml
-C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\Google.Protobuf.pdb
-C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\Google.Protobuf.xml
-C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\K4os.Compression.LZ4.xml
-C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\K4os.Compression.LZ4.Streams.xml
-C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\K4os.Hash.xxHash.xml
-C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
-C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\MySql.Data.xml
-C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\System.Buffers.xml
-C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\System.Configuration.ConfigurationManager.xml
-C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\System.Diagnostics.DiagnosticSource.xml
-C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\System.IO.Pipelines.xml
-C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\System.Memory.xml
-C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\System.Numerics.Vectors.xml
-C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\Andre\Desktop\JaguarGymApp_Preview\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\Andre\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Configuracion.resources
-C:\Users\Andre\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Gestion_Pagos.resources
-C:\Users\Andre\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Miembros_Activos.resources
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\JaguarGymApp_Preview.exe.config
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\JaguarGymApp_Preview.exe
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\JaguarGymApp_Preview.pdb
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\CxFlatUI.dll
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\Google.Protobuf.dll
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\Guna.UI2.dll
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\LiveCharts.dll
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\LiveCharts.WinForms.dll
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\MaterialSkin.dll
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\MySql.Data.dll
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\System.Buffers.dll
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\System.IO.Pipelines.dll
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\System.Memory.dll
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\ZstdSharp.dll
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\Google.Protobuf.pdb
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\Google.Protobuf.xml
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\LiveCharts.pdb
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\LiveCharts.xml
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\LiveCharts.WinForms.pdb
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\LiveCharts.WinForms.xml
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\MySql.Data.xml
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\System.Buffers.xml
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\System.IO.Pipelines.xml
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\System.Memory.xml
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.csproj.AssemblyReference.cache
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Agregar_Miembros.resources
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Configuracion.resources
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Crear_Cuenta.resources
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Escanea_tu_cedula_o_CIF.resources
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Esperando_por_escaneo.resources
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Gestion_Pagos.resources
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Ingresar_Pago.resources
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Inicio_Sesion.resources
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Miembros_Activos.resources
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\obj\Debug\estadisticasForm.Mostrar_Estadistica.resources
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Recuperar_Credenciales.resources
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Usuario_autorizado_gerente.resources
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Usuario_autorizado_usuario.resources
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Usuario_con_membresia_vencida_gerente.resources
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Usuario_con_membresia_vencida_usuario.resources
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Usuario_no_registrado_gerente.resources
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Usuario_no_Registrado_usuario.resources
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Principal.resources
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Properties.Resources.resources
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.csproj.GenerateResource.cache
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.csproj.CoreCompileInputs.cache
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\obj\Debug\JaguarGy.A30E3056.Up2Date
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.exe
+C:\Users\zogai\Documentos\About college 2nd\2nd Semester\ProyectoGYM\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.pdb
