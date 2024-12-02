@@ -81,6 +81,7 @@
             this.txtIdentificacion.SelectedText = "";
             this.txtIdentificacion.Size = new System.Drawing.Size(338, 36);
             this.txtIdentificacion.TabIndex = 4;
+            this.txtIdentificacion.TextChanged += new System.EventHandler(this.txtIdentificacion_TextChanged);
             // 
             // btnIngresarEntrada
             // 
@@ -109,6 +110,7 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1189, 110);
             this.guna2Panel1.TabIndex = 6;
+            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // guna2PictureBox1
             // 
@@ -149,6 +151,7 @@
             this.MaximizeBox = false;
             this.Name = "Escanea_tu_cedula_o_CIF";
             this.Text = "Registro de entrada";
+            this.Load += new System.EventHandler(this.Escanea_tu_cedula_o_CIF_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

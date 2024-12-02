@@ -133,17 +133,20 @@ namespace JaguarGymApp_Preview
 
                     // Tomar solo la primera palabra del nombre completo.
                     string primerNombre = nombreCompleto.Split(' ')[0];
+                    data.Close();
                     return primerNombre;
                 }
                 else
                 {
                     MessageBox.Show("No se encontró un usuario con ese ID.");
+                    data.Close();
                 }
             }
             catch (Exception ex)
             {
                 // Manejo de errores.
                 MessageBox.Show("Error al buscar el nombre: " + ex.Message);
+                data.Close();
             }
             finally
             {

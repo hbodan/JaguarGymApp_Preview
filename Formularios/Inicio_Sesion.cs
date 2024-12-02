@@ -63,14 +63,18 @@ namespace JaguarGymApp_Preview.Formularios
                 if (result != null)
                 {
                     int idMiembro = Convert.ToInt32(result);
+                    data.Close();
 
                     Principal nuevoFormulario = new Principal(idMiembro);
                     nuevoFormulario.Show();
 
                     this.Hide();
+
                 }
                 else
+                
                 {
+                    data.Close();
                     MessageBox.Show("Usuario o contraseña incorrectos.");
                 }
             }
