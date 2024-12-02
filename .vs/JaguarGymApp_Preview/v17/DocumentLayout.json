@@ -1,32 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\zogai\\Documentos\\About college 2nd\\2nd Semester\\ProyectoGYM\\JaguarGymApp_Preview\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|C:\\Users\\zogai\\Documentos\\About college 2nd\\2nd Semester\\ProyectoGYM\\JaguarGymApp_Preview\\formularios\\ingresar_pago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:formularios\\ingresar_pago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|C:\\Users\\zogai\\Documentos\\About college 2nd\\2nd Semester\\ProyectoGYM\\JaguarGymApp_Preview\\formularios\\gestionar_pagos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:formularios\\gestionar_pagos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|C:\\Users\\zogai\\Documentos\\About college 2nd\\2nd Semester\\ProyectoGYM\\JaguarGymApp_Preview\\estructuras\\pago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:estructuras\\pago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|C:\\Users\\zogai\\Documentos\\About college 2nd\\2nd Semester\\ProyectoGYM\\JaguarGymApp_Preview\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|C:\\Users\\zogai\\Documentos\\About college 2nd\\2nd Semester\\ProyectoGYM\\JaguarGymApp_Preview\\formularios\\gestionar_pagos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:formularios\\gestionar_pagos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|c:\\users\\zogai\\documentos\\about college 2nd\\2nd semester\\proyectogym\\jaguargymapp_preview\\formularios\\ingresar_pago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:formularios\\ingresar_pago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\hebod\\OneDrive\\Escritorio\\JaguarGymApp_Preview\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -34,15 +9,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+              "Name": "ST:2:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
             },
             {
               "$type": "Bookmark",
@@ -59,82 +42,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Ingresar_Pago.cs",
-              "DocumentMoniker": "C:\\Users\\zogai\\Documentos\\About college 2nd\\2nd Semester\\ProyectoGYM\\JaguarGymApp_Preview\\Formularios\\Ingresar_Pago.cs",
-              "RelativeDocumentMoniker": "Formularios\\Ingresar_Pago.cs",
-              "ToolTip": "C:\\Users\\zogai\\Documentos\\About college 2nd\\2nd Semester\\ProyectoGYM\\JaguarGymApp_Preview\\Formularios\\Ingresar_Pago.cs",
-              "RelativeToolTip": "Formularios\\Ingresar_Pago.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T19:01:37.829Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Gestionar_Pagos.cs",
-              "DocumentMoniker": "C:\\Users\\zogai\\Documentos\\About college 2nd\\2nd Semester\\ProyectoGYM\\JaguarGymApp_Preview\\Formularios\\Gestionar_Pagos.cs",
-              "RelativeDocumentMoniker": "Formularios\\Gestionar_Pagos.cs",
-              "ToolTip": "C:\\Users\\zogai\\Documentos\\About college 2nd\\2nd Semester\\ProyectoGYM\\JaguarGymApp_Preview\\Formularios\\Gestionar_Pagos.cs",
-              "RelativeToolTip": "Formularios\\Gestionar_Pagos.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAADwv2QAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T21:21:47.846Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Pago.cs",
-              "DocumentMoniker": "C:\\Users\\zogai\\Documentos\\About college 2nd\\2nd Semester\\ProyectoGYM\\JaguarGymApp_Preview\\Estructuras\\Pago.cs",
-              "RelativeDocumentMoniker": "Estructuras\\Pago.cs",
-              "ToolTip": "C:\\Users\\zogai\\Documentos\\About college 2nd\\2nd Semester\\ProyectoGYM\\JaguarGymApp_Preview\\Estructuras\\Pago.cs",
-              "RelativeToolTip": "Estructuras\\Pago.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T20:02:39.877Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Ingresar_Pago.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\zogai\\Documentos\\About college 2nd\\2nd Semester\\ProyectoGYM\\JaguarGymApp_Preview\\Formularios\\Ingresar_Pago.cs",
-              "RelativeDocumentMoniker": "Formularios\\Ingresar_Pago.cs",
-              "ToolTip": "C:\\Users\\zogai\\Documentos\\About college 2nd\\2nd Semester\\ProyectoGYM\\JaguarGymApp_Preview\\Formularios\\Ingresar_Pago.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Formularios\\Ingresar_Pago.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T19:00:45.49Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\zogai\\Documentos\\About college 2nd\\2nd Semester\\ProyectoGYM\\JaguarGymApp_Preview\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\zogai\\Documentos\\About college 2nd\\2nd Semester\\ProyectoGYM\\JaguarGymApp_Preview\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T19:21:51.544Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Gestionar_Pagos.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\zogai\\Documentos\\About college 2nd\\2nd Semester\\ProyectoGYM\\JaguarGymApp_Preview\\Formularios\\Gestionar_Pagos.cs",
-              "RelativeDocumentMoniker": "Formularios\\Gestionar_Pagos.cs",
-              "ToolTip": "C:\\Users\\zogai\\Documentos\\About college 2nd\\2nd Semester\\ProyectoGYM\\JaguarGymApp_Preview\\Formularios\\Gestionar_Pagos.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Formularios\\Gestionar_Pagos.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T19:00:25.019Z",
-              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }

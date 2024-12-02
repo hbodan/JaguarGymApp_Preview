@@ -22,7 +22,6 @@ namespace JaguarGymApp_Preview.Formularios
         {
             InitializeComponent();
             this.Resize += new System.EventHandler(this.Principal_Resize);
-
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Teal500, Primary.Teal700, Primary.Teal300, Accent.LightBlue200, TextShade.WHITE);
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -40,6 +39,7 @@ namespace JaguarGymApp_Preview.Formularios
             Actualizardata();
             ConteoMiembros();
         }
+
         private void Actualizardata()
         {
             try
@@ -61,6 +61,7 @@ namespace JaguarGymApp_Preview.Formularios
                 MessageBox.Show("Error al cargar datos: " + ex.Message);
             }
         }
+
         private void ConteoMiembros()
         {
             try

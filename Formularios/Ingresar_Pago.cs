@@ -12,21 +12,25 @@ using JaguarGymApp_Preview.Formularios;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using estadisticasForm;
+using MySql.Data.MySqlClient;
+using JaguarGymApp_Preview.Servicios;
+using System.Windows.Markup;
 
 
 namespace JaguarGymApp_Preview.Formularios
 {
     public partial class Ingresar_Pago : MaterialForm
     {
-        // Lista para almacenar los pagos ingresados
+        private MySqlConnection dataPagos;
         private List<Pago> pagosRecibidos;
         private Gestion_Pagos formularioAnterior;
 
         public Ingresar_Pago(List<Pago> lista, Gestion_Pagos formulario)
         {
+            ConexionBD connPagos = new ConexionBD();
+            dataPagos = new MySqlConnection(connPagos.GetConnector());
             InitializeComponent();
             this.Resize += new System.EventHandler(this.Principal_Resize);
-         
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Teal500, Primary.Teal700, Primary.Teal300, Accent.LightBlue200, TextShade.WHITE);
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -34,6 +38,52 @@ namespace JaguarGymApp_Preview.Formularios
             this.formularioAnterior = formulario;
 
         }
+
+        private void ToDataBase(Miembro miembro)
+        {
+            string queryPagos = @"INSERT INTO Pago 
+         (idTransaccion, fechaRealizacion, descripcion, monto, observacion, idUsuario, idMiembro) 
+         VALUES 
+         (@idTransaccion, @fechaRealizacion, @descripcion, @monto, @observacion, @idUsuario, @idMiembro)";
+
+            try
+            {
+                using (dataPagos)
+                {
+                   
+                    MySqlCommand commandPagos = new MySqlCommand(queryPagos, dataPagos);
+
+                    // Validar datos antes de asignar
+                    commandPagos.Parameters.AddWithValue("@idTransaccion", txtIdTransaccion.Text ?? string.Empty);
+                    commandPagos.Parameters.AddWithValue("@fechaRealizacion", dtPickerFecha);
+                    commandPagos.Parameters.AddWithValue("@descripcion", nudMesesPagados.ValueNumber.ToString() ?? string.Empty);
+                    commandPagos.Parameters.AddWithValue("@monto", decimal.Parse(txtMonto.Text));
+                    commandPagos.Parameters.AddWithValue("@observacion", txtObservacion.Text ?? string.Empty);
+                    commandPagos.Parameters.AddWithValue("@idUsuario", 1);
+                    commandPagos.Parameters.AddWithValue("@idMiembro", 2);
+
+                    dataPagos.Open();
+                    int rowsAffected = commandPagos.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Pago registrado correctamente.");
+                        dataPagos.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo registrar el pago.");
+                        dataPagos.Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al guardar el pago en la base de datos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dataPagos.Close();
+            }
+        }
+
         private void Principal_Resize(object sender, EventArgs e)
         {
             this.Size = new System.Drawing.Size(1080, 720); // Mantener el tamaño de la ventana fijo
@@ -94,7 +144,7 @@ namespace JaguarGymApp_Preview.Formularios
 
 
             // Agregar el pago a la lista
-            pagosRecibidos.Add(new Pago( idTransaccion, fechaRealizacion, monto, observacion, idMiembro, mesesPagados));
+            pagosRecibidos.Add(new Pago(1, idTransaccion, fechaRealizacion, "probando", monto, observacion, idMiembro, 1));
 
             MessageBox.Show("Pago registrado correctamente.");
 
@@ -107,6 +157,7 @@ namespace JaguarGymApp_Preview.Formularios
             formularioAnterior.RecibirDatos(pagosRecibidos);
             this.Close();
         }
+
         private void LimpiarCampos()
         {
             txtIdTransaccion.Text = "";

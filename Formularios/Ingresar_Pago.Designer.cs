@@ -78,7 +78,7 @@
             this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.Location = new System.Drawing.Point(478, 522);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(135, 37);
             this.btnAgregar.TabIndex = 18;
@@ -251,7 +251,7 @@
             this.nudMesesPagados.BackColor = System.Drawing.Color.Teal;
             this.nudMesesPagados.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.nudMesesPagados.Location = new System.Drawing.Point(550, 235);
-            this.nudMesesPagados.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nudMesesPagados.Margin = new System.Windows.Forms.Padding(2);
             this.nudMesesPagados.MaxNum = 12F;
             this.nudMesesPagados.MinNum = 1F;
             this.nudMesesPagados.Name = "nudMesesPagados";
@@ -315,7 +315,7 @@
             this.dgvMiembros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMiembros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMiembros.Location = new System.Drawing.Point(549, 413);
-            this.dgvMiembros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvMiembros.Margin = new System.Windows.Forms.Padding(2);
             this.dgvMiembros.Name = "dgvMiembros";
             this.dgvMiembros.ReadOnly = true;
             this.dgvMiembros.RowHeadersWidth = 72;
@@ -338,7 +338,7 @@
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Image = global::JaguarGymApp_Preview.Properties.Resources.buscarPNG;
             this.btnBuscar.Location = new System.Drawing.Point(755, 370);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(57, 36);
             this.btnBuscar.TabIndex = 44;
@@ -349,7 +349,7 @@
             this.guna2CirclePictureBox1.Image = global::JaguarGymApp_Preview.Properties.Resources.Logo_redondo;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
             this.guna2CirclePictureBox1.Location = new System.Drawing.Point(5, 78);
-            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox1.Size = new System.Drawing.Size(137, 137);
@@ -362,7 +362,7 @@
             this.lblMiembroSeleccionado.AutoSize = true;
             this.lblMiembroSeleccionado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.142858F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMiembroSeleccionado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.lblMiembroSeleccionado.Location = new System.Drawing.Point(547, 499);
+            this.lblMiembroSeleccionado.Location = new System.Drawing.Point(131, 479);
             this.lblMiembroSeleccionado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMiembroSeleccionado.Name = "lblMiembroSeleccionado";
             this.lblMiembroSeleccionado.Size = new System.Drawing.Size(137, 13);
@@ -384,7 +384,7 @@
             this.txtMiembroSeleccionado.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMiembroSeleccionado.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtMiembroSeleccionado.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMiembroSeleccionado.Location = new System.Drawing.Point(681, 499);
+            this.txtMiembroSeleccionado.Location = new System.Drawing.Point(275, 468);
             this.txtMiembroSeleccionado.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtMiembroSeleccionado.Name = "txtMiembroSeleccionado";
             this.txtMiembroSeleccionado.PasswordChar = '\0';

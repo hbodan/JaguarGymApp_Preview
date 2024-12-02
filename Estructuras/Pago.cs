@@ -8,20 +8,26 @@ namespace JaguarGymApp_Preview.Estructuras
 {
     public class Pago
     {
-        public string IdTransaccion { get; set; }
-        public DateTime FechaRealizacion { get; set; }
-        public int MesesPagados { get; set; }
-        public decimal Monto { get; set; }
-        public string Observacion { get; set; }
-        public int IdMiembro { get; set; }
+        public int IdPago { get; set; }               
+        public string IdTransaccion { get; set; }      
+        public DateTime FechaRealizacion { get; set; } 
+        public string Descripcion { get; set; }       
+        public decimal Monto { get; set; }            
+        public string Observacion { get; set; }      
+        public int IdUsuario { get; set; }            
+        public int IdMiembro { get; set; }      
 
-        public Pago(string idTransaccion, DateTime fechaRealizacion, decimal monto, string observacion, int idMiembro, int mesesPagados)
+        // Constructor adaptado a la estructura de la tabla
+        public Pago(int idPago, string idTransaccion, DateTime fechaRealizacion, string descripcion,
+                    decimal monto, string observacion, int idUsuario, int idMiembro)
         {
+            IdPago = idPago;
             IdTransaccion = idTransaccion;
             FechaRealizacion = fechaRealizacion;
-            MesesPagados = mesesPagados;
+            Descripcion = descripcion;
             Monto = monto;
             Observacion = observacion;
+            IdUsuario = idUsuario;
             IdMiembro = idMiembro;
         }
     }

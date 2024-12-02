@@ -346,5 +346,10 @@ namespace JaguarGymApp_Preview.Formularios
         {
 
         }
+
+        private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

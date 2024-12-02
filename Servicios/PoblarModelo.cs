@@ -12,8 +12,8 @@ namespace estadisticasForm
         {
             return new List<Pago>
             {
-                new Pago(1, "T001", new DateTime(2024, 10, 15), "Membresía1", 100, "PagoAnual1", 1) , new Pago(2, "T002", new DateTime(2024, 9, 15), "Membresía2", 200, "PagoAnual2", 3),
-                new Pago(3, "T003", new DateTime(2024, 12, 15), "Membresía3", 300, "PagoAnual3", 3)
+                new Pago(1, "T001", new DateTime(2024, 10, 15), "Membresía1", 100, "PagoAnual1", 1,1) , new Pago(2, "T002", new DateTime(2024, 9, 15), "Membresía2", 200, "PagoAnual2", 3,1),
+                new Pago(3, "T003", new DateTime(2024, 12, 15), "Membresía3", 300, "PagoAnual3", 3, 1)
             };
         }
 
