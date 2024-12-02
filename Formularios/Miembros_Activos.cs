@@ -30,17 +30,17 @@ namespace JaguarGymApp_Preview.Formularios
             Actualizardata();
         }
 
-         private void Principal_Resize(object sender, EventArgs e)
+         public void Principal_Resize(object sender, EventArgs e)
         {
             this.Size = new System.Drawing.Size(1080, 720); // Mantener el tamaño de la ventana fijo
         }
 
-        private void Miembros_Load(object sender, EventArgs e)
+        public void Miembros_Load(object sender, EventArgs e)
         {
             Actualizardata();
             ConteoMiembros();
         }
-        private void Actualizardata()
+        public void Actualizardata()
         {
             try
             {
@@ -48,7 +48,7 @@ namespace JaguarGymApp_Preview.Formularios
                 {
                     conn.Open();
 
-                    string query = "SELECT \r\n m.idMiembro AS 'ID',\r\n m.cif AS 'CIF', m.identificacion AS 'Identificación',\r\n    m.nombres AS 'Nombres',\r\n    m.apellidos AS 'Apellidos',\r\n m.fechaNacimiento AS 'Fecha de Nacimiento'\r\n ,   f.nombreFacultad AS 'Facultad',\r\n    c.nombreCarrera AS 'Carrera',\r\n    m.genero AS 'Género',\r\n m.fechaExp AS 'Membresia Expira', \r\n    CASE \r\n        WHEN m.interno = 1 THEN 'Sí' \r\n        ELSE 'No' \r\n    END AS 'Interno',\r\n    CASE \r\n        WHEN m.colaborador = 1 THEN 'Sí' \r\n        ELSE 'No' \r\n    END AS 'Colaborador',\r\n    m.cargo AS 'Cargo'\r\nFROM \r\n    Miembro m\r\nLEFT JOIN Facultad f ON m.idfacultad = f.idFacultad\r\nLEFT JOIN Carrera c ON m.idcarrera = c.idCarrera;";
+                    string query = "SELECT \r\n m.idMiembro AS 'ID',\r\n m.cif AS 'CIF', m.identificacion AS 'Identificación',\r\n    m.nombres AS 'Nombres',\r\n    m.apellidos AS 'Apellidos',\r\n    CASE \r\n        WHEN m.genero = 1 THEN 'Masculino' \r\n        ELSE 'Femenino' \r\n    END AS 'Genero',\r\n m.fechaNacimiento AS 'Fecha de Nacimiento'\r\n ,   f.nombreFacultad AS 'Facultad',\r\n    c.nombreCarrera AS 'Carrera',\r\n m.fechaExp AS 'Membresia Expira', \r\n    CASE \r\n        WHEN m.interno = 1 THEN 'Sí' \r\n        ELSE 'No' \r\n    END AS 'Interno',\r\n    CASE \r\n        WHEN m.colaborador = 1 THEN 'Sí' \r\n        ELSE 'No' \r\n    END AS 'Colaborador',\r\n    m.cargo AS 'Cargo'\r\nFROM \r\n    Miembro m\r\nLEFT JOIN Facultad f ON m.idfacultad = f.idFacultad\r\nLEFT JOIN Carrera c ON m.idcarrera = c.idCarrera;";
                     MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
                     DataTable table = new DataTable();
                     adapter.Fill(table);
@@ -61,7 +61,7 @@ namespace JaguarGymApp_Preview.Formularios
                 MessageBox.Show("Error al cargar datos: " + ex.Message);
             }
         }
-        private void ConteoMiembros()
+        public void ConteoMiembros()
         {
             try
             {
@@ -90,7 +90,7 @@ namespace JaguarGymApp_Preview.Formularios
         }
 
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        public void btnAgregar_Click(object sender, EventArgs e)
         {
             Agregar_Miembros formulario2 = new Agregar_Miembros(miembros,this);
             formulario2.Show();
@@ -104,7 +104,7 @@ namespace JaguarGymApp_Preview.Formularios
             ConteoMiembros();
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+        public void btnBuscar_Click(object sender, EventArgs e)
         {
             string filtroSeleccionado = cmbFiltro.SelectedItem.ToString(); // Obtener el criterio seleccionado
             string criterioBusqueda = txtBuscar.Text.Trim();     // Obtener el texto a buscar
@@ -184,17 +184,62 @@ namespace JaguarGymApp_Preview.Formularios
             
         }
 
-        private void LinkAtras_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        public void LinkAtras_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Principal formularioPrincipal = new Principal(0);
             formularioPrincipal.Show();
             this.Hide();
         }
 
-        private void dgvMiembros_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        public void dgvMiembros_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            dgvMiembros.ReadOnly = true;
+            dgvMiembros.ReadOnly = false;
+            // Verificar que se haga doble clic en una fila válida
+            if (e.RowIndex >= 0)
+            {
+                // Obtener los datos de la fila seleccionada
+                DataGridViewRow filaSeleccionada = dgvMiembros.Rows[e.RowIndex];
+
+                // Crear una instancia del formulario "Agregar_Miembros"
+                Agregar_Miembros formularioEdicion = new Agregar_Miembros(null, this);
+
+                formularioEdicion.btnAgregar.Text = "Editar";
+                formularioEdicion.lblTitulo.Text = "Edicion de Miembro";
+
+                // Pasar los datos al formulario de edición
+                formularioEdicion.CargarDatosMiembro(
+
+                    identificacion: filaSeleccionada.Cells["Identificación"].Value.ToString(),
+                    cif: filaSeleccionada.Cells["CIF"].Value.ToString(),
+                    nombres: filaSeleccionada.Cells["Nombres"].Value.ToString(),
+                    apellidos: filaSeleccionada.Cells["Apellidos"].Value.ToString(),
+                    fechaNacimiento: Convert.ToDateTime(filaSeleccionada.Cells["Fecha de Nacimiento"].Value),
+                    fechaExp: Convert.ToDateTime(filaSeleccionada.Cells["Membresia Expira"].Value),
+                    carrera: filaSeleccionada.Cells["Carrera"].Value.ToString(),
+                    facultad: filaSeleccionada.Cells["Facultad"].Value.ToString(),
+                    genero: filaSeleccionada.Cells["Genero"].Value.ToString() == "Masculino",
+                    interno: filaSeleccionada.Cells["Interno"].Value.ToString() == "Sí",
+                    colaborador: filaSeleccionada.Cells["Colaborador"].Value.ToString() == "Sí",
+                    cargo: filaSeleccionada.Cells["Cargo"].Value.ToString()
+                );
+
+                // Mostrar el formulario
+                formularioEdicion.ShowDialog();
+
+            }
 
         }
+
+
+        public void dgvMiembros_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        public void RecargarMiembros()
+        {
+            Actualizardata(); // Método que carga los datos en el DataGridView
+        }
+
     }
 }
