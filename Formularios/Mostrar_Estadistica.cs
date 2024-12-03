@@ -85,6 +85,33 @@ namespace estadisticasForm
             formularioPrincipal.Show();
             this.Hide();
         }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+            int cambio = flowLayoutPanel1.VerticalScroll.Value - flowLayoutPanel1.VerticalScroll.SmallChange * 10;
+            flowLayoutPanel1.AutoScrollPosition = new Point(0, cambio);
+        }
+
+        private void materialButton2_Click(object sender, EventArgs e)
+        {
+            int cambio = flowLayoutPanel1.VerticalScroll.Value + flowLayoutPanel1.VerticalScroll.SmallChange * 10;
+            flowLayoutPanel1.AutoScrollPosition = new Point(0, cambio);
+        }
     }
 }
 

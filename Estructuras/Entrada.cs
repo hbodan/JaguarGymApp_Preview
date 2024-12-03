@@ -12,5 +12,13 @@ namespace JaguarGymApp_Preview.Estructuras
         public int IdMiembro { get; set; }
         public DateTime Fecha { get; set; }
         public TimeSpan Hora { get; set; }
+
+    public Entrada(int idEntrada, int idMiembro, DateTime fecha, TimeSpan hora)
+        {
+            IdEntrada = idEntrada;
+            IdMiembro = idMiembro;
+            Fecha = fecha;
+            Hora = hora;
+        }
     }
 }

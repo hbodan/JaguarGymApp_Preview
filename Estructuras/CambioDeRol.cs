@@ -14,5 +14,16 @@ namespace JaguarGymApp_Preview.Estructuras
         public string RolNuevo { get; set; }
         public DateTime FechaCambio { get; set; }
         public string Observacion { get; set; }
+
+
+        public CambioDeRol(int idCambioRol, int idMiembro, string rolAnterior, string rolNuevo, DateTime fechaCambio, string observacion)
+        {
+            IdCambioRol = idCambioRol;
+            IdMiembro = idMiembro;
+            RolAnterior = rolAnterior;
+            RolNuevo = rolNuevo;
+            FechaCambio = fechaCambio;
+            Observacion = observacion;
+        }
     }
 }
