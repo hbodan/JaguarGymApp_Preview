@@ -1,13 +1,12 @@
 ﻿using JaguarGymApp_Preview.Estructuras;
+using JaguarGymApp_Preview.Servicios;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
 using System.Windows.Forms;
-using JaguarGymApp_Preview.Servicios;
 
 namespace JaguarGymApp_Preview.Formularios
 {
@@ -181,10 +180,10 @@ namespace JaguarGymApp_Preview.Formularios
                 nombres: string.IsNullOrWhiteSpace(txtNombre.Text) ? null : txtNombre.Text,
                 apellidos: string.IsNullOrWhiteSpace(txtApellidos.Text) ? null : txtApellidos.Text,
                 fechaNac: dateNacimiento.Value,
-                fechaExp: dateExpiracion.Value,
+                fechaExp: DateTime.Now,
                 carrera: cmbCarrera.SelectedValue?.ToString(),
                 facultad: cmbFacultad.SelectedValue?.ToString(),
-                genero: cmbGenero.SelectedItem?.ToString() == "Masculino",
+                genero: chkMasculino.Checked,
                 interno: chkEstudiante.Checked,
                 colaborador: chkColaborador.Checked,
                 cargo: string.IsNullOrWhiteSpace(txtCargo.Text) ? null : txtCargo.Text
@@ -216,21 +215,22 @@ namespace JaguarGymApp_Preview.Formularios
             this.Close();
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        public void btnAgregar_Click(object sender, EventArgs e)
         {
             if (ValidacionLlenado())
             {
-                AgregarMiembro();
-                formularioAnterior.RecibirDatos(miembrosRecibidos);
+                AgregarMiembro(); // Método existente para agregar un nuevo miembro
+                formularioAnterior.RecargarMiembros(); // Método en el formulario padre para recargar los datos
                 this.Close();
             }
         }
+
 
         private void linkSalir_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
         }
-        private bool ValidacionLlenado()
+        public bool ValidacionLlenado()
         {
             if (string.IsNullOrEmpty(txtidentificacion.Text))
             {
@@ -267,6 +267,11 @@ namespace JaguarGymApp_Preview.Formularios
                 MessageBox.Show("Debe seleccionar si el miembro es estudiante o colaborador.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
+            if (!chkMasculino.Checked && !chkFemenino.Checked)
+            {
+                MessageBox.Show("Debe seleccionar si el miembro es Masculino o Femenino.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
             // Validar campo de Cargo si es colaborador
             if (chkColaborador.Checked && string.IsNullOrWhiteSpace(txtCargo.Text))
             {
@@ -301,19 +306,127 @@ namespace JaguarGymApp_Preview.Formularios
         {
             bool seleccionado = chkColaborador.Checked;
 
-            // Mostrar/ocultar controles relacionados con "Colaborador"
+
             lblCargo.Visible = seleccionado;
             txtCargo.Visible = seleccionado;
 
-            // Limpiar y ocultar Facultad y Carrera si se selecciona "Colaborador"
+
             if (seleccionado)
             {
-                cmbFacultad.SelectedIndex = -1; // Limpiar selección de Facultad
-                cmbCarrera.DataSource = null;  // Limpiar las carreras cargadas
                 chkEstudiante.Checked = false;
+                txtCargo.Text = "";
+            }
+        }
+        private void chkMasculino_CheckedChanged(object sender, EventArgs e)
+        {
+            bool seleccionado = chkMasculino.Checked;
+
+            if (seleccionado)
+                chkFemenino.Checked = false;
+        }
+        private void chkFemenino_CheckedChanged(object sender, EventArgs e)
+        {
+            bool seleccionado = chkFemenino.Checked;
+
+            if (seleccionado)
+                chkMasculino.Checked = false;
+        }
+
+
+
+
+
+        private void LinkAtras_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            formularioAnterior.RecibirDatos(miembrosRecibidos);
+            this.Close();
+        }
+
+        public void CargarDatosMiembro(string identificacion, string cif, string nombres, string apellidos, DateTime fechaNacimiento, DateTime fechaExp, string carrera, string facultad, bool genero, bool interno, bool colaborador, string cargo)
+        {
+            txtidentificacion.Text = identificacion;
+            txtCIF.Text = cif;
+            txtNombre.Text = nombres;
+            txtApellidos.Text = apellidos;
+            dateNacimiento.Value = fechaNacimiento;
+            fechaExp = DateTime.Now;
+            cmbCarrera.Text = carrera;
+            cmbFacultad.Text = facultad;
+            chkMasculino.Checked = genero;
+            chkEstudiante.Checked = interno && !colaborador;
+            chkColaborador.Checked = colaborador;
+            txtCargo.Text = cargo;
+
+            // Ajustar visibilidad según el rol
+            lblFacultad.Visible = chkEstudiante.Checked;
+            cmbFacultad.Visible = chkEstudiante.Checked;
+            lblCarrera.Visible = chkEstudiante.Checked;
+            cmbCarrera.Visible = chkEstudiante.Checked;
+            lblCargo.Visible = chkColaborador.Checked;
+            txtCargo.Visible = chkColaborador.Checked;
+        }
+        private void EditarMiembro()
+        {
+            string query = @"
+        UPDATE miembro
+        SET 
+            identificacion = @identificacion,
+            cif = @cif,
+            nombres = @nombres,
+            apellidos = @apellidos,
+            fechaNacimiento = @fechaNacimiento,
+            fechaExp = @fechaExp,
+            idcarrera = (SELECT idCarrera FROM carrera WHERE nombreCarrera = @carrera LIMIT 1),
+            idfacultad = (SELECT idFacultad FROM facultad WHERE nombreFacultad = @facultad LIMIT 1),
+            genero = @genero,
+            interno = @interno,
+            colaborador = @colaborador,
+            cargo = @cargo
+        WHERE idMiembro = @idMiembro";
+
+            try
+            {
+                ConexionBD conn = new ConexionBD();
+                using (MySqlConnection connection = new MySqlConnection(conn.GetConnector()))
+                {
+                    MySqlCommand command = new MySqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@identificacion", txtidentificacion.Text);
+                    command.Parameters.AddWithValue("@cif", txtCIF.Text);
+                    command.Parameters.AddWithValue("@nombres", txtNombre.Text);
+                    command.Parameters.AddWithValue("@apellidos", txtApellidos.Text);
+                    command.Parameters.AddWithValue("@fechaNacimiento", dateNacimiento.Value);
+                    command.Parameters.AddWithValue("@fechaExp", DateTime.Now);
+                    command.Parameters.AddWithValue("@carrera", cmbCarrera.Text);
+                    command.Parameters.AddWithValue("@facultad", cmbFacultad.Text);
+                    command.Parameters.AddWithValue("@genero", chkMasculino.Checked);
+                    command.Parameters.AddWithValue("@interno", chkEstudiante.Checked ? 1 : 0);
+                    command.Parameters.AddWithValue("@colaborador", chkColaborador.Checked ? 1 : 0);
+                    command.Parameters.AddWithValue("@cargo", txtCargo.Text);
+
+                    connection.Open();
+                    int rowsAffected = command.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Miembro actualizado correctamente.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo actualizar el miembro.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al actualizar el miembro: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
+
+        private void lblApellidos_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void cmbFacultad_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -332,24 +445,6 @@ namespace JaguarGymApp_Preview.Formularios
             {
                 MessageBox.Show($"Error al cargar las carreras: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-
-
-
-        private void dateNacimiento_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbGenero_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

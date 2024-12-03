@@ -22,6 +22,7 @@ namespace JaguarGymApp_Preview.Estructuras
         public bool Colaborador { get; set; }
         public string Cargo { get; set; }
 
+        public Miembro() { }
         public Miembro(int idMiembro, string identificacion, string cif, string nombres, string apellidos,
                        DateTime fechaNac, DateTime fechaExp, string carrera, string facultad, bool genero,
                        bool interno, bool colaborador, string cargo)
