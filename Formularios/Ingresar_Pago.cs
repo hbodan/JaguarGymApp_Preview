@@ -296,5 +296,15 @@ namespace JaguarGymApp_Preview.Formularios
         {
 
         }
+
+        private void lblMesesPagados_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2GradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
