@@ -257,7 +257,6 @@ namespace JaguarGymApp_Preview.Formularios
                     // Abrir el formulario Editar_Miembros
                     Editar_Miembros editarMiembrosForm = new Editar_Miembros(miembroSeleccionado, this);
                     editarMiembrosForm.Show();
-                    
                 }
             }
         }
@@ -266,7 +265,7 @@ namespace JaguarGymApp_Preview.Formularios
 
         public void dgvMiembros_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            
         }
 
         public void RecargarMiembros()

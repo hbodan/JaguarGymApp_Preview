@@ -186,7 +186,7 @@ namespace JaguarGymApp_Preview.Formularios
                 genero: chkMasculino.Checked,
                 interno: chkEstudiante.Checked,
                 colaborador: chkColaborador.Checked,
-                cargo: string.IsNullOrWhiteSpace(txtCargo.Text) ? null : txtCargo.Text
+                cargo: string.IsNullOrWhiteSpace(txtCargo.Text) ? null : txtCargo.Text  
             );
         }
 
@@ -360,6 +360,12 @@ namespace JaguarGymApp_Preview.Formularios
             {
                 MessageBox.Show($"Error al cargar las carreras: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            Console.WriteLine($"SelectedValue: {cmbFacultad.SelectedValue}");
+        }
+
+        private void cmbCarrera_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Console.WriteLine($"idCarrera seleccionada: {cmbCarrera.SelectedValue}");
         }
     }
 }
