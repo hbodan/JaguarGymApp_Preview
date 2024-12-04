@@ -393,3 +393,4 @@ C:\Users\Usuario\Desktop\AA\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\Usuario\Desktop\AA\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Usuario\Desktop\AA\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Usuario\Desktop\AA\obj\Debug\JaguarGy.A30E3056.Up2Date
+C:\Users\hebod\OneDrive\Escritorio\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Editar_Miembros.resources

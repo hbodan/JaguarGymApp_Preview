@@ -181,8 +181,8 @@ namespace JaguarGymApp_Preview.Formularios
                 apellidos: string.IsNullOrWhiteSpace(txtApellidos.Text) ? null : txtApellidos.Text,
                 fechaNac: dateNacimiento.Value,
                 fechaExp: DateTime.Now,
-                carrera: cmbCarrera.SelectedValue?.ToString(),
-                facultad: cmbFacultad.SelectedValue?.ToString(),
+                carrera: int.Parse(cmbCarrera.SelectedValue.ToString()),
+                facultad: int.Parse(cmbFacultad.SelectedValue.ToString()),
                 genero: chkMasculino.Checked,
                 interno: chkEstudiante.Checked,
                 colaborador: chkColaborador.Checked,
@@ -332,96 +332,11 @@ namespace JaguarGymApp_Preview.Formularios
                 chkMasculino.Checked = false;
         }
 
-
-
-
-
         private void LinkAtras_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             formularioAnterior.RecibirDatos(miembrosRecibidos);
             this.Close();
         }
-
-        public void CargarDatosMiembro(string identificacion, string cif, string nombres, string apellidos, DateTime fechaNacimiento, DateTime fechaExp, string carrera, string facultad, bool genero, bool interno, bool colaborador, string cargo)
-        {
-            txtidentificacion.Text = identificacion;
-            txtCIF.Text = cif;
-            txtNombre.Text = nombres;
-            txtApellidos.Text = apellidos;
-            dateNacimiento.Value = fechaNacimiento;
-            fechaExp = DateTime.Now;
-            cmbCarrera.Text = carrera;
-            cmbFacultad.Text = facultad;
-            chkMasculino.Checked = genero;
-            chkEstudiante.Checked = interno && !colaborador;
-            chkColaborador.Checked = colaborador;
-            txtCargo.Text = cargo;
-
-            // Ajustar visibilidad según el rol
-            lblFacultad.Visible = chkEstudiante.Checked;
-            cmbFacultad.Visible = chkEstudiante.Checked;
-            lblCarrera.Visible = chkEstudiante.Checked;
-            cmbCarrera.Visible = chkEstudiante.Checked;
-            lblCargo.Visible = chkColaborador.Checked;
-            txtCargo.Visible = chkColaborador.Checked;
-        }
-        private void EditarMiembro()
-        {
-            string query = @"
-        UPDATE miembro
-        SET 
-            identificacion = @identificacion,
-            cif = @cif,
-            nombres = @nombres,
-            apellidos = @apellidos,
-            fechaNacimiento = @fechaNacimiento,
-            fechaExp = @fechaExp,
-            idcarrera = (SELECT idCarrera FROM carrera WHERE nombreCarrera = @carrera LIMIT 1),
-            idfacultad = (SELECT idFacultad FROM facultad WHERE nombreFacultad = @facultad LIMIT 1),
-            genero = @genero,
-            interno = @interno,
-            colaborador = @colaborador,
-            cargo = @cargo
-        WHERE idMiembro = @idMiembro";
-
-            try
-            {
-                ConexionBD conn = new ConexionBD();
-                using (MySqlConnection connection = new MySqlConnection(conn.GetConnector()))
-                {
-                    MySqlCommand command = new MySqlCommand(query, connection);
-                    command.Parameters.AddWithValue("@identificacion", txtidentificacion.Text);
-                    command.Parameters.AddWithValue("@cif", txtCIF.Text);
-                    command.Parameters.AddWithValue("@nombres", txtNombre.Text);
-                    command.Parameters.AddWithValue("@apellidos", txtApellidos.Text);
-                    command.Parameters.AddWithValue("@fechaNacimiento", dateNacimiento.Value);
-                    command.Parameters.AddWithValue("@fechaExp", DateTime.Now);
-                    command.Parameters.AddWithValue("@carrera", cmbCarrera.Text);
-                    command.Parameters.AddWithValue("@facultad", cmbFacultad.Text);
-                    command.Parameters.AddWithValue("@genero", chkMasculino.Checked);
-                    command.Parameters.AddWithValue("@interno", chkEstudiante.Checked ? 1 : 0);
-                    command.Parameters.AddWithValue("@colaborador", chkColaborador.Checked ? 1 : 0);
-                    command.Parameters.AddWithValue("@cargo", txtCargo.Text);
-
-                    connection.Open();
-                    int rowsAffected = command.ExecuteNonQuery();
-
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show("Miembro actualizado correctamente.");
-                    }
-                    else
-                    {
-                        MessageBox.Show("No se pudo actualizar el miembro.");
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error al actualizar el miembro: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
 
         private void lblApellidos_Click(object sender, EventArgs e)
         {

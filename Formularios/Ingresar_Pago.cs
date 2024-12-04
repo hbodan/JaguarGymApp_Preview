@@ -281,9 +281,9 @@ namespace JaguarGymApp_Preview.Formularios
             return new List<Miembro>
             {
                 new Miembro(1, "12345678", "CIF001", "Juan", "Pérez", DateTime.Now.AddYears(-25), DateTime.Now.AddYears(-5),
-                "Ingeniería", "Facultad de Tecnología", true, true, false, "Estudiante"),
+                1, 1, true, true, false, "Estudiante"),
                 new Miembro(2, "87654321", "CIF002", "María", "López", DateTime.Now.AddYears(-22), DateTime.Now.AddYears(-4),
-                "Medicina", "Facultad de Ciencias", false, false, true, "Colaboradora")
+                1, 1, false, false, true, "Colaboradora")
             };
         }
 

@@ -45,7 +45,7 @@ namespace estadisticasForm
             var conceptoPagos = logicaEstadistica.ObtenerDistribucionPorConcepto();
             var membresiasActivasExpiradas = logicaEstadistica.ObtenerMembresiasActivasVencidas();
             var internosExternos = logicaEstadistica.ObtenerMiembrosInternosExternos();
-            var miembrosPorFacultad = logicaEstadistica.ObtenerMiembrosPorFacultad();
+            //var miembrosPorFacultad = logicaEstadistica.ObtenerMiembrosPorFacultad();
             var flujoPorHora = logicaEstadistica.ObtenerEntradasPorHora();
             var flujoPorDia = logicaEstadistica.ObtenerEntradasPorDia();
 
@@ -54,7 +54,7 @@ namespace estadisticasForm
             chart_conceptoPagos.Series = conceptoPagos;
             chart_membresiasActivasExpiradas.Series = membresiasActivasExpiradas;
             chart_internosExternos.Series = internosExternos;
-            chart_porFacultad.Series = miembrosPorFacultad;
+            //chart_porFacultad.Series = miembrosPorFacultad;
             chart_flujoPorHora.Series = flujoPorHora;
             chart_flujoPorDia.Series = flujoPorDia;
         }

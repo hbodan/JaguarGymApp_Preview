@@ -15,8 +15,8 @@ namespace JaguarGymApp_Preview.Estructuras
         public string Apellidos { get; set; }
         public DateTime FechaNac { get; set; }
         public DateTime FechaExp { get; set; }
-        public string Carrera { get; set; }
-        public string Facultad { get; set; }
+        public int Carrera { get; set; }
+        public int Facultad { get; set; }
         public bool Genero { get; set; }
         public bool Interno { get; set; }
         public bool Colaborador { get; set; }
@@ -24,7 +24,7 @@ namespace JaguarGymApp_Preview.Estructuras
 
         public Miembro() { }
         public Miembro(int idMiembro, string identificacion, string cif, string nombres, string apellidos,
-                       DateTime fechaNac, DateTime fechaExp, string carrera, string facultad, bool genero,
+                       DateTime fechaNac, DateTime fechaExp,int carrera,int facultad, bool genero,
                        bool interno, bool colaborador, string cargo)
         {
             IdMiembro = idMiembro;

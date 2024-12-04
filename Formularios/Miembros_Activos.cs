@@ -50,6 +50,8 @@ namespace JaguarGymApp_Preview.Formularios
                     adapter.Fill(table);
 
                     dgvMiembros.DataSource = table;
+
+                    conn.Close();
                 }
             }
             catch (Exception ex)
@@ -166,16 +168,18 @@ namespace JaguarGymApp_Preview.Formularios
 
                     // Asumiendo que tienes un DataGridView para mostrar resultados
                     dgvMiembros.DataSource = resultados;
+                    connection.Open();
 
                     if (resultados.Rows.Count == 0)
                     {
                         MessageBox.Show("No se ha encontrado ningún registro que cumpla el criterio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        connection.Close();
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al realizar la búsqueda: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error al realizar la búsqueda: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);;
             }
 
 
@@ -189,36 +193,13 @@ namespace JaguarGymApp_Preview.Formularios
         }
 
 
-        private Miembro ObtenerDatosMiembroPorId(int idMiembro)
+        private Miembro ObtenerDatosMiembroPorId(int idMiembroo)
         {
             Miembro miembro = null;
             string query = @"
-        SELECT 
-    m.idMiembro, m.cif, m.identificacion, m.nombres, m.apellidos,
-    m.fechaNacimiento,f.nombreFacultad, c.nombreCarrera,
-    CASE 
-        WHEN m.genero = 1 THEN 'Masculino' 
-        ELSE 'Femenino' 
-    END AS genero,
-    m.fechaExp,
-    CASE 
-        WHEN m.interno = 1 THEN 'Sí' 
-        ELSE 'No' 
-    END AS interno,
-    CASE 
-        WHEN m.colaborador = 1 THEN 'Sí' 
-        ELSE 'No' 
-    END AS colaborador,
-    m.cargo
-    FROM 
-        Miembro m
-    LEFT JOIN 
-        Facultad f ON m.idfacultad = f.idFacultad
-    LEFT JOIN 
-        Carrera c ON m.idcarrera = c.idCarrera
-    WHERE 
-        m.idMiembro = @idMiembro";
-            ;
+            SELECT * 
+            FROM Miembro 
+            WHERE idMiembro = @idMiembro;";
 
             try
             {
@@ -227,7 +208,7 @@ namespace JaguarGymApp_Preview.Formularios
                 {
                     connection.Open();
                     MySqlCommand command = new MySqlCommand(query, connection);
-                    command.Parameters.AddWithValue("@idMiembro", idMiembro);
+                    command.Parameters.AddWithValue("@idMiembro", idMiembroo);
 
                     using (MySqlDataReader reader = command.ExecuteReader())
                     {
@@ -242,13 +223,14 @@ namespace JaguarGymApp_Preview.Formularios
                                 Apellidos = reader["apellidos"].ToString(),
                                 FechaNac = Convert.ToDateTime(reader["fechaNacimiento"]),
                                 FechaExp = Convert.ToDateTime(reader["fechaExp"]),
-                                Carrera = reader["nombreCarrera"].ToString(),
-                                Facultad = reader["nombreFacultad"].ToString(),
+                                Carrera = Convert.ToInt32(reader["idCarrera"]),
+                                Facultad = Convert.ToInt32(reader["idFacultad"]),
                                 Genero = Convert.ToBoolean(reader["genero"]),
                                 Interno = Convert.ToBoolean(reader["interno"]),
                                 Colaborador = Convert.ToBoolean(reader["colaborador"]),
                                 Cargo = reader["cargo"].ToString()
                             };
+                            connection.Close();
                         }
                     }
                 }
@@ -274,6 +256,7 @@ namespace JaguarGymApp_Preview.Formularios
                 {
                     // Abrir el formulario Editar_Miembros
                     Editar_Miembros editarMiembrosForm = new Editar_Miembros(miembroSeleccionado, this);
+                    editarMiembrosForm.Show();
                     
                 }
             }

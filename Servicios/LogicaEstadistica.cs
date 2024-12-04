@@ -92,7 +92,7 @@ namespace estadisticasForm
         // ############################## MIEMBROS POR FACULTAD ########################### //
 
 
-        public SeriesCollection ObtenerMiembrosPorFacultad()
+        /*public SeriesCollection ObtenerMiembrosPorFacultad()
         {
             var facultades = miembros
                 .GroupBy(m => m.Facultad)
@@ -110,7 +110,7 @@ namespace estadisticasForm
             }
 
             return series;
-        }
+        }*/
 
 
         // ############################## INTERNOS Y EXTERNOS ########################### //
