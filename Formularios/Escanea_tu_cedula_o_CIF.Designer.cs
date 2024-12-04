@@ -43,9 +43,10 @@
             this.lblEscaneacedulaCIF.AutoSize = true;
             this.lblEscaneacedulaCIF.BackColor = System.Drawing.Color.Transparent;
             this.lblEscaneacedulaCIF.Font = new System.Drawing.Font("Verdana", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEscaneacedulaCIF.Location = new System.Drawing.Point(163, 216);
+            this.lblEscaneacedulaCIF.Location = new System.Drawing.Point(217, 266);
+            this.lblEscaneacedulaCIF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEscaneacedulaCIF.Name = "lblEscaneacedulaCIF";
-            this.lblEscaneacedulaCIF.Size = new System.Drawing.Size(737, 59);
+            this.lblEscaneacedulaCIF.Size = new System.Drawing.Size(929, 73);
             this.lblEscaneacedulaCIF.TabIndex = 0;
             this.lblEscaneacedulaCIF.Text = "Escanea tu cedula o tu CIF";
             // 
@@ -54,9 +55,10 @@
             this.lblIdentificacion.AutoSize = true;
             this.lblIdentificacion.BackColor = System.Drawing.Color.Transparent;
             this.lblIdentificacion.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdentificacion.Location = new System.Drawing.Point(451, 487);
+            this.lblIdentificacion.Location = new System.Drawing.Point(601, 599);
+            this.lblIdentificacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIdentificacion.Name = "lblIdentificacion";
-            this.lblIdentificacion.Size = new System.Drawing.Size(194, 32);
+            this.lblIdentificacion.Size = new System.Drawing.Size(247, 41);
             this.lblIdentificacion.TabIndex = 1;
             this.lblIdentificacion.Text = "Identificacion";
             // 
@@ -64,7 +66,7 @@
             // 
             this.txtIdentificacion.AutoRoundedCorners = true;
             this.txtIdentificacion.BackColor = System.Drawing.Color.Transparent;
-            this.txtIdentificacion.BorderRadius = 17;
+            this.txtIdentificacion.BorderRadius = 21;
             this.txtIdentificacion.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtIdentificacion.DefaultText = "";
             this.txtIdentificacion.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -74,19 +76,21 @@
             this.txtIdentificacion.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtIdentificacion.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtIdentificacion.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdentificacion.Location = new System.Drawing.Point(376, 534);
+            this.txtIdentificacion.Location = new System.Drawing.Point(501, 657);
+            this.txtIdentificacion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtIdentificacion.Name = "txtIdentificacion";
             this.txtIdentificacion.PasswordChar = '\0';
             this.txtIdentificacion.PlaceholderText = "Ingrese su numero de cedula";
             this.txtIdentificacion.SelectedText = "";
-            this.txtIdentificacion.Size = new System.Drawing.Size(338, 36);
+            this.txtIdentificacion.Size = new System.Drawing.Size(451, 44);
             this.txtIdentificacion.TabIndex = 4;
+            this.txtIdentificacion.TextChanged += new System.EventHandler(this.txtIdentificacion_TextChanged);
             // 
             // btnIngresarEntrada
             // 
             this.btnIngresarEntrada.AutoRoundedCorners = true;
             this.btnIngresarEntrada.BackColor = System.Drawing.Color.Transparent;
-            this.btnIngresarEntrada.BorderRadius = 15;
+            this.btnIngresarEntrada.BorderRadius = 18;
             this.btnIngresarEntrada.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnIngresarEntrada.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnIngresarEntrada.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -94,10 +98,11 @@
             this.btnIngresarEntrada.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
             this.btnIngresarEntrada.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresarEntrada.ForeColor = System.Drawing.Color.White;
-            this.btnIngresarEntrada.Location = new System.Drawing.Point(478, 590);
+            this.btnIngresarEntrada.Location = new System.Drawing.Point(637, 726);
+            this.btnIngresarEntrada.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnIngresarEntrada.Name = "btnIngresarEntrada";
             this.btnIngresarEntrada.PressedColor = System.Drawing.Color.Bisque;
-            this.btnIngresarEntrada.Size = new System.Drawing.Size(149, 32);
+            this.btnIngresarEntrada.Size = new System.Drawing.Size(199, 39);
             this.btnIngresarEntrada.TabIndex = 5;
             this.btnIngresarEntrada.Text = "Ingresar";
             this.btnIngresarEntrada.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -105,29 +110,34 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(154)))), ((int)(((byte)(165)))));
-            this.guna2Panel1.Location = new System.Drawing.Point(-4, 57);
+            this.guna2Panel1.Location = new System.Drawing.Point(-5, 70);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1189, 110);
+            this.guna2Panel1.Size = new System.Drawing.Size(1585, 135);
             this.guna2Panel1.TabIndex = 6;
+            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.Image = global::JaguarGymApp_Preview.Properties.Resources.Codigo_de_barras_Horizontal;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(90, 360);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(120, 443);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(892, 88);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(1189, 108);
             this.guna2PictureBox1.TabIndex = 7;
             this.guna2PictureBox1.TabStop = false;
+            
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(862, 663);
+            this.linkLabel1.Location = new System.Drawing.Point(1149, 816);
+            this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(196, 18);
+            this.linkLabel1.Size = new System.Drawing.Size(260, 25);
             this.linkLabel1.TabIndex = 8;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Volver a iniciar sesión";
@@ -135,10 +145,10 @@
             // 
             // Escanea_tu_cedula_o_CIF
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1080, 720);
+            this.ClientSize = new System.Drawing.Size(1440, 886);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.guna2Panel1);
@@ -146,9 +156,12 @@
             this.Controls.Add(this.txtIdentificacion);
             this.Controls.Add(this.lblIdentificacion);
             this.Controls.Add(this.lblEscaneacedulaCIF);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "Escanea_tu_cedula_o_CIF";
+            this.Padding = new System.Windows.Forms.Padding(4, 79, 4, 4);
             this.Text = "Registro de entrada";
+            this.Load += new System.EventHandler(this.Escanea_tu_cedula_o_CIF_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

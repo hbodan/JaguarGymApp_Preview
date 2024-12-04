@@ -28,22 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnMembresiavencidagerente = new Guna.UI2.WinForms.Guna2Panel();
             this.lbUsuariopuedeingresar = new System.Windows.Forms.Label();
             this.pbFotodeperfil = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.lbEjemplofechadevencimiento = new System.Windows.Forms.Label();
+            this.lbFechaDeVencimiento = new System.Windows.Forms.Label();
             this.lbFechavencimiento = new System.Windows.Forms.Label();
-            this.lbEjemplocarrera = new System.Windows.Forms.Label();
+            this.lbCarreraAutorizado = new System.Windows.Forms.Label();
             this.lbCarrera = new System.Windows.Forms.Label();
-            this.lbEjemploapellido = new System.Windows.Forms.Label();
+            this.lbApellidoAutorizado = new System.Windows.Forms.Label();
             this.lbApellido = new System.Windows.Forms.Label();
-            this.lbEjemplonombre = new System.Windows.Forms.Label();
+            this.lbNombreAutorizado = new System.Windows.Forms.Label();
             this.lbNombre = new System.Windows.Forms.Label();
             this.pbCheck = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lbUsuarioAutorizado = new System.Windows.Forms.Label();
             this.pnSuperior = new Guna.UI2.WinForms.Guna2Panel();
             this.pbLogoUam = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.pnMembresiavencidagerente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotodeperfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCheck)).BeginInit();
@@ -56,13 +57,13 @@
             this.pnMembresiavencidagerente.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.pnMembresiavencidagerente.Controls.Add(this.lbUsuariopuedeingresar);
             this.pnMembresiavencidagerente.Controls.Add(this.pbFotodeperfil);
-            this.pnMembresiavencidagerente.Controls.Add(this.lbEjemplofechadevencimiento);
+            this.pnMembresiavencidagerente.Controls.Add(this.lbFechaDeVencimiento);
             this.pnMembresiavencidagerente.Controls.Add(this.lbFechavencimiento);
-            this.pnMembresiavencidagerente.Controls.Add(this.lbEjemplocarrera);
+            this.pnMembresiavencidagerente.Controls.Add(this.lbCarreraAutorizado);
             this.pnMembresiavencidagerente.Controls.Add(this.lbCarrera);
-            this.pnMembresiavencidagerente.Controls.Add(this.lbEjemploapellido);
+            this.pnMembresiavencidagerente.Controls.Add(this.lbApellidoAutorizado);
             this.pnMembresiavencidagerente.Controls.Add(this.lbApellido);
-            this.pnMembresiavencidagerente.Controls.Add(this.lbEjemplonombre);
+            this.pnMembresiavencidagerente.Controls.Add(this.lbNombreAutorizado);
             this.pnMembresiavencidagerente.Controls.Add(this.lbNombre);
             this.pnMembresiavencidagerente.Controls.Add(this.pbCheck);
             this.pnMembresiavencidagerente.Controls.Add(this.lbUsuarioAutorizado);
@@ -76,7 +77,7 @@
             this.lbUsuariopuedeingresar.AutoSize = true;
             this.lbUsuariopuedeingresar.Font = new System.Drawing.Font("Verdana", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUsuariopuedeingresar.ForeColor = System.Drawing.Color.Teal;
-            this.lbUsuariopuedeingresar.Location = new System.Drawing.Point(349, 350);
+            this.lbUsuariopuedeingresar.Location = new System.Drawing.Point(283, 353);
             this.lbUsuariopuedeingresar.Name = "lbUsuariopuedeingresar";
             this.lbUsuariopuedeingresar.Size = new System.Drawing.Size(231, 18);
             this.lbUsuariopuedeingresar.TabIndex = 11;
@@ -92,15 +93,15 @@
             this.pbFotodeperfil.TabIndex = 10;
             this.pbFotodeperfil.TabStop = false;
             // 
-            // lbEjemplofechadevencimiento
+            // lbFechaDeVencimiento
             // 
-            this.lbEjemplofechadevencimiento.AutoSize = true;
-            this.lbEjemplofechadevencimiento.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEjemplofechadevencimiento.Location = new System.Drawing.Point(331, 248);
-            this.lbEjemplofechadevencimiento.Name = "lbEjemplofechadevencimiento";
-            this.lbEjemplofechadevencimiento.Size = new System.Drawing.Size(232, 36);
-            this.lbEjemplofechadevencimiento.TabIndex = 9;
-            this.lbEjemplofechadevencimiento.Text = "Miercoles 5 de Marzo 2025 \r\n\r\n";
+            this.lbFechaDeVencimiento.AutoSize = true;
+            this.lbFechaDeVencimiento.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFechaDeVencimiento.Location = new System.Drawing.Point(331, 248);
+            this.lbFechaDeVencimiento.Name = "lbFechaDeVencimiento";
+            this.lbFechaDeVencimiento.Size = new System.Drawing.Size(232, 36);
+            this.lbFechaDeVencimiento.TabIndex = 9;
+            this.lbFechaDeVencimiento.Text = "Miercoles 5 de Marzo 2025 \r\n\r\n";
             // 
             // lbFechavencimiento
             // 
@@ -112,15 +113,15 @@
             this.lbFechavencimiento.TabIndex = 8;
             this.lbFechavencimiento.Text = "Fecha de vencimiento:";
             // 
-            // lbEjemplocarrera
+            // lbCarreraAutorizado
             // 
-            this.lbEjemplocarrera.AutoSize = true;
-            this.lbEjemplocarrera.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEjemplocarrera.Location = new System.Drawing.Point(212, 214);
-            this.lbEjemplocarrera.Name = "lbEjemplocarrera";
-            this.lbEjemplocarrera.Size = new System.Drawing.Size(128, 18);
-            this.lbEjemplocarrera.TabIndex = 7;
-            this.lbEjemplocarrera.Text = "Diseño Grafico\r\n";
+            this.lbCarreraAutorizado.AutoSize = true;
+            this.lbCarreraAutorizado.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCarreraAutorizado.Location = new System.Drawing.Point(212, 214);
+            this.lbCarreraAutorizado.Name = "lbCarreraAutorizado";
+            this.lbCarreraAutorizado.Size = new System.Drawing.Size(128, 18);
+            this.lbCarreraAutorizado.TabIndex = 7;
+            this.lbCarreraAutorizado.Text = "Diseño Grafico\r\n";
             // 
             // lbCarrera
             // 
@@ -132,15 +133,15 @@
             this.lbCarrera.TabIndex = 6;
             this.lbCarrera.Text = "Carrera:";
             // 
-            // lbEjemploapellido
+            // lbApellidoAutorizado
             // 
-            this.lbEjemploapellido.AutoSize = true;
-            this.lbEjemploapellido.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEjemploapellido.Location = new System.Drawing.Point(212, 179);
-            this.lbEjemploapellido.Name = "lbEjemploapellido";
-            this.lbEjemploapellido.Size = new System.Drawing.Size(67, 18);
-            this.lbEjemploapellido.TabIndex = 5;
-            this.lbEjemploapellido.Text = "Sunday";
+            this.lbApellidoAutorizado.AutoSize = true;
+            this.lbApellidoAutorizado.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbApellidoAutorizado.Location = new System.Drawing.Point(212, 179);
+            this.lbApellidoAutorizado.Name = "lbApellidoAutorizado";
+            this.lbApellidoAutorizado.Size = new System.Drawing.Size(67, 18);
+            this.lbApellidoAutorizado.TabIndex = 5;
+            this.lbApellidoAutorizado.Text = "Sunday";
             // 
             // lbApellido
             // 
@@ -152,15 +153,16 @@
             this.lbApellido.TabIndex = 4;
             this.lbApellido.Text = "Apellido:";
             // 
-            // lbEjemplonombre
+            // lbNombreAutorizado
             // 
-            this.lbEjemplonombre.AutoSize = true;
-            this.lbEjemplonombre.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEjemplonombre.Location = new System.Drawing.Point(212, 145);
-            this.lbEjemplonombre.Name = "lbEjemplonombre";
-            this.lbEjemplonombre.Size = new System.Drawing.Size(82, 18);
-            this.lbEjemplonombre.TabIndex = 3;
-            this.lbEjemplonombre.Text = "Jefferson";
+            this.lbNombreAutorizado.AutoSize = true;
+            this.lbNombreAutorizado.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNombreAutorizado.Location = new System.Drawing.Point(212, 145);
+            this.lbNombreAutorizado.Name = "lbNombreAutorizado";
+            this.lbNombreAutorizado.Size = new System.Drawing.Size(82, 18);
+            this.lbNombreAutorizado.TabIndex = 3;
+            this.lbNombreAutorizado.Text = "Jefferson";
+            this.lbNombreAutorizado.Click += new System.EventHandler(this.lbNombreAutorizado_Click);
             // 
             // lbNombre
             // 
@@ -200,6 +202,7 @@
             this.pnSuperior.Name = "pnSuperior";
             this.pnSuperior.Size = new System.Drawing.Size(1088, 160);
             this.pnSuperior.TabIndex = 2;
+            this.pnSuperior.Paint += new System.Windows.Forms.PaintEventHandler(this.pnSuperior_Paint);
             // 
             // pbLogoUam
             // 
@@ -211,27 +214,20 @@
             this.pbLogoUam.TabIndex = 0;
             this.pbLogoUam.TabStop = false;
             // 
-            // linkLabel1
+            // timer2
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(959, 679);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(98, 24);
-            this.linkLabel1.TabIndex = 4;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Siguiente";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.timer2.Interval = 7000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // Usuario_autorizado_gerente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1080, 720);
-            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.pnMembresiavencidagerente);
             this.Controls.Add(this.pnSuperior);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Usuario_autorizado_gerente";
             this.Text = "Usuario autorizado(Vista gerente)";
             this.Load += new System.EventHandler(this.Usuario_autorizado_gerente_Load);
@@ -242,7 +238,6 @@
             this.pnSuperior.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoUam)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -250,19 +245,19 @@
 
         private Guna.UI2.WinForms.Guna2Panel pnMembresiavencidagerente;
         private Guna.UI2.WinForms.Guna2PictureBox pbFotodeperfil;
-        private System.Windows.Forms.Label lbEjemplofechadevencimiento;
+        private System.Windows.Forms.Label lbFechaDeVencimiento;
         private System.Windows.Forms.Label lbFechavencimiento;
-        private System.Windows.Forms.Label lbEjemplocarrera;
+        private System.Windows.Forms.Label lbCarreraAutorizado;
         private System.Windows.Forms.Label lbCarrera;
-        private System.Windows.Forms.Label lbEjemploapellido;
+        private System.Windows.Forms.Label lbApellidoAutorizado;
         private System.Windows.Forms.Label lbApellido;
-        private System.Windows.Forms.Label lbEjemplonombre;
+        private System.Windows.Forms.Label lbNombreAutorizado;
         private System.Windows.Forms.Label lbNombre;
         private Guna.UI2.WinForms.Guna2PictureBox pbCheck;
         private System.Windows.Forms.Label lbUsuarioAutorizado;
         private Guna.UI2.WinForms.Guna2Panel pnSuperior;
         private Guna.UI2.WinForms.Guna2PictureBox pbLogoUam;
         private System.Windows.Forms.Label lbUsuariopuedeingresar;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Timer timer2;
     }
 }

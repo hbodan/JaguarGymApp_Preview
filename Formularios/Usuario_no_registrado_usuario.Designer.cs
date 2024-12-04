@@ -34,7 +34,6 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lbUstednoestaregistrado = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pnSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogouam)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -66,9 +65,9 @@
             this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.lbUstednoestaregistrado);
-            this.guna2Panel1.Location = new System.Drawing.Point(67, 219);
+            this.guna2Panel1.Location = new System.Drawing.Point(29, 219);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(934, 412);
+            this.guna2Panel1.Size = new System.Drawing.Size(1009, 412);
             this.guna2Panel1.TabIndex = 1;
             // 
             // guna2PictureBox1
@@ -84,46 +83,35 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(41, 160);
+            this.label1.Location = new System.Drawing.Point(19, 211);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(855, 18);
+            this.label1.Size = new System.Drawing.Size(960, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Usted no está registrado en el sistema. Por favor, contacte con Vida Estudiantil " +
     "para más información";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lbUstednoestaregistrado
             // 
             this.lbUstednoestaregistrado.AutoSize = true;
             this.lbUstednoestaregistrado.Font = new System.Drawing.Font("Verdana", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUstednoestaregistrado.Location = new System.Drawing.Point(195, 73);
+            this.lbUstednoestaregistrado.Location = new System.Drawing.Point(233, 73);
             this.lbUstednoestaregistrado.Name = "lbUstednoestaregistrado";
             this.lbUstednoestaregistrado.Size = new System.Drawing.Size(534, 45);
             this.lbUstednoestaregistrado.TabIndex = 0;
             this.lbUstednoestaregistrado.Text = "Usted no esta registrado";
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(805, 645);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(253, 23);
-            this.linkLabel1.TabIndex = 2;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Volver a iniciar Sesion";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
             // Usuario_no_Registrado_usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1064, 681);
-            this.Controls.Add(this.linkLabel1);
+            this.ClientSize = new System.Drawing.Size(1080, 720);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.pnSuperior);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Usuario_no_Registrado_usuario";
             this.Text = "Usuario no registrado";
             this.Load += new System.EventHandler(this.Usuario_no_Registrado_usuario_Load);
@@ -133,7 +121,6 @@
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -145,6 +132,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbUstednoestaregistrado;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

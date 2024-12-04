@@ -142,6 +142,7 @@ namespace JaguarGymApp_Preview
 
                     // Tomar solo la primera palabra del nombre completo.
                     string primerNombre = nombreCompleto.Split(' ')[0];
+                    data.Close();
                     return primerNombre;
                     data.Close();
                 }
