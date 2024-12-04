@@ -28,22 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnSuperior = new Guna.UI2.WinForms.Guna2Panel();
             this.pbLogoUam = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnMembresiavencidagerente = new Guna.UI2.WinForms.Guna2Panel();
             this.lbRecordatorio = new System.Windows.Forms.Label();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.lbEjemplofechadevencimiento = new System.Windows.Forms.Label();
+            this.lbfechadevencimientocaducado = new System.Windows.Forms.Label();
             this.lbFechavencimiento = new System.Windows.Forms.Label();
-            this.lbEjemplocarrera = new System.Windows.Forms.Label();
+            this.lbcarreraCaducado = new System.Windows.Forms.Label();
             this.lbCarrera = new System.Windows.Forms.Label();
-            this.lbEjemploapellido = new System.Windows.Forms.Label();
+            this.lbapellidoCaducado = new System.Windows.Forms.Label();
             this.lbApellido = new System.Windows.Forms.Label();
-            this.lbEjemplonombre = new System.Windows.Forms.Label();
+            this.lbnombreCaducado = new System.Windows.Forms.Label();
             this.lbNombre = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lbMembresiavencidausuario = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoUam)).BeginInit();
             this.pnMembresiavencidagerente.SuspendLayout();
@@ -75,13 +76,13 @@
             this.pnMembresiavencidagerente.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.pnMembresiavencidagerente.Controls.Add(this.lbRecordatorio);
             this.pnMembresiavencidagerente.Controls.Add(this.guna2PictureBox2);
-            this.pnMembresiavencidagerente.Controls.Add(this.lbEjemplofechadevencimiento);
+            this.pnMembresiavencidagerente.Controls.Add(this.lbfechadevencimientocaducado);
             this.pnMembresiavencidagerente.Controls.Add(this.lbFechavencimiento);
-            this.pnMembresiavencidagerente.Controls.Add(this.lbEjemplocarrera);
+            this.pnMembresiavencidagerente.Controls.Add(this.lbcarreraCaducado);
             this.pnMembresiavencidagerente.Controls.Add(this.lbCarrera);
-            this.pnMembresiavencidagerente.Controls.Add(this.lbEjemploapellido);
+            this.pnMembresiavencidagerente.Controls.Add(this.lbapellidoCaducado);
             this.pnMembresiavencidagerente.Controls.Add(this.lbApellido);
-            this.pnMembresiavencidagerente.Controls.Add(this.lbEjemplonombre);
+            this.pnMembresiavencidagerente.Controls.Add(this.lbnombreCaducado);
             this.pnMembresiavencidagerente.Controls.Add(this.lbNombre);
             this.pnMembresiavencidagerente.Controls.Add(this.guna2PictureBox1);
             this.pnMembresiavencidagerente.Controls.Add(this.lbMembresiavencidausuario);
@@ -107,21 +108,21 @@
             // 
             this.guna2PictureBox2.Image = global::JaguarGymApp_Preview.Properties.Resources.User_icon;
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(629, 91);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(637, 95);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.Size = new System.Drawing.Size(172, 172);
             this.guna2PictureBox2.TabIndex = 10;
             this.guna2PictureBox2.TabStop = false;
             // 
-            // lbEjemplofechadevencimiento
+            // lbfechadevencimientocaducado
             // 
-            this.lbEjemplofechadevencimiento.AutoSize = true;
-            this.lbEjemplofechadevencimiento.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEjemplofechadevencimiento.Location = new System.Drawing.Point(332, 229);
-            this.lbEjemplofechadevencimiento.Name = "lbEjemplofechadevencimiento";
-            this.lbEjemplofechadevencimiento.Size = new System.Drawing.Size(250, 18);
-            this.lbEjemplofechadevencimiento.TabIndex = 9;
-            this.lbEjemplofechadevencimiento.Text = "Viernes 1 de Noviembre 2024";
+            this.lbfechadevencimientocaducado.AutoSize = true;
+            this.lbfechadevencimientocaducado.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbfechadevencimientocaducado.Location = new System.Drawing.Point(332, 229);
+            this.lbfechadevencimientocaducado.Name = "lbfechadevencimientocaducado";
+            this.lbfechadevencimientocaducado.Size = new System.Drawing.Size(210, 18);
+            this.lbfechadevencimientocaducado.TabIndex = 9;
+            this.lbfechadevencimientocaducado.Text = "Viernes 1 de Marzo 2024";
             // 
             // lbFechavencimiento
             // 
@@ -133,15 +134,15 @@
             this.lbFechavencimiento.TabIndex = 8;
             this.lbFechavencimiento.Text = "Fecha de vencimiento:";
             // 
-            // lbEjemplocarrera
+            // lbcarreraCaducado
             // 
-            this.lbEjemplocarrera.AutoSize = true;
-            this.lbEjemplocarrera.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEjemplocarrera.Location = new System.Drawing.Point(213, 195);
-            this.lbEjemplocarrera.Name = "lbEjemplocarrera";
-            this.lbEjemplocarrera.Size = new System.Drawing.Size(87, 18);
-            this.lbEjemplocarrera.TabIndex = 7;
-            this.lbEjemplocarrera.Text = "Marketing";
+            this.lbcarreraCaducado.AutoSize = true;
+            this.lbcarreraCaducado.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbcarreraCaducado.Location = new System.Drawing.Point(213, 195);
+            this.lbcarreraCaducado.Name = "lbcarreraCaducado";
+            this.lbcarreraCaducado.Size = new System.Drawing.Size(87, 18);
+            this.lbcarreraCaducado.TabIndex = 7;
+            this.lbcarreraCaducado.Text = "Marketing";
             // 
             // lbCarrera
             // 
@@ -153,15 +154,15 @@
             this.lbCarrera.TabIndex = 6;
             this.lbCarrera.Text = "Carrera:";
             // 
-            // lbEjemploapellido
+            // lbapellidoCaducado
             // 
-            this.lbEjemploapellido.AutoSize = true;
-            this.lbEjemploapellido.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEjemploapellido.Location = new System.Drawing.Point(213, 160);
-            this.lbEjemploapellido.Name = "lbEjemploapellido";
-            this.lbEjemploapellido.Size = new System.Drawing.Size(59, 18);
-            this.lbEjemploapellido.TabIndex = 5;
-            this.lbEjemploapellido.Text = "Bodan";
+            this.lbapellidoCaducado.AutoSize = true;
+            this.lbapellidoCaducado.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbapellidoCaducado.Location = new System.Drawing.Point(213, 160);
+            this.lbapellidoCaducado.Name = "lbapellidoCaducado";
+            this.lbapellidoCaducado.Size = new System.Drawing.Size(59, 18);
+            this.lbapellidoCaducado.TabIndex = 5;
+            this.lbapellidoCaducado.Text = "Bodan";
             // 
             // lbApellido
             // 
@@ -173,15 +174,15 @@
             this.lbApellido.TabIndex = 4;
             this.lbApellido.Text = "Apellido:";
             // 
-            // lbEjemplonombre
+            // lbnombreCaducado
             // 
-            this.lbEjemplonombre.AutoSize = true;
-            this.lbEjemplonombre.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEjemplonombre.Location = new System.Drawing.Point(213, 126);
-            this.lbEjemplonombre.Name = "lbEjemplonombre";
-            this.lbEjemplonombre.Size = new System.Drawing.Size(51, 18);
-            this.lbEjemplonombre.TabIndex = 3;
-            this.lbEjemplonombre.Text = "Harry";
+            this.lbnombreCaducado.AutoSize = true;
+            this.lbnombreCaducado.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbnombreCaducado.Location = new System.Drawing.Point(213, 126);
+            this.lbnombreCaducado.Name = "lbnombreCaducado";
+            this.lbnombreCaducado.Size = new System.Drawing.Size(51, 18);
+            this.lbnombreCaducado.TabIndex = 3;
+            this.lbnombreCaducado.Text = "Harry";
             // 
             // lbNombre
             // 
@@ -213,24 +214,17 @@
             this.lbMembresiavencidausuario.TabIndex = 0;
             this.lbMembresiavencidausuario.Text = "Usuario con membresia vencida";
             // 
-            // linkLabel1
+            // timer1
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(942, 650);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(114, 23);
-            this.linkLabel1.TabIndex = 2;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Siguiente";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 7000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Usuario_con_membresia_vencida_gerente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1064, 681);
-            this.Controls.Add(this.linkLabel1);
+            this.ClientSize = new System.Drawing.Size(1080, 720);
             this.Controls.Add(this.pnMembresiavencidagerente);
             this.Controls.Add(this.pnSuperior);
             this.Name = "Usuario_con_membresia_vencida_gerente";
@@ -243,7 +237,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -254,16 +247,16 @@
         private Guna.UI2.WinForms.Guna2Panel pnMembresiavencidagerente;
         private System.Windows.Forms.Label lbMembresiavencidausuario;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private System.Windows.Forms.Label lbEjemploapellido;
+        private System.Windows.Forms.Label lbapellidoCaducado;
         private System.Windows.Forms.Label lbApellido;
-        private System.Windows.Forms.Label lbEjemplonombre;
+        private System.Windows.Forms.Label lbnombreCaducado;
         private System.Windows.Forms.Label lbNombre;
-        private System.Windows.Forms.Label lbEjemplofechadevencimiento;
+        private System.Windows.Forms.Label lbfechadevencimientocaducado;
         private System.Windows.Forms.Label lbFechavencimiento;
-        private System.Windows.Forms.Label lbEjemplocarrera;
+        private System.Windows.Forms.Label lbcarreraCaducado;
         private System.Windows.Forms.Label lbCarrera;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private System.Windows.Forms.Label lbRecordatorio;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Timer timer1;
     }
 }

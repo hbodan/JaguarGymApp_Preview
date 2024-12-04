@@ -3,40 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\formularios\\usuario_autorizado_gerente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\formularios\\usuario_autorizado_gerente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:formularios\\usuario_autorizado_gerente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\formularios\\usuario_con_membresia_vencida_gerente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:formularios\\usuario_con_membresia_vencida_gerente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\formularios\\usuario_no_registrado_gerente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:formularios\\usuario_no_registrado_gerente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|c:\\users\\user\\desktop\\jaguargymapp_preview\\formularios\\usuario_autorizado_gerente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:formularios\\usuario_autorizado_gerente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\formularios\\usuario_autorizado_gerente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:formularios\\usuario_autorizado_gerente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\formularios\\usuario_no_registrado_gerente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:formularios\\usuario_no_registrado_gerente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\formularios\\escanea_tu_cedula_o_cif.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:formularios\\escanea_tu_cedula_o_cif.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\formularios\\inicio_sesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:formularios\\inicio_sesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|c:\\users\\user\\desktop\\jaguargymapp_preview\\formularios\\esperando_por_escaneo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:formularios\\esperando_por_escaneo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\formularios\\inicio_sesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:formularios\\inicio_sesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\formularios\\usuario_con_membresia_vencida_gerente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:formularios\\usuario_con_membresia_vencida_gerente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\formularios\\escanea_tu_cedula_o_cif.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:formularios\\escanea_tu_cedula_o_cif.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\formularios\\usuario_autorizado_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:formularios\\usuario_autorizado_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\formularios\\usuario_con_membresia_vencida_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:formularios\\usuario_con_membresia_vencida_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\formularios\\usuario_no_registrado_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:formularios\\usuario_no_registrado_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\formularios\\usuario_autorizado_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44145F30-AE07-4BF3-92B6-FF6078872B51}|JaguarGymApp_Preview.csproj|solutionrelative:formularios\\usuario_autorizado_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,120 +58,150 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Esperando_por_escaneo.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Esperando_por_escaneo.cs",
-              "RelativeDocumentMoniker": "Formularios\\Esperando_por_escaneo.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Esperando_por_escaneo.cs",
-              "RelativeToolTip": "Formularios\\Esperando_por_escaneo.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAADgvyoAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Usuario_autorizado_gerente.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Usuario_autorizado_gerente.cs",
+              "RelativeDocumentMoniker": "Formularios\\Usuario_autorizado_gerente.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Usuario_autorizado_gerente.cs",
+              "RelativeToolTip": "Formularios\\Usuario_autorizado_gerente.cs",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAlwJoAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T04:53:16.117Z",
+              "WhenOpened": "2024-12-04T02:49:31.181Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Usuario_no_registrado_gerente.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Usuario_no_registrado_gerente.cs",
+              "RelativeDocumentMoniker": "Formularios\\Usuario_no_registrado_gerente.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Usuario_no_registrado_gerente.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Formularios\\Usuario_no_registrado_gerente.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T03:41:03.096Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Usuario_con_membresia_vencida_gerente.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Usuario_con_membresia_vencida_gerente.cs",
+              "RelativeDocumentMoniker": "Formularios\\Usuario_con_membresia_vencida_gerente.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Usuario_con_membresia_vencida_gerente.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Formularios\\Usuario_con_membresia_vencida_gerente.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T21:53:24.053Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Usuario_autorizado_gerente.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Usuario_autorizado_gerente.cs",
               "RelativeDocumentMoniker": "Formularios\\Usuario_autorizado_gerente.cs",
               "ToolTip": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Usuario_autorizado_gerente.cs [Dise\u00F1o]",
               "RelativeToolTip": "Formularios\\Usuario_autorizado_gerente.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T22:52:36.376Z",
+              "WhenOpened": "2024-12-04T01:35:10.478Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Inicio_Sesion.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Inicio_Sesion.cs",
-              "RelativeDocumentMoniker": "Formularios\\Inicio_Sesion.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Inicio_Sesion.cs",
-              "RelativeToolTip": "Formularios\\Inicio_Sesion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEwAAAAhAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Usuario_no_registrado_gerente.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Usuario_no_registrado_gerente.cs",
+              "RelativeDocumentMoniker": "Formularios\\Usuario_no_registrado_gerente.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Usuario_no_registrado_gerente.cs",
+              "RelativeToolTip": "Formularios\\Usuario_no_registrado_gerente.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAD4vzMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T22:05:33.949Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Escanea_tu_cedula_o_CIF.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Escanea_tu_cedula_o_CIF.cs",
-              "RelativeDocumentMoniker": "Formularios\\Escanea_tu_cedula_o_CIF.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Escanea_tu_cedula_o_CIF.cs",
-              "RelativeToolTip": "Formularios\\Escanea_tu_cedula_o_CIF.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T22:05:27.297Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Usuario_autorizado_gerente.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Usuario_autorizado_gerente.cs",
-              "RelativeDocumentMoniker": "Formularios\\Usuario_autorizado_gerente.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Usuario_autorizado_gerente.cs",
-              "RelativeToolTip": "Formularios\\Usuario_autorizado_gerente.cs",
-              "ViewState": "AgIAAI0AAAAAAAAAAAAawKUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T22:52:52.563Z",
+              "WhenOpened": "2024-12-04T04:24:29.779Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Principal.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Principal.cs",
-              "RelativeDocumentMoniker": "Principal.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Principal.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Principal.cs [Dise\u00F1o]",
+              "Title": "Escanea_tu_cedula_o_CIF.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Escanea_tu_cedula_o_CIF.cs",
+              "RelativeDocumentMoniker": "Formularios\\Escanea_tu_cedula_o_CIF.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Escanea_tu_cedula_o_CIF.cs",
+              "RelativeToolTip": "Formularios\\Escanea_tu_cedula_o_CIF.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T03:18:02.528Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Principal.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Principal.cs",
-              "RelativeDocumentMoniker": "Principal.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Principal.cs",
-              "RelativeToolTip": "Principal.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAkwJQAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T03:18:05.869Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T03:10:35.45Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Inicio_Sesion.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Inicio_Sesion.cs",
-              "RelativeDocumentMoniker": "Formularios\\Inicio_Sesion.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Inicio_Sesion.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Formularios\\Inicio_Sesion.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T22:05:32.825Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "Escanea_tu_cedula_o_CIF.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Escanea_tu_cedula_o_CIF.cs",
               "RelativeDocumentMoniker": "Formularios\\Escanea_tu_cedula_o_CIF.cs",
               "ToolTip": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Escanea_tu_cedula_o_CIF.cs [Dise\u00F1o]",
               "RelativeToolTip": "Formularios\\Escanea_tu_cedula_o_CIF.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T22:04:57.114Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-12-01T22:04:57.114Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Usuario_con_membresia_vencida_gerente.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Usuario_con_membresia_vencida_gerente.cs",
+              "RelativeDocumentMoniker": "Formularios\\Usuario_con_membresia_vencida_gerente.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Usuario_con_membresia_vencida_gerente.cs",
+              "RelativeToolTip": "Formularios\\Usuario_con_membresia_vencida_gerente.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAtwJcAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T03:04:52.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Usuario_autorizado_usuario.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Usuario_autorizado_usuario.cs",
+              "RelativeDocumentMoniker": "Formularios\\Usuario_autorizado_usuario.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Usuario_autorizado_usuario.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Formularios\\Usuario_autorizado_usuario.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T03:41:17.447Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Usuario_con_membresia_vencida_usuario.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Usuario_con_membresia_vencida_usuario.cs",
+              "RelativeDocumentMoniker": "Formularios\\Usuario_con_membresia_vencida_usuario.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Usuario_con_membresia_vencida_usuario.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Formularios\\Usuario_con_membresia_vencida_usuario.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T03:40:52.695Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Usuario_no_registrado_usuario.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Usuario_no_registrado_usuario.cs",
+              "RelativeDocumentMoniker": "Formularios\\Usuario_no_registrado_usuario.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Usuario_no_registrado_usuario.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Formularios\\Usuario_no_registrado_usuario.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T03:41:09.241Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Usuario_autorizado_usuario.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Usuario_autorizado_usuario.cs",
+              "RelativeDocumentMoniker": "Formularios\\Usuario_autorizado_usuario.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\JaguarGymApp_Preview\\Formularios\\Usuario_autorizado_usuario.cs",
+              "RelativeToolTip": "Formularios\\Usuario_autorizado_usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T03:37:33.831Z"
             }
           ]
         }

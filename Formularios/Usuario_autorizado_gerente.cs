@@ -77,7 +77,7 @@ namespace JaguarGymApp_Preview.Formularios
                 }
                 else
                 {
-                    MessageBox.Show("No se encontró un miembro con la identificación o CIF ingresado.");
+                    MessageBox.Show("No se encontró una carrera.");
                     dataCarrera.Close();
                 }
             }
@@ -97,7 +97,7 @@ namespace JaguarGymApp_Preview.Formularios
         }
         private void ConseguirDataUsuario()
         {
-            string queryExtraccion = "SELECT idMiembro, nombres, apellidos, IdCarrera, fechaExp FROM Miembro WHERE idMiembro = @Id ";
+            string queryExtraccion = "SELECT idMiembro, nombres, apellidos, IdCarrera, fechaExp FROM Miembro WHERE idMiembro = @Id LIMIT 1";
 
             try
             {
@@ -127,11 +127,11 @@ namespace JaguarGymApp_Preview.Formularios
                    lbFechaDeVencimiento.Text = fecha.ToString();
                     dataExtraccion.Close();
 
-                    this.Hide();
+                  
                 }
                 else
                 {
-                    MessageBox.Show("No se encontró un miembro con la identificación o CIF ingresado.");
+                    
                     dataExtraccion.Close();
                 }
             }
@@ -151,7 +151,8 @@ namespace JaguarGymApp_Preview.Formularios
 
         private void Usuario_autorizado_gerente_Load(object sender, EventArgs e)
         {
-
+            ConseguirDataUsuario();
+            timer2.Start();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -169,6 +170,14 @@ namespace JaguarGymApp_Preview.Formularios
         private void lbNombreAutorizado_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            timer2.Stop(); 
+            Form pantallaDestino = new Escanea_tu_cedula_o_CIF(); 
+            pantallaDestino.Show();
+            this.Close(); 
         }
     }
 }

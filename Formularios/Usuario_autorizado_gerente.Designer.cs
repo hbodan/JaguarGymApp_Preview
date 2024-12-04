@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnMembresiavencidagerente = new Guna.UI2.WinForms.Guna2Panel();
             this.lbUsuariopuedeingresar = new System.Windows.Forms.Label();
             this.pbFotodeperfil = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -43,7 +44,7 @@
             this.lbUsuarioAutorizado = new System.Windows.Forms.Label();
             this.pnSuperior = new Guna.UI2.WinForms.Guna2Panel();
             this.pbLogoUam = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.pnMembresiavencidagerente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotodeperfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCheck)).BeginInit();
@@ -76,7 +77,7 @@
             this.lbUsuariopuedeingresar.AutoSize = true;
             this.lbUsuariopuedeingresar.Font = new System.Drawing.Font("Verdana", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUsuariopuedeingresar.ForeColor = System.Drawing.Color.Teal;
-            this.lbUsuariopuedeingresar.Location = new System.Drawing.Point(349, 350);
+            this.lbUsuariopuedeingresar.Location = new System.Drawing.Point(283, 353);
             this.lbUsuariopuedeingresar.Name = "lbUsuariopuedeingresar";
             this.lbUsuariopuedeingresar.Size = new System.Drawing.Size(231, 18);
             this.lbUsuariopuedeingresar.TabIndex = 11;
@@ -213,27 +214,20 @@
             this.pbLogoUam.TabIndex = 0;
             this.pbLogoUam.TabStop = false;
             // 
-            // linkLabel1
+            // timer2
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(959, 679);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(98, 24);
-            this.linkLabel1.TabIndex = 4;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Siguiente";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.timer2.Interval = 7000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // Usuario_autorizado_gerente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1080, 720);
-            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.pnMembresiavencidagerente);
             this.Controls.Add(this.pnSuperior);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Usuario_autorizado_gerente";
             this.Text = "Usuario autorizado(Vista gerente)";
             this.Load += new System.EventHandler(this.Usuario_autorizado_gerente_Load);
@@ -244,7 +238,6 @@
             this.pnSuperior.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoUam)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -265,6 +258,6 @@
         private Guna.UI2.WinForms.Guna2Panel pnSuperior;
         private Guna.UI2.WinForms.Guna2PictureBox pbLogoUam;
         private System.Windows.Forms.Label lbUsuariopuedeingresar;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Timer timer2;
     }
 }
