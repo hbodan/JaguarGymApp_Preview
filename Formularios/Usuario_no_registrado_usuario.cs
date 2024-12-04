@@ -44,5 +44,10 @@ namespace JaguarGymApp_Preview.Formularios
         {
 
         }
+
+        private void pnSuperior_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

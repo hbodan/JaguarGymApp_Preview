@@ -48,6 +48,7 @@
             this.pnSuperior.Name = "pnSuperior";
             this.pnSuperior.Size = new System.Drawing.Size(1110, 147);
             this.pnSuperior.TabIndex = 0;
+            this.pnSuperior.Paint += new System.Windows.Forms.PaintEventHandler(this.pnSuperior_Paint);
             // 
             // pbLogouam
             // 

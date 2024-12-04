@@ -118,8 +118,6 @@ namespace JaguarGymApp_Preview.Formularios
                             this.Hide();
                             Usuario_no_Registrado_usuario formularioSinregistro = new Usuario_no_Registrado_usuario();
                             formularioSinregistro.Show();
-
-                            MessageBox.Show("No se encontró un miembro con la identificación o CIF ingresado.");
                         }
                     }
                 }
