@@ -15,11 +15,8 @@ namespace JaguarGymApp_Preview.Formularios
     {
         private MySqlConnection data;
         public Miembro miembrito;
-        
-        List<Miembro> miembrosRecibidos;
-        private Miembros_Activos formularioAnterior;
-        private Miembro miembroActual;
-        public Editar_Miembros(Miembro miembro, Miembros_Activos formulario)
+
+        public Editar_Miembros(Miembro miembro)
         {
             ConexionBD conn = new ConexionBD();
             data = new MySqlConnection(conn.GetConnector());
@@ -28,9 +25,62 @@ namespace JaguarGymApp_Preview.Formularios
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Teal500, Primary.Teal700, Primary.Teal300, Accent.LightBlue200, TextShade.WHITE);
             this.StartPosition = FormStartPosition.CenterScreen;
-            this.formularioAnterior = formulario;
             miembrito = new Miembro(miembro.IdMiembro, miembro.Identificacion, miembro.CIF, miembro.Nombres, miembro.Apellidos, miembro.FechaNac, miembro.FechaExp, miembro.Carrera, miembro.Facultad, miembro.Genero, miembro.Interno, miembro.Colaborador, miembro.Cargo);
         }
+
+        private void Principal_Resize(object sender, EventArgs e)
+        {
+            this.Size = new System.Drawing.Size(1080, 720); // Mantener el tamaño de la ventana fijo
+        }
+
+        private void Editar_Miembros_Load(object sender, EventArgs e)
+        {
+
+            ConexionBD conn = new ConexionBD();
+
+            string query = "SELECT idFacultad, nombreFacultad FROM Facultad";
+
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(conn.GetConnector()))
+                {
+                    connection.Open();
+                    MySqlCommand command = new MySqlCommand(query, connection);
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+
+                    DataTable facultades = new DataTable();
+                    adapter.Fill(facultades);
+
+                    cmbFacultad.DataSource = facultades;
+                    cmbFacultad.DisplayMember = "nombreFacultad";
+                    cmbFacultad.ValueMember = "idFacultad";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar facultades: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            string valores = $@"
+                idMiembro: {miembrito.IdMiembro}
+                identificacion: {txtidentificacion.Text}
+                cif: {txtCIF.Text}
+                nombres: {txtNombre.Text}
+                apellidos: {txtApellidos.Text}
+                fechaNacimiento: {dateNacimiento.Value.ToString("yyyy-MM-dd")}
+                fechaExp: {dateExpiracion.Value.ToString("yyyy-MM-dd")}
+                carrera: {cmbCarrera.ValueMember}
+                facultad: {cmbFacultad.ValueMember}
+                genero: {(chkMasculino.Checked ? "Masculino" : "Femenino")}
+                interno: {(chkEstudiante.Checked ? "Sí" : "No")}
+                colaborador: {(chkColaborador.Checked ? "Sí" : "No")}
+                cargo: {txtCargo.Text}";
+
+            ObtenerFacultades();
+            ObtenerCarrerasPorFacultad(miembrito.Facultad);
+            CargarDatosMiembro(miembrito.Identificacion, miembrito.CIF, miembrito.Nombres, miembrito.Apellidos, miembrito.FechaNac, miembrito.FechaExp, miembrito.Carrera, miembrito.Facultad, miembrito.Genero, miembrito.Interno, miembrito.Colaborador, miembrito.Cargo);
+        }
+
         public DataTable ObtenerFacultades()
         {
             ConexionBD connectionString = new ConexionBD();
@@ -88,60 +138,29 @@ namespace JaguarGymApp_Preview.Formularios
         }
 
 
-        private void Principal_Resize(object sender, EventArgs e)
-        {
-            this.Size = new System.Drawing.Size(1080, 720); // Mantener el tamaño de la ventana fijo
-        }
-
-        private void Editar_Miembros_Load(object sender, EventArgs e)
-        {
-            ConexionBD conn = new ConexionBD();
-
-            string query = "SELECT idFacultad, nombreFacultad FROM Facultad";
-
-            try
-            {
-                using (MySqlConnection connection = new MySqlConnection(conn.GetConnector()))
-                {
-                    connection.Open();
-                    MySqlCommand command = new MySqlCommand(query, connection);
-                    MySqlDataAdapter adapter = new MySqlDataAdapter(command);
-
-                    DataTable facultades = new DataTable();
-                    adapter.Fill(facultades);
-
-                    cmbFacultad.DataSource = facultades;
-                    cmbFacultad.DisplayMember = "nombreFacultad";
-                    cmbFacultad.ValueMember = "idFacultad";
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error al cargar facultades: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            string valores = $@"
-                idMiembro: {miembrito.IdMiembro}
-                identificacion: {txtidentificacion.Text}
-                cif: {txtCIF.Text}
-                nombres: {txtNombre.Text}
-                apellidos: {txtApellidos.Text}
-                fechaNacimiento: {dateNacimiento.Value.ToString("yyyy-MM-dd")}
-                fechaExp: {dateExpiracion.Value.ToString("yyyy-MM-dd")}
-                carrera: {cmbCarrera.ValueMember}
-                facultad: {cmbFacultad.ValueMember}
-                genero: {(chkMasculino.Checked ? "Masculino" : "Femenino")}
-                interno: {(chkEstudiante.Checked ? "Sí" : "No")}
-                colaborador: {(chkColaborador.Checked ? "Sí" : "No")}
-                cargo: {txtCargo.Text}";
-
-            ObtenerCarrerasPorFacultad(miembrito.Facultad);
-            CargarDatosMiembro(miembrito.Identificacion, miembrito.CIF, miembrito.Nombres, miembrito.Apellidos, miembrito.FechaNac, miembrito.FechaExp, miembrito.Carrera, miembrito.Facultad, miembrito.Genero, miembrito.Interno, miembrito.Colaborador, miembrito.Cargo);
-        }
+        
        
 
         public void CargarDatosMiembro(string identificacion,string cif,string nombres,string apellidos,DateTime fechaNacimiento,DateTime fechaExp,int carrera,int facultad,bool genero,bool interno,bool colaborador,string cargo)
         {
+            string valores = $@"
+                idMiembro: {miembrito.IdMiembro}
+                identificacion: {identificacion}
+                cif: {cif}
+                nombres: {nombres}
+                apellidos: {apellidos}
+                fechaNacimiento: {fechaNacimiento.ToString("yyyy-MM-dd")}
+                fechaExp: {fechaExp.ToString("yyyy-MM-dd")}
+                carrera: {carrera}
+                facultad: {facultad}
+                genero: {genero}
+                interno: {interno}
+                colaborador: {colaborador}
+                cargo: {cargo}";
+
+            // Imprimir en consola
+            Console.WriteLine(valores);
+
             txtidentificacion.Text = identificacion;
             txtCIF.Text = cif;
             txtNombre.Text = nombres;
@@ -366,15 +385,14 @@ namespace JaguarGymApp_Preview.Formularios
             {
                 MessageBox.Show($"Error al cargar las carreras: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            Console.WriteLine($"idFacultad seleccionada: {cmbFacultad.SelectedValue}");
             
             
         }
 
         private void LinkAtras_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            formularioAnterior.RecibirDatos(miembrosRecibidos);
+            Miembros_Activos mimebrosForm  = new Miembros_Activos();
+            mimebrosForm.ShowDialog();
             this.Close();
         }
 
@@ -383,7 +401,8 @@ namespace JaguarGymApp_Preview.Formularios
             if (ValidacionLlenado())
             {
                 EditarMiembro();
-                formularioAnterior.RecibirDatos(miembrosRecibidos);
+                Miembros_Activos mimebrosForm = new Miembros_Activos();
+                mimebrosForm.ShowDialog();
                 this.Close();
             }
         }

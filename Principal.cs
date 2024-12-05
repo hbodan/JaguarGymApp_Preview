@@ -144,7 +144,6 @@ namespace JaguarGymApp_Preview
                     string primerNombre = nombreCompleto.Split(' ')[0];
                     data.Close();
                     return primerNombre;
-                    data.Close();
                 }
                 else
                 {

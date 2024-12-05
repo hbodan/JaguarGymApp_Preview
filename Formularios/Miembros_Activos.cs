@@ -12,7 +12,7 @@ namespace JaguarGymApp_Preview.Formularios
 {
     public partial class Miembros_Activos : MaterialForm
     {
-        List<Miembro> miembros;
+
         public Miembros_Activos()
         {
             InitializeComponent();
@@ -91,17 +91,11 @@ namespace JaguarGymApp_Preview.Formularios
 
         public void btnAgregar_Click(object sender, EventArgs e)
         {
-            Agregar_Miembros formulario2 = new Agregar_Miembros(miembros, this);
+            Agregar_Miembros formulario2 = new Agregar_Miembros();
             formulario2.Show();
             this.Hide();
         }
-        public void RecibirDatos(List<Miembro> datos)
-        {
-            miembros = datos;
-            this.Show();
-            Actualizardata();
-            ConteoMiembros();
-        }
+
 
         public void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -255,7 +249,7 @@ namespace JaguarGymApp_Preview.Formularios
                 if (miembroSeleccionado != null)
                 {
                     // Abrir el formulario Editar_Miembros
-                    Editar_Miembros editarMiembrosForm = new Editar_Miembros(miembroSeleccionado, this);
+                    Editar_Miembros editarMiembrosForm = new Editar_Miembros(miembroSeleccionado);
                     editarMiembrosForm.Show();
                 }
             }

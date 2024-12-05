@@ -14,10 +14,8 @@ namespace JaguarGymApp_Preview.Formularios
     public partial class Agregar_Miembros : MaterialForm
     {
         private MySqlConnection data;
-        List<Miembro> miembrosRecibidos;
-        private Miembros_Activos formularioAnterior;
 
-        public Agregar_Miembros(List<Miembro> lista, Miembros_Activos formulario)
+        public Agregar_Miembros()
         {
             ConexionBD conn = new ConexionBD();
             data = new MySqlConnection(conn.GetConnector());
@@ -26,9 +24,6 @@ namespace JaguarGymApp_Preview.Formularios
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Teal500, Primary.Teal700, Primary.Teal300, Accent.LightBlue200, TextShade.WHITE);
             this.StartPosition = FormStartPosition.CenterScreen;
-            this.miembrosRecibidos = lista;
-            this.formularioAnterior = formulario;
-
         }
         public class DataHelper
         {
@@ -211,7 +206,8 @@ namespace JaguarGymApp_Preview.Formularios
 
         private void LinkAtras_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            formularioAnterior.RecibirDatos(miembrosRecibidos);
+            Miembros_Activos miembrosForm = new Miembros_Activos();
+            miembrosForm.Show();
             this.Close();
         }
 
@@ -220,7 +216,8 @@ namespace JaguarGymApp_Preview.Formularios
             if (ValidacionLlenado())
             {
                 AgregarMiembro(); // Método existente para agregar un nuevo miembro
-                formularioAnterior.RecargarMiembros(); // Método en el formulario padre para recargar los datos
+                Miembros_Activos mimebrosForm = new Miembros_Activos();
+                mimebrosForm.ShowDialog();
                 this.Close();
             }
         }
@@ -334,7 +331,8 @@ namespace JaguarGymApp_Preview.Formularios
 
         private void LinkAtras_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            formularioAnterior.RecibirDatos(miembrosRecibidos);
+            Miembros_Activos miembrosForm = new Miembros_Activos();
+            miembrosForm.Show();
             this.Close();
         }
 
