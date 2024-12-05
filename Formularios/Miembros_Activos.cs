@@ -127,31 +127,207 @@ namespace JaguarGymApp_Preview.Formularios
             switch (filtroSeleccionado)
             {
                 case "Identificacion":
-                    query = "SELECT * FROM Miembro WHERE identificacion LIKE @criterio";
+                    query = @"
+                    SELECT 
+                        m.idMiembro AS 'ID',
+                        m.cif AS 'CIF', 
+                        m.identificacion AS 'Identificación',
+                        m.nombres AS 'Nombres',
+                        m.apellidos AS 'Apellidos',
+                        CASE 
+                            WHEN m.genero = 1 THEN 'Masculino' 
+                            ELSE 'Femenino' 
+                        END AS 'Genero', 
+                        m.fechaNacimiento AS 'Fecha de Nacimiento',
+                        f.nombreFacultad AS 'Facultad',
+                        c.nombreCarrera AS 'Carrera', 
+                        m.fechaExp AS 'Membresia Expira', 
+                        CASE 
+                            WHEN m.interno = 1 THEN 'Sí' 
+                            ELSE 'No' 
+                        END AS 'Interno',
+                        CASE 
+                            WHEN m.colaborador = 1 THEN 'Sí' 
+                            ELSE 'No' 
+                        END AS 'Colaborador',
+                        m.cargo AS 'Cargo'
+                    FROM 
+                        Miembro m
+                    LEFT JOIN Facultad f ON m.idfacultad = f.idFacultad
+                    LEFT JOIN Carrera c ON m.idcarrera = c.idCarrera
+                    WHERE 
+                        m.identificacion LIKE '%' + @criterio + '%';
+                    ";
                     break;
 
                 case "Nombre":
-                    query = "SELECT * FROM Miembro WHERE nombres LIKE @criterio";
+                    query = @"
+                    SELECT 
+                        m.idMiembro AS 'ID',
+                        m.cif AS 'CIF', 
+                        m.identificacion AS 'Identificación',
+                        m.nombres AS 'Nombres',
+                        m.apellidos AS 'Apellidos',
+                        CASE 
+                            WHEN m.genero = 1 THEN 'Masculino' 
+                            ELSE 'Femenino' 
+                        END AS 'Genero', 
+                        m.fechaNacimiento AS 'Fecha de Nacimiento',
+                        f.nombreFacultad AS 'Facultad',
+                        c.nombreCarrera AS 'Carrera', 
+                        m.fechaExp AS 'Membresia Expira', 
+                        CASE 
+                            WHEN m.interno = 1 THEN 'Sí' 
+                            ELSE 'No' 
+                        END AS 'Interno',
+                        CASE 
+                            WHEN m.colaborador = 1 THEN 'Sí' 
+                            ELSE 'No' 
+                        END AS 'Colaborador',
+                        m.cargo AS 'Cargo'
+                    FROM 
+                        Miembro m
+                    LEFT JOIN Facultad f ON m.idfacultad = f.idFacultad
+                    LEFT JOIN Carrera c ON m.idcarrera = c.idCarrera
+                    WHERE 
+                        m.nombres LIKE '%' + @criterio + '%';
+                    ";
                     break;
 
                 case "Apellido":
-                    query = "SELECT * FROM Miembro WHERE apellidos LIKE @criterio";
+                    query = @"
+                    SELECT 
+                        m.idMiembro AS 'ID',
+                        m.cif AS 'CIF', 
+                        m.identificacion AS 'Identificación',
+                        m.nombres AS 'Nombres',
+                        m.apellidos AS 'Apellidos',
+                        CASE 
+                            WHEN m.genero = 1 THEN 'Masculino' 
+                            ELSE 'Femenino' 
+                        END AS 'Genero', 
+                        m.fechaNacimiento AS 'Fecha de Nacimiento',
+                        f.nombreFacultad AS 'Facultad',
+                        c.nombreCarrera AS 'Carrera', 
+                        m.fechaExp AS 'Membresia Expira', 
+                        CASE 
+                            WHEN m.interno = 1 THEN 'Sí' 
+                            ELSE 'No' 
+                        END AS 'Interno',
+                        CASE 
+                            WHEN m.colaborador = 1 THEN 'Sí' 
+                            ELSE 'No' 
+                        END AS 'Colaborador',
+                        m.cargo AS 'Cargo'
+                    FROM 
+                        Miembro m
+                    LEFT JOIN Facultad f ON m.idfacultad = f.idFacultad
+                    LEFT JOIN Carrera c ON m.idcarrera = c.idCarrera
+                    WHERE 
+                        m.apellidos LIKE '%' + @criterio + '%';
+                    ";
                     break;
 
                 case "Facultad":
-                    query = @"SELECT m.* FROM Miembro m 
-                      JOIN Facultad f ON m.idfacultad = f.idFacultad 
-                      WHERE f.nombreFacultad LIKE @criterio";
+                    query = @"
+                    SELECT 
+                        m.idMiembro AS 'ID',
+                        m.cif AS 'CIF', 
+                        m.identificacion AS 'Identificación',
+                        m.nombres AS 'Nombres',
+                        m.apellidos AS 'Apellidos',
+                        CASE 
+                            WHEN m.genero = 1 THEN 'Masculino' 
+                            ELSE 'Femenino' 
+                        END AS 'Genero', 
+                        m.fechaNacimiento AS 'Fecha de Nacimiento',
+                        f.nombreFacultad AS 'Facultad',
+                        c.nombreCarrera AS 'Carrera', 
+                        m.fechaExp AS 'Membresia Expira', 
+                        CASE 
+                            WHEN m.interno = 1 THEN 'Sí' 
+                            ELSE 'No' 
+                        END AS 'Interno',
+                        CASE 
+                            WHEN m.colaborador = 1 THEN 'Sí' 
+                            ELSE 'No' 
+                        END AS 'Colaborador',
+                        m.cargo AS 'Cargo'
+                    FROM 
+                        Miembro m
+                    LEFT JOIN Facultad f ON m.idfacultad = f.idFacultad
+                    LEFT JOIN Carrera c ON m.idcarrera = c.idCarrera
+                    WHERE 
+                        f.nombreFacultad LIKE '%' + @criterio + '%';
+                    ";
                     break;
 
                 case "Carrera":
-                    query = @"SELECT m.* FROM Miembro m 
-                      JOIN Carrera c ON m.idcarrera = c.idCarrera 
-                      WHERE c.nombreCarrera LIKE @criterio";
+                    query = @"
+                    SELECT 
+                        m.idMiembro AS 'ID',
+                        m.cif AS 'CIF', 
+                        m.identificacion AS 'Identificación',
+                        m.nombres AS 'Nombres',
+                        m.apellidos AS 'Apellidos',
+                        CASE 
+                            WHEN m.genero = 1 THEN 'Masculino' 
+                            ELSE 'Femenino' 
+                        END AS 'Genero', 
+                        m.fechaNacimiento AS 'Fecha de Nacimiento',
+                        f.nombreFacultad AS 'Facultad',
+                        c.nombreCarrera AS 'Carrera', 
+                        m.fechaExp AS 'Membresia Expira', 
+                        CASE 
+                            WHEN m.interno = 1 THEN 'Sí' 
+                            ELSE 'No' 
+                        END AS 'Interno',
+                        CASE 
+                            WHEN m.colaborador = 1 THEN 'Sí' 
+                            ELSE 'No' 
+                        END AS 'Colaborador',
+                        m.cargo AS 'Cargo'
+                    FROM 
+                        Miembro m
+                    LEFT JOIN Facultad f ON m.idfacultad = f.idFacultad
+                    LEFT JOIN Carrera c ON m.idcarrera = c.idCarrera
+                    WHERE 
+                        c.nombreCarrera LIKE '%' + @criterio + '%';
+                    ";
                     break;
 
                 case "Género":
-                    query = "SELECT * FROM Miembro WHERE genero LIKE @criterio";
+                    query = @"
+                    SELECT 
+                        m.idMiembro AS 'ID',
+                        m.cif AS 'CIF', 
+                        m.identificacion AS 'Identificación',
+                        m.nombres AS 'Nombres',
+                        m.apellidos AS 'Apellidos',
+                        CASE 
+                            WHEN m.genero = 1 THEN 'Masculino' 
+                            ELSE 'Femenino' 
+                        END AS 'Genero', 
+                        m.fechaNacimiento AS 'Fecha de Nacimiento',
+                        f.nombreFacultad AS 'Facultad',
+                        c.nombreCarrera AS 'Carrera', 
+                        m.fechaExp AS 'Membresia Expira', 
+                        CASE 
+                            WHEN m.interno = 1 THEN 'Sí' 
+                            ELSE 'No' 
+                        END AS 'Interno',
+                        CASE 
+                            WHEN m.colaborador = 1 THEN 'Sí' 
+                            ELSE 'No' 
+                        END AS 'Colaborador',
+                        m.cargo AS 'Cargo'
+                    FROM 
+                        Miembro m
+                    LEFT JOIN Facultad f ON m.idfacultad = f.idFacultad
+                    LEFT JOIN Carrera c ON m.idcarrera = c.idCarrera
+                    WHERE 
+                        m.genero LIKE '%' + @criterio + '%';
+                    ";
                     break;
 
                 default:
