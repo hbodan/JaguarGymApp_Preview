@@ -98,13 +98,14 @@ namespace JaguarGymApp_Preview
         }
         private void imgBtn_Estadistica_Click(object sender, EventArgs e)
         {
-            Mostrar_Estadistica formularioEstadistica = new Mostrar_Estadistica();
-            formularioEstadistica.Show();
+            Mostrar_Estadistica formularioEstadistica = new Mostrar_Estadistica(_idUsuario);
+            this.Hide();
+            formularioEstadistica.ShowDialog();
             this.Close();
         }
         private void btn_Estadistica_Click(object sender, EventArgs e)
         {
-            Mostrar_Estadistica formularioEstadistica = new Mostrar_Estadistica();
+            Mostrar_Estadistica formularioEstadistica = new Mostrar_Estadistica(_idUsuario);
             this.Hide();
             formularioEstadistica.ShowDialog();
             this.Close();

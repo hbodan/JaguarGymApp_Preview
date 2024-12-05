@@ -20,8 +20,9 @@ namespace estadisticasForm
     {
 
         private LogicaEstadistica logicaEstadistica;
+        int _idUsuario;
 
-        public Mostrar_Estadistica()
+        public Mostrar_Estadistica(int idUsuario)
         {
             InitializeComponent();
             logicaEstadistica = new LogicaEstadistica(); // Instanciamos la clase LogicaEstadistica
@@ -30,6 +31,7 @@ namespace estadisticasForm
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Teal500, Primary.Teal700, Primary.Teal300, Accent.LightBlue200, TextShade.WHITE);
             this.StartPosition = FormStartPosition.CenterScreen;
+            _idUsuario = idUsuario;
         }
 
         private void Principal_Resize(object sender, EventArgs e)
@@ -81,9 +83,10 @@ namespace estadisticasForm
 
         private void LinkAtras_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Principal formularioPrincipal = new Principal(0);
-            formularioPrincipal.Show();
+            Principal formularioPrincipal = new Principal(_idUsuario);
             this.Hide();
+            formularioPrincipal.ShowDialog();
+            this.Close();
         }
 
         private void label1_Click_1(object sender, EventArgs e)
@@ -111,6 +114,14 @@ namespace estadisticasForm
         {
             int cambio = flowLayoutPanel1.VerticalScroll.Value + flowLayoutPanel1.VerticalScroll.SmallChange * 10;
             flowLayoutPanel1.AutoScrollPosition = new Point(0, cambio);
+        }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+            Principal formularioPrincipal = new Principal(_idUsuario);
+            this.Hide();
+            formularioPrincipal.ShowDialog();
+            this.Close();
         }
     }
 }
