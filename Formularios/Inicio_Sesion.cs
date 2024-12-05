@@ -66,9 +66,9 @@ namespace JaguarGymApp_Preview.Formularios
                     data.Close();
 
                     Principal nuevoFormulario = new Principal(idMiembro);
-                    nuevoFormulario.Show();
-
                     this.Hide();
+                    nuevoFormulario.Show();
+                    this.Close();
 
                 }
                 else
@@ -98,23 +98,25 @@ namespace JaguarGymApp_Preview.Formularios
 
         private void linkLb_CrearCuenta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Crear_Cuenta nuevoFormulario = new Crear_Cuenta(); // Cambia a tu formulario
-            
+            Crear_Cuenta nuevoFormulario = new Crear_Cuenta();
+            this.Hide();
             nuevoFormulario.ShowDialog();
             this.Close();
         }
         private void linkLb_RecuperarCredenciales_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Recuperar_Credenciales formularioRecuperar = new Recuperar_Credenciales();
+            this.Hide();
             formularioRecuperar.ShowDialog();
             this.Close();
         }
 
         private void imgbtn_Escaner_Click(object sender, EventArgs e)
         {
-            Escanea_tu_cedula_o_CIF nuevoFormulario = new Escanea_tu_cedula_o_CIF(); // Cambia a tu formulario
+            Escanea_tu_cedula_o_CIF nuevoFormulario = new Escanea_tu_cedula_o_CIF(); 
             this.Hide();
             nuevoFormulario.ShowDialog();
+            this.Close();
         }
 
         private void btn_MostrarPassword_MouseDown(object sender, MouseEventArgs e)
@@ -142,10 +144,9 @@ namespace JaguarGymApp_Preview.Formularios
             }
             else
             {
-                errorProvider1.SetError(txtbox_IngresarUsuario, string.Empty); // Limpia el error.
+                errorProvider1.SetError(txtbox_IngresarUsuario, string.Empty);
             }
         }
-
 
         private void txtBox_IngresarPassword_TextChanged(object sender, EventArgs e)
         {
@@ -160,7 +161,7 @@ namespace JaguarGymApp_Preview.Formularios
             }
             else
             {
-                errorProvider1.SetError(txtBox_IngresarPassword, string.Empty); // Limpia el error.
+                errorProvider1.SetError(txtBox_IngresarPassword, string.Empty);
             }
         }
     }

@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LinkAtras = new System.Windows.Forms.LinkLabel();
             this.btnAgregar = new Guna.UI2.WinForms.Guna2Button();
             this.lblFechaRealizacion = new System.Windows.Forms.Label();
@@ -44,11 +47,16 @@
             this.nudMesesPagados = new CxFlatUI.CxFlatNumericUpDown();
             this.txtObservacion = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtBuscarMiembro = new Guna.UI2.WinForms.Guna2TextBox();
-            this.dgvMiembros = new System.Windows.Forms.DataGridView();
-            this.btnBuscar = new Guna.UI2.WinForms.Guna2Button();
             this.lblMiembroSeleccionado = new System.Windows.Forms.Label();
             this.txtMiembroSeleccionado = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnBuscar = new Guna.UI2.WinForms.Guna2Button();
+            this.dgvMiembros = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.guna2GradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMiembros)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +64,7 @@
             // 
             this.LinkAtras.AutoSize = true;
             this.LinkAtras.LinkColor = System.Drawing.Color.Silver;
-            this.LinkAtras.Location = new System.Drawing.Point(558, 587);
+            this.LinkAtras.Location = new System.Drawing.Point(945, 682);
             this.LinkAtras.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LinkAtras.Name = "LinkAtras";
             this.LinkAtras.Size = new System.Drawing.Size(93, 13);
@@ -78,7 +86,7 @@
             this.btnAgregar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(579, 535);
+            this.btnAgregar.Location = new System.Drawing.Point(924, 634);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(135, 37);
@@ -91,13 +99,12 @@
             this.lblFechaRealizacion.AutoSize = true;
             this.lblFechaRealizacion.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaRealizacion.ForeColor = System.Drawing.Color.Black;
-            this.lblFechaRealizacion.Location = new System.Drawing.Point(275, 364);
+            this.lblFechaRealizacion.Location = new System.Drawing.Point(275, 294);
             this.lblFechaRealizacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFechaRealizacion.Name = "lblFechaRealizacion";
             this.lblFechaRealizacion.Size = new System.Drawing.Size(158, 18);
             this.lblFechaRealizacion.TabIndex = 17;
             this.lblFechaRealizacion.Text = "Fecha Realizacion:";
-            this.lblFechaRealizacion.Click += new System.EventHandler(this.label4_Click);
             // 
             // lblIdTransaccion
             // 
@@ -110,7 +117,6 @@
             this.lblIdTransaccion.Size = new System.Drawing.Size(133, 18);
             this.lblIdTransaccion.TabIndex = 15;
             this.lblIdTransaccion.Text = "Id Transaccion:";
-            this.lblIdTransaccion.Click += new System.EventHandler(this.label3_Click);
             // 
             // lblPago
             // 
@@ -123,14 +129,13 @@
             this.lblPago.Size = new System.Drawing.Size(312, 28);
             this.lblPago.TabIndex = 12;
             this.lblPago.Text = "Agregar un nuevo Pago";
-            this.lblPago.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripcion.ForeColor = System.Drawing.Color.Black;
-            this.lblDescripcion.Location = new System.Drawing.Point(275, 445);
+            this.lblDescripcion.Location = new System.Drawing.Point(662, 294);
             this.lblDescripcion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(106, 18);
@@ -142,7 +147,7 @@
             this.lblObservacion.AutoSize = true;
             this.lblObservacion.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblObservacion.ForeColor = System.Drawing.Color.Black;
-            this.lblObservacion.Location = new System.Drawing.Point(275, 293);
+            this.lblObservacion.Location = new System.Drawing.Point(662, 185);
             this.lblObservacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblObservacion.Name = "lblObservacion";
             this.lblObservacion.Size = new System.Drawing.Size(115, 18);
@@ -166,13 +171,12 @@
             this.lblMiembro.AutoSize = true;
             this.lblMiembro.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMiembro.ForeColor = System.Drawing.Color.Black;
-            this.lblMiembro.Location = new System.Drawing.Point(703, 147);
+            this.lblMiembro.Location = new System.Drawing.Point(275, 359);
             this.lblMiembro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMiembro.Name = "lblMiembro";
             this.lblMiembro.Size = new System.Drawing.Size(85, 18);
             this.lblMiembro.TabIndex = 28;
             this.lblMiembro.Text = "Miembro:";
-            this.lblMiembro.Click += new System.EventHandler(this.label7_Click);
             // 
             // txtMonto
             // 
@@ -195,7 +199,6 @@
             this.txtMonto.SelectedText = "";
             this.txtMonto.Size = new System.Drawing.Size(200, 28);
             this.txtMonto.TabIndex = 30;
-            this.txtMonto.TextChanged += new System.EventHandler(this.txtMonto_TextChanged);
             // 
             // txtIdTransaccion
             // 
@@ -218,15 +221,16 @@
             this.txtIdTransaccion.SelectedText = "";
             this.txtIdTransaccion.Size = new System.Drawing.Size(198, 28);
             this.txtIdTransaccion.TabIndex = 36;
-            this.txtIdTransaccion.TextChanged += new System.EventHandler(this.txtIdTransaccion_TextChanged);
             // 
             // dtPickerFecha
             // 
+            this.dtPickerFecha.BackColor = System.Drawing.SystemColors.Control;
             this.dtPickerFecha.Checked = true;
-            this.dtPickerFecha.FillColor = System.Drawing.Color.White;
+            this.dtPickerFecha.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(134)))));
             this.dtPickerFecha.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtPickerFecha.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dtPickerFecha.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtPickerFecha.Location = new System.Drawing.Point(437, 353);
+            this.dtPickerFecha.Location = new System.Drawing.Point(438, 285);
             this.dtPickerFecha.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtPickerFecha.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtPickerFecha.Name = "dtPickerFecha";
@@ -239,20 +243,19 @@
             this.lblMesesPagados.AutoSize = true;
             this.lblMesesPagados.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMesesPagados.ForeColor = System.Drawing.Color.Black;
-            this.lblMesesPagados.Location = new System.Drawing.Point(547, 450);
+            this.lblMesesPagados.Location = new System.Drawing.Point(902, 296);
             this.lblMesesPagados.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMesesPagados.Name = "lblMesesPagados";
             this.lblMesesPagados.Size = new System.Drawing.Size(157, 16);
             this.lblMesesPagados.TabIndex = 41;
             this.lblMesesPagados.Text = "Mes/Meses Pagados";
-            this.lblMesesPagados.Click += new System.EventHandler(this.lblMesesPagados_Click);
             // 
             // nudMesesPagados
             // 
             this.nudMesesPagados.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.nudMesesPagados.BackColor = System.Drawing.Color.Teal;
             this.nudMesesPagados.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudMesesPagados.Location = new System.Drawing.Point(409, 442);
+            this.nudMesesPagados.Location = new System.Drawing.Point(772, 289);
             this.nudMesesPagados.Margin = new System.Windows.Forms.Padding(2, 2, 2, 1);
             this.nudMesesPagados.MaxNum = 12F;
             this.nudMesesPagados.MinNum = 1F;
@@ -263,13 +266,12 @@
             this.nudMesesPagados.Style = CxFlatUI.CxFlatNumericUpDown.NumericStyle.LeftRight;
             this.nudMesesPagados.TabIndex = 42;
             this.nudMesesPagados.Text = "nudMesPagados";
-            this.nudMesesPagados.ValueNumber = 0F;
-            this.nudMesesPagados.Click += new System.EventHandler(this.nudMesesPagados_Click);
+            this.nudMesesPagados.ValueNumber = 1F;
             // 
             // txtObservacion
             // 
             this.txtObservacion.AutoRoundedCorners = true;
-            this.txtObservacion.BorderRadius = 13;
+            this.txtObservacion.BorderRadius = 48;
             this.txtObservacion.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtObservacion.DefaultText = "";
             this.txtObservacion.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -279,15 +281,14 @@
             this.txtObservacion.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtObservacion.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtObservacion.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtObservacion.Location = new System.Drawing.Point(438, 293);
+            this.txtObservacion.Location = new System.Drawing.Point(784, 147);
             this.txtObservacion.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtObservacion.Name = "txtObservacion";
             this.txtObservacion.PasswordChar = '\0';
             this.txtObservacion.PlaceholderText = "";
             this.txtObservacion.SelectedText = "";
-            this.txtObservacion.Size = new System.Drawing.Size(200, 28);
+            this.txtObservacion.Size = new System.Drawing.Size(275, 98);
             this.txtObservacion.TabIndex = 32;
-            this.txtObservacion.TextChanged += new System.EventHandler(this.txtObservacion_TextChanged);
             // 
             // txtBuscarMiembro
             // 
@@ -302,7 +303,7 @@
             this.txtBuscarMiembro.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBuscarMiembro.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBuscarMiembro.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBuscarMiembro.Location = new System.Drawing.Point(795, 147);
+            this.txtBuscarMiembro.Location = new System.Drawing.Point(367, 354);
             this.txtBuscarMiembro.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtBuscarMiembro.Name = "txtBuscarMiembro";
             this.txtBuscarMiembro.PasswordChar = '\0';
@@ -310,22 +311,80 @@
             this.txtBuscarMiembro.SelectedText = "";
             this.txtBuscarMiembro.Size = new System.Drawing.Size(200, 28);
             this.txtBuscarMiembro.TabIndex = 43;
-            this.txtBuscarMiembro.TextChanged += new System.EventHandler(this.txtBuscarMiembro_TextChanged);
             // 
-            // dgvMiembros
+            // lblMiembroSeleccionado
             // 
-            this.dgvMiembros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvMiembros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMiembros.Location = new System.Drawing.Point(706, 196);
-            this.dgvMiembros.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvMiembros.Name = "dgvMiembros";
-            this.dgvMiembros.ReadOnly = true;
-            this.dgvMiembros.RowHeadersWidth = 72;
-            this.dgvMiembros.RowTemplate.Height = 31;
-            this.dgvMiembros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMiembros.Size = new System.Drawing.Size(353, 186);
-            this.dgvMiembros.TabIndex = 45;
-            this.dgvMiembros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMiembros_CellContentClick);
+            this.lblMiembroSeleccionado.AutoSize = true;
+            this.lblMiembroSeleccionado.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMiembroSeleccionado.ForeColor = System.Drawing.Color.Black;
+            this.lblMiembroSeleccionado.Location = new System.Drawing.Point(282, 620);
+            this.lblMiembroSeleccionado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMiembroSeleccionado.Name = "lblMiembroSeleccionado";
+            this.lblMiembroSeleccionado.Size = new System.Drawing.Size(158, 14);
+            this.lblMiembroSeleccionado.TabIndex = 46;
+            this.lblMiembroSeleccionado.Text = "Miembro seleccionado:";
+            // 
+            // txtMiembroSeleccionado
+            // 
+            this.txtMiembroSeleccionado.AutoRoundedCorners = true;
+            this.txtMiembroSeleccionado.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtMiembroSeleccionado.BorderRadius = 18;
+            this.txtMiembroSeleccionado.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMiembroSeleccionado.DefaultText = "";
+            this.txtMiembroSeleccionado.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMiembroSeleccionado.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMiembroSeleccionado.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMiembroSeleccionado.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMiembroSeleccionado.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMiembroSeleccionado.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtMiembroSeleccionado.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMiembroSeleccionado.Location = new System.Drawing.Point(447, 606);
+            this.txtMiembroSeleccionado.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtMiembroSeleccionado.Name = "txtMiembroSeleccionado";
+            this.txtMiembroSeleccionado.PasswordChar = '\0';
+            this.txtMiembroSeleccionado.PlaceholderText = "";
+            this.txtMiembroSeleccionado.ReadOnly = true;
+            this.txtMiembroSeleccionado.SelectedText = "";
+            this.txtMiembroSeleccionado.Size = new System.Drawing.Size(421, 38);
+            this.txtMiembroSeleccionado.TabIndex = 47;
+            // 
+            // guna2GradientPanel1
+            // 
+            this.guna2GradientPanel1.Controls.Add(this.guna2PictureBox2);
+            this.guna2GradientPanel1.Controls.Add(this.guna2PictureBox1);
+            this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(151)))), ((int)(((byte)(136)))));
+            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(110)))), ((int)(((byte)(121)))));
+            this.guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(-35, 59);
+            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(290, 675);
+            this.guna2GradientPanel1.TabIndex = 48;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.Image = global::JaguarGymApp_Preview.Properties.Resources.Jaguares_UAM_redondo;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(90, 39);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(137, 137);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.guna2PictureBox2.TabIndex = 1;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = global::JaguarGymApp_Preview.Properties.Resources.gym_7;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(41, 331);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(249, 319);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 0;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // btnBuscar
             // 
@@ -341,70 +400,81 @@
             this.btnBuscar.Font = new System.Drawing.Font("Verdana", 10.2F);
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Image = global::JaguarGymApp_Preview.Properties.Resources.buscarPNG;
-            this.btnBuscar.Location = new System.Drawing.Point(1002, 141);
+            this.btnBuscar.Location = new System.Drawing.Point(581, 350);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(57, 36);
             this.btnBuscar.TabIndex = 44;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // lblMiembroSeleccionado
+            // dgvMiembros
             // 
-            this.lblMiembroSeleccionado.AutoSize = true;
-            this.lblMiembroSeleccionado.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMiembroSeleccionado.ForeColor = System.Drawing.Color.Black;
-            this.lblMiembroSeleccionado.Location = new System.Drawing.Point(706, 395);
-            this.lblMiembroSeleccionado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblMiembroSeleccionado.Name = "lblMiembroSeleccionado";
-            this.lblMiembroSeleccionado.Size = new System.Drawing.Size(158, 14);
-            this.lblMiembroSeleccionado.TabIndex = 46;
-            this.lblMiembroSeleccionado.Text = "Miembro seleccionado:";
-            this.lblMiembroSeleccionado.Click += new System.EventHandler(this.lblMiembroSeleccionado_Click);
-            // 
-            // txtMiembroSeleccionado
-            // 
-            this.txtMiembroSeleccionado.AutoRoundedCorners = true;
-            this.txtMiembroSeleccionado.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.txtMiembroSeleccionado.BorderRadius = 13;
-            this.txtMiembroSeleccionado.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMiembroSeleccionado.DefaultText = "";
-            this.txtMiembroSeleccionado.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMiembroSeleccionado.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMiembroSeleccionado.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMiembroSeleccionado.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMiembroSeleccionado.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMiembroSeleccionado.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtMiembroSeleccionado.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMiembroSeleccionado.Location = new System.Drawing.Point(870, 390);
-            this.txtMiembroSeleccionado.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.txtMiembroSeleccionado.Name = "txtMiembroSeleccionado";
-            this.txtMiembroSeleccionado.PasswordChar = '\0';
-            this.txtMiembroSeleccionado.PlaceholderText = "";
-            this.txtMiembroSeleccionado.ReadOnly = true;
-            this.txtMiembroSeleccionado.SelectedText = "";
-            this.txtMiembroSeleccionado.Size = new System.Drawing.Size(189, 28);
-            this.txtMiembroSeleccionado.TabIndex = 47;
-            // 
-            // guna2GradientPanel1
-            // 
-            this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(151)))), ((int)(((byte)(136)))));
-            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(110)))), ((int)(((byte)(121)))));
-            this.guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(-35, 64);
-            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(290, 670);
-            this.guna2GradientPanel1.TabIndex = 48;
-            this.guna2GradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel1_Paint);
+            this.dgvMiembros.AllowUserToAddRows = false;
+            this.dgvMiembros.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.dgvMiembros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgvMiembros.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvMiembros.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Raised;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMiembros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.dgvMiembros.ColumnHeadersHeight = 35;
+            this.dgvMiembros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMiembros.DefaultCellStyle = dataGridViewCellStyle12;
+            this.dgvMiembros.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvMiembros.Location = new System.Drawing.Point(285, 390);
+            this.dgvMiembros.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvMiembros.Name = "dgvMiembros";
+            this.dgvMiembros.ReadOnly = true;
+            this.dgvMiembros.RowHeadersVisible = false;
+            this.dgvMiembros.RowHeadersWidth = 65;
+            this.dgvMiembros.RowTemplate.Height = 24;
+            this.dgvMiembros.Size = new System.Drawing.Size(774, 191);
+            this.dgvMiembros.TabIndex = 49;
+            this.dgvMiembros.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvMiembros.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvMiembros.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvMiembros.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvMiembros.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvMiembros.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgvMiembros.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvMiembros.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(134)))));
+            this.dgvMiembros.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Raised;
+            this.dgvMiembros.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Lucida Console", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvMiembros.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvMiembros.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvMiembros.ThemeStyle.HeaderStyle.Height = 35;
+            this.dgvMiembros.ThemeStyle.ReadOnly = true;
+            this.dgvMiembros.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvMiembros.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvMiembros.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvMiembros.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvMiembros.ThemeStyle.RowsStyle.Height = 24;
+            this.dgvMiembros.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvMiembros.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvMiembros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMiembros_CellContentClick);
             // 
             // Ingresar_Pago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1080, 720);
+            this.Controls.Add(this.dgvMiembros);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Controls.Add(this.txtMiembroSeleccionado);
             this.Controls.Add(this.lblMiembroSeleccionado);
-            this.Controls.Add(this.dgvMiembros);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscarMiembro);
             this.Controls.Add(this.nudMesesPagados);
@@ -426,6 +496,10 @@
             this.Name = "Ingresar_Pago";
             this.Text = "Ingresar Pago";
             this.Load += new System.EventHandler(this.Ingresar_Pago_Load);
+            this.guna2GradientPanel1.ResumeLayout(false);
+            this.guna2GradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMiembros)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -450,9 +524,11 @@
         private Guna.UI2.WinForms.Guna2TextBox txtObservacion;
         private Guna.UI2.WinForms.Guna2TextBox txtBuscarMiembro;
         private Guna.UI2.WinForms.Guna2Button btnBuscar;
-        private System.Windows.Forms.DataGridView dgvMiembros;
         private System.Windows.Forms.Label lblMiembroSeleccionado;
         private Guna.UI2.WinForms.Guna2TextBox txtMiembroSeleccionado;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvMiembros;
     }
 }

@@ -17,8 +17,9 @@ namespace JaguarGymApp_Preview.Formularios
         private MySqlConnection data;
         public Miembro miembrito;
         private bool bloqueandoEventos = false;
+        public int _idUsuario;
 
-        public Editar_Miembros(Miembro miembro)
+        public Editar_Miembros(Miembro miembro, int idUsuario)
         {
             ConexionBD conn = new ConexionBD();
             data = new MySqlConnection(conn.GetConnector());
@@ -28,19 +29,19 @@ namespace JaguarGymApp_Preview.Formularios
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Teal500, Primary.Teal700, Primary.Teal300, Accent.LightBlue200, TextShade.WHITE);
             this.StartPosition = FormStartPosition.CenterScreen;
             miembrito = new Miembro(miembro.IdMiembro, miembro.Identificacion, miembro.CIF, miembro.Nombres, miembro.Apellidos, miembro.FechaNac, miembro.FechaExp, miembro.Carrera, miembro.Facultad, miembro.Genero, miembro.Interno, miembro.Colaborador, miembro.Cargo);
+            _idUsuario = idUsuario;
         }
 
         private void Principal_Resize(object sender, EventArgs e)
         {
-            this.Size = new System.Drawing.Size(1080, 720); // Mantener el tamaño de la ventana fijo
+            this.Size = new System.Drawing.Size(1080, 720); 
         }
 
         private void Editar_Miembros_Load(object sender, EventArgs e)
         {
-            // Llenar las facultades cuando se cargue el formulario.
+          
             LlenarFacultades();
 
-            // Mostrar los valores en consola (solo para pruebas).
             string valores = $@"
             idMiembro: {miembrito.IdMiembro}
             identificacion: {txtIdentificacion.Text}
@@ -58,10 +59,8 @@ namespace JaguarGymApp_Preview.Formularios
 
             Console.WriteLine(valores);
 
-            // Obtener y cargar las carreras de la facultad seleccionada
             ObtenerCarrerasPorFacultad(miembrito.Facultad ?? 0);
 
-            // Llamar a CargarDatosMiembro para rellenar los datos en los controles
             CargarDatosMiembro(
                 miembrito.Identificacion,
                 miembrito.CIF,
@@ -97,6 +96,7 @@ namespace JaguarGymApp_Preview.Formularios
                     cmbFacultad.DataSource = facultades;
                     cmbFacultad.DisplayMember = "nombreFacultad";
                     cmbFacultad.ValueMember = "idFacultad";
+                    connectionFacultades.Close();
                 }
             }
             catch (Exception ex)
@@ -134,25 +134,7 @@ namespace JaguarGymApp_Preview.Formularios
 
         public void CargarDatosMiembro(string identificacion, string cif, string nombres, string apellidos, DateTime fechaNacimiento, DateTime fechaExp, int carrera, int facultad, bool genero, bool interno, bool colaborador, string cargo)
         {
-            string valores = $@"
-            idMiembro: {miembrito.IdMiembro}
-            identificacion: {identificacion}
-            cif: {cif}
-            nombres: {nombres}
-            apellidos: {apellidos}
-            fechaNacimiento: {fechaNacimiento.ToString("yyyy-MM-dd")}
-            fechaExp: {fechaExp.ToString("yyyy-MM-dd")}
-            carrera: {carrera}
-            facultad: {facultad}
-            genero: {genero}
-            interno: {interno}
-            colaborador: {colaborador}
-            cargo: {cargo}";
 
-            // Imprimir en consola
-            Console.WriteLine(valores);
-
-            // Asignar valores a los controles
             txtIdentificacion.Text = identificacion;
             txtCIF.Text = cif;
             txtNombre.Text = nombres;
@@ -169,7 +151,6 @@ namespace JaguarGymApp_Preview.Formularios
             chkExterno.Checked = !interno && !colaborador;
             txtCargo.Text = cargo;
 
-            // Ajustar visibilidad según el rol
             lblFacultad.Visible = chkEstudiante.Checked;
             cmbFacultad.Visible = chkEstudiante.Checked;
             lblCarrera.Visible = chkEstudiante.Checked;
@@ -177,7 +158,6 @@ namespace JaguarGymApp_Preview.Formularios
             lblCargo.Visible = chkColaborador.Checked;
             txtCargo.Visible = chkColaborador.Checked;
 
-            // Si el miembro no es colaborador ni estudiante, ocultar estos controles
             if (!chkEstudiante.Checked && !chkColaborador.Checked)
             {
                 lblFacultad.Visible = false;
@@ -191,39 +171,34 @@ namespace JaguarGymApp_Preview.Formularios
 
         private Miembro CrearMiembro()
         {
-            // Inicializa los valores como nulos
             int? carrera = null;
             int? facultad = null;
             string cargo = null;
 
-            // Verifica si es estudiante y asigna los valores correspondientes
             if (chkEstudiante.Checked)
             {
-                // Verifica si el valor de carrera o facultad es válido (no nulo y no vacío)
                 carrera = string.IsNullOrWhiteSpace(cmbCarrera.SelectedValue?.ToString()) ? (int?)null : (int?)cmbCarrera.SelectedValue;
                 facultad = string.IsNullOrWhiteSpace(cmbFacultad.SelectedValue?.ToString()) ? (int?)null : (int?)cmbFacultad.SelectedValue;
             }
-            // Verifica si es colaborador y asigna el cargo si existe
             else if (chkColaborador.Checked)
             {
                 cargo = string.IsNullOrWhiteSpace(txtCargo.Text) ? null : txtCargo.Text;
             }
 
-            // Retorna el nuevo objeto Miembro con los valores proporcionados
             return new Miembro(
-                idMiembro: 0, // Puede ser asignado más tarde si es necesario
+                idMiembro: 0,
                 identificacion: string.IsNullOrWhiteSpace(txtIdentificacion.Text) ? null : txtIdentificacion.Text,
                 cif: string.IsNullOrWhiteSpace(txtCIF.Text) ? null : txtCIF.Text,
                 nombres: string.IsNullOrWhiteSpace(txtNombre.Text) ? null : txtNombre.Text,
                 apellidos: string.IsNullOrWhiteSpace(txtApellidos.Text) ? null : txtApellidos.Text,
                 fechaNac: dateNacimiento.Value,
-                fechaExp: DateTime.Now, // Asumiendo que la fecha de expedición es la fecha actual
+                fechaExp: DateTime.Now,
                 carrera: carrera,
                 facultad: facultad,
-                genero: chkMasculino.Checked, // Si el checkbox de masculino está marcado
-                interno: chkEstudiante.Checked, // Si está marcado como estudiante
-                colaborador: chkColaborador.Checked, // Si está marcado como colaborador
-                cargo: cargo // Asignará null si no es colaborador
+                genero: chkMasculino.Checked,
+                interno: chkEstudiante.Checked,
+                colaborador: chkColaborador.Checked,
+                cargo: cargo
             );
         }
 
@@ -231,21 +206,21 @@ namespace JaguarGymApp_Preview.Formularios
         public void EditarMiembro(Miembro miembroNuevo)
         {
             string query = @"
-    UPDATE Miembro
-    SET 
-        identificacion = @identificacion,
-        cif = @cif,
-        nombres = @nombres,
-        apellidos = @apellidos,
-        fechaNacimiento = @fechaNacimiento,
-        fechaExp = @fechaExp,
-        idCarrera = @carrera,
-        idFacultad = @facultad,
-        genero = @genero,
-        interno = @interno,
-        colaborador = @colaborador,
-        cargo = @cargo
-    WHERE idMiembro = @idMiembroo";
+            UPDATE Miembro
+            SET 
+                identificacion = @identificacion,
+                cif = @cif,
+                nombres = @nombres,
+                apellidos = @apellidos,
+                fechaNacimiento = @fechaNacimiento,
+                fechaExp = @fechaExp,
+                idCarrera = @carrera,
+                idFacultad = @facultad,
+                genero = @genero,
+                interno = @interno,
+                colaborador = @colaborador,
+                cargo = @cargo
+            WHERE idMiembro = @idMiembroo";
 
             try
             {
@@ -255,10 +230,8 @@ namespace JaguarGymApp_Preview.Formularios
                 {
                     MySqlCommand command = new MySqlCommand(query, connection);
 
-                    // Limpia parámetros para evitar duplicados
                     command.Parameters.Clear();
 
-                    // Asigna valores desde miembrito
                     command.Parameters.AddWithValue("@idMiembroo", miembrito.IdMiembro);
                     command.Parameters.AddWithValue("@identificacion", string.IsNullOrWhiteSpace(miembroNuevo.Identificacion) ? (object)DBNull.Value : miembroNuevo.Identificacion);
                     command.Parameters.AddWithValue("@cif", string.IsNullOrWhiteSpace(miembroNuevo.CIF) ? (object)DBNull.Value : miembroNuevo.CIF);
@@ -266,28 +239,14 @@ namespace JaguarGymApp_Preview.Formularios
                     command.Parameters.AddWithValue("@apellidos", miembroNuevo.Apellidos ?? string.Empty);
                     command.Parameters.AddWithValue("@fechaNacimiento", miembroNuevo.FechaNac);
                     command.Parameters.AddWithValue("@fechaExp", miembroNuevo.FechaExp);
-
-                    // Condicionalmente asigna valores nulos para carrera y facultad
                     command.Parameters.AddWithValue("@carrera", miembroNuevo.Carrera ?? (object)DBNull.Value);
                     command.Parameters.AddWithValue("@facultad", miembroNuevo.Facultad ?? (object)DBNull.Value);
-
-
-
                     command.Parameters.AddWithValue("@genero", miembroNuevo.Genero);
                     command.Parameters.AddWithValue("@interno", miembroNuevo.Interno ? 1 : 0);
                     command.Parameters.AddWithValue("@colaborador", miembroNuevo.Colaborador ? 1 : 0);
-
-                    // Manejo condicional para `@cargo`
-                    // Si no es colaborador, asignamos null a cargo
                     command.Parameters.AddWithValue("@cargo", miembroNuevo.Colaborador ? (miembroNuevo.Cargo ?? string.Empty) : (object)DBNull.Value);
 
                     connection.Open();
-
-                    // Imprime los parámetros para depuración
-                    foreach (MySqlParameter param in command.Parameters)
-                    {
-                        Console.WriteLine($"{param.ParameterName}: {param.Value}");
-                    }
 
                     int rowsAffected = command.ExecuteNonQuery();
 
@@ -299,6 +258,7 @@ namespace JaguarGymApp_Preview.Formularios
                     {
                         MessageBox.Show("No se pudo actualizar el miembro.");
                     }
+                    connection.Close();
                 }
             }
             catch (Exception ex)
@@ -331,7 +291,6 @@ namespace JaguarGymApp_Preview.Formularios
                 return false;
             }
 
-            // Validar CheckBox (al menos uno seleccionado)
             if (!chkEstudiante.Checked && !chkColaborador.Checked && !chkExterno.Checked)
             {
                 MessageBox.Show("Debe seleccionar si el miembro es estudiante, colaborador o externo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -343,7 +302,6 @@ namespace JaguarGymApp_Preview.Formularios
                 return false;
             }
 
-            // Validar campo de Cargo si es colaborador
             if (chkColaborador.Checked && string.IsNullOrWhiteSpace(txtCargo.Text))
             {
                 MessageBox.Show("Debe ingresar un Cargo si selecciona Colaborador.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -357,7 +315,7 @@ namespace JaguarGymApp_Preview.Formularios
         {
             if (bloqueandoEventos) return;
 
-            bloqueandoEventos = true; // Bloquea otros eventos
+            bloqueandoEventos = true;
 
             lblCargo.Visible = false;
             txtCargo.Visible = false;
@@ -370,7 +328,7 @@ namespace JaguarGymApp_Preview.Formularios
             chkExterno.Checked = false;
             txtCargo.Text = "Estudiante";
 
-            bloqueandoEventos = false; // Desbloquea eventos
+            bloqueandoEventos = false;
         }
 
         private void chkExterno_CheckedChanged(object sender, EventArgs e)
@@ -434,7 +392,6 @@ namespace JaguarGymApp_Preview.Formularios
             {
                 if (cmbFacultad.SelectedValue != null && cmbFacultad.SelectedValue is int idFacultadSeleccionada)
                 {
-                    // Obtener las carreras según la facultad seleccionada
                     DataTable carreras = ObtenerCarrerasPorFacultad(idFacultadSeleccionada);
                     cmbCarrera.DataSource = carreras;
                     cmbCarrera.DisplayMember = "nombreCarrera";
@@ -451,9 +408,10 @@ namespace JaguarGymApp_Preview.Formularios
 
         private void LinkAtras_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Miembros_Activos mimebrosForm  = new Miembros_Activos();
+            Miembros_Activos mimebrosForm  = new Miembros_Activos(_idUsuario);
             this.Hide();
             mimebrosForm.ShowDialog();
+            this.Close();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -465,9 +423,10 @@ namespace JaguarGymApp_Preview.Formularios
                     Miembro nuevoMiembro = CrearMiembro();
                     EditarMiembro(nuevoMiembro);
 
-                    Miembros_Activos nuevoForm = new Miembros_Activos();
+                    Miembros_Activos nuevoForm = new Miembros_Activos(_idUsuario);
                     this.Hide();
                     nuevoForm.ShowDialog();
+                    this.Close();
                 }
                 catch (Exception ex)
                 {
@@ -475,17 +434,5 @@ namespace JaguarGymApp_Preview.Formularios
                 }
             }
         }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblidentificacion_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
     }
 }

@@ -31,7 +31,7 @@ namespace JaguarGymApp_Preview.Formularios
 
         private void Principal_Resize(object sender, EventArgs e)
         {
-            this.Size = new System.Drawing.Size(1080, 720); // Mantener el tamaño de la ventana fijo
+            this.Size = new System.Drawing.Size(1080, 720);
         }
 
         private void Crear_Cuenta_Load(object sender, EventArgs e)
@@ -42,39 +42,37 @@ namespace JaguarGymApp_Preview.Formularios
         private void AgregarUsuario()
         {
             string nombreUsuario = txtRegistroNombreCompleto.Text;
-            string correo = txtRegistroEmail.Text;  // Campo de Correo
-            string clave = txtPassword2.Text;  // Campo de Contraseña
+            string correo = txtRegistroEmail.Text;  
+            string clave = txtPassword2.Text;  
 
             string query = "INSERT INTO Usuario (nombreUsuario, correoElectronico, clave) VALUES (@nombre, @correo, @clave)";
 
             try
             {
-                // Establecemos la conexión
                 ConexionBD conn = new ConexionBD();
                 MySqlConnection data = new MySqlConnection(conn.GetConnector());
 
-                // Creamos la consulta con parámetros
                 MySqlCommand command = new MySqlCommand(query, data);
                 command.Parameters.AddWithValue("@nombre", nombreUsuario);
                 command.Parameters.AddWithValue("@correo", correo);
                 command.Parameters.AddWithValue("@clave", clave);
 
-                // Abrimos la conexión
                 data.Open();
 
-                // Ejecutamos la consulta de inserción
                 int rowsAffected = command.ExecuteNonQuery();
 
                 if (rowsAffected > 0)
                 {
+                    data.Close(); 
+                    MessageBox.Show("Usuario registrado exitosamente!");
                     Inicio_Sesion formularioInicioSesion = new Inicio_Sesion();
+                    this.Hide();
                     formularioInicioSesion.ShowDialog();
                     this.Close();
-                    MessageBox.Show("Usuario registrado exitosamente!");
-
                 }
                 else
                 {
+                    data.Close();
                     MessageBox.Show("Hubo un problema al registrar el usuario.");
                 }
             }
@@ -85,7 +83,6 @@ namespace JaguarGymApp_Preview.Formularios
         }
         private bool EsCorreoValido(string correo)
         {
-            // Expresión regular para correos que terminan en @uamv.edu.ni
             string patron = @"^[^@\s]+@uamv\.edu\.ni";
             return System.Text.RegularExpressions.Regex.IsMatch(correo, patron);
         }
@@ -95,39 +92,32 @@ namespace JaguarGymApp_Preview.Formularios
 
             errorProvider1.Clear();
 
-            // Limpiar errores anteriores
             errorProvider1.Clear();
 
-            // Lista para almacenar los errores de validación
             List<string> errores = new List<string>();
 
-            // Validación del campo nombre completo
             if (string.IsNullOrWhiteSpace(txtRegistroNombreCompleto.Text))
             {
                 errores.Add("El campo de nombre no puede estar vacío.");
                 errorProvider1.SetError(txtRegistroNombreCompleto, "El campo de nombre no puede estar vacío.");
             }
-            // Validación del campo Email
             if (string.IsNullOrWhiteSpace(txtRegistroEmail.Text))
             {
                 errores.Add("El campo de Email no puede estar vacío.");
                 errorProvider1.SetError(txtRegistroEmail, "El campo de Email no puede estar vacío.");
             }
-            else if (!EsCorreoValido(txtRegistroEmail.Text)) // Validar formato del correo específico
+            else if (!EsCorreoValido(txtRegistroEmail.Text))
             {
                 errores.Add("El correo electrónico debe tener el formato @uamv.edu.ni");
                 errorProvider1.SetError(txtRegistroEmail, "El correo electrónico debe tener el formato @uamv.edu.ni");
             }
 
-
-            // Validación del campo Contraseña
             if (string.IsNullOrWhiteSpace(txtPassword.Text))
             {
                 errores.Add("El campo de contraseña no puede estar vacío.");
                 errorProvider1.SetError(txtPassword, "El campo de contraseña no puede estar vacío.");
             }
 
-            // Validación de la confirmación de la Contraseña (Repetir contraseña)
             if (string.IsNullOrWhiteSpace(txtPassword2.Text))
             {
                 errores.Add("Debe confirmar la contraseña.");
@@ -139,10 +129,8 @@ namespace JaguarGymApp_Preview.Formularios
                 errorProvider1.SetError(txtPassword, "Las contraseñas no coinciden.");
             }
 
-            // Verificar si hay errores
             if (errores.Count > 0)
             {
-                // Mostrar los errores en una nueva pestaña o control
                 MostrarErrores(errores);
             }
             else
@@ -152,13 +140,9 @@ namespace JaguarGymApp_Preview.Formularios
 
         }
 
-        // Método para mostrar los errores en una pestaña o lista
         private void MostrarErrores(List<string> errores)
         {
-            // Unir todos los errores en una sola cadena separada por saltos de línea
             string mensajeErrores = string.Join(Environment.NewLine, errores);
-
-            // Mostrar el mensaje de errores en un cuadro emergente (MessageBox)
             MessageBox.Show(mensajeErrores, "Errores de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 

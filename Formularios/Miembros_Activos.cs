@@ -12,14 +12,16 @@ namespace JaguarGymApp_Preview.Formularios
 {
     public partial class Miembros_Activos : MaterialForm
     {
+        public int _idUsuario;
 
-        public Miembros_Activos()
+        public Miembros_Activos(int idUsuario)
         {
             InitializeComponent();
             this.Resize += new System.EventHandler(this.Principal_Resize);
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Teal500, Primary.Teal700, Primary.Teal300, Accent.LightBlue200, TextShade.WHITE);
             this.StartPosition = FormStartPosition.CenterScreen;
+            _idUsuario = idUsuario;
         }
 
         public void Principal_Resize(object sender, EventArgs e)
@@ -41,7 +43,35 @@ namespace JaguarGymApp_Preview.Formularios
                 {
                     conn.Open();
 
-                    string query = "SELECT \r\n m.idMiembro AS 'ID',\r\n m.cif AS 'CIF', m.identificacion AS 'Identificación',\r\n    m.nombres AS 'Nombres',\r\n    m.apellidos AS 'Apellidos',\r\n    CASE \r\n        WHEN m.genero = 1 THEN 'Masculino' \r\n        ELSE 'Femenino' \r\n    END AS 'Genero',\r\n m.fechaNacimiento AS 'Fecha de Nacimiento'\r\n ,   f.nombreFacultad AS 'Facultad',\r\n    c.nombreCarrera AS 'Carrera',\r\n m.fechaExp AS 'Membresia Expira', \r\n    CASE \r\n        WHEN m.interno = 1 THEN 'Sí' \r\n        ELSE 'No' \r\n    END AS 'Interno',\r\n    CASE \r\n        WHEN m.colaborador = 1 THEN 'Sí' \r\n        ELSE 'No' \r\n    END AS 'Colaborador',\r\n    m.cargo AS 'Cargo'\r\nFROM \r\n    Miembro m\r\nLEFT JOIN Facultad f ON m.idfacultad = f.idFacultad\r\nLEFT JOIN Carrera c ON m.idcarrera = c.idCarrera;";
+                    string query = @"
+                    SELECT 
+                        m.idMiembro AS 'ID',
+                        m.cif AS 'CIF', 
+                        m.identificacion AS 'Identificación',
+                        m.nombres AS 'Nombres',
+                        m.apellidos AS 'Apellidos',
+                        CASE 
+                            WHEN m.genero = 1 THEN 'Masculino' 
+                            ELSE 'Femenino' 
+                        END AS 'Genero', 
+                        m.fechaNacimiento AS 'Fecha de Nacimiento',
+                        f.nombreFacultad AS 'Facultad',
+                        c.nombreCarrera AS 'Carrera', 
+                        m.fechaExp AS 'Membresia Expira', 
+                        CASE 
+                            WHEN m.interno = 1 THEN 'Sí' 
+                            ELSE 'No' 
+                        END AS 'Interno',
+                        CASE 
+                            WHEN m.colaborador = 1 THEN 'Sí' 
+                            ELSE 'No' 
+                        END AS 'Colaborador',
+                        m.cargo AS 'Cargo'
+                    FROM 
+                        Miembro m
+                    LEFT JOIN Facultad f ON m.idfacultad = f.idFacultad
+                    LEFT JOIN Carrera c ON m.idcarrera = c.idCarrera;
+                    ";
                     MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
                     DataTable table = new DataTable();
                     adapter.Fill(table);
@@ -81,19 +111,10 @@ namespace JaguarGymApp_Preview.Formularios
             }
         }
 
-
-        public void btnAgregar_Click(object sender, EventArgs e)
-        {
-            Agregar_Miembros formulario2 = new Agregar_Miembros();
-            formulario2.ShowDialog();
-            this.Close();
-        }
-
-
         public void btnBuscar_Click(object sender, EventArgs e)
         {
-            string filtroSeleccionado = cmbFiltro.SelectedItem.ToString(); // Obtener el criterio seleccionado
-            string criterioBusqueda = txtBuscar.Text.Trim();     // Obtener el texto a buscar
+            string filtroSeleccionado = cmbFiltro.SelectedItem.ToString();
+            string criterioBusqueda = txtBuscar.Text.Trim();
 
             if (string.IsNullOrEmpty(criterioBusqueda))
             {
@@ -156,7 +177,7 @@ namespace JaguarGymApp_Preview.Formularios
                     if (resultados.Rows.Count == 0)
                     {
                         MessageBox.Show("No se ha encontrado ningún registro que cumpla el criterio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        
+
                     }
 
                     connection.Close();
@@ -164,15 +185,24 @@ namespace JaguarGymApp_Preview.Formularios
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al realizar la búsqueda: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);;
+                MessageBox.Show($"Error al realizar la búsqueda: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); ;
             }
 
 
         }
 
+        public void btnAgregar_Click(object sender, EventArgs e)
+        {
+            Agregar_Miembros formulario2 = new Agregar_Miembros(_idUsuario);
+            this.Hide();
+            formulario2.ShowDialog();
+            this.Close();
+        }
+
         public void LinkAtras_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Principal formularioPrincipal = new Principal(0);
+            Principal formularioPrincipal = new Principal(_idUsuario);
+            this.Hide();
             formularioPrincipal.ShowDialog();
             this.Close();
         }
@@ -182,9 +212,9 @@ namespace JaguarGymApp_Preview.Formularios
         {
             Miembro miembro = null;
             string query = @"
-    SELECT * 
-    FROM Miembro 
-    WHERE idMiembro = @idMiembro;";
+            SELECT * 
+            FROM Miembro 
+            WHERE idMiembro = @idMiembro;";
 
             try
             {
@@ -230,32 +260,23 @@ namespace JaguarGymApp_Preview.Formularios
 
         public void dgvMiembros_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Verificar que no sea el encabezado
+
             if (e.RowIndex >= 0)
             {
-                // Obtener el ID del miembro seleccionado
+      
                 int idMiembro = Convert.ToInt32(dgvMiembros.Rows[e.RowIndex].Cells["ID"].Value);
                 DataGridViewRow filaSeleccionada = dgvMiembros.Rows[e.RowIndex];
                 Miembro miembroSeleccionado = ObtenerDatosMiembroPorId(idMiembro);
-                // Recuperar datos del miembro desde la base de datos
+
                 if (miembroSeleccionado != null)
                 {
-                    // Abrir el formulario Editar_Miembros
-                    Editar_Miembros editarMiembrosForm = new Editar_Miembros(miembroSeleccionado);
+
+                    Editar_Miembros editarMiembrosForm = new Editar_Miembros(miembroSeleccionado, _idUsuario);
                     this.Hide();
                     editarMiembrosForm.ShowDialog();
+                    this.Close();
                 }
             }
-        }
-
-        public void RecargarMiembros()
-        {
-            Actualizardata(); // Método que carga los datos en el DataGridView
-        }
-
-        private void dgvMiembros_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

@@ -590,7 +590,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1080, 720);
-            this.MinimumSize = new System.Drawing.Size(1023, 583);
+            this.MinimumSize = new System.Drawing.Size(1080, 718);
             this.Name = "Agregar_Miembros";
             this.Padding = new System.Windows.Forms.Padding(2, 52, 2, 2);
             this.Text = "Agregar Miembros";

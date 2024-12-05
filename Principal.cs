@@ -24,7 +24,7 @@ namespace JaguarGymApp_Preview
         private MySqlConnection data;
         private MySqlConnection dataMembresia;
         private MySqlConnection dataTop;
-        private int _idUsuario;
+        public int _idUsuario;
 
         public Principal(int idUsuario)
         {
@@ -72,20 +72,20 @@ namespace JaguarGymApp_Preview
         }
         private void imgBtn_Pagos_Click(object sender, EventArgs e)
         {
-            Gestion_Pagos formularioPagos = new Gestion_Pagos();
+            Gestion_Pagos formularioPagos = new Gestion_Pagos(_idUsuario);
             formularioPagos.Show();
             this.Hide();
         }
 
         private void imgBtn_Miembros_Click(object sender, EventArgs e)
         {
-            Miembros_Activos formularioMiembros = new Miembros_Activos(); // Cambia a tu formulario
+            Miembros_Activos formularioMiembros = new Miembros_Activos(_idUsuario); // Cambia a tu formulario
             this.Hide();
             formularioMiembros.Show();
         }
         private void btn_Miembros_Click(object sender, EventArgs e)
         {
-            Miembros_Activos formularioMiembros = new Miembros_Activos(); // Cambia a tu formulario
+            Miembros_Activos formularioMiembros = new Miembros_Activos(_idUsuario); // Cambia a tu formulario
             this.Hide();
             formularioMiembros.Show();
         }
@@ -109,7 +109,7 @@ namespace JaguarGymApp_Preview
         }
         private void btn_Pagos_Click(object sender, EventArgs e)
         {
-            Gestion_Pagos formularioPagos = new Gestion_Pagos();
+            Gestion_Pagos formularioPagos = new Gestion_Pagos(_idUsuario);
             formularioPagos.Show();
             this.Hide();
         }

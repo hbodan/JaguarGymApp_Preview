@@ -15,6 +15,7 @@ using estadisticasForm;
 using MySql.Data.MySqlClient;
 using JaguarGymApp_Preview.Servicios;
 using System.Windows.Markup;
+using Guna.UI2.WinForms.Suite;
 
 
 namespace JaguarGymApp_Preview.Formularios
@@ -22,10 +23,9 @@ namespace JaguarGymApp_Preview.Formularios
     public partial class Ingresar_Pago : MaterialForm
     {
         private MySqlConnection dataPagos;
-        private List<Pago> pagosRecibidos;
-        private Gestion_Pagos formularioAnterior;
+        public int _idUsuario;
 
-        public Ingresar_Pago(List<Pago> lista, Gestion_Pagos formulario)
+        public Ingresar_Pago(int idUsuario)
         {
             ConexionBD connPagos = new ConexionBD();
             dataPagos = new MySqlConnection(connPagos.GetConnector());
@@ -34,54 +34,7 @@ namespace JaguarGymApp_Preview.Formularios
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Teal500, Primary.Teal700, Primary.Teal300, Accent.LightBlue200, TextShade.WHITE);
             this.StartPosition = FormStartPosition.CenterScreen;
-            this.pagosRecibidos = lista;
-            this.formularioAnterior = formulario;
-
-        }
-
-        private void ToDataBase(Miembro miembro)
-        {
-            string queryPagos = @"INSERT INTO Pago 
-         (idTransaccion, fechaRealizacion, descripcion, monto, observacion, idUsuario, idMiembro) 
-         VALUES 
-         (@idTransaccion, @fechaRealizacion, @descripcion, @monto, @observacion, @idUsuario, @idMiembro)";
-
-            try
-            {
-                using (dataPagos)
-                {
-                   
-                    MySqlCommand commandPagos = new MySqlCommand(queryPagos, dataPagos);
-
-                    // Validar datos antes de asignar
-                    commandPagos.Parameters.AddWithValue("@idTransaccion", txtIdTransaccion.Text ?? string.Empty);
-                    commandPagos.Parameters.AddWithValue("@fechaRealizacion", dtPickerFecha);
-                    commandPagos.Parameters.AddWithValue("@descripcion", nudMesesPagados.ValueNumber.ToString() ?? string.Empty);
-                    commandPagos.Parameters.AddWithValue("@monto", decimal.Parse(txtMonto.Text));
-                    commandPagos.Parameters.AddWithValue("@observacion", txtObservacion.Text ?? string.Empty);
-                    commandPagos.Parameters.AddWithValue("@idUsuario", 1);
-                    commandPagos.Parameters.AddWithValue("@idMiembro", 2);
-
-                    dataPagos.Open();
-                    int rowsAffected = commandPagos.ExecuteNonQuery();
-
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show("Pago registrado correctamente.");
-                        dataPagos.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("No se pudo registrar el pago.");
-                        dataPagos.Close();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error al guardar el pago en la base de datos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                dataPagos.Close();
-            }
+            _idUsuario = idUsuario;
         }
 
         private void Principal_Resize(object sender, EventArgs e)
@@ -91,15 +44,69 @@ namespace JaguarGymApp_Preview.Formularios
 
         private void Ingresar_Pago_Load(object sender, EventArgs e)
         {
-
+            ActualizarData();
+            dtPickerFecha.Value = DateTime.Now;
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        public void ToDataBase(Pago pagoNuevo)
+        {
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(new ConexionBD().GetConnector()))
+                {
+                    conn.Open();
+
+
+                    string query = @"INSERT INTO Pago (IdTransaccion, FechaRealizacion, Descripcion, Monto, Observacion, IdUsuario, IdMiembro)
+                                     VALUES (@IdTransaccion, @FechaRealizacion, @Descripcion, @Monto, @Observacion, @IdUsuario, @IdMiembro)";
+
+                    MySqlCommand command = new MySqlCommand(query, conn);
+
+                    command.Parameters.AddWithValue("@IdTransaccion", pagoNuevo.IdTransaccion);
+                    command.Parameters.AddWithValue("@FechaRealizacion", pagoNuevo.FechaRealizacion);
+                    command.Parameters.AddWithValue("@Descripcion", pagoNuevo.Descripcion);
+                    command.Parameters.AddWithValue("@Monto", pagoNuevo.Monto);
+                    command.Parameters.AddWithValue("@Observacion", pagoNuevo.Observacion);
+                    command.Parameters.AddWithValue("@IdUsuario",   pagoNuevo.IdUsuario);
+                    command.Parameters.AddWithValue("@IdMiembro", pagoNuevo.IdMiembro);
+
+                    command.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al insertar en la base de datos: " + ex.Message);
+            }
+        }
+
+        private Pago CrearPago()
         {
 
+            string idTransaccion = txtIdTransaccion.Text; 
+            DateTime fechaRealizacion = dtPickerFecha.Value;
+
+
+            string descripcion = $"{nudMesesPagados.ValueNumber} Mes/Meses Pagados";
+            decimal monto = decimal.Parse(txtMonto.Text);
+            string observacion = string.IsNullOrWhiteSpace(txtObservacion.Text) ? null : txtObservacion.Text;
+            int idUsuario = 1; 
+            int idMiembro = int.Parse(txtMiembroSeleccionado.Tag.ToString()); 
+
+
+            return new Pago(
+                idPago: _idUsuario,
+                idTransaccion: idTransaccion,
+                fechaRealizacion: fechaRealizacion,
+                descripcion: descripcion,
+                monto: monto,
+                observacion: observacion,
+                idUsuario: idUsuario,
+                idMiembro: idMiembro
+            );
         }
 
-        private void AgregarPago()
+        public bool ValidacionLlenado()
         {
          
 
@@ -107,204 +114,168 @@ namespace JaguarGymApp_Preview.Formularios
             if (string.IsNullOrEmpty(idTransaccion))
             {
                 MessageBox.Show("El ID de transacción no puede estar vacío.");
-                return;
+                return false;
             }
 
             if (!DateTime.TryParse(dtPickerFecha.Text, out DateTime fechaRealizacion))
             {
                 MessageBox.Show("Por favor, selecciona una fecha válida.");
-                return;
+                return false;
             }
 
             int mesesPagados = (int)nudMesesPagados.ValueNumber; // Obtenemos el valor del NumericUpDown
             if (mesesPagados < 1 || mesesPagados > 12)
             {
                 MessageBox.Show("El número de meses pagados debe estar entre 1 y 12.");
-                return;
+                return false;
             }
 
             if (string.IsNullOrWhiteSpace(txtMonto.Text) || !decimal.TryParse(txtMonto.Text, out decimal monto) || monto <= 0)
             {
                 MessageBox.Show("Por favor, ingresa un monto válido mayor a 0.");
-                return;
+                return false;
             }
 
             string observacion = txtObservacion.Text.Trim();
             if (observacion.Length > 500)
             {
                 MessageBox.Show("La observación no puede exceder los 500 caracteres.");
-                return;
+                return false;
             }
 
-            if (string.IsNullOrWhiteSpace(txtBuscarMiembro.Text) || !int.TryParse(txtBuscarMiembro.Text, out int idMiembro))
+            return true;
+
+        }
+
+        private void AgregarPago()
+        {
+            if (ValidacionLlenado())
             {
-                MessageBox.Show("Por favor, ingresa un ID de miembro válido.");
-                return;
+                try
+                {
+                    Pago nuevoPago = CrearPago();
+                    ToDataBase(nuevoPago);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-
-
-            // Agregar el pago a la lista
-            pagosRecibidos.Add(new Pago(1, idTransaccion, fechaRealizacion, "probando", monto, observacion, idMiembro, 1));
-
-            MessageBox.Show("Pago registrado correctamente.");
-
-        }
-
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            AgregarPago();
-            LimpiarCampos();
-            formularioAnterior.RecibirDatos(pagosRecibidos);
-            this.Close();
-        }
-
-        private void LimpiarCampos()
-        {
-            txtIdTransaccion.Text = "";
-            nudMesesPagados.ValueNumber = 1;
-            txtMonto.Text = "";
-            txtObservacion.Text = "";
-            txtBuscarMiembro.Text = "";
-        }
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCarrera_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void LinkAtras_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            formularioAnterior.RecibirDatos(pagosRecibidos);
+            Gestion_Pagos formGestionPago = new Gestion_Pagos(_idUsuario);
+            this.Hide();
+            formGestionPago.ShowDialog();
             this.Close();
         }
 
-        private void txtIdPago_TextChanged(object sender, EventArgs e)
+        private void btnAgregar_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void txtIdTransaccion_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtFechaRealizacion_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtDescripcion_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtMonto_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtObservacion_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtIdMiembro_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void nudMesesPagados_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtBuscarMiembro_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvMiembros_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // Verificar que se haya seleccionado una fila válida
-            if (e.RowIndex >= 0)
+            if (ValidacionLlenado())
             {
-                // Obtener los datos de la fila seleccionada
-                var miembroSeleccionado = (Miembro)dgvMiembros.Rows[e.RowIndex].DataBoundItem;
+                 AgregarPago();
+                Gestion_Pagos formGestionPago = new Gestion_Pagos(_idUsuario);
+                this.Hide();
+                formGestionPago.ShowDialog();
+                this.Close();
 
-                // Actualizar el TextBox con el nombre completo del miembro seleccionado
-                txtMiembroSeleccionado.Text = $"Miembro: {miembroSeleccionado.Nombres} {miembroSeleccionado.Apellidos}";
+            }
+        }
 
-                // Actualizar el campo ID miembro
-                txtBuscarMiembro.Text = miembroSeleccionado.Identificacion;
+        public void ActualizarData()
+        {
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(new ConexionBD().GetConnector()))
+                {
+                    conn.Open();
+
+                    string query = "SELECT " +
+                                   "m.idMiembro AS 'ID', " +
+                                   "m.cif AS 'CIF', " +
+                                   "m.identificacion AS 'Identificación', " +
+                                   "CONCAT(m.nombres, ' ', m.apellidos) AS 'Nombre' " +  
+                                   "FROM Miembro m;";
+
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
+                    DataTable table = new DataTable();
+                    adapter.Fill(table);
+
+                    dgvMiembros.DataSource = table;
+
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar datos: " + ex.Message);
             }
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-              // Obtener el texto de búsqueda
-            string criterio = txtBuscarMiembro.Text.Trim().ToLower();
 
-            // Simular la búsqueda en una lista de miembros (reemplazar por datos reales)
-            List<Miembro> listaMiembros = ObtenerMiembros(); // Implementar método para obtener miembros
+            string criterioBusqueda = txtBuscarMiembro.Text.Trim();
 
-            // Filtrar los resultados por ID o CIF
-            var resultados = listaMiembros.Where(m =>
-                m.Identificacion.ToLower().Contains(criterio) ||
-                m.CIF.ToLower().Contains(criterio)).ToList();
-
-            // Mostrar los resultados en el DataGridView
-            dgvMiembros.DataSource = resultados;
-
-            if (resultados.Count == 0)
+            if (string.IsNullOrEmpty(criterioBusqueda))
             {
-                MessageBox.Show("No se encontraron coincidencias.");
+                ActualizarData();
+                return;
+            }
+
+
+            string query = "SELECT " +
+                           "m.idMiembro AS 'ID', " +
+                           "m.cif AS 'CIF', " +
+                           "m.identificacion AS 'Identificación', " +
+                           "CONCAT(m.nombres, ' ', m.apellidos) AS 'Nombre' " + 
+                           "FROM Miembro m " +
+                           "WHERE m.identificacion LIKE @criterio OR m.cif LIKE @criterio;";
+
+            try
+            {
+                ConexionBD conn = new ConexionBD();
+                using (MySqlConnection connection = new MySqlConnection(conn.GetConnector()))
+                {
+                    connection.Open();
+                    MySqlCommand command = new MySqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@criterio", "%" + criterioBusqueda + "%");
+
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                    DataTable resultados = new DataTable();
+                    adapter.Fill(resultados);
+
+                    dgvMiembros.DataSource = resultados;
+
+                    if (resultados.Rows.Count == 0)
+                    {
+                        MessageBox.Show("No se ha encontrado ningún registro que cumpla el criterio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    }
+
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al realizar la búsqueda: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); ;
             }
         }
 
-        // Método para obtener miembros (puedes reemplazarlo con una consulta real a la base de datos)
-        private List<Miembro> ObtenerMiembros()
+        private void dgvMiembros_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            return new List<Miembro>
+            if (e.RowIndex >= 0)
             {
-                new Miembro(1, "12345678", "CIF001", "Juan", "Pérez", DateTime.Now.AddYears(-25), DateTime.Now.AddYears(-5),
-                1, 1, true, true, false, "Estudiante"),
-                new Miembro(2, "87654321", "CIF002", "María", "López", DateTime.Now.AddYears(-22), DateTime.Now.AddYears(-4),
-                1, 1, false, false, true, "Colaboradora")
-            };
-        }
+                string nombreCompleto = dgvMiembros.Rows[e.RowIndex].Cells["Nombre"].Value.ToString();
 
-        private void label7_Click(object sender, EventArgs e)
-        {
+                txtMiembroSeleccionado.Text = nombreCompleto;
 
-        }
-
-        private void lblMiembroSeleccionado_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblMesesPagados_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2GradientPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
+                string idMiembro = dgvMiembros.Rows[e.RowIndex].Cells["ID"].Value.ToString();
+                txtMiembroSeleccionado.Tag = idMiembro;
+            }
         }
     }
 }

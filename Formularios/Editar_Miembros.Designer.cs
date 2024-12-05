@@ -164,7 +164,6 @@
             this.label6.Size = new System.Drawing.Size(256, 26);
             this.label6.TabIndex = 57;
             this.label6.Text = "Edición de Miembro";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // groupBox1
             // 
@@ -433,7 +432,6 @@
             this.lblidentificacion.Size = new System.Drawing.Size(132, 18);
             this.lblidentificacion.TabIndex = 84;
             this.lblidentificacion.Text = "Identificacion:";
-            this.lblidentificacion.Click += new System.EventHandler(this.lblidentificacion_Click);
             // 
             // label3
             // 

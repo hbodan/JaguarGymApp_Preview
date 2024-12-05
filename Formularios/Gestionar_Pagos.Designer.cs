@@ -54,7 +54,6 @@
             this.lblPagos.Size = new System.Drawing.Size(92, 32);
             this.lblPagos.TabIndex = 13;
             this.lblPagos.Text = "Pagos";
-            this.lblPagos.Click += new System.EventHandler(this.lblPagos_Click);
             // 
             // btnVerPagos
             // 
@@ -73,7 +72,6 @@
             this.btnVerPagos.Size = new System.Drawing.Size(135, 37);
             this.btnVerPagos.TabIndex = 12;
             this.btnVerPagos.Text = "Ver Pagos";
-            this.btnVerPagos.Click += new System.EventHandler(this.btnVerPagos_Click);
             // 
             // btnAgregar
             // 
@@ -134,7 +132,6 @@
             this.txtBuscar.SelectedText = "";
             this.txtBuscar.Size = new System.Drawing.Size(287, 39);
             this.txtBuscar.TabIndex = 9;
-            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // dgvPagos
             // 
@@ -188,7 +185,6 @@
             this.dgvPagos.ThemeStyle.RowsStyle.Height = 24;
             this.dgvPagos.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvPagos.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvPagos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPagos_CellContentClick);
             // 
             // statusStrip1
             // 

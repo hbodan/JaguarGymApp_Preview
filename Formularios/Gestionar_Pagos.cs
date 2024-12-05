@@ -18,22 +18,22 @@ namespace JaguarGymApp_Preview.Formularios
 {
     public partial class Gestion_Pagos : MaterialForm
     {
-        List<Pago> pagos;
-        public Gestion_Pagos()
+
+        public int _idUsuario;
+
+        public Gestion_Pagos(int IdUsuario)
         {
             InitializeComponent();
             this.Resize += new System.EventHandler(this.Principal_Resize);
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Teal500, Primary.Teal700, Primary.Teal300, Accent.LightBlue200, TextShade.WHITE);
             this.StartPosition = FormStartPosition.CenterScreen;
-
-
-            ActualizarData();
-          
+            _idUsuario = IdUsuario;
         }
+
         private void Principal_Resize(object sender, EventArgs e)
         {
-            this.Size = new System.Drawing.Size(1080, 720); // Mantener el tamaño de la ventana fijo
+            this.Size = new System.Drawing.Size(1080, 720);
         }
 
         private void Pagos_Load(object sender, EventArgs e)
@@ -42,110 +42,6 @@ namespace JaguarGymApp_Preview.Formularios
             ConteoPagos();
         }
 
-
-        private void ConteoPagos()
-        {
-            try
-            {
-                // Crear una conexión con la base de datos
-                ConexionBD conn = new ConexionBD();
-                using (MySqlConnection connection = new MySqlConnection(conn.GetConnector()))
-                {
-                    connection.Open(); // Abrir la conexión
-                    string query = "SELECT COUNT(*) FROM Pago"; // Consulta SQL para contar los registros
-
-                    using (MySqlCommand command = new MySqlCommand(query, connection))
-                    {
-                        // Ejecutar la consulta y obtener el resultado
-                        int totalMiembros = Convert.ToInt32(command.ExecuteScalar());
-
-                        // Mostrar el total en el ToolStripStatusLabel
-                        toolStripStatusLabel1.Text = $"Total de Pagos: {totalMiembros}";
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                // Manejo de errores
-                MessageBox.Show($"Error al contar los pagos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        private void txtBuscar_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            string criterioBusqueda = txtBuscar.Text.Trim();  // Obtener el texto a buscar
-
-            if (string.IsNullOrEmpty(criterioBusqueda))
-            {
-                ActualizarData();  // Asumiendo que esta es la función para recargar los datos
-                return;
-            }
-
-            string query = "SELECT * FROM Pago WHERE idTransaccion LIKE @criterio";
-
-            // Ejecutar la consulta
-            try
-            {
-                ConexionBD conn = new ConexionBD();
-                using (MySqlConnection connection = new MySqlConnection(conn.GetConnector()))
-                {
-                    connection.Open();
-                    MySqlCommand command = new MySqlCommand(query, connection);
-                    command.Parameters.AddWithValue("@criterio", "%" + criterioBusqueda + "%");
-
-                    MySqlDataAdapter adapter = new MySqlDataAdapter(command);
-                    DataTable resultados = new DataTable();
-                    adapter.Fill(resultados);
-
-                    // Asumiendo que tienes un DataGridView para mostrar resultados
-                    dgvPagos.DataSource = resultados;
-
-                    if (resultados.Rows.Count == 0)
-                    {
-                        MessageBox.Show("No se ha encontrado ningún registro que cumpla el criterio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error al realizar la búsqueda: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-        }
-
-        private void dgvPagos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            Ingresar_Pago nuevoFormulario = new Ingresar_Pago(pagos, this);
-            nuevoFormulario.Show();
-            this.Hide();
-
-        }
-
-        public void RecibirDatos(List<Pago> datosActualizados)
-        {
-            pagos = datosActualizados;
-            this.Show();
-            ActualizarData();
-            ConteoPagos();
-        }
-        private void btnVerPagos_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblPagos_Click(object sender, EventArgs e)
-        {
-
-        }
         private void ActualizarData()
         {
             try
@@ -175,6 +71,7 @@ namespace JaguarGymApp_Preview.Formularios
                     adapter.Fill(table);
 
                     dgvPagos.DataSource = table;
+                    conn.Close();
                 }
             }
             catch (Exception ex)
@@ -182,6 +79,92 @@ namespace JaguarGymApp_Preview.Formularios
                 MessageBox.Show("Error al cargar datos: " + ex.Message);
             }
         }
+
+        private void ConteoPagos()
+        {
+            try
+            {
+
+                ConexionBD conn = new ConexionBD();
+                using (MySqlConnection connection = new MySqlConnection(conn.GetConnector()))
+                {
+                    connection.Open(); 
+                    string query = "SELECT COUNT(*) FROM Pago"; 
+
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        int totalMiembros = Convert.ToInt32(command.ExecuteScalar());
+
+
+                        toolStripStatusLabel1.Text = $"Total de Pagos: {totalMiembros}";
+                    }
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al contar los pagos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string criterioBusqueda = txtBuscar.Text.Trim();  
+
+            if (string.IsNullOrEmpty(criterioBusqueda))
+            {
+                ActualizarData();  
+                return;
+            }
+
+            string query = "SELECT * FROM Pago WHERE idTransaccion LIKE @criterio";
+
+            try
+            {
+                ConexionBD conn = new ConexionBD();
+                using (MySqlConnection connection = new MySqlConnection(conn.GetConnector()))
+                {
+                    connection.Open();
+                    MySqlCommand command = new MySqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@criterio", "%" + criterioBusqueda + "%");
+
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                    DataTable resultados = new DataTable();
+                    adapter.Fill(resultados);
+
+
+                    dgvPagos.DataSource = resultados;
+
+                    if (resultados.Rows.Count == 0)
+                    {
+                        MessageBox.Show("No se ha encontrado ningún registro que cumpla el criterio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al realizar la búsqueda: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            Ingresar_Pago nuevoFormulario = new Ingresar_Pago(_idUsuario);
+            this.Hide();
+            nuevoFormulario.Show();
+            this.Close();
+        }
+
+        private void LinkAtras_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Principal formularioPrincipal = new Principal(_idUsuario);
+            this.Hide();
+            formularioPrincipal.Show();
+            this.Close();
+        }
+
 
         private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
@@ -193,11 +176,6 @@ namespace JaguarGymApp_Preview.Formularios
             MessageBox.Show("Este es el monto total de todos los pagos registrados.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void LinkAtras_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Principal formularioPrincipal = new Principal(0);
-            formularioPrincipal.Show();
-            this.Hide();
-        }
+       
     }
 }
