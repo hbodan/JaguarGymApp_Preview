@@ -9,6 +9,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using JaguarGymApp_Preview.Estructuras;
 using JaguarGymApp_Preview.Servicios;
 using MaterialSkin;
 using MaterialSkin.Controls;
@@ -19,8 +20,9 @@ namespace JaguarGymApp_Preview.Formularios
     public partial class Configuracion : MaterialForm
     {
         private MySqlConnection data;
+        public int _idUsuario;
 
-        public Configuracion()
+        public Configuracion(int idUsuario)
         {
             
             ConexionBD conn = new ConexionBD();
@@ -30,6 +32,7 @@ namespace JaguarGymApp_Preview.Formularios
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Teal500, Primary.Teal700, Primary.Teal300, Accent.LightBlue200, TextShade.WHITE);
             this.StartPosition = FormStartPosition.CenterScreen;
+            _idUsuario = idUsuario;
         }
         private void Principal_Resize(object sender, EventArgs e)
         {
@@ -70,7 +73,8 @@ namespace JaguarGymApp_Preview.Formularios
 
         private void regreso_Principal_Click(object sender, EventArgs e)
         {
-            Principal formularioPrincipal = new Principal(0);
+            Principal formularioPrincipal = new Principal(_idUsuario);
+            this.Hide();
             formularioPrincipal.Show();
             this.Close();
         }
@@ -108,6 +112,7 @@ namespace JaguarGymApp_Preview.Formularios
                          
                         }
                     }
+                    data.Close();
                 }
             }
             catch (MySqlException sqlEx)
@@ -162,6 +167,7 @@ namespace JaguarGymApp_Preview.Formularios
                             MessageBox.Show("Hubo un problema al registrar el usuario.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
+                    data.Close();
                 }
             }
             catch (Exception ex)
@@ -263,6 +269,7 @@ namespace JaguarGymApp_Preview.Formularios
                             MessageBox.Show("No se pudo actualizar el registro.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
+                    conn.Close();
                 }
             }
             catch (Exception ex)
@@ -384,6 +391,8 @@ namespace JaguarGymApp_Preview.Formularios
                                 MessageBox.Show("No se pudo eliminar el registro.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
+
+                        conn.Close();
                     }
                 }
             }

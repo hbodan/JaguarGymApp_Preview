@@ -89,8 +89,7 @@ namespace JaguarGymApp_Preview.Formularios
 
             string descripcion = $"{nudMesesPagados.ValueNumber} Mes/Meses Pagados";
             decimal monto = decimal.Parse(txtMonto.Text);
-            string observacion = string.IsNullOrWhiteSpace(txtObservacion.Text) ? null : txtObservacion.Text;
-            int idUsuario = 1; 
+            string observacion = string.IsNullOrWhiteSpace(txtObservacion.Text) ? null : txtObservacion.Text; 
             int idMiembro = int.Parse(txtMiembroSeleccionado.Tag.ToString()); 
 
 

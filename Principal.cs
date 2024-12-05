@@ -59,9 +59,10 @@ namespace JaguarGymApp_Preview
 
         private void guna2ImageButton1_Click(object sender, EventArgs e)
         {
-            Configuracion iniciarFormulario = new Configuracion();
-            iniciarFormulario.Show();
+            Configuracion iniciarFormulario = new Configuracion(_idUsuario);
             this.Hide();
+            iniciarFormulario.Show();
+            this.Close();
         }
 
         private void guna2GroupBox1_Click(object sender, EventArgs e)
