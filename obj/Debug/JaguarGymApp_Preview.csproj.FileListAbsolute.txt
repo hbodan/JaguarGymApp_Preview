@@ -647,3 +647,4 @@ C:\Users\Andre\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formu
 C:\Users\Andre\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Gestion_Pagos.resources
 C:\Users\Andre\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Miembros_Activos.resources
 C:\Users\Andre\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.FormulariosReportes.FrmReportePagos.resources
+C:\Users\hebod\OneDrive\Escritorio\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.FormulariosReportes.FrmReportePagos.resources
