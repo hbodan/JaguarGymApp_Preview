@@ -106,7 +106,9 @@ namespace JaguarGymApp_Preview.Formularios
         {
             Recuperar_Credenciales formularioRecuperar = new Recuperar_Credenciales();
             this.Hide();
+
             formularioRecuperar.Show();
+
         }
 
         private void imgbtn_Escaner_Click(object sender, EventArgs e)

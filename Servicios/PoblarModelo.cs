@@ -84,11 +84,11 @@ namespace estadisticasForm
                                 fechaNac: Convert.ToDateTime(reader["fechaNacimiento"]),
                                 fechaExp: Convert.ToDateTime(reader["fechaExp"]),
                                 genero: Convert.ToBoolean(reader["genero"]),
-                                carrera: Convert.ToString(reader["idCarrera"]),
+                                carrera: Convert.ToInt32(reader["idCarrera"]),
                                 interno: Convert.ToBoolean(reader["interno"]),
                                 colaborador: Convert.ToBoolean(reader["colaborador"]),
                                 cargo: reader["cargo"].ToString(),
-                                facultad: Convert.ToString(reader["idFacultad"])
+                                facultad: Convert.ToInt32(reader["idFacultad"])
                             ));
                         }
                     }
