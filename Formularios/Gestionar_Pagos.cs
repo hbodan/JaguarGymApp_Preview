@@ -9,9 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using JaguarGymApp_Preview.Estructuras;
 using JaguarGymApp_Preview.Formularios;
+using JaguarGymApp_Preview.FormulariosReportes;
 using JaguarGymApp_Preview.Servicios;
 using MaterialSkin;
 using MaterialSkin.Controls;
+using Microsoft.Reporting.WinForms;
 using MySql.Data.MySqlClient;
 
 namespace JaguarGymApp_Preview.Formularios
@@ -176,6 +178,83 @@ namespace JaguarGymApp_Preview.Formularios
             MessageBox.Show("Este es el monto total de todos los pagos registrados.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-       
+        private void btnVerPagos_Click(object sender, EventArgs e)
+        {
+            List<PagoReporte> lista = new List<PagoReporte>();
+
+            string query = @"
+     SELECT 
+            p.idPago AS 'ID Pago',
+            p.idTransaccion AS 'ID Transacción',
+            p.fechaRealizacion AS 'Fecha Realización',
+            p.descripcion AS 'Descripción',
+            p.monto AS 'Monto',
+            p.observacion AS 'Observación',
+            u.nombreUsuario AS 'Nombre Usuario',
+            CONCAT(m.nombres, ' ', m.apellidos) AS 'Nombre Miembro'
+        FROM 
+            Pago p
+        INNER JOIN 
+            Usuario u ON p.idUsuario = u.idUsuario
+        INNER JOIN
+            Miembro m ON p.idMiembro = m.idMiembro;
+    ";
+
+            ConexionBD conn = new ConexionBD();
+            using (MySqlConnection connection = new MySqlConnection(conn.GetConnector()))
+            {
+                MySqlCommand command = new MySqlCommand(query, connection);
+
+                try
+                {
+                    connection.Open();
+                    MySqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        PagoReporte pago = new PagoReporte
+                        {
+                            idPago = reader.GetInt32(reader.GetOrdinal("ID Pago")),
+                            idTransaccion = reader.GetString(reader.GetOrdinal("ID Transacción")),
+                            fechaRealizacion = reader.GetDateTime(reader.GetOrdinal("Fecha Realización")),
+                            descripcion = reader.GetString(reader.GetOrdinal("Descripción")),
+                            monto = reader.GetDecimal(reader.GetOrdinal("Monto")),
+                            observacion = reader.IsDBNull(reader.GetOrdinal("Observación")) ? "" : reader.GetString(reader.GetOrdinal("Observación")),
+                            nombreUsuario = reader.GetString(reader.GetOrdinal("Nombre Usuario")),
+                            nombreMiembro = reader.GetString(reader.GetOrdinal("Nombre Miembro"))
+                        };
+                        lista.Add(pago);
+                    }
+
+                    reader.Close();
+                    connection.Close();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error: " + ex.Message);
+                }
+            }
+
+            foreach (var pago in lista)
+            {
+                Console.WriteLine("ID Pago: " + pago.idPago);
+                Console.WriteLine("ID Transacción: " + pago.idTransaccion);
+                Console.WriteLine("Fecha Realización: " + pago.fechaRealizacion.ToString("yyyy-MM-dd HH:mm:ss"));
+                Console.WriteLine("Descripción: " + pago.descripcion);
+                Console.WriteLine("Monto: " + pago.monto.ToString("C"));
+                Console.WriteLine("Observación: " + pago.observacion);
+                Console.WriteLine("Usuario: " + pago.nombreUsuario);
+                Console.WriteLine("Nombre Miembro: " + pago.nombreMiembro);
+                Console.WriteLine("=====================================");
+            }
+
+            ReportDataSource dataSource = new ReportDataSource("dsPagos", lista);
+            FrmReportePagos reportePago = new FrmReportePagos();
+            reportePago.reportViewer1.LocalReport.DataSources.Clear();
+            reportePago.reportViewer1.LocalReport.DataSources.Add(dataSource);
+            reportePago.reportViewer1.LocalReport.ReportEmbeddedResource = "JaguarGymApp_Preview.Reportes.rptPagos.rdlc";
+            reportePago.reportViewer1.RefreshReport();
+            reportePago.ShowDialog();
+        }
     }
 }

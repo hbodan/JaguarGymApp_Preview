@@ -141,6 +141,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSet\dsPagos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsPagos.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSet\dsEntrada.cs">
       <DependentUpon>dsEntrada.xsd</DependentUpon>
     </Compile>
@@ -159,6 +164,12 @@
     </Compile>
     <Compile Include="FormulariosReportes\FrmReporteEntrada.Designer.cs">
       <DependentUpon>FrmReporteEntrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulariosReportes\FrmReportePagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosReportes\FrmReportePagos.Designer.cs">
+      <DependentUpon>FrmReportePagos.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Agregar_Miembros.cs">
       <SubType>Form</SubType>
@@ -288,6 +299,9 @@
     <EmbeddedResource Include="FormulariosReportes\FrmReporteEntrada.resx">
       <DependentUpon>FrmReporteEntrada.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormulariosReportes\FrmReportePagos.resx">
+      <DependentUpon>FrmReportePagos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Agregar_Miembros.resx">
       <DependentUpon>Agregar_Miembros.cs</DependentUpon>
     </EmbeddedResource>
@@ -351,6 +365,18 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\rptEntrada.rdlc" />
+    <EmbeddedResource Include="Reportes\rptPagos.rdlc" />
+    <None Include="DataSet\dsPagos.xsc">
+      <DependentUpon>dsPagos.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\dsPagos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsPagos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\dsPagos.xss">
+      <DependentUpon>dsPagos.xsd</DependentUpon>
+    </None>
     <None Include="DataSet\dsEntrada.xsc">
       <DependentUpon>dsEntrada.xsd</DependentUpon>
     </None>

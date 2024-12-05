@@ -9,16 +9,16 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="dsEntrada" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="dsEntrada" msprop:Generator_DataSetName="dsEntrada">
+  <xs:element name="dsEntrada" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsEntrada" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsEntrada">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="DataTable1" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_UserTableName="DataTable1">
+        <xs:element name="DataTable1" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="IdEntrada" msprop:Generator_ColumnPropNameInRow="IdEntrada" msprop:Generator_ColumnPropNameInTable="IdEntradaColumn" msprop:Generator_ColumnVarNameInTable="columnIdEntrada" msprop:Generator_UserColumnName="IdEntrada" type="xs:int" minOccurs="0" />
-              <xs:element name="NombreMiembro" msprop:Generator_ColumnPropNameInRow="NombreMiembro" msprop:Generator_ColumnPropNameInTable="NombreMiembroColumn" msprop:Generator_ColumnVarNameInTable="columnNombreMiembro" msprop:Generator_UserColumnName="NombreMiembro" type="xs:string" minOccurs="0" />
-              <xs:element name="Fecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_UserColumnName="Fecha" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="Hora" msprop:Generator_ColumnPropNameInRow="Hora" msprop:Generator_ColumnPropNameInTable="HoraColumn" msprop:Generator_ColumnVarNameInTable="columnHora" msprop:Generator_UserColumnName="Hora" type="xs:duration" minOccurs="0" />
+              <xs:element name="IdEntrada" msprop:Generator_UserColumnName="IdEntrada" msprop:Generator_ColumnPropNameInTable="IdEntradaColumn" msprop:Generator_ColumnPropNameInRow="IdEntrada" msprop:Generator_ColumnVarNameInTable="columnIdEntrada" type="xs:int" minOccurs="0" />
+              <xs:element name="NombreMiembro" msprop:Generator_UserColumnName="NombreMiembro" msprop:Generator_ColumnPropNameInTable="NombreMiembroColumn" msprop:Generator_ColumnPropNameInRow="NombreMiembro" msprop:Generator_ColumnVarNameInTable="columnNombreMiembro" type="xs:string" minOccurs="0" />
+              <xs:element name="Fecha" msprop:Generator_UserColumnName="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Hora" msprop:Generator_UserColumnName="Hora" msprop:Generator_ColumnPropNameInTable="HoraColumn" msprop:Generator_ColumnPropNameInRow="Hora" msprop:Generator_ColumnVarNameInTable="columnHora" type="xs:duration" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

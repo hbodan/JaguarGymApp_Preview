@@ -28,17 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.dsPagos = new JaguarGymApp_Preview.DataSet.dsPagos();
+            this.dsPagosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.dsPagos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsPagosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.dsPagosBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "JaguarGymApp_Preview.Reportes.rptPagos.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(3, 64);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(1074, 653);
             this.reportViewer1.TabIndex = 0;
+            // 
+            // dsPagos
+            // 
+            this.dsPagos.DataSetName = "dsPagos";
+            this.dsPagos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dsPagosBindingSource
+            // 
+            this.dsPagosBindingSource.DataSource = this.dsPagos;
+            this.dsPagosBindingSource.Position = 0;
             // 
             // FrmReporteEntrada
             // 
@@ -51,8 +71,9 @@
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1080, 718);
             this.Name = "FrmReporteEntrada";
-            this.Text = "Form1";
             this.Load += new System.EventHandler(this.FrmReporteEntrada_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dsPagos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsPagosBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -60,5 +81,7 @@
         #endregion
 
         public Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource dsPagosBindingSource;
+        private DataSet.dsPagos dsPagos;
     }
 }
