@@ -103,7 +103,7 @@
             this.dgvMiembros.ThemeStyle.RowsStyle.Height = 24;
             this.dgvMiembros.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvMiembros.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvMiembros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMiembros_CellContentClick);
+            this.dgvMiembros.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMiembros_CellDoubleClick);
             // 
             // txtBuscar
             // 

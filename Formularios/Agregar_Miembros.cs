@@ -14,6 +14,7 @@ namespace JaguarGymApp_Preview.Formularios
     public partial class Agregar_Miembros : MaterialForm
     {
         private MySqlConnection data;
+        private bool bloqueandoEventos = false;
 
         public Agregar_Miembros()
         {
@@ -25,38 +26,46 @@ namespace JaguarGymApp_Preview.Formularios
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Teal500, Primary.Teal700, Primary.Teal300, Accent.LightBlue200, TextShade.WHITE);
             this.StartPosition = FormStartPosition.CenterScreen;
         }
-        public class DataHelper
+
+        private void Principal_Resize(object sender, EventArgs e)
         {
-            ConexionBD connectionString = new ConexionBD();
-
-            public DataTable ObtenerFacultades()
-            {
-                using (MySqlConnection connection = new MySqlConnection(connectionString.GetConnector()))
-                {
-                    try
-                    {
-                        connection.Open();
-                        string query = "SELECT idFacultad, nombreFacultad FROM Facultad";
-
-                        // Crear el comando
-                        MySqlCommand command = new MySqlCommand(query, connection);
-
-                        // Usar MySqlDataAdapter para llenar el DataTable
-                        MySqlDataAdapter adapter = new MySqlDataAdapter(command);
-                        DataTable facultades = new DataTable();
-                        adapter.Fill(facultades);
-
-                        return facultades;
-                    }
-                    catch (Exception ex)
-                    {
-                        // Manejo de errores
-                        throw new Exception($"Error al obtener facultades: {ex.Message}");
-                    }
-                }
-            }
+            this.Size = new System.Drawing.Size(1080, 720); // Mantener el tamaño de la ventana fijo
         }
 
+        private void Agregar_Miembros_Load(object sender, EventArgs e)
+        {
+            LlenarFacultades();
+        }
+
+        private void LlenarFacultades()
+        {
+            ConexionBD connFacultades = new ConexionBD();
+
+            string queryFacultades = "SELECT idFacultad, nombreFacultad FROM Facultad";
+
+            try
+            {
+                using (MySqlConnection connectionFacultades = new MySqlConnection(connFacultades.GetConnector()))
+                {
+                    connectionFacultades.Open();
+                    MySqlCommand commandFacultades = new MySqlCommand(queryFacultades, connectionFacultades);
+                    MySqlDataAdapter adapterFacultades = new MySqlDataAdapter(commandFacultades);
+
+                    DataTable facultades = new DataTable();
+                    adapterFacultades.Fill(facultades);
+
+                    cmbFacultad.DataSource = facultades;
+                    cmbFacultad.DisplayMember = "nombreFacultad";
+                    cmbFacultad.ValueMember = "idFacultad";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar facultades: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            dateExpiracion.Value = DateTime.Now;
+        }
 
         public DataTable ObtenerCarrerasPorFacultad(int idFacultad)
         {
@@ -87,9 +96,9 @@ namespace JaguarGymApp_Preview.Formularios
         private void ToDataBase(Miembro miembro)
         {
             string query = @"INSERT INTO Miembro 
-                     (identificacion, cif, nombres, apellidos, fechaNacimiento, fechaExp, idcarrera, idfacultad, genero, interno, colaborador, cargo) 
-                     VALUES 
-                     (@identificacion, @cif, @nombres, @apellidos, @fechaNacimiento, @fechaExp, @idcarrera, @idfacultad, @genero, @interno, @colaborador, @cargo)";
+             (identificacion, cif, nombres, apellidos, fechaNacimiento, fechaExp, idcarrera, idfacultad, genero, interno, colaborador, cargo) 
+             VALUES 
+             (@identificacion, @cif, @nombres, @apellidos, @fechaNacimiento, @fechaExp, @idcarrera, @idfacultad, @genero, @interno, @colaborador, @cargo)";
 
             try
             {
@@ -98,9 +107,9 @@ namespace JaguarGymApp_Preview.Formularios
                 {
                     MySqlCommand command = new MySqlCommand(query, connection);
 
-                    // Validar datos antes de asignar
-                    command.Parameters.AddWithValue("@identificacion", miembro.Identificacion ?? string.Empty);
-                    command.Parameters.AddWithValue("@cif", miembro.CIF ?? string.Empty);
+                    // Asignación de parámetros
+                    command.Parameters.AddWithValue("@identificacion", string.IsNullOrWhiteSpace(miembro.Identificacion) ? (object)DBNull.Value : miembro.Identificacion);
+                    command.Parameters.AddWithValue("@cif", string.IsNullOrWhiteSpace(miembro.CIF) ? (object)DBNull.Value : miembro.CIF);
                     command.Parameters.AddWithValue("@nombres", miembro.Nombres ?? string.Empty);
                     command.Parameters.AddWithValue("@apellidos", miembro.Apellidos ?? string.Empty);
                     command.Parameters.AddWithValue("@fechaNacimiento", miembro.FechaNac);
@@ -110,7 +119,9 @@ namespace JaguarGymApp_Preview.Formularios
                     command.Parameters.AddWithValue("@genero", miembro.Genero);
                     command.Parameters.AddWithValue("@interno", miembro.Interno ? 1 : 0);
                     command.Parameters.AddWithValue("@colaborador", miembro.Colaborador ? 1 : 0);
-                    command.Parameters.AddWithValue("@cargo", miembro.Cargo ?? string.Empty);
+
+                    // Solo añade @cargo una vez
+                    command.Parameters.AddWithValue("@cargo", miembro.Colaborador ? miembro.Cargo ?? string.Empty : (object)DBNull.Value);
 
                     connection.Open();
                     int rowsAffected = command.ExecuteNonQuery();
@@ -132,56 +143,38 @@ namespace JaguarGymApp_Preview.Formularios
         }
 
 
-        private void Principal_Resize(object sender, EventArgs e)
-        {
-            this.Size = new System.Drawing.Size(1080, 720); // Mantener el tamaño de la ventana fijo
-        }
 
-
-        private void Agregar_Miembros_Load(object sender, EventArgs e)
-        {
-            ConexionBD conn = new ConexionBD();
-
-            string query = "SELECT idFacultad, nombreFacultad FROM Facultad";
-
-            try
-            {
-                using (MySqlConnection connection = new MySqlConnection(conn.GetConnector()))
-                {
-                    connection.Open();
-                    MySqlCommand command = new MySqlCommand(query, connection);
-                    MySqlDataAdapter adapter = new MySqlDataAdapter(command);
-
-                    DataTable facultades = new DataTable();
-                    adapter.Fill(facultades);
-
-                    cmbFacultad.DataSource = facultades;
-                    cmbFacultad.DisplayMember = "nombreFacultad";
-                    cmbFacultad.ValueMember = "idFacultad";
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error al cargar facultades: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
 
         private Miembro CrearMiembro()
         {
+            int? carrera = null;
+            int? facultad = null;
+            string cargo = null;
+
+            if (chkEstudiante.Checked)
+            {
+                carrera = int.Parse(cmbCarrera.SelectedValue.ToString());
+                facultad = int.Parse(cmbFacultad.SelectedValue.ToString());
+            }
+            else if (chkColaborador.Checked)
+            {
+                cargo = string.IsNullOrWhiteSpace(txtCargo.Text) ? null : txtCargo.Text;
+            }
+
             return new Miembro(
-                idMiembro: 0, // Valor autogenerado
+                idMiembro: 0,
                 identificacion: string.IsNullOrWhiteSpace(txtidentificacion.Text) ? null : txtidentificacion.Text,
                 cif: string.IsNullOrWhiteSpace(txtCIF.Text) ? null : txtCIF.Text,
                 nombres: string.IsNullOrWhiteSpace(txtNombre.Text) ? null : txtNombre.Text,
                 apellidos: string.IsNullOrWhiteSpace(txtApellidos.Text) ? null : txtApellidos.Text,
                 fechaNac: dateNacimiento.Value,
                 fechaExp: DateTime.Now,
-                carrera: int.Parse(cmbCarrera.SelectedValue.ToString()),
-                facultad: int.Parse(cmbFacultad.SelectedValue.ToString()),
+                carrera: carrera,
+                facultad: facultad, 
                 genero: chkMasculino.Checked,
                 interno: chkEstudiante.Checked,
                 colaborador: chkColaborador.Checked,
-                cargo: string.IsNullOrWhiteSpace(txtCargo.Text) ? null : txtCargo.Text  
+                cargo: cargo 
             );
         }
 
@@ -222,22 +215,9 @@ namespace JaguarGymApp_Preview.Formularios
             }
         }
 
-
-        private void linkSalir_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
         public bool ValidacionLlenado()
         {
-            if (string.IsNullOrEmpty(txtidentificacion.Text))
-            {
-                MessageBox.Show("El campo Identificación no puede estar vacío", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-            if (string.IsNullOrEmpty(txtCIF.Text))
-            {
-                MessageBox.Show("El campo CIF no puede estar vacío", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            
             if (string.IsNullOrEmpty(txtNombre.Text))
             {
                 MessageBox.Show("El campo Nombres no puede estar vacío", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -258,10 +238,11 @@ namespace JaguarGymApp_Preview.Formularios
                 MessageBox.Show("Debe seleccionar una Carrera.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
+
             // Validar CheckBox (al menos uno seleccionado)
-            if (!chkEstudiante.Checked && !chkColaborador.Checked)
+            if (!chkEstudiante.Checked && !chkColaborador.Checked && !chkExterno.Checked)
             {
-                MessageBox.Show("Debe seleccionar si el miembro es estudiante o colaborador.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe seleccionar si el miembro es estudiante, colaborador o externo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (!chkMasculino.Checked && !chkFemenino.Checked)
@@ -269,6 +250,7 @@ namespace JaguarGymApp_Preview.Formularios
                 MessageBox.Show("Debe seleccionar si el miembro es Masculino o Femenino.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
+
             // Validar campo de Cargo si es colaborador
             if (chkColaborador.Checked && string.IsNullOrWhiteSpace(txtCargo.Text))
             {
@@ -280,40 +262,68 @@ namespace JaguarGymApp_Preview.Formularios
         }
 
 
+        
+
         private void chkEstudiante_CheckedChanged(object sender, EventArgs e)
         {
-            bool seleccionado = chkEstudiante.Checked;
+            if (bloqueandoEventos) return;
 
-            // Mostrar/ocultar controles relacionados con "Estudiante"
-            lblFacultad.Visible = seleccionado;
-            cmbFacultad.Visible = seleccionado;
-            lblCarrera.Visible = seleccionado;
-            cmbCarrera.Visible = seleccionado;
+            bloqueandoEventos = true; // Bloquea otros eventos
 
-            // Limpiar los campos de "Colaborador" y llenar el cargo como "Estudiante"
-            if (seleccionado)
-            {
-                chkColaborador.Checked = false;
-                txtCargo.Text = "Estudiante"; // Asignar "Estudiante" como cargo
-            }
+            lblCargo.Visible = false;
+            txtCargo.Visible = false;
+            lblFacultad.Visible = true;
+            cmbFacultad.Visible = true;
+            lblCarrera.Visible = true;
+            cmbCarrera.Visible = true;
+
+            chkColaborador.Checked = false;
+            chkExterno.Checked = false;
+            txtCargo.Text = "Estudiante";
+
+            bloqueandoEventos = false; // Desbloquea eventos
         }
 
+        private void chkExterno_CheckedChanged(object sender, EventArgs e)
+        {
+            if (bloqueandoEventos) return;
+
+            bloqueandoEventos = true;
+
+            lblFacultad.Visible = false;
+            cmbFacultad.Visible = false;
+            lblCarrera.Visible = false;
+            cmbCarrera.Visible = false;
+            lblCargo.Visible = false;
+            txtCargo.Visible = false;
+
+            chkEstudiante.Checked = false;
+            chkColaborador.Checked = false;
+            txtCargo.Text = "Externo";
+
+            bloqueandoEventos = false;
+        }
 
         private void chkColaborador_CheckedChanged(object sender, EventArgs e)
         {
-            bool seleccionado = chkColaborador.Checked;
+            if (bloqueandoEventos) return;
 
+            bloqueandoEventos = true;
 
-            lblCargo.Visible = seleccionado;
-            txtCargo.Visible = seleccionado;
+            lblFacultad.Visible = false;
+            cmbFacultad.Visible = false;
+            lblCarrera.Visible = false;
+            cmbCarrera.Visible = false;
+            lblCargo.Visible = true;
+            txtCargo.Visible = true;
 
+            chkEstudiante.Checked = false;
+            chkExterno.Checked = false;
+            txtCargo.Text = "";
 
-            if (seleccionado)
-            {
-                chkEstudiante.Checked = false;
-                txtCargo.Text = "";
-            }
+            bloqueandoEventos = false;
         }
+
         private void chkMasculino_CheckedChanged(object sender, EventArgs e)
         {
             bool seleccionado = chkMasculino.Checked;
@@ -332,13 +342,8 @@ namespace JaguarGymApp_Preview.Formularios
         private void LinkAtras_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Miembros_Activos miembrosForm = new Miembros_Activos();
-            miembrosForm.Show();
+            miembrosForm.ShowDialog();
             this.Close();
-        }
-
-        private void lblApellidos_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void cmbFacultad_SelectedIndexChanged(object sender, EventArgs e)
@@ -347,6 +352,7 @@ namespace JaguarGymApp_Preview.Formularios
             {
                 if (cmbFacultad.SelectedValue != null && cmbFacultad.SelectedValue is int idFacultadSeleccionada)
                 {
+                    Console.WriteLine($"idFacultad seleccionada: {cmbFacultad.SelectedValue}");
                     // Obtener las carreras según la facultad seleccionada
                     DataTable carreras = ObtenerCarrerasPorFacultad(idFacultadSeleccionada);
                     cmbCarrera.DataSource = carreras;
@@ -365,5 +371,6 @@ namespace JaguarGymApp_Preview.Formularios
         {
             Console.WriteLine($"idCarrera seleccionada: {cmbCarrera.SelectedValue}");
         }
+
     }
 }

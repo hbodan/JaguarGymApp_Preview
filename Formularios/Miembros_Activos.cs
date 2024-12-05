@@ -152,13 +152,14 @@ namespace JaguarGymApp_Preview.Formularios
                     adapter.Fill(resultados);
 
                     dgvMiembros.DataSource = resultados;
-                    connection.Close();
 
                     if (resultados.Rows.Count == 0)
                     {
                         MessageBox.Show("No se ha encontrado ningún registro que cumpla el criterio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        connection.Close();
+                        
                     }
+
+                    connection.Close();
                 }
             }
             catch (Exception ex)
@@ -172,8 +173,8 @@ namespace JaguarGymApp_Preview.Formularios
         public void LinkAtras_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Principal formularioPrincipal = new Principal(0);
-            formularioPrincipal.Show();
-            this.Hide();
+            formularioPrincipal.ShowDialog();
+            this.Close();
         }
 
 
@@ -181,9 +182,9 @@ namespace JaguarGymApp_Preview.Formularios
         {
             Miembro miembro = null;
             string query = @"
-            SELECT * 
-            FROM Miembro 
-            WHERE idMiembro = @idMiembro;";
+    SELECT * 
+    FROM Miembro 
+    WHERE idMiembro = @idMiembro;";
 
             try
             {
@@ -200,21 +201,20 @@ namespace JaguarGymApp_Preview.Formularios
                         {
                             miembro = new Miembro
                             {
-                                IdMiembro = Convert.ToInt32(reader["idMiembro"]),
-                                Identificacion = reader["identificacion"].ToString(),
-                                CIF = reader["cif"].ToString(),
-                                Nombres = reader["nombres"].ToString(),
-                                Apellidos = reader["apellidos"].ToString(),
-                                FechaNac = Convert.ToDateTime(reader["fechaNacimiento"]),
-                                FechaExp = Convert.ToDateTime(reader["fechaExp"]),
-                                Carrera = Convert.ToInt32(reader["idCarrera"]),
-                                Facultad = Convert.ToInt32(reader["idFacultad"]),
-                                Genero = Convert.ToBoolean(reader["genero"]),
-                                Interno = Convert.ToBoolean(reader["interno"]),
-                                Colaborador = Convert.ToBoolean(reader["colaborador"]),
-                                Cargo = reader["cargo"].ToString()
+                                IdMiembro = reader["idMiembro"] != DBNull.Value ? Convert.ToInt32(reader["idMiembro"]) : 0,
+                                Identificacion = reader["identificacion"] != DBNull.Value ? reader["identificacion"].ToString() : string.Empty,
+                                CIF = reader["cif"] != DBNull.Value ? reader["cif"].ToString() : string.Empty,
+                                Nombres = reader["nombres"] != DBNull.Value ? reader["nombres"].ToString() : string.Empty,
+                                Apellidos = reader["apellidos"] != DBNull.Value ? reader["apellidos"].ToString() : string.Empty,
+                                FechaNac = reader["fechaNacimiento"] != DBNull.Value ? Convert.ToDateTime(reader["fechaNacimiento"]) : DateTime.MinValue,
+                                FechaExp = reader["fechaExp"] != DBNull.Value ? Convert.ToDateTime(reader["fechaExp"]) : DateTime.MinValue,
+                                Carrera = reader["idCarrera"] != DBNull.Value ? Convert.ToInt32(reader["idCarrera"]) : 0,
+                                Facultad = reader["idFacultad"] != DBNull.Value ? Convert.ToInt32(reader["idFacultad"]) : 0,
+                                Genero = reader["genero"] != DBNull.Value ? Convert.ToBoolean(reader["genero"]) : false,
+                                Interno = reader["interno"] != DBNull.Value ? Convert.ToBoolean(reader["interno"]) : false,
+                                Colaborador = reader["colaborador"] != DBNull.Value ? Convert.ToBoolean(reader["colaborador"]) : false,
+                                Cargo = reader["cargo"] != DBNull.Value ? reader["cargo"].ToString() : string.Empty
                             };
-                            connection.Close();
                         }
                     }
                 }
@@ -226,7 +226,9 @@ namespace JaguarGymApp_Preview.Formularios
 
             return miembro;
         }
-        private void dgvMiembros_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+
+        public void dgvMiembros_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             // Verificar que no sea el encabezado
             if (e.RowIndex >= 0)
@@ -240,16 +242,10 @@ namespace JaguarGymApp_Preview.Formularios
                 {
                     // Abrir el formulario Editar_Miembros
                     Editar_Miembros editarMiembrosForm = new Editar_Miembros(miembroSeleccionado);
-                    editarMiembrosForm.Show();
+                    this.Hide();
+                    editarMiembrosForm.ShowDialog();
                 }
             }
-        }
-
-
-
-        public void dgvMiembros_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
         }
 
         public void RecargarMiembros()
@@ -257,5 +253,9 @@ namespace JaguarGymApp_Preview.Formularios
             Actualizardata(); // Método que carga los datos en el DataGridView
         }
 
+        private void dgvMiembros_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

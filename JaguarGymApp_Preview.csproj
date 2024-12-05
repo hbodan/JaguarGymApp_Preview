@@ -356,6 +356,7 @@
     <Content Include="Recursos\estadisticasBoton.png" />
     <None Include="Recursos\Fondo_GYM.png" />
     <None Include="Recursos\image.jpg" />
+    <None Include="Recursos\gym_test.png" />
     <Content Include="Recursos\Iniciar_Sesion.png" />
     <Content Include="Recursos\Jaguares_UAM.png" />
     <Content Include="Recursos\Jaguares_UAM_redondo.png" />
