@@ -14,9 +14,9 @@ namespace estadisticasForm
 {
     internal class LogicaEstadistica
     {
-        private List<Pago> pagos = ObtenerPagosDeEjemplo();
-        private List<Miembro> miembros = ObtenerMiembrosDeEjemplo();
-        private List<Entrada> entradas = ObtenerEntradasDeEjemplo();
+        private List<Pago> pagos = ObtenerPagos();
+        private List<Miembro> miembros = ObtenerMiembros();
+        private List<Entrada> entradas = ObtenerEntradas();
 
 
         // ############################## INGRESOS POR MES ########################### //
