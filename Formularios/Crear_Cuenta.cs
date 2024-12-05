@@ -68,8 +68,8 @@ namespace JaguarGymApp_Preview.Formularios
                 if (rowsAffected > 0)
                 {
                     Inicio_Sesion formularioInicioSesion = new Inicio_Sesion();
-                    formularioInicioSesion.Show();
-                    this.Dispose();
+                    formularioInicioSesion.ShowDialog();
+                    this.Close();
                     MessageBox.Show("Usuario registrado exitosamente!");
 
                 }
@@ -165,7 +165,7 @@ namespace JaguarGymApp_Preview.Formularios
         private void lkbVolverIniciar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Inicio_Sesion formularioInicioSesion = new Inicio_Sesion();
-            formularioInicioSesion.Show();
+            formularioInicioSesion.ShowDialog();
             this.Close();
         }
 

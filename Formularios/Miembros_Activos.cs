@@ -20,13 +20,11 @@ namespace JaguarGymApp_Preview.Formularios
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Teal500, Primary.Teal700, Primary.Teal300, Accent.LightBlue200, TextShade.WHITE);
             this.StartPosition = FormStartPosition.CenterScreen;
-
-            Actualizardata();
         }
 
         public void Principal_Resize(object sender, EventArgs e)
         {
-            this.Size = new System.Drawing.Size(1080, 720); // Mantener el tamaño de la ventana fijo
+            this.Size = new System.Drawing.Size(1080, 720);
         }
 
         public void Miembros_Load(object sender, EventArgs e)
@@ -34,7 +32,6 @@ namespace JaguarGymApp_Preview.Formularios
             Actualizardata();
             ConteoMiembros();
         }
-
 
         public void Actualizardata()
         {
@@ -64,26 +61,22 @@ namespace JaguarGymApp_Preview.Formularios
         {
             try
             {
-                // Crear una conexión con la base de datos
                 ConexionBD conn = new ConexionBD();
                 using (MySqlConnection connection = new MySqlConnection(conn.GetConnector()))
                 {
-                    connection.Open(); // Abrir la conexión
-                    string query = "SELECT COUNT(*) FROM Miembro"; // Consulta SQL para contar los registros
+                    connection.Open();
+                    string query = "SELECT COUNT(*) FROM Miembro"; 
 
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
-                        // Ejecutar la consulta y obtener el resultado
                         int totalMiembros = Convert.ToInt32(command.ExecuteScalar());
-
-                        // Mostrar el total en el ToolStripStatusLabel
                         toolStripStatusLabel1.Text = $"Total de Miembros activos: {totalMiembros}";
                     }
+                    connection.Close();
                 }
             }
             catch (Exception ex)
             {
-                // Manejo de errores
                 MessageBox.Show($"Error al contar los miembros: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -92,8 +85,8 @@ namespace JaguarGymApp_Preview.Formularios
         public void btnAgregar_Click(object sender, EventArgs e)
         {
             Agregar_Miembros formulario2 = new Agregar_Miembros();
-            formulario2.Show();
-            this.Hide();
+            formulario2.ShowDialog();
+            this.Close();
         }
 
 
@@ -110,7 +103,6 @@ namespace JaguarGymApp_Preview.Formularios
 
             string query = "";
 
-            // Construir la consulta SQL según el filtro seleccionado
             switch (filtroSeleccionado)
             {
                 case "Identificacion":
@@ -146,7 +138,6 @@ namespace JaguarGymApp_Preview.Formularios
                     return;
             }
 
-            // Ejecutar la consulta
             try
             {
                 ConexionBD conn = new ConexionBD();
@@ -160,9 +151,8 @@ namespace JaguarGymApp_Preview.Formularios
                     DataTable resultados = new DataTable();
                     adapter.Fill(resultados);
 
-                    // Asumiendo que tienes un DataGridView para mostrar resultados
                     dgvMiembros.DataSource = resultados;
-                    connection.Open();
+                    connection.Close();
 
                     if (resultados.Rows.Count == 0)
                     {

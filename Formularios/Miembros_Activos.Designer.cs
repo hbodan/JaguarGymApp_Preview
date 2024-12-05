@@ -74,7 +74,7 @@
             this.dgvMiembros.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvMiembros.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvMiembros.Location = new System.Drawing.Point(20, 233);
-            this.dgvMiembros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvMiembros.Margin = new System.Windows.Forms.Padding(2);
             this.dgvMiembros.Name = "dgvMiembros";
             this.dgvMiembros.ReadOnly = true;
             this.dgvMiembros.RowHeadersVisible = false;
@@ -139,7 +139,7 @@
             this.btnBuscar.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Location = new System.Drawing.Point(559, 170);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(135, 39);
             this.btnBuscar.TabIndex = 3;
@@ -158,7 +158,7 @@
             this.btnAgregar.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.Location = new System.Drawing.Point(21, 632);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(135, 37);
             this.btnAgregar.TabIndex = 4;
@@ -177,11 +177,11 @@
             this.btnVerMiembros.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerMiembros.ForeColor = System.Drawing.Color.White;
             this.btnVerMiembros.Location = new System.Drawing.Point(173, 632);
-            this.btnVerMiembros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVerMiembros.Margin = new System.Windows.Forms.Padding(2);
             this.btnVerMiembros.Name = "btnVerMiembros";
             this.btnVerMiembros.Size = new System.Drawing.Size(135, 37);
             this.btnVerMiembros.TabIndex = 5;
-            this.btnVerMiembros.Text = "Ver Miembros";
+            this.btnVerMiembros.Text = "Reporte";
             // 
             // statusStrip1
             // 
@@ -264,7 +264,7 @@
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1080, 720);
             this.MinimumSize = new System.Drawing.Size(1080, 718);

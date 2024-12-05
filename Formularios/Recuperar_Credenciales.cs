@@ -37,7 +37,7 @@ namespace JaguarGymApp_Preview.Formularios
         private void btnAceptarRecuperar_Click(object sender, EventArgs e)
         {
             Inicio_Sesion formularioInicioSesion = new Inicio_Sesion();
-            formularioInicioSesion.Show();
+            formularioInicioSesion.ShowDialog();
             this.Close();
         }
     }

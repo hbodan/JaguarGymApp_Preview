@@ -99,23 +99,22 @@ namespace JaguarGymApp_Preview.Formularios
         private void linkLb_CrearCuenta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Crear_Cuenta nuevoFormulario = new Crear_Cuenta(); // Cambia a tu formulario
-            this.Hide();
-            nuevoFormulario.Show();
+            
+            nuevoFormulario.ShowDialog();
+            this.Close();
         }
         private void linkLb_RecuperarCredenciales_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Recuperar_Credenciales formularioRecuperar = new Recuperar_Credenciales();
-            this.Hide();
-
-            formularioRecuperar.Show();
-
+            formularioRecuperar.ShowDialog();
+            this.Close();
         }
 
         private void imgbtn_Escaner_Click(object sender, EventArgs e)
         {
             Escanea_tu_cedula_o_CIF nuevoFormulario = new Escanea_tu_cedula_o_CIF(); // Cambia a tu formulario
             this.Hide();
-            nuevoFormulario.Show();
+            nuevoFormulario.ShowDialog();
         }
 
         private void btn_MostrarPassword_MouseDown(object sender, MouseEventArgs e)
