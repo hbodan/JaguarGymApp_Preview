@@ -332,5 +332,20 @@ namespace JaguarGymApp_Preview
             reporteEntrada.reportViewer1.RefreshReport();
             reporteEntrada.ShowDialog();
         }
+
+        private void panelOverlay_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dgv_ListaMembresiasAVencer_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
