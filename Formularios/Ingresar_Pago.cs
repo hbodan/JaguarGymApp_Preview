@@ -67,7 +67,7 @@ namespace JaguarGymApp_Preview.Formularios
                     command.Parameters.AddWithValue("@Descripcion", pagoNuevo.Descripcion);
                     command.Parameters.AddWithValue("@Monto", pagoNuevo.Monto);
                     command.Parameters.AddWithValue("@Observacion", pagoNuevo.Observacion);
-                    command.Parameters.AddWithValue("@IdUsuario",   pagoNuevo.IdUsuario);
+                    command.Parameters.AddWithValue("@IdUsuario",   _idUsuario);
                     command.Parameters.AddWithValue("@IdMiembro", pagoNuevo.IdMiembro);
 
                     command.ExecuteNonQuery();
@@ -95,13 +95,13 @@ namespace JaguarGymApp_Preview.Formularios
 
 
             return new Pago(
-                idPago: _idUsuario,
+                idPago: 0,
                 idTransaccion: idTransaccion,
                 fechaRealizacion: fechaRealizacion,
                 descripcion: descripcion,
                 monto: monto,
                 observacion: observacion,
-                idUsuario: idUsuario,
+                idUsuario: _idUsuario,
                 idMiembro: idMiembro
             );
         }

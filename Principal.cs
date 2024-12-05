@@ -84,13 +84,16 @@ namespace JaguarGymApp_Preview
         {
             Miembros_Activos formularioMiembros = new Miembros_Activos(_idUsuario); // Cambia a tu formulario
             this.Hide();
-            formularioMiembros.Show();
+            formularioMiembros.ShowDialog();
+            this.Close();
         }
         private void btn_Miembros_Click(object sender, EventArgs e)
         {
             Miembros_Activos formularioMiembros = new Miembros_Activos(_idUsuario); // Cambia a tu formulario
             this.Hide();
-            formularioMiembros.Show();
+            formularioMiembros.ShowDialog();
+            this.Close();
+            
         }
         private void imgBtn_Estadistica_Click(object sender, EventArgs e)
         {
@@ -101,20 +104,23 @@ namespace JaguarGymApp_Preview
         private void btn_Estadistica_Click(object sender, EventArgs e)
         {
             Mostrar_Estadistica formularioEstadistica = new Mostrar_Estadistica();
-            formularioEstadistica.Show();
+            this.Hide();
+            formularioEstadistica.ShowDialog();
             this.Close();
         }
         private void imgBtn_Escanear_Click(object sender, EventArgs e)
         {
             Escanea_tu_cedula_o_CIF nuevoFormulario = new Escanea_tu_cedula_o_CIF(); // Cambia a tu formulario
             this.Hide();
-            nuevoFormulario.Show();
+            nuevoFormulario.ShowDialog();
+            this.Close();   
         }
         private void btn_Pagos_Click(object sender, EventArgs e)
         {
             Gestion_Pagos formularioPagos = new Gestion_Pagos(_idUsuario);
-            formularioPagos.Show();
             this.Hide();
+            formularioPagos.ShowDialog();
+            this.Close();
         }
 
         private string ObtenerPrimerNombrePorId(int idUsuario)

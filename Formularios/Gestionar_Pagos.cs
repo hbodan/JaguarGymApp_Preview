@@ -153,7 +153,7 @@ namespace JaguarGymApp_Preview.Formularios
         {
             Ingresar_Pago nuevoFormulario = new Ingresar_Pago(_idUsuario);
             this.Hide();
-            nuevoFormulario.Show();
+            nuevoFormulario.ShowDialog();
             this.Close();
         }
 
@@ -161,7 +161,7 @@ namespace JaguarGymApp_Preview.Formularios
         {
             Principal formularioPrincipal = new Principal(_idUsuario);
             this.Hide();
-            formularioPrincipal.Show();
+            formularioPrincipal.ShowDialog();
             this.Close();
         }
 
