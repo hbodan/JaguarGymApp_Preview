@@ -29,16 +29,15 @@
         private void InitializeComponent()
         {
             this.pnpanelsuperior = new Guna.UI2.WinForms.Guna2Panel();
-            this.pbLogouam = new Guna.UI2.WinForms.Guna2PictureBox();
             this.PnEsperandoescaner = new Guna.UI2.WinForms.Guna2Panel();
             this.lblEsperealusuario = new System.Windows.Forms.Label();
             this.lblEsperandoescaneo = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.pbLogouam = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnpanelsuperior.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogouam)).BeginInit();
             this.PnEsperandoescaner.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogouam)).BeginInit();
             this.SuspendLayout();
             // 
             // pnpanelsuperior
@@ -50,20 +49,9 @@
             this.pnpanelsuperior.Size = new System.Drawing.Size(1114, 138);
             this.pnpanelsuperior.TabIndex = 1;
             // 
-            // pbLogouam
-            // 
-            this.pbLogouam.Image = global::JaguarGymApp_Preview.Properties.Resources.Jaguares_UAM_redondo;
-            this.pbLogouam.ImageRotate = 0F;
-            this.pbLogouam.Location = new System.Drawing.Point(50, 0);
-            this.pbLogouam.Name = "pbLogouam";
-            this.pbLogouam.Size = new System.Drawing.Size(147, 150);
-            this.pbLogouam.TabIndex = 0;
-            this.pbLogouam.TabStop = false;
-            // 
             // PnEsperandoescaner
             // 
             this.PnEsperandoescaner.BackColor = System.Drawing.Color.White;
-            this.PnEsperandoescaner.Controls.Add(this.linkLabel1);
             this.PnEsperandoescaner.Controls.Add(this.lblEsperealusuario);
             this.PnEsperandoescaner.Controls.Add(this.lblEsperandoescaneo);
             this.PnEsperandoescaner.Controls.Add(this.guna2PictureBox1);
@@ -99,6 +87,7 @@
             // 
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = global::JaguarGymApp_Preview.Properties.Resources.Animacion_Reloj;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(218, 52);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
@@ -108,18 +97,15 @@
             this.guna2PictureBox1.UseTransparentBackground = true;
             this.guna2PictureBox1.UseWaitCursor = true;
             // 
-            // linkLabel1
+            // pbLogouam
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(760, 465);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(114, 23);
-            this.linkLabel1.TabIndex = 3;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Siguiente";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.pbLogouam.Image = global::JaguarGymApp_Preview.Properties.Resources.Jaguares_UAM_redondo;
+            this.pbLogouam.ImageRotate = 0F;
+            this.pbLogouam.Location = new System.Drawing.Point(50, 0);
+            this.pbLogouam.Name = "pbLogouam";
+            this.pbLogouam.Size = new System.Drawing.Size(147, 150);
+            this.pbLogouam.TabIndex = 0;
+            this.pbLogouam.TabStop = false;
             // 
             // Esperando_por_escaneo
             // 
@@ -132,10 +118,10 @@
             this.Text = "Escaner de Cedula o CIF";
             this.Load += new System.EventHandler(this.Esperando_por_escaneo_Load);
             this.pnpanelsuperior.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogouam)).EndInit();
             this.PnEsperandoescaner.ResumeLayout(false);
             this.PnEsperandoescaner.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogouam)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -147,6 +133,5 @@
         private System.Windows.Forms.Label lblEsperandoescaneo;
         private System.Windows.Forms.Label lblEsperealusuario;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

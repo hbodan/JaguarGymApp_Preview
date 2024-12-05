@@ -227,6 +227,8 @@
             this.ClientSize = new System.Drawing.Size(1080, 720);
             this.Controls.Add(this.pnMembresiavencidagerente);
             this.Controls.Add(this.pnSuperior);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Usuario_con_membresia_vencida_gerente";
             this.Text = "Usuario con membresia vencida (Vista gerente)";
             this.Load += new System.EventHandler(this.Usuario_con_membresia_vencida_gerente_Load);

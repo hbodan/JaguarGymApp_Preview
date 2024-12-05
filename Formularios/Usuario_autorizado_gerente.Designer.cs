@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.pnMembresiavencidagerente = new Guna.UI2.WinForms.Guna2Panel();
             this.lbUsuariopuedeingresar = new System.Windows.Forms.Label();
-            this.pbFotodeperfil = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lbFechaDeVencimiento = new System.Windows.Forms.Label();
             this.lbFechavencimiento = new System.Windows.Forms.Label();
             this.lbCarreraAutorizado = new System.Windows.Forms.Label();
@@ -40,15 +39,16 @@
             this.lbApellido = new System.Windows.Forms.Label();
             this.lbNombreAutorizado = new System.Windows.Forms.Label();
             this.lbNombre = new System.Windows.Forms.Label();
-            this.pbCheck = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lbUsuarioAutorizado = new System.Windows.Forms.Label();
             this.pnSuperior = new Guna.UI2.WinForms.Guna2Panel();
-            this.pbLogoUam = new Guna.UI2.WinForms.Guna2PictureBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.pbFotodeperfil = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pbCheck = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pbLogoUam = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnMembresiavencidagerente.SuspendLayout();
+            this.pnSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotodeperfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCheck)).BeginInit();
-            this.pnSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoUam)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,21 +77,11 @@
             this.lbUsuariopuedeingresar.AutoSize = true;
             this.lbUsuariopuedeingresar.Font = new System.Drawing.Font("Verdana", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUsuariopuedeingresar.ForeColor = System.Drawing.Color.Teal;
-            this.lbUsuariopuedeingresar.Location = new System.Drawing.Point(283, 353);
+            this.lbUsuariopuedeingresar.Location = new System.Drawing.Point(300, 343);
             this.lbUsuariopuedeingresar.Name = "lbUsuariopuedeingresar";
             this.lbUsuariopuedeingresar.Size = new System.Drawing.Size(231, 18);
             this.lbUsuariopuedeingresar.TabIndex = 11;
             this.lbUsuariopuedeingresar.Text = "El usuario puede ingresar";
-            // 
-            // pbFotodeperfil
-            // 
-            this.pbFotodeperfil.Image = global::JaguarGymApp_Preview.Properties.Resources.User_icon;
-            this.pbFotodeperfil.ImageRotate = 0F;
-            this.pbFotodeperfil.Location = new System.Drawing.Point(601, 112);
-            this.pbFotodeperfil.Name = "pbFotodeperfil";
-            this.pbFotodeperfil.Size = new System.Drawing.Size(172, 172);
-            this.pbFotodeperfil.TabIndex = 10;
-            this.pbFotodeperfil.TabStop = false;
             // 
             // lbFechaDeVencimiento
             // 
@@ -174,21 +164,11 @@
             this.lbNombre.TabIndex = 2;
             this.lbNombre.Text = "Nombre:";
             // 
-            // pbCheck
-            // 
-            this.pbCheck.Image = global::JaguarGymApp_Preview.Properties.Resources.Check_icon;
-            this.pbCheck.ImageRotate = 0F;
-            this.pbCheck.Location = new System.Drawing.Point(658, 23);
-            this.pbCheck.Name = "pbCheck";
-            this.pbCheck.Size = new System.Drawing.Size(60, 60);
-            this.pbCheck.TabIndex = 1;
-            this.pbCheck.TabStop = false;
-            // 
             // lbUsuarioAutorizado
             // 
             this.lbUsuarioAutorizado.AutoSize = true;
             this.lbUsuarioAutorizado.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUsuarioAutorizado.Location = new System.Drawing.Point(218, 36);
+            this.lbUsuarioAutorizado.Location = new System.Drawing.Point(236, 34);
             this.lbUsuarioAutorizado.Name = "lbUsuarioAutorizado";
             this.lbUsuarioAutorizado.Size = new System.Drawing.Size(362, 38);
             this.lbUsuarioAutorizado.TabIndex = 0;
@@ -204,6 +184,31 @@
             this.pnSuperior.TabIndex = 2;
             this.pnSuperior.Paint += new System.Windows.Forms.PaintEventHandler(this.pnSuperior_Paint);
             // 
+            // timer2
+            // 
+            this.timer2.Interval = 7000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // pbFotodeperfil
+            // 
+            this.pbFotodeperfil.Image = global::JaguarGymApp_Preview.Properties.Resources.User_icon;
+            this.pbFotodeperfil.ImageRotate = 0F;
+            this.pbFotodeperfil.Location = new System.Drawing.Point(601, 112);
+            this.pbFotodeperfil.Name = "pbFotodeperfil";
+            this.pbFotodeperfil.Size = new System.Drawing.Size(172, 172);
+            this.pbFotodeperfil.TabIndex = 10;
+            this.pbFotodeperfil.TabStop = false;
+            // 
+            // pbCheck
+            // 
+            this.pbCheck.Image = global::JaguarGymApp_Preview.Properties.Resources.Check_icon;
+            this.pbCheck.ImageRotate = 0F;
+            this.pbCheck.Location = new System.Drawing.Point(658, 23);
+            this.pbCheck.Name = "pbCheck";
+            this.pbCheck.Size = new System.Drawing.Size(60, 60);
+            this.pbCheck.TabIndex = 1;
+            this.pbCheck.TabStop = false;
+            // 
             // pbLogoUam
             // 
             this.pbLogoUam.Image = global::JaguarGymApp_Preview.Properties.Resources.Jaguares_UAM_redondo;
@@ -213,11 +218,6 @@
             this.pbLogoUam.Size = new System.Drawing.Size(137, 137);
             this.pbLogoUam.TabIndex = 0;
             this.pbLogoUam.TabStop = false;
-            // 
-            // timer2
-            // 
-            this.timer2.Interval = 7000;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // Usuario_autorizado_gerente
             // 
@@ -233,9 +233,9 @@
             this.Load += new System.EventHandler(this.Usuario_autorizado_gerente_Load);
             this.pnMembresiavencidagerente.ResumeLayout(false);
             this.pnMembresiavencidagerente.PerformLayout();
+            this.pnSuperior.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbFotodeperfil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCheck)).EndInit();
-            this.pnSuperior.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoUam)).EndInit();
             this.ResumeLayout(false);
 

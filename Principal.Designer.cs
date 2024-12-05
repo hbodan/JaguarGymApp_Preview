@@ -288,7 +288,7 @@
             this.imgBtn_Escaner.Location = new System.Drawing.Point(992, 84);
             this.imgBtn_Escaner.Margin = new System.Windows.Forms.Padding(2);
             this.imgBtn_Escaner.Name = "imgBtn_Escaner";
-            this.imgBtn_Escaner.PressedState.Image = global::JaguarGymApp_Preview.Properties.Resources.escaneo_de_codigo_de_barras1;
+            this.imgBtn_Escaner.PressedState.Image = global::JaguarGymApp_Preview.Properties.Resources.escaneo_de_codigo_de_barras;
             this.imgBtn_Escaner.PressedState.ImageSize = new System.Drawing.Size(35, 35);
             this.imgBtn_Escaner.Size = new System.Drawing.Size(40, 40);
             this.imgBtn_Escaner.TabIndex = 37;

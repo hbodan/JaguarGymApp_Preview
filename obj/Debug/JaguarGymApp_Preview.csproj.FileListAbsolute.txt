@@ -557,3 +557,4 @@ C:\Users\hebod\OneDrive\Escritorio\JaguarGymApp_Preview\bin\Debug\pt\Microsoft.R
 C:\Users\hebod\OneDrive\Escritorio\JaguarGymApp_Preview\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\hebod\OneDrive\Escritorio\JaguarGymApp_Preview\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\hebod\OneDrive\Escritorio\JaguarGymApp_Preview\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\USER\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Editar_Miembros.resources

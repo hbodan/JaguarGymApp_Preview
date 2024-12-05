@@ -277,8 +277,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
-      <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Servicios\ConexionBD.cs" />
@@ -347,7 +347,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\rptEntrada.rdlc" />
@@ -386,6 +385,67 @@
     <Content Include="ReadMePng\Options.png" />
     <Content Include="ReadMePng\类库上右键.png" />
     <Content Include="Recursos\Animacion_Reloj.gif" />
+    <Content Include="Recursos\avatar.png" />
+    <Content Include="Recursos\bloquear.png" />
+    <Content Include="Recursos\buscar.ico" />
+    <Content Include="Recursos\buscar2.ico" />
+    <Content Include="Recursos\buscarPNG.png" />
+    <Content Include="Recursos\Check_icon.png" />
+    <Content Include="Recursos\codigo-de-barras.png" />
+    <Content Include="Recursos\Codigo_de_barras_Horizontal.png" />
+    <Content Include="Recursos\configuracion hover.png" />
+    <Content Include="Recursos\configuracion.png" />
+    <Content Include="Recursos\correo.gif" />
+    <Content Include="Recursos\correo.png" />
+    <Content Include="Recursos\crearCuentaImagen.png" />
+    <Content Include="Recursos\deporte.png" />
+    <Content Include="Recursos\escaneo-de-codigo-de-barras.png" />
+    <Content Include="Recursos\estadisticasBoton.png" />
+    <Content Include="Recursos\flechas_atras.png" />
+    <Content Include="Recursos\Fondo_GYM.png" />
+    <Content Include="Recursos\gym_1.png" />
+    <Content Include="Recursos\gym_2.png" />
+    <Content Include="Recursos\gym_3.png" />
+    <Content Include="Recursos\gym_4.png" />
+    <Content Include="Recursos\gym_5.png" />
+    <Content Include="Recursos\gym_6.png" />
+    <Content Include="Recursos\gym_7.png" />
+    <Content Include="Recursos\gym_test.png" />
+    <Content Include="Recursos\image.jpg" />
+    <Content Include="Recursos\Iniciar_Sesion.png" />
+    <Content Include="Recursos\Jaguares_UAM.png" />
+    <Content Include="Recursos\Jaguares_UAM_redondo.png" />
+    <Content Include="Recursos\Jaguar_Mamado.png" />
+    <Content Include="Recursos\Jaguar_Mamado_Redondo.png" />
+    <Content Include="Recursos\Juaguar_Mostroso_UAM.png" />
+    <Content Include="Recursos\Logo_deportes.png" />
+    <Content Include="Recursos\Logo_redondo.png" />
+    <Content Include="Recursos\Mascota.png" />
+    <Content Include="Recursos\miembrosBoton.png" />
+    <Content Include="Recursos\Mostro_UAM.png" />
+    <Content Include="Recursos\ojo-cruzado.png" />
+    <Content Include="Recursos\ojo.png" />
+    <Content Include="Recursos\onda-de-mano.png" />
+    <Content Include="Recursos\pagoBoton.png" />
+    <Content Include="Recursos\pistola-de-escaner-hover.png" />
+    <Content Include="Recursos\pistola-de-escaner-negra.png" />
+    <Content Include="Recursos\pistola-de-escaner.png" />
+    <Content Include="Recursos\Precaucion_icono_Amarillo.png" />
+    <Content Include="Recursos\Recursos.txt" />
+    <Content Include="Recursos\Renovar_subscripcion_icon.png" />
+    <Content Include="Recursos\Salida hover.png" />
+    <Content Include="Recursos\Salida.png" />
+    <Content Include="Recursos\Siga_adeltante.gif" />
+    <Content Include="Recursos\tarjeta-de-identificacion.png" />
+    <Content Include="Recursos\uamLogoBlancoNoFondo.png" />
+    <Content Include="Recursos\uam_edificio_home.jpg" />
+    <Content Include="Recursos\uam_internacional_portada.jpg" />
+    <Content Include="Recursos\UAM_Mamado.ico" />
+    <Content Include="Recursos\User_icon.png" />
+    <Content Include="Recursos\Vencimiento_icon.png" />
+    <Content Include="Recursos\vida_estudiantil.png" />
+    <Content Include="Recursos\vida_estudiantil2.png" />
+    <Content Include="Recursos\Warning_icon_red.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -399,60 +459,6 @@
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Resources\buscarPNG.png" />
-    <None Include="Resources\buscar2.ico" />
-    <None Include="Resources\buscar.ico" />
-    <None Include="Recursos\avatar.png" />
-    <None Include="Recursos\bloquear.png" />
-    <Content Include="Recursos\Check_icon.png" />
-    <None Include="Recursos\codigo-de-barras.png" />
-    <Content Include="Recursos\Codigo_de_barras_Horizontal.png" />
-    <Content Include="Recursos\configuracion hover.png" />
-    <Content Include="Recursos\configuracion.png" />
-    <Content Include="Recursos\correo.gif" />
-    <None Include="Recursos\correo.png" />
-    <Content Include="Recursos\crearCuentaImagen.png" />
-    <Content Include="Recursos\deporte.png" />
-    <None Include="Recursos\escaneo-de-codigo-de-barras.png" />
-    <Content Include="Recursos\estadisticasBoton.png" />
-    <None Include="Recursos\Fondo_GYM.png" />
-    <None Include="Recursos\image.jpg" />
-    <None Include="Recursos\gym_test.png" />
-    <None Include="Recursos\gym_7.png" />
-    <Content Include="Recursos\Iniciar_Sesion.png" />
-    <Content Include="Recursos\Jaguares_UAM.png" />
-    <Content Include="Recursos\Jaguares_UAM_redondo.png" />
-    <None Include="Recursos\Jaguar_Mamado.png" />
-    <None Include="Recursos\Jaguar_Mamado_Redondo.png" />
-    <None Include="Recursos\Juaguar_Mostroso_UAM.png" />
-    <Content Include="Recursos\Logo_deportes.png" />
-    <Content Include="Recursos\Logo_redondo.png" />
-    <None Include="Recursos\marco1.png" />
-    <None Include="Recursos\marco2.png" />
-    <None Include="Recursos\marco3.png" />
-    <Content Include="Recursos\Mascota.png" />
-    <Content Include="Recursos\miembrosBoton.png" />
-    <None Include="Recursos\ojo-cruzado.png" />
-    <None Include="Recursos\Mostro_UAM.png" />
-    <Content Include="Recursos\ojo.png" />
-    <Content Include="Recursos\onda-de-mano.png" />
-    <Content Include="Recursos\pagoBoton.png" />
-    <Content Include="Recursos\pistola-de-escaner-hover.png" />
-    <Content Include="Recursos\pistola-de-escaner-negra.png" />
-    <Content Include="Recursos\pistola-de-escaner.png" />
-    <Content Include="Recursos\Precaucion_icono_Amarillo.png" />
-    <Content Include="Recursos\Recursos.txt" />
-    <Content Include="Recursos\Renovar_subscripcion_icon.png" />
-    <None Include="Recursos\Salida.png" />
-    <None Include="Recursos\Salida hover.png" />
-    <Content Include="Recursos\Siga_adeltante.gif" />
-    <None Include="Recursos\tarjeta-de-identificacion.png" />
-    <Content Include="Recursos\uamLogoBlancoNoFondo.png" />
-    <Content Include="Recursos\uam_edificio_home.jpg" />
-    <Content Include="Recursos\uam_internacional_portada.jpg" />
-    <Content Include="Recursos\User_icon.png" />
-    <Content Include="Recursos\Vencimiento_icon.png" />
-    <Content Include="Recursos\Warning_icon_red.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

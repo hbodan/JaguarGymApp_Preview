@@ -119,9 +119,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1064, 720);
+            this.ClientSize = new System.Drawing.Size(1080, 720);
             this.Controls.Add(this.pnMembresiavencidagerente);
             this.Controls.Add(this.pnSuperior);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Usuario_autorizado_usuario";
             this.Text = "Usuario_autorizado_usuario";
             this.Load += new System.EventHandler(this.Usuario_autorizado_usuario_Load);

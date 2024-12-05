@@ -118,160 +118,178 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\ojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="codigo-de-barras" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\codigo-de-barras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pistola-de-escaner" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\pistola-de-escaner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Precaucion_icono_Amarillo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Precaucion_icono_Amarillo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bloquear" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\bloquear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Codigo_de_barras_Horizontal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Codigo_de_barras_Horizontal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="uam_internacional_portada" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\uam_internacional_portada.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Iniciar_Sesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Iniciar_Sesion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="buscar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\buscar2.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Vencimiento_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Vencimiento_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="crearCuentaImagen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\crearCuentaImagen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Salida hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Salida hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gym_test" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\gym_test.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="User_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\User_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="avatar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\avatar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="estadisticasBoton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\estadisticasBoton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="correo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\correo.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Jaguar_Mamado_Redondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Jaguar_Mamado_Redondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ojo-cruzado" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\ojo-cruzado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pistola-de-escaner-hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\pistola-de-escaner-hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Salida" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Salida.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Fondo_GYM" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Fondo_GYM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="correo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\correo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Mostro_UAM" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Mostro_UAM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="buscar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\buscar.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Jaguares_UAM" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Jaguares_UAM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Logo_deportes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Logo_deportes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="miembrosBoton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\miembrosBoton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Check_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Check_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="configuracion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\configuracion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Juaguar_Mostroso_UAM" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Juaguar_Mostroso_UAM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Logo_redondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Logo_redondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Animacion_Reloj" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\Animacion_Reloj.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Jaguares_UAM_redondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Jaguares_UAM_redondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Siga_adeltante" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Siga_adeltante.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Renovar_subscripcion_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Renovar_subscripcion_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="avatar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\avatar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="onda-de-mano" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\onda-de-mano.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Warning_icon_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Warning_icon_red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tarjeta-de-identificacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\tarjeta-de-identificacion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="configuracion hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\configuracion hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pagoBoton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\pagoBoton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\image.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="deporte" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\deporte.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="avatar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\avatar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Jaguar_Mamado" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Jaguar_Mamado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="uam_edificio_home" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\uam_edificio_home.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="escaneo-de-codigo-de-barras1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\escaneo-de-codigo-de-barras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Mascota" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Mascota.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bloquear" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\bloquear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="buscarPNG" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\buscarPNG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Recursos\buscarPNG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Check_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\Check_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Codigo_de_barras_Horizontal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\Codigo_de_barras_Horizontal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="codigo-de-barras" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\codigo-de-barras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="configuracion hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\configuracion hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="configuracion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\configuracion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="correo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\correo.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="correo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\correo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="crearCuentaImagen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\crearCuentaImagen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="deporte" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\deporte.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="escaneo-de-codigo-de-barras" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\escaneo-de-codigo-de-barras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="estadisticasBoton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\estadisticasBoton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechas_atras" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\flechas_atras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fondo_GYM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\Fondo_GYM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gym_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\gym_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gym_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\gym_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gym_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\gym_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gym_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\gym_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gym_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\gym_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gym_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\gym_6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="gym_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\gym_7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gym_test" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\gym_test.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="image" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\image.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Iniciar_Sesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\Iniciar_Sesion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Jaguar_Mamado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\Jaguar_Mamado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Jaguar_Mamado_Redondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\Jaguar_Mamado_Redondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Jaguares_UAM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\Jaguares_UAM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Jaguares_UAM_redondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\Jaguares_UAM_redondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Juaguar_Mostroso_UAM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\Juaguar_Mostroso_UAM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logo_deportes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\Logo_deportes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logo_redondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\Logo_redondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mascota" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\Mascota.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="miembrosBoton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\miembrosBoton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mostro_UAM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\Mostro_UAM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\ojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ojo-cruzado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\ojo-cruzado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="onda-de-mano" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\onda-de-mano.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pagoBoton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\pagoBoton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pistola-de-escaner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\pistola-de-escaner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pistola-de-escaner-hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\pistola-de-escaner-hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pistola-de-escaner-negra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\pistola-de-escaner-negra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Precaucion_icono_Amarillo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\Precaucion_icono_Amarillo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Renovar_subscripcion_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\Renovar_subscripcion_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Salida hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\Salida hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Salida" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\Salida.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Siga_adeltante" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\Siga_adeltante.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tarjeta-de-identificacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\tarjeta-de-identificacion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="uam_edificio_home" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\uam_edificio_home.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="uam_internacional_portada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\uam_internacional_portada.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="uamLogoBlancoNoFondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\uamLogoBlancoNoFondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="User_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\User_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Vencimiento_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\Vencimiento_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vida_estudiantil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\vida_estudiantil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vida_estudiantil2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\vida_estudiantil2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Warning_icon_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\Warning_icon_red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
