@@ -11,10 +11,13 @@ using System.Windows.Forms;
 using System.Windows.Markup;
 using estadisticasForm;
 using Guna.UI2.WinForms;
+using JaguarGymApp_Preview.Estructuras;
 using JaguarGymApp_Preview.Formularios;
+using JaguarGymApp_Preview.FormulariosReportes;
 using JaguarGymApp_Preview.Servicios;
 using MaterialSkin;
 using MaterialSkin.Controls;
+using Microsoft.Reporting.WinForms;
 using MySql.Data.MySqlClient;
 
 namespace JaguarGymApp_Preview
@@ -255,9 +258,71 @@ namespace JaguarGymApp_Preview
             }
         }
 
-        private void guna2PictureBox2_Click(object sender, EventArgs e)
+        private void btnReporteEntrada_Click(object sender, EventArgs e)
         {
+            List<EntradaReporte> lista = new List<EntradaReporte>();
 
+            string query = @"
+             SELECT 
+                    e.idEntrada AS 'ID Entrada',
+                    CONCAT(m.nombres, ' ', m.apellidos) AS 'Nombre Miembro',
+                    e.fecha AS 'Fecha',
+                    e.hora AS 'Hora'
+                FROM 
+                    Entrada e
+                INNER JOIN 
+                    Miembro m ON e.idMiembro = m.idMiembro;
+            ";
+
+            ConexionBD conn = new ConexionBD(); 
+            using (MySqlConnection connection = new MySqlConnection(conn.GetConnector())) 
+            {
+                MySqlCommand command = new MySqlCommand(query, connection); 
+
+                try
+                {
+                    connection.Open(); 
+                    MySqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+
+                        EntradaReporte entrada = new EntradaReporte
+                        {
+                            IdEntrada = reader.GetInt32(reader.GetOrdinal("ID Entrada")),
+                            NombreMiembro = reader.GetString(reader.GetOrdinal("Nombre Miembro")),
+                            Fecha = reader.GetDateTime(reader.GetOrdinal("Fecha")),
+                            Hora = reader.GetTimeSpan(reader.GetOrdinal("Hora"))
+                        };
+                        lista.Add(entrada); 
+                    }
+
+                    reader.Close(); 
+                    connection.Close();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error: " + ex.Message); 
+                }
+            }
+
+
+            foreach (var entrada in lista)
+            {
+                Console.WriteLine("ID Entrada: " + entrada.IdEntrada);
+                Console.WriteLine("Nombre Miembro: " + entrada.NombreMiembro);
+                Console.WriteLine("Fecha: " + entrada.Fecha.ToString("yyyy-MM-dd"));
+                Console.WriteLine("Hora: " + entrada.Hora.ToString(@"hh\:mm\:ss"));
+                Console.WriteLine("=====================================");
+            }
+
+            ReportDataSource dataSource = new ReportDataSource("dsEntrada", lista);
+            FrmReporteEntrada reporteEntrada = new FrmReporteEntrada();
+            reporteEntrada.reportViewer1.LocalReport.DataSources.Clear();
+            reporteEntrada.reportViewer1.LocalReport.DataSources.Add(dataSource);
+            reporteEntrada.reportViewer1.LocalReport.ReportEmbeddedResource = "JaguarGymApp_Preview.Reportes.rptEntrada.rdlc";
+            reporteEntrada.reportViewer1.RefreshReport();
+            reporteEntrada.ShowDialog();
         }
     }
 }

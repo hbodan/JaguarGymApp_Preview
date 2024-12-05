@@ -67,7 +67,7 @@ namespace JaguarGymApp_Preview.Formularios
 
                     Principal nuevoFormulario = new Principal(idMiembro);
                     this.Hide();
-                    nuevoFormulario.Show();
+                    nuevoFormulario.ShowDialog();
                     this.Close();
 
                 }
