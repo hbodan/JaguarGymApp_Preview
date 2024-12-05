@@ -116,7 +116,7 @@ namespace JaguarGymApp_Preview.Formularios
                         {
                             // No encontrado
                             this.Hide();
-                            Usuario_no_Registrado_usuario formularioSinregistro = new Usuario_no_Registrado_usuario();
+                            Usuario_no_registrado_gerente formularioSinregistro = new Usuario_no_registrado_gerente();
                             formularioSinregistro.Show();
                         }
                     }

@@ -31,7 +31,7 @@ namespace JaguarGymApp_Preview.Formularios
 
         private void Usuario_no_registrado_gerente_Load(object sender, EventArgs e)
         {
-
+            timer3.Start();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

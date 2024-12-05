@@ -504,3 +504,4 @@ C:\Users\alvar\OneDrive\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Prev
 C:\Users\alvar\OneDrive\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGy.A30E3056.Up2Date
 C:\Users\alvar\OneDrive\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.exe
 C:\Users\alvar\OneDrive\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.pdb
+C:\Users\USER\Desktop\JaguarGymApp_Preview\obj\Debug\JaguarGymApp_Preview.Formularios.Editar_Miembros.resources
