@@ -75,7 +75,7 @@ namespace JaguarGymApp_Preview.Formularios
         {
             Principal formularioPrincipal = new Principal(_idUsuario);
             this.Hide();
-            formularioPrincipal.Show();
+            formularioPrincipal.ShowDialog();
             this.Close();
         }
 
@@ -304,8 +304,6 @@ namespace JaguarGymApp_Preview.Formularios
 
         private void btn_EditarConfiguracion_Click(object sender, EventArgs e)
         {
-            errorProvider1.Clear();
-
             errorProvider1.Clear();
 
             List<string> errores = new List<string>();

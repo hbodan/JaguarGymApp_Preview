@@ -157,9 +157,7 @@ namespace JaguarGymApp_Preview.Formularios
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Usuario_autorizado_usuario formularioUsuarioAutorizado = new Usuario_autorizado_usuario();
-            formularioUsuarioAutorizado.Show();
-            this.Close();
+
         }
 
         private void pnSuperior_Paint(object sender, PaintEventArgs e)
@@ -174,9 +172,10 @@ namespace JaguarGymApp_Preview.Formularios
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            timer2.Stop(); 
-            Form pantallaDestino = new Escanea_tu_cedula_o_CIF(); 
-            pantallaDestino.Show();
+            timer2.Stop();
+            this.Hide();    
+            Escanea_tu_cedula_o_CIF pantallaDestino = new Escanea_tu_cedula_o_CIF(); 
+            pantallaDestino.ShowDialog();
             this.Close(); 
         }
     }

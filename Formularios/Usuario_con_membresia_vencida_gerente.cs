@@ -159,17 +159,21 @@ namespace JaguarGymApp_Preview.Formularios
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Usuario_con_membresia_vencida_usuario formularioUsuarioMembresiaVencida = new Usuario_con_membresia_vencida_usuario();
-            formularioUsuarioMembresiaVencida.Show();
-            this.Close();
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             timer1.Stop(); // Detenemos el timer después de que se dispara
-            Form pantallaDestino = new Escanea_tu_cedula_o_CIF(); // Reemplaza FormDestino con el nombre del formulario al que quieres redirigir
-            pantallaDestino.Show();
+            Escanea_tu_cedula_o_CIF pantallaDestino = new Escanea_tu_cedula_o_CIF(); // Reemplaza FormDestino con el nombre del formulario al que quieres redirigir
+            this.Hide();
+            pantallaDestino.ShowDialog();
             this.Close(); // Cierra la pantalla actual
+        }
+
+        private void pnSuperior_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

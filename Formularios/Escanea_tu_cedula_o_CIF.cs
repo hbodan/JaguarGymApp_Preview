@@ -54,7 +54,8 @@ namespace JaguarGymApp_Preview.Formularios
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Inicio_Sesion formularioInicioSesion = new Inicio_Sesion();
-            formularioInicioSesion.Show();
+            this.Hide();
+            formularioInicioSesion.ShowDialog();
             this.Close();
         }
 
@@ -102,14 +103,16 @@ namespace JaguarGymApp_Preview.Formularios
                                 // Membresía caducada
                                 this.Hide();
                                 Usuario_con_membresia_vencida_gerente formularioVencido = new Usuario_con_membresia_vencida_gerente(idMiembro);
-                                formularioVencido.Show();
+                                formularioVencido.ShowDialog();
+                                this.Close();
                             }
                             else
                             {
                                 // Membresía vigente
                                 this.Hide();
                                 Usuario_autorizado_gerente formularioVigente = new Usuario_autorizado_gerente(idMiembro);
-                                formularioVigente.Show();
+                                formularioVigente.ShowDialog();
+                                this.Close();
                             }
                         }
                         else
@@ -117,7 +120,8 @@ namespace JaguarGymApp_Preview.Formularios
                             // No encontrado
                             this.Hide();
                             Usuario_no_registrado_gerente formularioSinregistro = new Usuario_no_registrado_gerente();
-                            formularioSinregistro.Show();
+                            formularioSinregistro.ShowDialog();
+                            this.Close();
                         }
                     }
                 }

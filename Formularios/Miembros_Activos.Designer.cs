@@ -182,6 +182,7 @@
             this.btnVerMiembros.Size = new System.Drawing.Size(135, 37);
             this.btnVerMiembros.TabIndex = 5;
             this.btnVerMiembros.Text = "Reporte";
+            this.btnVerMiembros.Click += new System.EventHandler(this.btnVerMiembros_Click);
             // 
             // statusStrip1
             // 

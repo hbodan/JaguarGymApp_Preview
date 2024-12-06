@@ -141,6 +141,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSet\dsMiembro.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsMiembro.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSet\dsPagos.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -164,6 +169,12 @@
     </Compile>
     <Compile Include="FormulariosReportes\FrmReporteEntrada.Designer.cs">
       <DependentUpon>FrmReporteEntrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulariosReportes\FrmReporteMiembro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosReportes\FrmReporteMiembro.Designer.cs">
+      <DependentUpon>FrmReporteMiembro.cs</DependentUpon>
     </Compile>
     <Compile Include="FormulariosReportes\FrmReportePagos.cs">
       <SubType>Form</SubType>
@@ -299,6 +310,9 @@
     <EmbeddedResource Include="FormulariosReportes\FrmReporteEntrada.resx">
       <DependentUpon>FrmReporteEntrada.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormulariosReportes\FrmReporteMiembro.resx">
+      <DependentUpon>FrmReporteMiembro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormulariosReportes\FrmReportePagos.resx">
       <DependentUpon>FrmReportePagos.cs</DependentUpon>
     </EmbeddedResource>
@@ -364,7 +378,19 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\rptEntrada.rdlc" />
+    <EmbeddedResource Include="Reportes\rptMiembro.rdlc" />
     <EmbeddedResource Include="Reportes\rptPagos.rdlc" />
+    <None Include="DataSet\dsMiembro.xsc">
+      <DependentUpon>dsMiembro.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\dsMiembro.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsMiembro.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\dsMiembro.xss">
+      <DependentUpon>dsMiembro.xsd</DependentUpon>
+    </None>
     <None Include="DataSet\dsPagos.xsc">
       <DependentUpon>dsPagos.xsd</DependentUpon>
     </None>

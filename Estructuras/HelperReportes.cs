@@ -57,4 +57,37 @@ namespace JaguarGymApp_Preview.Estructuras
             nombreMiembro = NombreMiembro;
         }
     }
+    public class MiembroReporte
+    {
+        public int idMiembro { get; set; }
+        public string identificacion { get; set; }
+        public string cif { get; set; }
+        public string nombreCompleto { get; set; }
+        public DateTime fechaNacimiento { get; set; }
+        public string genero { get; set; }
+        public string carrera { get; set; }
+        public string facultad { get; set; }
+        public DateTime fechaExp { get; set; }
+        public string rol { get; set; }
+
+        public MiembroReporte() { }
+
+        // Constructor adaptado a la estructura de la tabla
+        public MiembroReporte(int IdMiembro, string Identificacion, string Cif, string NombreCompleto,
+                              DateTime FechaNacimiento, string Genero, string Carrera, string Facultad,
+                              DateTime FechaExp, string Rol)
+        {
+            idMiembro = IdMiembro;
+            identificacion = Identificacion;
+            cif = Cif;
+            nombreCompleto = NombreCompleto;
+            fechaNacimiento = FechaNacimiento;
+            genero = Genero;
+            carrera = Carrera;
+            facultad = Facultad;
+            fechaExp = FechaExp;
+            rol = Rol;
+        }
+    }
+
 }
