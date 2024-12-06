@@ -347,6 +347,7 @@ namespace JaguarGymApp_Preview.Formularios
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1080, 720);
@@ -355,6 +356,8 @@ namespace JaguarGymApp_Preview.Formularios
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciar Sesión";
             this.Load += new System.EventHandler(this.Inicio_Sesión_Load);
+            this.Enter += new System.EventHandler(this.btn_IniciarSesion_Click);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Inicio_Sesion_KeyDown);
             this.guna2GradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();

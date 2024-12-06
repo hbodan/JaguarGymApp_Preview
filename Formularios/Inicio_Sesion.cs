@@ -164,5 +164,14 @@ namespace JaguarGymApp_Preview.Formularios
                 errorProvider1.SetError(txtBox_IngresarPassword, string.Empty);
             }
         }
+
+        private void Inicio_Sesion_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) // Verifica si la tecla presionada es Enter.
+            {
+                btn_IniciarSesion.PerformClick(); // Ejecuta el evento Click del botón.
+                e.Handled = true; // Previene el comportamiento por defecto.
+            }
+        }
     }
 }

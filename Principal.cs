@@ -59,9 +59,9 @@ namespace JaguarGymApp_Preview
 
         private void guna2ImageButton1_Click(object sender, EventArgs e)
         {
-            Configuracion iniciarFormulario = new Configuracion(_idUsuario);
+            Configuracion ConfiguracionFormulario = new Configuracion(_idUsuario);
             this.Hide();
-            iniciarFormulario.Show();
+            ConfiguracionFormulario.ShowDialog();
             this.Close();
         }
 
@@ -77,8 +77,9 @@ namespace JaguarGymApp_Preview
         private void imgBtn_Pagos_Click(object sender, EventArgs e)
         {
             Gestion_Pagos formularioPagos = new Gestion_Pagos(_idUsuario);
-            formularioPagos.Show();
             this.Hide();
+            formularioPagos.ShowDialog();
+            this.Close();
         }
 
         private void imgBtn_Miembros_Click(object sender, EventArgs e)
@@ -344,6 +345,11 @@ namespace JaguarGymApp_Preview
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2GroupBox1_Click_1(object sender, EventArgs e)
         {
 
         }

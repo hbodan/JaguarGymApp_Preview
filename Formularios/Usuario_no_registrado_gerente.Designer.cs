@@ -30,22 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnSuperior = new Guna.UI2.WinForms.Guna2Panel();
+            this.pbLogouam = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnUsuarionoregistrado = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lbRecomendarvidaestudiantil2 = new System.Windows.Forms.Label();
             this.lbRecomendarvidaestudiantil = new System.Windows.Forms.Label();
             this.lblRecomendarvidaestudiantil = new System.Windows.Forms.Label();
             this.lblUsuarionoregistrado = new System.Windows.Forms.Label();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.pbLogouam = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnSuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogouam)).BeginInit();
             this.pnUsuarionoregistrado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogouam)).BeginInit();
             this.SuspendLayout();
             // 
             // pnSuperior
@@ -56,6 +56,17 @@
             this.pnSuperior.Name = "pnSuperior";
             this.pnSuperior.Size = new System.Drawing.Size(1089, 153);
             this.pnSuperior.TabIndex = 0;
+            this.pnSuperior.Paint += new System.Windows.Forms.PaintEventHandler(this.pnSuperior_Paint);
+            // 
+            // pbLogouam
+            // 
+            this.pbLogouam.Image = global::JaguarGymApp_Preview.Properties.Resources.Jaguares_UAM_redondo;
+            this.pbLogouam.ImageRotate = 0F;
+            this.pbLogouam.Location = new System.Drawing.Point(60, 9);
+            this.pbLogouam.Name = "pbLogouam";
+            this.pbLogouam.Size = new System.Drawing.Size(137, 137);
+            this.pbLogouam.TabIndex = 0;
+            this.pbLogouam.TabStop = false;
             // 
             // pnUsuarionoregistrado
             // 
@@ -71,6 +82,36 @@
             this.pnUsuarionoregistrado.Name = "pnUsuarionoregistrado";
             this.pnUsuarionoregistrado.Size = new System.Drawing.Size(916, 431);
             this.pnUsuarionoregistrado.TabIndex = 1;
+            // 
+            // guna2PictureBox4
+            // 
+            this.guna2PictureBox4.Image = global::JaguarGymApp_Preview.Properties.Resources.vida_estudiantil;
+            this.guna2PictureBox4.ImageRotate = 0F;
+            this.guna2PictureBox4.Location = new System.Drawing.Point(380, 265);
+            this.guna2PictureBox4.Name = "guna2PictureBox4";
+            this.guna2PictureBox4.Size = new System.Drawing.Size(140, 140);
+            this.guna2PictureBox4.TabIndex = 7;
+            this.guna2PictureBox4.TabStop = false;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Image = global::JaguarGymApp_Preview.Properties.Resources.Precaucion_icono_Amarillo;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(696, 56);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(59, 58);
+            this.guna2PictureBox2.TabIndex = 5;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::JaguarGymApp_Preview.Properties.Resources.Precaucion_icono_Amarillo;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(137, 56);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(59, 58);
+            this.guna2PictureBox1.TabIndex = 4;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // lbRecomendarvidaestudiantil2
             // 
@@ -117,46 +158,6 @@
             this.timer3.Interval = 7000;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
-            // guna2PictureBox4
-            // 
-            this.guna2PictureBox4.Image = global::JaguarGymApp_Preview.Properties.Resources.vida_estudiantil;
-            this.guna2PictureBox4.ImageRotate = 0F;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(380, 265);
-            this.guna2PictureBox4.Name = "guna2PictureBox4";
-            this.guna2PictureBox4.Size = new System.Drawing.Size(140, 140);
-            this.guna2PictureBox4.TabIndex = 7;
-            this.guna2PictureBox4.TabStop = false;
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.Image = global::JaguarGymApp_Preview.Properties.Resources.Precaucion_icono_Amarillo;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(696, 56);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(59, 58);
-            this.guna2PictureBox2.TabIndex = 5;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = global::JaguarGymApp_Preview.Properties.Resources.Precaucion_icono_Amarillo;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(137, 56);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(59, 58);
-            this.guna2PictureBox1.TabIndex = 4;
-            this.guna2PictureBox1.TabStop = false;
-            // 
-            // pbLogouam
-            // 
-            this.pbLogouam.Image = global::JaguarGymApp_Preview.Properties.Resources.Jaguares_UAM_redondo;
-            this.pbLogouam.ImageRotate = 0F;
-            this.pbLogouam.Location = new System.Drawing.Point(60, 9);
-            this.pbLogouam.Name = "pbLogouam";
-            this.pbLogouam.Size = new System.Drawing.Size(137, 137);
-            this.pbLogouam.TabIndex = 0;
-            this.pbLogouam.TabStop = false;
-            // 
             // Usuario_no_registrado_gerente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -170,12 +171,12 @@
             this.Text = "Usuario no registrado (Vista Gerente)";
             this.Load += new System.EventHandler(this.Usuario_no_registrado_gerente_Load);
             this.pnSuperior.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogouam)).EndInit();
             this.pnUsuarionoregistrado.ResumeLayout(false);
             this.pnUsuarionoregistrado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogouam)).EndInit();
             this.ResumeLayout(false);
 
         }

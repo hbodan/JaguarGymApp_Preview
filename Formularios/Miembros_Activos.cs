@@ -1,7 +1,9 @@
 ﻿using JaguarGymApp_Preview.Estructuras;
+using JaguarGymApp_Preview.FormulariosReportes;
 using JaguarGymApp_Preview.Servicios;
 using MaterialSkin;
 using MaterialSkin.Controls;
+using Microsoft.Reporting.WinForms;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -95,7 +97,7 @@ namespace JaguarGymApp_Preview.Formularios
                 using (MySqlConnection connection = new MySqlConnection(conn.GetConnector()))
                 {
                     connection.Open();
-                    string query = "SELECT COUNT(*) FROM Miembro"; 
+                    string query = "SELECT COUNT(*) FROM Miembro";
 
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
@@ -439,7 +441,7 @@ namespace JaguarGymApp_Preview.Formularios
 
             if (e.RowIndex >= 0)
             {
-      
+
                 int idMiembro = Convert.ToInt32(dgvMiembros.Rows[e.RowIndex].Cells["ID"].Value);
                 DataGridViewRow filaSeleccionada = dgvMiembros.Rows[e.RowIndex];
                 Miembro miembroSeleccionado = ObtenerDatosMiembroPorId(idMiembro);
@@ -454,5 +456,95 @@ namespace JaguarGymApp_Preview.Formularios
                 }
             }
         }
+
+        private void btnVerMiembros_Click(object sender, EventArgs e)
+        {
+
+                List<MiembroReporte> lista = new List<MiembroReporte>();
+
+                string query = @"
+        SELECT 
+            m.idMiembro AS 'ID Miembro',
+            m.identificacion AS 'Identificación',
+            m.cif AS 'CIF',
+            m.nombres AS 'Nombres',
+            m.apellidos AS 'Apellidos',
+            m.fechaNacimiento AS 'Fecha de Nacimiento',
+            m.genero AS 'Género',
+            c.nombreCarrera AS 'Carrera',
+            f.nombreFacultad AS 'Facultad',
+            m.fechaExp AS 'Fecha Exp',
+            m.interno AS 'Interno',
+            m.colaborador AS 'Colaborador'
+        FROM 
+            Miembro m
+        LEFT JOIN 
+            Carrera c ON m.idCarrera = c.idCarrera
+        LEFT JOIN 
+            Facultad f ON m.idFacultad = f.idFacultad;
+    ";
+
+                ConexionBD conn = new ConexionBD();
+                using (MySqlConnection connection = new MySqlConnection(conn.GetConnector()))
+                {
+                    MySqlCommand command = new MySqlCommand(query, connection);
+
+                    try
+                    {
+                        connection.Open();
+                        MySqlDataReader reader = command.ExecuteReader();
+
+                        while (reader.Read())
+                        {
+                            bool interno = reader.GetBoolean("Interno");
+                            bool colaborador = reader.GetBoolean("Colaborador");
+                            bool genero = reader.GetBoolean("Género");
+
+                            MiembroReporte miembro = new MiembroReporte
+                            {
+                                idMiembro = reader.GetInt32("ID Miembro"),
+                                identificacion = reader.IsDBNull(reader.GetOrdinal("Identificación")) ? null : reader.GetString("Identificación"),
+                                cif = reader.IsDBNull(reader.GetOrdinal("CIF")) ? null : reader.GetString("CIF"),
+                                nombreCompleto = $"{reader.GetString("Nombres")} {reader.GetString("Apellidos")}",
+                                fechaNacimiento = reader.GetDateTime("Fecha de Nacimiento"),
+                                genero = genero ? "Masculino" : "Femenino", // Mapeo del género
+                                carrera = reader.IsDBNull(reader.GetOrdinal("Carrera")) ? null : reader.GetString("Carrera"),
+                                facultad = reader.IsDBNull(reader.GetOrdinal("Facultad")) ? null : reader.GetString("Facultad"),
+                                fechaExp = reader.GetDateTime("Fecha Exp"),
+                                rol = interno ? "Estudiante" : (colaborador ? "Colaborador" : "Externo") // Lógica de rol
+                            };
+                            lista.Add(miembro);
+                        }
+
+                        reader.Close();
+                        connection.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error: " + ex.Message);
+                    }
+                }
+
+                foreach (var miembro in lista)
+                {
+                    Console.WriteLine($"ID Miembro: {miembro.idMiembro}");
+                    Console.WriteLine($"Nombre Completo: {miembro.nombreCompleto}");
+                    Console.WriteLine($"Género: {miembro.genero}");
+                    Console.WriteLine($"Carrera: {miembro.carrera ?? "N/A"}");
+                    Console.WriteLine($"Facultad: {miembro.facultad ?? "N/A"}");
+                    Console.WriteLine($"Rol: {miembro.rol}");
+                    Console.WriteLine("=====================================");
+                }
+
+                // Configuración del reporte
+                ReportDataSource dataSource = new ReportDataSource("dsMiembro", lista);
+                FrmReporteMiembro reporteMiembro = new FrmReporteMiembro();
+                reporteMiembro.reportViewer1.LocalReport.DataSources.Clear();
+                reporteMiembro.reportViewer1.LocalReport.DataSources.Add(dataSource);
+                reporteMiembro.reportViewer1.LocalReport.ReportEmbeddedResource = "JaguarGymApp_Preview.Reportes.rptMiembro.rdlc";
+                reporteMiembro.reportViewer1.RefreshReport();
+                reporteMiembro.ShowDialog();
+            }
+        }
     }
-}
+
